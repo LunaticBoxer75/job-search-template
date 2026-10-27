@@ -1,0 +1,148 @@
+{
+  "queries": [
+    {
+      "search_term": "supply chain analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "operations analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain risk",
+      "category": "primary"
+    },
+    {
+      "search_term": "procurement analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "demand planning analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "logistics analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "program manager operations",
+      "category": "primary"
+    },
+    {
+      "search_term": "program manager supply chain",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain intern 2026",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain intern 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain intern winter 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "operations intern 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "operations intern winter",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain co-op",
+      "category": "primary"
+    },
+    {
+      "search_term": "procurement intern winter",
+      "category": "primary"
+    },
+    {
+      "search_term": "logistics intern winter 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain new grad",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain new grad 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "program manager intern 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "procurement intern",
+      "category": "primary"
+    },
+    {
+      "search_term": "logistics intern 2027",
+      "category": "primary"
+    },
+    {
+      "search_term": "business operations analyst",
+      "category": "secondary"
+    },
+    {
+      "search_term": "compliance analyst",
+      "category": "secondary"
+    },
+    {
+      "search_term": "operations new grad 2027",
+      "category": "secondary"
+    },
+    {
+      "search_term": "inventory analyst",
+      "category": "stretch"
+    },
+    {
+      "search_term": "strategic sourcing analyst",
+      "category": "stretch"
+    },
+    {
+      "search_term": "S&OP analyst",
+      "category": "stretch"
+    },
+    {
+      "search_term": "supply chain leadership development program",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain rotational program",
+      "category": "primary"
+    },
+    {
+      "search_term": "operations rotational program new grad",
+      "category": "primary"
+    },
+    {
+      "search_term": "supply chain fellowship",
+      "category": "primary"
+    },
+    {
+      "search_term": "risk compliance analyst",
+      "category": "primary"
+    },
+    {
+      "search_term": "operations management trainee",
+      "category": "secondary"
+    },
+    {
+      "search_term": "supply chain MBA leadership program",
+      "category": "secondary"
+    }
+  ],
+  "google_search_templates": [
+    "supply chain analyst jobs near Austin, TX since yesterday",
+    "operations analyst jobs near Austin, TX since yesterday",
+    "program manager supply chain jobs near Austin, TX since yesterday",
+    "supply chain intern jobs near Austin, TX since yesterday",
+    "new grad supply chain operations jobs since yesterday",
+    "procurement logistics analyst jobs near Austin, TX since yesterday"
+  ]
+}

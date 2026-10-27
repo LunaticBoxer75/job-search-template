@@ -1,0 +1,487 @@
+[
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "hq": "Seattle, WA",
+    "why_relevant": "Highest-volume employer of supply chain, operations, program management and risk/compliance talent in the Seattle area, and the only target that publishes its interview rubric and role-specific prep guides openly. Amazon's Program Manager prep page describes the competency set it screens for (program management, stakeholder management, written communication), and the role traits map closely to risk, compliance and operations work: data-driven decisions and 'identify, assess, and mitigate project risks.' Because the rubric is public, this is the single highest-leverage company to prepare for first — the prep transfers to every other loop.",
+    "values_framework": "Leadership Principles",
+    "values": [
+      {
+        "name": "Customer Obsession",
+        "detail": "Leaders start with the customer and work backwards. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers."
+      },
+      {
+        "name": "Ownership",
+        "detail": "Leaders are owners. They think long term and don't sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team, and never say 'that's not my job.'"
+      },
+      {
+        "name": "Invent and Simplify",
+        "detail": "Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by 'not invented here.' Because we do new things, we accept that we may be misunderstood for long periods of time."
+      },
+      {
+        "name": "Are Right, A Lot",
+        "detail": "Leaders have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs."
+      },
+      {
+        "name": "Learn and Be Curious",
+        "detail": "Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them."
+      },
+      {
+        "name": "Hire and Develop the Best",
+        "detail": "Leaders raise the performance bar with every hire and promotion. They recognize exceptional talent and willingly move them throughout the organization. Leaders develop leaders and take seriously their role in coaching others, and work on behalf of mechanisms for developing others such as Career Choice."
+      },
+      {
+        "name": "Insist on the Highest Standards",
+        "detail": "Leaders have relentlessly high standards — many people may think these standards are unreasonably high. Leaders continually raise the bar and drive their teams to deliver high-quality products, services and processes, and ensure that defects do not get sent down the line."
+      },
+      {
+        "name": "Think Big",
+        "detail": "Thinking small is a self-fulfilling prophecy. Leaders create and communicate a bold direction that inspires results. They think differently and look around corners for ways to serve customers."
+      },
+      {
+        "name": "Bias for Action",
+        "detail": "Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking."
+      },
+      {
+        "name": "Frugality",
+        "detail": "Accomplish more with less. Constraints breed resourcefulness, self-sufficiency and invention. There are no extra points for growing headcount, budget size or fixed expense."
+      },
+      {
+        "name": "Earn Trust",
+        "detail": "Leaders listen attentively, speak candidly and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing. Leaders do not believe their or their team's body odor smells of perfume. They benchmark themselves and their teams against the best."
+      },
+      {
+        "name": "Dive Deep",
+        "detail": "Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them."
+      },
+      {
+        "name": "Have Backbone; Disagree and Commit",
+        "detail": "Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly."
+      },
+      {
+        "name": "Deliver Results",
+        "detail": "Leaders focus on the key inputs for their business and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle."
+      },
+      {
+        "name": "Strive to be Earth's Best Employer",
+        "detail": "Leaders work every day to create a safer, more productive, higher performing, more diverse and more just work environment. They lead with empathy, have fun at work, and make it easy for others to have fun. Leaders ask themselves whether their fellow employees are growing, whether they are empowered, and whether they are ready for what's next."
+      },
+      {
+        "name": "Success and Scale Bring Broad Responsibility",
+        "detail": "We started in a garage, but we're not there anymore. We are big, we impact the world, and we are far from perfect. We must be humble and thoughtful about even the secondary effects of our actions. Leaders create more than they consume and always leave things better than how they found them."
+      }
+    ],
+    "interview_format": "Verified from Amazon's official Program Manager interview-prep page (the closest published path to supply chain, operations and program roles): application -> phone screening -> writing assessment -> interview loop -> decision. The phone screen is a 60-minute conversation with a senior leader, split roughly evenly between Leadership-Principle behavioral questions and functional program/project-management questions; a second screen is possible depending on the team. A writing assessment is sent about 2 days before the loop. The onsite loop is 'five 55-minute interviews where you'll meet with members of our program management community,' with each interviewer assigned specific competencies (program management, stakeholder management, and the writing exercise). Decision comes 'within 5 business days.' Amazon states 'A significant portion of the conversation will focus on how you've demonstrated our Leadership Principles in your past jobs,' expects roughly two to three behavioral questions per interviewer, and says plainly 'We won't ask brain teasers.' Amazon explicitly recommends the STAR method: 'We recommend using the STAR model to frame your responses.' The Bar Raiser and 'Candid Chats' are named on the How We Hire hub but are not defined there.",
+    "prep_notes": [
+      "Build a bank of 12-16 STAR stories before anything else. Amazon explicitly recommends STAR, and with ~2-3 behavioral questions across five 55-minute interviews you need 10-15 distinct, non-repeating stories — most candidates prepare 5 and start recycling by interview three.",
+      "Tag every story to 2-3 specific Leadership Principles by name, and deliberately cover the ones a risk or operations background makes easy but candidates usually miss: Dive Deep (audit/detail work), Earn Trust (candid escalation), Insist on the Highest Standards (defect prevention), and Have Backbone (pushing back on a business team).",
+      "Practice the writing assessment as a real deliverable, not an afterthought — it arrives ~2 days before the loop and is a scored competency. Drill a one-page, data-first narrative: recommendation up front, then the data, then risks and mitigations. No bullet-only answers.",
+      "Convert your current work into numbers. The prep page lists 'data-driven' and 'results-driven' as role traits, so every story needs a quantified input and outcome (volume handled, defect or leakage rate reduced, cycle time, cost avoided, SLA moved).",
+      "Answer the 'why' and not just the 'what.' Amazon says it probes the 'what' and 'how' of experiences 'as well as the why of your decisions' — so each story needs the alternative you rejected and the reason."
+    ],
+    "visa_note": "Not verified. Amazon's careers FAQ and How We Hire pages fetched this session state equal-opportunity language but publish no visa-sponsorship or E-Verify policy. Rather than rely on third-party claims, check Amazon's current enrollment directly in the USCIS E-Verify employer search (link below), noting that tool's own caveat that a match does not mean every hiring site participates.",
+    "links": [
+      {
+        "label": "Leadership Principles (official, 16 principles)",
+        "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles"
+      },
+      {
+        "label": "The interview loop (official)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire/interview-loop"
+      },
+      {
+        "label": "Phone screening (official)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire/phone-screening"
+      },
+      {
+        "label": "Program Manager interview prep (official — loop structure + STAR)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire/program-manager-interview-prep"
+      },
+      {
+        "label": "How we hire (official hub)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire"
+      },
+      {
+        "label": "Careers FAQ",
+        "url": "https://www.amazon.jobs/content/en/faq"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "hq": "Redmond, WA",
+    "why_relevant": "Second-largest Puget Sound corporate employer and a realistic home for program management, business operations and supply chain roles supporting devices, datacenters and cloud infrastructure. Microsoft is the one target that publishes both its values and its full recruiting lifecycle, including the detail that work authorization is handled at the pre-onboard step — useful signal for an F-1 candidate that it is a process step rather than an early screen-out at this company.",
+    "values_framework": "Company values (Respect, Integrity, Accountability) plus four named cultural attributes",
+    "values": [
+      {
+        "name": "Respect",
+        "detail": "Acknowledging that the thoughts, feelings, and backgrounds of others are as important as our own."
+      },
+      {
+        "name": "Integrity",
+        "detail": "We are honest, ethical, and trustworthy."
+      },
+      {
+        "name": "Accountability",
+        "detail": "We accept full responsibility for our decisions, actions, and results."
+      },
+      {
+        "name": "Growth mindset (cultural attribute)",
+        "detail": "Growth isn't just possible — it's expected; potential is something to be nurtured, not pre-determined. Microsoft says it values curiosity, continuous learning, experimentation and agility, and that 'Taking smart risks and learning from mistakes is how we move forward.'"
+      },
+      {
+        "name": "Customer obsessed (cultural attribute)",
+        "detail": "Teams approach customers 'with a beginner's mind,' building trust-based partnerships and co-creating impact; employees are described as 'insatiable learners' who bring outside insight inward."
+      },
+      {
+        "name": "Diverse and inclusive (cultural attribute)",
+        "detail": "Innovation is framed as depending on varied skills, backgrounds and experiences: 'We don't just value differences — we seek them out and invite them in.'"
+      },
+      {
+        "name": "One Microsoft (cultural attribute)",
+        "detail": "Working as a single connected company rather than competing teams, in service of the mission to empower every person and every organization on the planet to achieve more."
+      }
+    ],
+    "interview_format": "Verified from Microsoft's official hiring-tips page. Seven-step lifecycle: explore open jobs -> submit application -> application review (some teams add 'a brief screening conversation') -> interview -> offer -> pre-onboard -> hired. The interview stage is typically '2-4 conversations with potential teammates and cross-functional colleagues,' each up to an hour, by phone, on Microsoft Teams, or onsite; some roles add code, a portfolio, or other work samples. Microsoft states it uses 'Structured interviews and consistent framework' measuring 'real skills against the role's requirements,' and looks for alignment with 'respect, integrity, accountability, and growth mindset' plus 'how you'll learn, collaborate, and contribute to impact across teams.' Work authorization and relocation are explicitly handled at the pre-onboard step. Microsoft also notes candidates may use AI tools to prepare 'as long as it reflects their true capabilities' but during interviews and assessments 'should demonstrate their own skills without outside assistance unless explicitly permitted.'",
+    "prep_notes": [
+      "Prepare for a structured competency interview, not an Amazon-style principle-by-principle rubric: 2-4 conversations of up to an hour, scored against the posting's stated requirements. Pull the job description apart and prepare one example per listed requirement.",
+      "Growth mindset is the attribute candidates fumble. Prepare a story where you were wrong, changed course, and can say what you'd do differently — delivered without defensiveness. A polished 'weakness that's really a strength' answer reads as a miss here.",
+      "Microsoft asks for two things explicitly: 'Specific examples from your past experiences related to the role' AND a proposed approach to the role's actual tasks. Bring a short point of view on how you'd tackle the job in your first 90 days, not just history.",
+      "Respect the honesty policy. AI-assisted prep is allowed; AI assistance during a live interview or assessment is not unless explicitly permitted. Do not run a live assist tool in a Teams interview.",
+      "Do not force the work-authorization conversation early — Microsoft's own published process places work authorization at pre-onboard. Answer honestly if asked, then let the recruiter route it."
+    ],
+    "visa_note": "Not verified as a sponsorship commitment. Microsoft's published hiring process does state that at the pre-onboard step recruiting handles 'relocation, work authorization, or completing paperwork,' which confirms work authorization is a managed step in its process, but no sponsorship or E-Verify policy is published on the pages fetched. Verify current E-Verify enrollment via the USCIS employer search.",
+    "links": [
+      {
+        "label": "Corporate values (official)",
+        "url": "https://www.microsoft.com/en-us/about/corporate-values"
+      },
+      {
+        "label": "Culture and cultural attributes (careers site)",
+        "url": "https://careers.microsoft.com/v2/global/en/culture"
+      },
+      {
+        "label": "Hiring process and interview tips (official)",
+        "url": "https://careers.microsoft.com/v2/global/en/hiring-tips"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "boeing",
+    "name": "Boeing",
+    "hq": "Corporate offices near Washington, D.C. (Arlington, VA area). Washington State is Boeing's largest employee base — 65,024 employees as of December 2025, out of 181,984 company-wide.",
+    "why_relevant": "Despite the corporate HQ move, Boeing remains the largest industrial supply chain employer in Puget Sound by headcount, and it runs a named Supply Chain Management career track plus a dedicated Supply Chain Internship. Aerospace supply chain is genuinely hard — long lead times, supplier quality, traceability — which makes it strong resume material for a supply chain graduate student. One important filter: Boeing's careers site foregrounds security clearance as an eligibility gate for a large share of postings, so screen postings for clearance requirements before investing time.",
+    "values_framework": "Core values (safety, quality and integrity)",
+    "values": [
+      {
+        "name": "Safety",
+        "detail": "Named by Boeing as one of three core values it is building its culture around: 'our core values of safety, quality and integrity.'"
+      },
+      {
+        "name": "Quality",
+        "detail": "Named as a core value; reflected in careers content on supplier quality and 'using problem-solving skills to drive operational excellence.'"
+      },
+      {
+        "name": "Integrity",
+        "detail": "Named as a core value alongside safety and quality."
+      }
+    ],
+    "interview_format": "Not publicly documented in detail — not verified. Boeing's careers site publishes no stage-by-stage loop description. What it does publish: applications are accepted through one channel only ('The only way to apply for a position at Boeing is via our Careers website'), a Talent Acquisition Advisor article titled '5 Tips for Acing Your Virtual Interview,' and two special-path programs (a Pre-Employment Training Program that lets qualifying students 'skip the interview process' for specific manufacturing jobs, and Boeing Manufacturing Accelerated Careers, which lets select candidates 'skip resume review'). Neither special path applies to corporate supply chain roles.",
+    "prep_notes": [
+      "Filter postings for security clearance requirements first. Clearance is the most prominent eligibility gate on Boeing's careers site, and clearance-gated roles will not be viable — confirm requirements per posting rather than assuming.",
+      "Target the named Supply Chain Management track and the Supply Chain Internship rather than generic 'business' postings; supplier management sits under Business careers alongside finance and HR.",
+      "Anchor answers in the three stated core values — safety, quality, integrity. For an aerospace audience, a story about catching a defect or refusing to let a known issue pass downstream lands harder than a story about speed.",
+      "Learn enough aerospace supply chain vocabulary to be credible: rate ramp, supplier quality escape, long-lead castings and forgings, configuration control, traceability. You do not need depth, but you do need not to sound like a generalist.",
+      "Prepare for a virtual first round — Boeing's own published interview advice is specifically about virtual interviews."
+    ],
+    "visa_note": "Partially verified: Boeing's careers site states 'Boeing participates in E-Verify' and links Right to Work notices, which is relevant because the 24-month STEM OPT extension requires an E-Verify-enrolled employer. Boeing publishes no visa-sponsorship policy. Separately, no ITAR/EAR or 'U.S. person' language appeared on the careers pages fetched, but security clearance is highlighted as an eligibility gate for many roles — treat clearance-required postings as out of scope and verify per posting.",
+    "links": [
+      {
+        "label": "Boeing careers (official)",
+        "url": "https://jobs.boeing.com/"
+      },
+      {
+        "label": "Boeing company page (core values, employee footprint)",
+        "url": "https://www.boeing.com/company"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "hq": "Seattle, WA",
+    "why_relevant": "Seattle-headquartered global consumer supply chain with real scale — its careers site references 'five U.S. manufacturing and distribution centers' and a Manufacturing & Distribution job family alongside Corporate roles. Green coffee sourcing, ethical sourcing and multi-echelon distribution make it one of the most recognizable SCM stories a candidate could put on a resume, and one of its own partner testimonials on the culture page is from an employee in 'global supply chain,' confirming that organization exists by name.",
+    "values_framework": "Mission statement; a separate 'Mission & Values' page exists but could not be retrieved this session",
+    "values": [
+      {
+        "name": "Mission (verbatim)",
+        "detail": "To be the premier purveyor of the finest coffee in the world, inspiring and nurturing the human spirit — one person, one cup and one neighborhood at a time."
+      },
+      {
+        "name": "Partner ownership",
+        "detail": "Not a formally named value, but stated on the careers site: employees are called partners because of an annual Bean Stock grant giving each person 'ownership in the future success of our business,' and the company frames itself as 'not in the coffee business serving people – we're in the people business, serving coffee.'"
+      }
+    ],
+    "interview_format": "Not publicly documented in the pages retrieved — not verified. The careers site links a 'Hiring Process' page and 'FAQs & Tips,' but those pages were not retrievable this session, so no stage structure is confirmed. Do not assume a specific loop shape.",
+    "prep_notes": [
+      "Lead with the mission language. Starbucks' mission is unusually specific and is quoted prominently on its own careers site; an answer that connects supply chain reliability to 'one person, one cup and one neighborhood' reads as genuine homework.",
+      "Target the Manufacturing & Distribution and Corporate job families explicitly — supply chain roles live inside those rather than under a standalone 'Supply Chain' category on the careers search.",
+      "Prepare an ethical-sourcing point of view. Green coffee sourcing, farmer support and traceability are the substance of Starbucks supply chain work and the most likely technical conversation.",
+      "Because the hiring process is not published, ask the recruiter directly at the screen how many rounds there are and who you'll meet — that is a legitimate, low-risk question and prevents walking into an unexpected panel or case.",
+      "Use the partner/Bean Stock framing when asked about total compensation rather than fixating on base salary."
+    ],
+    "visa_note": "Not verified. No E-Verify statement and no sponsorship policy appeared on the Starbucks careers pages fetched — only equal-opportunity and accommodation language. Since the STEM OPT extension requires an E-Verify-enrolled employer, verify Starbucks' current enrollment in the USCIS E-Verify employer search before relying on it.",
+    "links": [
+      {
+        "label": "Starbucks careers (official — mission verbatim)",
+        "url": "https://careers.starbucks.com/"
+      },
+      {
+        "label": "Starbucks culture (careers site)",
+        "url": "https://careers.starbucks.com/culture/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "costco",
+    "name": "Costco Wholesale",
+    "hq": "Issaquah, WA",
+    "why_relevant": "One of the most operationally disciplined retailers in the world and a major Puget Sound corporate employer. Its stated operating philosophy — 'Keep costs down and pass the savings on to our members' — is a supply chain thesis, and the deliberately narrow assortment it describes (roughly 4,000 SKUs versus about 30,000 at most supermarkets) is a textbook case in SKU rationalization you can discuss with credibility. Costco also states nationwide E-Verify participation on its careers site, which matters directly for a STEM OPT extension.",
+    "values_framework": "Guiding principle ('Do the right thing') plus published value headings; Costco's well-known numbered Code of Ethics could not be retrieved from an official page this session",
+    "values": [
+      {
+        "name": "Do the right thing (guiding principle)",
+        "detail": "Stated on Costco's Our Values page as the guiding principle followed since founding, for members, employees, suppliers, communities and the environment: 'when we do the right thing, good things happen.'"
+      },
+      {
+        "name": "Respect our Differences",
+        "detail": "Value heading published on Costco's Our Values page. The page content retrieved was truncated, so the full supporting text is not confirmed."
+      },
+      {
+        "name": "Contribute to our Communities",
+        "detail": "Value heading published on Costco's Our Values page. Full supporting text not confirmed."
+      },
+      {
+        "name": "Care for the Environment",
+        "detail": "Value heading published on Costco's Our Values page. Full supporting text not confirmed."
+      },
+      {
+        "name": "Operating philosophy (not a named value)",
+        "detail": "'Keep costs down and pass the savings on to our members.' Costco also cites three qualities behind member loyalty: commitment to quality via a narrow assortment (about 4,000 SKUs vs. roughly 30,000 at most supermarkets), entrepreneurial spirit, and employee focus through 'fair wages and top-notch benefits.'"
+      }
+    ],
+    "interview_format": "Not publicly documented — not verified. Costco's careers site offers 'Resources for Applying' and a how-to-apply page but publishes no interview stage structure.",
+    "prep_notes": [
+      "Do the SKU math before the interview. Costco's own about page contrasts roughly 4,000 SKUs against about 30,000 at most supermarkets — being able to explain what that does to inventory turns, purchasing leverage and warehouse labor is the highest-signal thing you can bring.",
+      "Frame every answer as cost-to-serve. The published operating philosophy is 'Keep costs down and pass the savings on to our members,' so savings ideas beat sophistication for its own sake.",
+      "Expect a long-tenure, promote-from-within culture — the careers page testimonials are from people with 10 and 17 years of service. Be ready to answer why Costco and not a two-year rotation elsewhere, honestly.",
+      "Confirm the interview structure with the recruiter since it isn't published; also confirm whether the role is HQ-based in Issaquah or depot/regional, because the work differs substantially.",
+      "Costco states nationwide E-Verify participation — worth noting quietly as a positive for a STEM OPT timeline, but confirm it for the specific hiring site."
+    ],
+    "visa_note": "Partially verified: Costco's careers page states nationwide E-Verify participation, which is a prerequisite for the 24-month STEM OPT extension. No visa-sponsorship policy is published. Confirm the specific hiring site's enrollment in the USCIS E-Verify employer search, since that tool notes multi-location employers 'may choose which of their sites participate.'",
+    "links": [
+      {
+        "label": "About Costco (operating philosophy, SKU comparison)",
+        "url": "https://www.costco.com/about.html"
+      },
+      {
+        "label": "Costco careers (E-Verify statement)",
+        "url": "https://www.costco.com/careers.html"
+      },
+      {
+        "label": "Our Values",
+        "url": "https://www.costco.com/our-values.html"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nordstrom",
+    "name": "Nordstrom",
+    "hq": "Seattle, WA",
+    "why_relevant": "Seattle-founded retailer (1901) with a named Supply Chain career category — 23 open supply chain positions at the time this file was compiled — plus corporate roles spanning business strategy, merchandising, data science and industrial engineering. Its first value, 'Customer Obsessed,' overlaps almost word-for-word with Amazon's Customer Obsession, so STAR stories prepared for Amazon transfer directly. Note that Nordstrom was taken private in 2025 by Nordstrom family members and El Puerto de Liverpool, which is worth acknowledging as context in interviews.",
+    "values_framework": "Company values (five, published on the careers site)",
+    "values": [
+      {
+        "name": "Customer Obsessed",
+        "detail": "Knowing customers better than anyone; the company says it aims to 'listen, anticipate, build trust, and move with speed.'"
+      },
+      {
+        "name": "Owners at Heart",
+        "detail": "Treating each interaction as a chance to make an impact; employees are 'empowered to use good judgment' and to 'leave it better than we found it.'"
+      },
+      {
+        "name": "Curious and Ever Changing",
+        "detail": "Approaching problems with curiosity and disrupting 'the status quo to solve customer needs in new and relevant ways.'"
+      },
+      {
+        "name": "Here to Win",
+        "detail": "Delivering results and winning as a team by 'supporting and challenging one another.'"
+      },
+      {
+        "name": "We Extend Ourselves",
+        "detail": "Respect and kindness — doing 'the small things that make a big difference' and building a welcoming community."
+      }
+    ],
+    "interview_format": "Not publicly documented — not verified. The careers site describes only 'Nora,' the Nordstrom Online Recruiting Assistant, an AI chat tool that answers questions about openings and helps with applications, and clarifies that Nora only assists because 'all hiring decisions are made by our amazing hiring managers and recruiting teams.' No stages, assessments or timelines are published. Applications and candidate accounts run through Workday.",
+    "prep_notes": [
+      "Reuse your Amazon prep. 'Customer Obsessed' and 'Owners at Heart' map onto Customer Obsession and Ownership almost directly — the same STAR stories work with relabeled headlines.",
+      "Prepare for the retail-specific tension explicitly: inventory availability versus markdown risk. That is the core supply chain trade-off in full-price and off-price retail and the likeliest technical question.",
+      "Acknowledge the 2025 take-private transaction if it comes up, and frame it as a cost-discipline and speed environment rather than pretending it didn't happen.",
+      "Apply through the Workday portal and expect Nora-driven screening questions up front; answer them as carefully as a human screen, because they gate the handoff.",
+      "Ask which part of the network the role supports — stores, digital fulfillment, or off-price — because the supply chain problems differ sharply across them."
+    ],
+    "visa_note": "Not verified. No E-Verify statement and no sponsorship policy appeared on the Nordstrom careers pages fetched. Verify current enrollment in the USCIS E-Verify employer search before counting on Nordstrom for the STEM OPT extension.",
+    "links": [
+      {
+        "label": "Nordstrom careers (official — five values)",
+        "url": "https://careers.nordstrom.com/"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "alaska-airlines",
+    "name": "Alaska Airlines",
+    "hq": "SeaTac, WA (Seattle-Tacoma area)",
+    "why_relevant": "A Seattle-area operations employer where the product IS the operation — on-time performance, crew and aircraft scheduling, maintenance turn times, station logistics. Its careers site groups roles under a combined 'Corporate & Operations' career area and explicitly promotes internal mobility ('whether rising through the ranks, becoming experts in their field or transferring within the company'), which suits someone entering a new function. One honest caveat: supply chain is not named anywhere on the careers site, so target operations, network planning and corporate roles rather than expecting SCM titles.",
+    "values_framework": "Shared values (four, spanning Alaska, Hawaiian and Horizon)",
+    "values": [
+      {
+        "name": "Own safety",
+        "detail": "Published as the first of four shared values that 'inform our actions, for our guests and for each other.'"
+      },
+      {
+        "name": "Do the right thing",
+        "detail": "Published as one of four shared values across Alaska, Hawaiian and Horizon."
+      },
+      {
+        "name": "Be caring and kind",
+        "detail": "Published as one of four shared values; reinforced by the careers site theme that 'the most care in the air starts here.'"
+      },
+      {
+        "name": "Deliver performance",
+        "detail": "Published as one of four shared values, paired with the stated goal of 'Creating an airline people love.'"
+      }
+    ],
+    "interview_format": "Not publicly documented — not verified. The careers site publishes no interview stages. It does publish a fraud warning worth heeding: applicants should be wary of messages requesting confidential information or offering a job or work visa, and legitimate messages come from addresses ending in '@alaskaair.com.'",
+    "prep_notes": [
+      "Lead with 'Own safety.' It is listed first for a reason in an airline, and a candidate from a risk and compliance background has a natural, credible story here — safety culture, reporting without blame, controls that actually get followed.",
+      "Target 'Corporate & Operations' and Airport Operations postings, not 'supply chain' — that phrase does not appear on the careers site and searching for it will hide the relevant roles.",
+      "Learn the airline operating metrics before the screen: on-time departure (D0/A14), completion factor, turn time, crew legality, misconnect rate. Fluency here separates serious candidates fast.",
+      "Use the stated internal-mobility culture in your narrative if you are early in a function change, and Alaska explicitly markets transfers within the company as normal.",
+      "Treat any unsolicited message about an Alaska job or work visa from a non-@alaskaair.com address as fraud — the company warns about exactly this scam, which disproportionately targets international candidates."
+    ],
+    "visa_note": "Partially verified: Alaska states it is 'an E-Verify employer, where required by law' — note the conditional wording, which means enrollment may not cover every hiring site and should not be assumed for STEM OPT purposes. No sponsorship policy is published. The careers site's only other visa reference is a fraud warning about scam messages offering jobs or work visas.",
+    "links": [
+      {
+        "label": "Alaska Airlines careers (official — four shared values)",
+        "url": "https://careers.alaskaair.com/"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "paccar",
+    "name": "PACCAR",
+    "hq": "Bellevue, WA",
+    "why_relevant": "A Fortune 500 truck manufacturer headquartered in Bellevue (Kenworth, Peterbilt, DAF), and one of the few Seattle-area employers with an explicitly named 'Supply Chain & Operations' job family alongside 'Manufacturing & Distribution' and 'Facilities & Maintenance.' Heavy-truck manufacturing and parts distribution is deep, unglamorous, high-quality SCM experience — exactly the kind of role that is less crowded with applicants than the Amazon and Microsoft funnels, and PACCAR advertises 'robust training, leadership and mentorship programs' plus an internships category.",
+    "values_framework": "Not verified — PACCAR's careers site refers generically to 'our core values' in an ESG context but publishes no named list, and paccar.com returned HTTP 403 to automated fetches",
+    "values": [],
+    "interview_format": "Not publicly documented — not verified. The careers site publishes no interview stages. The only application mechanic disclosed is an optional 'Apply with LinkedIn' feature. Jobs are browsable by category with filters for country, state, city and division, and candidates may 'Join Our Talent Community.'",
+    "prep_notes": [
+      "Search by the exact job family names on jobs.paccar.com — 'Supply Chain & Operations' and 'Manufacturing & Distribution' — rather than keyword-searching 'supply chain analyst,' since the site organizes by category.",
+      "Prepare for a manufacturing and aftermarket-parts context: build schedules, supplier tiers, parts distribution centers, fill rate and dealer service levels. This is a different vocabulary from retail or tech supply chain.",
+      "Because no values list is published, ground culture answers in what PACCAR does publish: long-term employee investment ('From hired to retired, we have you and your family covered'), training and mentorship programs, and an inclusion rationale framed around better decisions and engagement.",
+      "Ask the recruiter directly about interview structure and about which PACCAR division the role supports (Kenworth, Peterbilt, Parts, Financial Services) — it is not discoverable from the site.",
+      "Heed the recruiting-fraud notice: PACCAR states it 'will never ask you for money as part of recruitment or a job offer.'"
+    ],
+    "visa_note": "Not verified. No E-Verify notice, sponsorship policy or work-authorization requirement appears anywhere on PACCAR's careers site — only an 'Equal Opportunity Employer' line and a recruiting-fraud caution. Check the USCIS E-Verify employer search directly, and ask the recruiter explicitly if the STEM OPT extension matters to your decision.",
+    "links": [
+      {
+        "label": "PACCAR careers (official — job families)",
+        "url": "https://jobs.paccar.com/"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "target",
+    "name": "Target",
+    "hq": "Minneapolis, MN",
+    "why_relevant": "One of the strongest national SCM employers for a supply chain master's graduate: Supply Chain is one of four highlighted career areas, described as work to 'Fuel the movement of products to 60+ facilities, reaching shelves and homes across the country,' with a corporate 'Global Supply Chain & Logistics' function based in Minneapolis and a dedicated intern/entry-level track. The careers page also publishes an Interview Guide and a page on Recorded Video Interviews, which signals an asynchronous video round is part of the process for some roles — something worth preparing for specifically.",
+    "values_framework": "No formal named values list is published on the careers site; culture is summarized as 'We care, grow and win together'",
+    "values": [
+      {
+        "name": "We care, grow and win together",
+        "detail": "The culture line published on Target's careers landing page. Target does not publish a numbered values or leadership-expectations list there; related commitments appear only as section names ('Belonging at the Bullseye,' 'Workplace Health & Safety')."
+      }
+    ],
+    "interview_format": "Partially documented — not verified. Target's careers site advertises a Hiring Process section containing an Interview Guide plus a separate page on Recorded Video Interviews, and runs applications through Workday, but the underlying stage detail was not retrievable this session. The existence of a dedicated recorded-video-interview page is itself a strong signal that an asynchronous, one-way video round is used for some roles.",
+    "prep_notes": [
+      "Prepare for a recorded, one-way video round. Target publishes a page specifically about Recorded Video Interviews — practice answering to a camera with no interviewer reaction, on a timer, with a clean background and a tested mic.",
+      "Read Target's own Interview Guide before the first round rather than generic advice; it is linked from the careers site's Hiring Process section.",
+      "Anchor supply chain answers in the published network shape: 60+ facilities serving more than 2,000 stores plus direct-to-home. Store replenishment plus ship-from-store is the interesting problem — be ready to talk about it.",
+      "Apply to the Intern & Entry Level track deliberately. Target maintains distinct internship, entry-level and leadership-development pipelines, and corporate supply chain hiring runs largely through them for new graduates.",
+      "Do not claim knowledge of Target 'values' — there is no published list. Use the 'We care, grow and win together' culture line instead, which is verifiable."
+    ],
+    "visa_note": "Not verified. No E-Verify statement or sponsorship policy appeared on the Target careers pages fetched. Check the USCIS E-Verify employer search and confirm with the recruiter, especially since new-grad supply chain hiring often runs through internship conversion where authorization timing matters.",
+    "links": [
+      {
+        "label": "Target careers (official)",
+        "url": "https://corporate.target.com/careers"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "hq": "Beaverton, OR",
+    "why_relevant": "The Pacific Northwest's other major consumer supply chain employer and a strong national target — close enough to Seattle to stay in-region. Its published maxims include 'Be On the Offense Always' with the line 'Agility is our edge,' which is effectively a demand-planning and responsiveness thesis. Relevant open roles observed on the careers site include 'Lead Process Analyst' (Beaverton, Program/Product & Project Management) and 'Lead, Inventory Controlling NA,' and job categories break out Corporate, Distribution and Manufacturing. Caveat: there is no career area literally labeled 'Supply Chain' — the closest is Business Operations.",
+    "values_framework": "Maxims ('What Moves Us')",
+    "values": [
+      {
+        "name": "Serve Athletes",
+        "detail": "Grounded in 'the power of sport' and shared responsibility for athletes' voices. Nike's framing is that 'If you have a body, you are an athlete.'"
+      },
+      {
+        "name": "Create the Future of Sport",
+        "detail": "Ideas must meet a real need; 'we're not afraid to fail - because innovation depends on risk.'"
+      },
+      {
+        "name": "Be On the Offense Always",
+        "detail": "'Agility is our edge' — acting decisively and consumer-first."
+      },
+      {
+        "name": "Do the Right Thing",
+        "detail": "Accountability and ethics, aiming 'to level the playing field for all.'"
+      },
+      {
+        "name": "Win as a Team",
+        "detail": "'We are strong together,' with collaboration and shared celebration of wins."
+      }
+    ],
+    "interview_format": "Not publicly documented — not verified. Nike's careers site publishes no interview stages. It does publish accommodation detail: screen readers, sign language interpreters, accessible single-location in-person interviews and closed captioning are available, with a request line at +1 503-671-4156.",
+    "prep_notes": [
+      "Search under 'Business Operations' and the Corporate, Distribution and Manufacturing categories — there is no 'Supply Chain' career area on the careers site, so the obvious search term will miss the roles.",
+      "Build one strong demand-and-agility story. 'Be On the Offense Always' and 'Agility is our edge' are Nike's own words; a story about reacting fast to a demand signal or a supply disruption is directly on-message.",
+      "Look at roles like 'Lead Process Analyst' and inventory-controlling postings as realistic entry points — they are process and analytics work rather than requiring footwear-industry tenure.",
+      "Expect a consumer-brand culture screen. Nike's maxims are athlete-centric; a candidate who cannot connect operational rigor back to the consumer experience reads as a poor fit regardless of technical skill.",
+      "Note that very few Nike roles are flagged remote, so plan for Beaverton-area onsite expectations and be explicit about your relocation or commute position."
+    ],
+    "visa_note": "Not verified. No E-Verify statement or sponsorship policy appeared on the Nike careers pages fetched. Verify current enrollment through the USCIS E-Verify employer search before relying on Nike for the STEM OPT extension.",
+    "links": [
+      {
+        "label": "Nike careers (official — five maxims)",
+        "url": "https://careers.nike.com/"
+      }
+    ],
+    "verified": true
+  }
+]

@@ -1,0 +1,200 @@
+{
+  "_note": "Curated SCM/Operations fellowships, competitions, hackathons, LDPs and associations for a supply-chain / operations graduate student (f1_ok marks F-1 friendliness). Verify live dates each fall. Last researched 2026-06.",
+  "case_competitions": [
+    {
+      "name": "TCU Graduate Supply Chain Case Competition",
+      "org": "TCU Neeley School",
+      "timeline": "~Feb 2027 (annual, 24-hour)",
+      "eligibility": "Invitation-only at program level; full-time MS/MBA. No citizenship restriction. Ask whether your program is already invited.",
+      "f1_ok": true,
+      "url": "https://neeley.tcu.edu/centers-institutes/center-for-supply-chain-innovation/graduate-supply-chain-case-competition.php",
+      "desc": "Strongest, most accessible fit. Prizes $14K/$10K/$6K. Tell your program's faculty / supply chain club early in the fall."
+    },
+    {
+      "name": "GM / WSU Supply Chain Case Competition",
+      "org": "Wayne State (Ilitch), sponsored by General Motors",
+      "timeline": "Oct 22-24, 2026 (in-person Detroit). Invite-only: one team of up to 4 per school, registered by a faculty advisor — ask your faculty early (verified on wayne.edu, 2026-09-27)",
+      "eligibility": "Invitation-only, explicitly international. F1-friendly.",
+      "f1_ok": true,
+      "url": "https://ilitchbusiness.wayne.edu/supply-chain/case",
+      "desc": "Auto-industry SCM focus."
+    },
+    {
+      "name": "ASCM Student Case Competition",
+      "org": "ASCM (judged with Deloitte)",
+      "timeline": "2026 finals Sept 29-30 (Long Beach) — this year's school/regional rounds are over. Plan for the 2027 cycle; check ascm.org (couldn't verify automatically)",
+      "eligibility": "Undergrad + grad, teams of 4 + faculty advisor. No citizenship restriction.",
+      "f1_ok": true,
+      "url": "https://www.ascm.org/making-an-impact/case-competition/",
+      "desc": "Check via your school's ASCM student chapter in the fall."
+    },
+    {
+      "name": "ISM Student Case Competition",
+      "org": "Institute for Supply Management",
+      "timeline": "2026-27 dates unconfirmed (member-gated)",
+      "eligibility": "Teams ≤4, full-time undergrad/grad. No citizenship restriction stated.",
+      "f1_ok": true,
+      "url": "https://www.ismworld.org/for-individuals/scholarships-and-awards/ism-case-competition/",
+      "desc": "Procurement/sourcing focus."
+    }
+  ],
+  "hackathons_datathons": [
+    {
+      "name": "Kaggle — Store Sales: Time Series Forecasting",
+      "org": "Kaggle (Google) / Corporación Favorita",
+      "timeline": "Rolling, no deadline, medals only",
+      "eligibility": "Globally open, F1-safe (not employment)",
+      "f1_ok": true,
+      "url": "https://www.kaggle.com/competitions/store-sales-time-series-forecasting",
+      "desc": "Canonical retail demand-forecasting portfolio project. Start today — directly SCM-relevant."
+    },
+    {
+      "name": "GS3 — Global Sustainability Supply Chain Student Competition",
+      "org": "Supply Chain SDG (UN-endorsed)",
+      "timeline": "2026-27 dates TBA — monitor registration",
+      "eligibility": "Team-based, online, ~$50/student entry. No travel required.",
+      "f1_ok": true,
+      "url": "https://www.supplychainsdg.org/",
+      "desc": "Most directly SCM-specific team competition; online, no travel."
+    },
+    {
+      "name": "Kaggle Competitions (broader)",
+      "org": "Kaggle",
+      "timeline": "New challenges weekly (~1-3 months each)",
+      "eligibility": "Free, globally open, F1-safe",
+      "f1_ok": true,
+      "url": "https://www.kaggle.com/competitions",
+      "desc": "Watch for forecasting/tabular challenges (e.g. M5 Walmart-style)."
+    },
+    {
+      "name": "DrivenData Competitions",
+      "org": "DrivenData",
+      "timeline": "Rolling",
+      "eligibility": "Globally open, F1-safe",
+      "f1_ok": true,
+      "url": "https://www.drivendata.org/competitions/",
+      "desc": "Social-impact/logistics data challenges. Good secondary platform."
+    }
+  ],
+  "rotational_ldps": [
+    {
+      "name": "Microsoft — Supply Chain & Operations",
+      "org": "Microsoft (Redmond, WA)",
+      "timeline": "University roles for 2027 post ~fall 2026",
+      "eligibility": "One of largest US H1B sponsors; strongest sponsorship track record.",
+      "f1_ok": true,
+      "tier": "Tier 1 — reliable sponsor",
+      "url": "https://careers.microsoft.com/",
+      "desc": "Cloud/hardware supply chain & operations roles."
+    },
+    {
+      "name": "Amazon — Pathways Operations Leadership & Supply Chain",
+      "org": "Amazon (Seattle HQ)",
+      "timeline": "~fall 2026 for 2027; some ops roles year-round",
+      "eligibility": "Reliable visa sponsor, OPT/STEM-OPT friendly.",
+      "f1_ok": true,
+      "tier": "Tier 1 — reliable sponsor",
+      "url": "https://www.amazon.jobs/",
+      "desc": "Operations leadership; Pathways targets advanced-degree holders."
+    },
+    {
+      "name": "PepsiCo — Supply Chain Leadership Development Program",
+      "org": "PepsiCo",
+      "timeline": "Campus recruiting Aug-Oct 2026 for 2027",
+      "eligibility": "Historically sponsors; some postings restrict — verify per posting. Best CPG bet.",
+      "f1_ok": true,
+      "tier": "Tier 1 — reliable sponsor",
+      "url": "https://www.pepsicojobs.com/",
+      "desc": "Rotational across manufacturing, logistics, planning."
+    },
+    {
+      "name": "Johnson & Johnson — Operations (SCM) LDP",
+      "org": "Johnson & Johnson",
+      "timeline": "Applications ~Sept-Nov 2026",
+      "eligibility": "MIXED — some J&J LDP postings explicitly state NO sponsorship. Verify each.",
+      "f1_ok": false,
+      "tier": "Tier 2 — verify per posting",
+      "url": "https://www.careers.jnj.com/",
+      "desc": "Rotational across planning, manufacturing, procurement, logistics."
+    },
+    {
+      "name": "Starbucks — Supply Chain (Seattle HQ)",
+      "org": "Starbucks (Seattle)",
+      "timeline": "Rolling",
+      "eligibility": "Sponsors some corporate roles; no dedicated visa-sponsoring SCM LDP confirmed.",
+      "f1_ok": false,
+      "tier": "Tier 2 — verify per posting",
+      "url": "https://www.starbucks.com/careers/",
+      "desc": "Worth monitoring."
+    },
+    {
+      "name": "Target — Supply Chain / Operations Leadership",
+      "org": "Target",
+      "timeline": "Campus recruiting fall 2026",
+      "eligibility": "Ops/distribution roles frequently require work auth without future sponsorship.",
+      "f1_ok": false,
+      "tier": "Tier 2 — verify per posting",
+      "url": "https://corporate.target.com/careers",
+      "desc": "Distribution + HQ supply chain leadership."
+    },
+    {
+      "name": "Boeing — Supply Chain / Operations rotationals",
+      "org": "Boeing (Everett, WA and other sites)",
+      "timeline": "—",
+      "eligibility": "HARD BLOCKER: defense contractor, most roles require US citizen/PR (ITAR).",
+      "f1_ok": false,
+      "tier": "Tier 3 — generally not viable for F1",
+      "url": "https://jobs.boeing.com/",
+      "desc": "Most ops/SCM roles need US-Person status."
+    }
+  ],
+  "fellowships": [
+    {
+      "name": "AWESOME Excellence in Education Scholarship",
+      "org": "AWESOME (Women's Leadership Center)",
+      "timeline": "2026-27 deadline TBA",
+      "eligibility": "Women in full-time SCM programs; no citizenship requirement. RISK: may be undergrad-only — EMAIL TO CONFIRM grad eligibility.",
+      "f1_ok": true,
+      "url": "https://awesomeleaders.org/scholars/scholarship/excellence-in-education/",
+      "desc": "$5,000 + AWESOME Symposium + CSCMP EDGE attendance. Only women-specific fellowship not obviously ruled out."
+    }
+  ],
+  "associations": [
+    {
+      "name": "ASCM (formerly APICS) Student Membership",
+      "org": "ASCM",
+      "timeline": "Anytime",
+      "eligibility": "FREE student membership. Open to all enrolled students.",
+      "f1_ok": true,
+      "url": "https://www.ascm.org/membership-community/discounts/",
+      "desc": "Top no-cost pick. Discounts on CPIM/CSCP/CLTD + case competition access."
+    },
+    {
+      "name": "ASCM local chapter",
+      "org": "ASCM (example: Seattle chapter)",
+      "timeline": "Ongoing",
+      "eligibility": "Local cert training + networking + facility tours",
+      "f1_ok": true,
+      "url": "https://seattle.ascm.org/",
+      "desc": "Find the chapter for your area through ascm.org; local cert training, networking and facility tours. Verify current calendar."
+    },
+    {
+      "name": "CSCMP Student Membership",
+      "org": "CSCMP",
+      "timeline": "EDGE 2026: Oct 4-7, Nashville",
+      "eligibility": "Discounted student membership (~$40/yr indicative)",
+      "f1_ok": true,
+      "url": "https://cscmp.org/",
+      "desc": "Includes EDGE conference pricing + local roundtable access."
+    },
+    {
+      "name": "INFORMS Student Membership",
+      "org": "INFORMS",
+      "timeline": "Anytime",
+      "eligibility": "$46/yr",
+      "f1_ok": true,
+      "url": "https://www.informs.org/Membership/Join-INFORMS",
+      "desc": "Best for OR/analytics/optimization side of SCM."
+    }
+  ]
+}

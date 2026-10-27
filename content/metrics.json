@@ -1,0 +1,514 @@
+[
+  {
+    "id": "inventory-turnover",
+    "name": "Inventory Turnover",
+    "domains": [
+      "Supply Chain",
+      "Financial Literacy"
+    ],
+    "formula": "COGS / Average Inventory (Average Inventory = (beginning + ending) / 2, at cost)",
+    "plain_english": "How many times you sell through your average inventory in a period, usually a year.",
+    "good_bad": "High turnover means inventory converts to cash quickly and less capital is trapped on the balance sheet. Low turnover means slow-moving or obsolete stock, or buying in quantities the demand does not justify. Higher is not automatically better: turnover rises when you deliberately under-stock, so a great turnover number sitting next to a falling fill rate means you bought your working-capital improvement with stockouts, lost sales, and expedite freight. The right turnover is the highest one that still holds your service level.",
+    "interview_use": "Expect it as the opening metric in any inventory question, and expect to be asked what you would do if it is low. Strong answer: segment before acting, because a blended turnover figure across 40,000 SKUs is nearly meaningless — turn it by ABC class and by category, since the fix for slow A items (forecasting and replenishment frequency) is completely different from slow C items (order quantity and SKU rationalization). The trap is treating it as a number to maximize; always pair it with fill rate or OTIF as the counter-metric and say so unprompted.",
+    "watch_out": "Genuinely ambiguous by convention. It is sometimes computed as Sales / Average Inventory, which inflates the ratio because sales include gross margin while inventory is carried at cost — the two versions are not comparable, so ask or state which you are using. Some retailers compute it on retail-valued inventory. Using ending inventory instead of average distorts it badly for seasonal businesses, which is exactly when people do it. And any turnover figure is meaningless without its period: a quarterly turn of 2 is an annual turn of about 8."
+  },
+  {
+    "id": "days-sales-of-inventory",
+    "name": "Days Sales of Inventory (DSI / Days on Hand)",
+    "domains": [
+      "Supply Chain",
+      "Financial Literacy"
+    ],
+    "formula": "365 / Inventory Turnover, equivalently (Average Inventory / COGS) x 365",
+    "plain_english": "How many days of selling your current inventory would cover — the same information as turnover, expressed in days instead of times.",
+    "good_bad": "Fewer days means leaner inventory and faster cash conversion. More days means capital and warehouse space tied up and rising obsolescence exposure. As with turnover, lower is not automatically better: it is only good if service level held. Days are usually the more useful framing in an operations conversation because they compare directly against lead time — carrying 12 days of inventory against a 30-day replenishment lead time tells you immediately that you are going to stock out.",
+    "interview_use": "Use days rather than turns when you want to make a point land, because 'we hold 94 days of inventory on a product with a 21-day lead time' is self-evidently a problem in a way that 'turnover is 3.9' is not. It is also the inventory leg of cash-to-cash, so be ready to move between DSI and the cash conversion cycle in the same answer. If asked to improve it, name both levers explicitly: reduce the cycle stock (order more often in smaller quantities) and reduce the safety stock (shorten or stabilize lead time), which are different projects with different owners.",
+    "watch_out": "Conventions legitimately vary and the same company may use several. Some use ending inventory rather than average; some use 360 or 252 days rather than 365; some compute it off sales rather than COGS, inheriting the same distortion as turnover. Worse, the operations term that sounds identical — 'days of supply' — is usually forward-looking (inventory divided by forecast daily demand) rather than backward-looking off historical COGS, so it produces a different number for the same warehouse. Ask which definition is on the dashboard before you interpret a change in it."
+  },
+  {
+    "id": "otif",
+    "name": "OTIF (On Time In Full)",
+    "domains": [
+      "Supply Chain",
+      "Operations"
+    ],
+    "formula": "Orders delivered both on time AND complete / Total orders",
+    "plain_english": "The share of orders that arrived when promised and with everything on them — a single pass-fail test per order.",
+    "good_bad": "High OTIF means the customer got what they expected without chasing anyone. Low OTIF means either a delivery problem or a promising problem, and the number alone cannot tell you which. Because it requires both conditions, it is bounded by each: if on-time is 95 percent and in-full is 95 percent and the failures are independent, OTIF is only about 90 percent, which is why OTIF always looks worse than the component metrics people quote in a status update.",
+    "interview_use": "Almost always the metric behind 'our deliveries are unreliable' and 'on-time delivery dropped, why'. The move that separates candidates is decomposing it before diagnosing: split on-time from in-full first, because a late-but-complete failure is a planning, capacity, or freight problem while an on-time-but-short failure is an inventory availability or allocation problem. Only then segment by customer, site, carrier, and SKU. Naming the promise-date question early — were we late, or did we promise a date we never could have hit — is a very strong opening.",
+    "watch_out": "The definition is the metric, and it is gameable in ways that matter. 'On time' can be measured against the original committed date or against a revised date, and measuring against the revised date is the classic way a supply chain reports 97 percent while customers are furious — always ask which baseline. Whose date also matters: supplier ship date, carrier delivery scan, or customer receipt and put-away. Retailers like Walmart define OTIF with a delivery window and penalties for early as well as late, so 'early' can be a failure. And OTIF is usually measured at order level but sometimes at line level, which produces materially different numbers from the same data."
+  },
+  {
+    "id": "fill-rate",
+    "name": "Fill Rate",
+    "domains": [
+      "Supply Chain"
+    ],
+    "formula": "Unit fill rate = Units shipped / Units ordered. Line fill rate = Order lines shipped complete / Lines ordered. Order fill rate = Orders shipped complete / Orders received.",
+    "plain_english": "The share of what the customer asked for that you were actually able to ship.",
+    "good_bad": "High fill rate means availability matched demand. Low fill rate means stockouts, allocation problems, or a forecast that missed. Higher is better up to the point where the inventory required to buy the last few points costs more than the sales it protects, which is why service-level targets are set per class rather than universally — 99 percent on A items and 90 percent on C items is a deliberate, defensible policy, not a failure.",
+    "interview_use": "The natural counter-metric to inventory turnover and DSI, and the reason a working-capital answer is incomplete without it. If asked to raise fill rate, do not jump to 'more safety stock' — the ordered list is shorten and stabilize lead time, improve forecast accuracy at the SKU-location level, then add safety stock, because the first two lower the inventory required while the third just buys the service level with cash.",
+    "watch_out": "The three variants tell different stories from identical data, and people quote whichever flatters them. Unit fill rate can look excellent while order fill rate is dismal: ship 98 percent of units but leave one line short on most orders and nearly every order is incomplete, which is what the customer actually experiences. Order fill rate is therefore the honest customer-facing version and unit fill rate the kindest internal one. Also clarify whether a later shipment of the backordered units counts as filled, since first-pass fill rate and eventual fill rate are very different measures of your operation."
+  },
+  {
+    "id": "perfect-order-rate",
+    "name": "Perfect Order Rate",
+    "domains": [
+      "Supply Chain"
+    ],
+    "formula": "Orders delivered on time AND complete AND damage-free AND with correct documentation / Total orders — in practice the product of the component rates",
+    "plain_english": "The share of orders that went right in every respect the customer notices, with no exceptions and nothing to fix afterwards.",
+    "good_bad": "It is the strictest fulfillment reliability measure and therefore always the lowest-looking number on the dashboard, which is the point: it is the only one that reflects the customer's actual experience of a flawless order. A low perfect order rate with high component rates means your failures are spread across different orders rather than concentrated, which is worse for customers and harder to fix than one broken process.",
+    "interview_use": "The SCOR reliability metric, so it pairs naturally with a SCOR-framed answer. The high-value move is the arithmetic: because the components multiply, four components each at 97 percent produce a perfect order rate of about 88.5 percent (0.97 to the fourth power). Saying that out loud shows you understand why incremental improvement on any single component has limited effect and why the right question is which component is the worst. It is also a strong answer to 'what one metric would you put on an executive dashboard', because it resists the gaming that single-dimension metrics invite.",
+    "watch_out": "The component list is not standardized — companies variously include invoice accuracy, correct documentation, damage-free, correct quantity, correct item, and no customer complaint, so two companies' perfect order rates are not comparable and a company that improves its number may simply have dropped a component. Because it multiplies, it is also extremely sensitive to adding a fifth or sixth condition, so a sudden drop may be a definition change rather than a performance change — check that before diagnosing."
+  },
+  {
+    "id": "lead-time",
+    "name": "Lead Time",
+    "domains": [
+      "Supply Chain",
+      "Operations"
+    ],
+    "formula": "Elapsed time from a defined trigger to a defined receipt. Purchasing lead time = PO release to dock receipt. Customer order lead time = order placement to delivery. Manufacturing lead time = order release to production complete.",
+    "plain_english": "How long you wait from asking for something to having it available to use or sell.",
+    "good_bad": "Shorter is better and compounds: shorter lead time means less cycle stock, less safety stock, less forecast horizon to be wrong over, and faster response to demand change. But the average is the less important half of the story — lead-time variability drives safety stock and service failures more than the mean does. A supplier with a reliable 30-day lead time is genuinely easier to plan around than one averaging 18 days with a range of 5 to 45.",
+    "interview_use": "The most consistently underrated lever in supply chain interviews, because shortening it improves inventory, service, and forecast accuracy at once rather than trading them off. When asked how to cut inventory, lead time should be your first answer, not safety stock. Quantify it: safety stock scales with the square root of lead time, so halving lead time cuts required safety stock by about 29 percent at the same service level, which turns a vague 'work with suppliers' into a sized benefit. Always decompose before promising a reduction — order processing, supplier queue and manufacturing, transit, customs, receiving and put-away — because the reducible days are rarely where people assume.",
+    "watch_out": "The endpoints are the whole definition and are constantly equivocated. Suppliers quote lead time from order acknowledgement while buyers experience it from requisition, and the gap between those two is often the largest single block of days. 'Lead time' also means different things by discipline in the same conversation: replenishment lead time, manufacturing lead time, customer-facing order-to-delivery, and DORA's lead time for changes are four different measures. Finally, a single average hides the tail — get the distribution or at least the 90th percentile, because your safety stock is sized against variability, not against the mean."
+  },
+  {
+    "id": "safety-stock",
+    "name": "Safety Stock",
+    "domains": [
+      "Supply Chain"
+    ],
+    "formula": "Demand variability only, constant lead time: SS = z x sigma_d x sqrt(L). Demand and lead-time variability: SS = z x sqrt(L x sigma_d^2 + (mean daily demand)^2 x sigma_L^2). Here z is the service factor for the target cycle service level, sigma_d is the standard deviation of demand per period, L is lead time in those same periods, and sigma_L is the standard deviation of lead time.",
+    "plain_english": "Extra inventory held specifically to absorb demand and lead-time uncertainty, so a normal bad week does not become a stockout.",
+    "good_bad": "Enough safety stock means variability gets absorbed instead of turning into lost sales; too much means cash, space, and obsolescence risk with no service benefit. The trade-off against carrying cost is non-linear and that is the key insight: because z grows faster than service level near the top, moving a target from 95 to 99 percent moves z from about 1.65 to about 2.33, which is roughly 41 percent more safety stock for four points of service. Whether that is worth it depends entirely on the margin on a sale versus the carrying cost, and it is almost never worth it uniformly across every SKU.",
+    "interview_use": "Knowing that safety stock scales with the square root of lead time, not linearly, is one of the highest-value facts you can bring to an inventory question — it means lead-time reduction and lead-time stabilization are cheaper levers than buying service level with stock, and it lets you size the benefit on the spot. Also be ready to argue for differentiating the service level by ABC class and by criticality rather than applying one target everywhere, since a uniform 98 percent target is simultaneously too expensive for C items and too thin for critical ones.",
+    "watch_out": "The z factor comes from the target cycle service level — the probability of not stocking out during a replenishment cycle — which is not the same thing as fill rate, the share of units or orders actually served. Conflating the two is the single most common technical error in inventory interviews, and it systematically under-sizes safety stock for lumpy demand. The formulas above also assume approximately normal, independent demand, which fails badly for slow-moving or intermittent items (where Poisson or Croston-style methods apply) and for promotional demand. And safety stock sized off historical variability silently encodes past forecast error as permanent, so improving the forecast should be followed by re-sizing it rather than leaving the buffer in place."
+  },
+  {
+    "id": "cash-to-cash",
+    "name": "Cash-to-Cash Cycle Time (Cash Conversion Cycle)",
+    "domains": [
+      "Supply Chain",
+      "Financial Literacy"
+    ],
+    "formula": "C2C = DIO + DSO - DPO (Days Inventory Outstanding + Days Sales Outstanding - Days Payables Outstanding)",
+    "plain_english": "How many days your cash is tied up between paying suppliers and collecting from customers.",
+    "good_bad": "Shorter is better, and it can legitimately go negative — you collect from customers before you pay suppliers, so suppliers are financing your growth. Amazon and Dell are the canonical negative-C2C examples. A negative or very short cycle means growth funds itself; a long cycle means growth consumes cash and you need financing to expand. It is the metric that connects a supply chain job to the CFO's concerns, which makes it the best single metric for a supply chain candidate to be fluent in.",
+    "interview_use": "The strongest way to show that you understand supply chain as a financial function rather than a logistics function. When asked about inventory reduction, frame it as one of three levers on C2C and note that the other two are usually owned elsewhere — DSO by finance and collections, DPO by procurement and treasury — which is a natural, credible answer to a question about cross-functional influence. Be able to compute it and to say which leg you would attack and why.",
+    "watch_out": "Improving C2C by stretching DPO is the easiest and most frequently abused lever, and it is not free: it pushes working capital onto suppliers, who price it back in, degrade their service, or in the case of a small sole-source supplier fail outright — which is a supply risk you created to improve a finance metric. Say this unprompted. Also, all three legs use different denominators (DIO on COGS, DSO on revenue, DPO on COGS or purchases), so they are not directly additive in a strict accounting sense even though the convention adds them; and the DPO denominator convention (COGS versus purchases) varies by company, which makes cross-company comparison unreliable."
+  },
+  {
+    "id": "freight-cost-per-unit",
+    "name": "Freight Cost per Unit",
+    "domains": [
+      "Supply Chain",
+      "Operations"
+    ],
+    "formula": "Total freight spend / Units shipped (variants: per case, per pound, per cubic foot, per shipment, or freight as a percent of revenue)",
+    "plain_english": "What it costs on average to physically move one unit to where it needs to be.",
+    "good_bad": "Lower is better only if service held and the mix did not change. A falling cost per unit is good when it comes from better trailer cube utilization, mode optimization, consolidation, or renegotiated rates. It is meaningless when it comes from a mix shift toward denser or closer-shipping products, and it is actively bad when it comes from downgrading service in a way that shows up later as lost sales or expedite freight in another cost center.",
+    "interview_use": "The metric to reach for in any transportation or network question, but the value is in choosing the denominator deliberately. Say why you chose it: per unit for a stable product mix, per pound or per cubic foot when density varies, and freight as a percent of revenue for an executive conversation. If asked to reduce it, give the ordered lever list — mode shift, consolidation and load building, cube and weight utilization, network and node placement, carrier rate negotiation, and reducing expedites — and note that reducing expedites is usually the largest and is a symptom of a planning problem rather than a freight problem.",
+    "watch_out": "The denominator choice can reverse the conclusion, so a reported improvement often turns out to be mix rather than performance — always ask whether unit density and average distance were constant over the comparison period. Expedited and premium freight hides inside the blended average and is where the real money is, so separate it out and report it as its own line. Accessorial charges (detention, fuel surcharge, residential, liftgate) are frequently excluded from the freight figure people quote and can be a large share of true landed cost. And inbound freight is typically capitalized into inventory and flows through COGS while outbound is often a selling expense, so the two may not even live in the same report."
+  },
+  {
+    "id": "cost-to-serve",
+    "name": "Cost-to-Serve",
+    "domains": [
+      "Supply Chain",
+      "Financial Literacy"
+    ],
+    "formula": "Fully allocated cost to fulfill a specific customer, channel, order profile, or product — typically warehousing + pick and pack labor + freight + returns + customer service + allocated overhead — expressed per order, per customer, or per unit",
+    "plain_english": "What it actually costs to serve this particular customer or channel, rather than the company average.",
+    "good_bad": "The value is not in the level but in the spread. The standard finding is that a minority of customers, channels, or SKUs are unprofitable at the margin once real fulfillment cost is allocated to them, and the average hides it completely. High cost-to-serve is not automatically bad if the customer's margin supports it; the problem is a high-cost, low-margin customer being served on standard terms because nobody measured it.",
+    "interview_use": "The right answer when asked why margin is falling while prices and unit costs are flat, and the right frame for any question about small orders, drop-ship, e-commerce versus wholesale, or minimum order quantities. Strong answers name the response options rather than only the diagnosis: reprice, restructure the terms (minimum order quantity, order frequency, delivery windows), change the fulfillment path, or in the last resort exit the account. Tie it to activity-based costing vocabulary if the interviewer is finance-facing.",
+    "watch_out": "It is an allocation exercise, so the conclusion is only as good as the cost drivers, and a bad driver (allocating warehouse cost by revenue rather than by touches or cube) manufactures fake winners and losers. It is not a standardized metric, so no external benchmark exists and cross-company comparison is meaningless. The most important caution is on acting: allocated fixed overhead does not disappear when you drop a customer, so a customer who is unprofitable on a fully allocated basis may still be contributing above their incremental cost — the drop-or-keep decision belongs on avoidable cost, not allocated cost."
+  },
+  {
+    "id": "oee",
+    "name": "OEE (Overall Equipment Effectiveness)",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "OEE = Availability x Performance x Quality, where Availability = Run Time / Planned Production Time, Performance = (Ideal Cycle Time x Total Count) / Run Time, and Quality = Good Count / Total Count. Equivalently OEE = (Good Count x Ideal Cycle Time) / Planned Production Time.",
+    "plain_english": "Of the time you planned to produce, the fraction spent actually making good product at full rate.",
+    "good_bad": "Higher is better, and the commonly cited 85 percent world-class figure (roughly 90 percent availability x 95 percent performance x 99 percent quality) is a discrete-manufacturing rule of thumb rather than a universal target — process industries and highly variable job shops legitimately run different numbers. What matters far more than the level is the decomposition, because 55 percent from poor availability and 55 percent from poor quality are unrelated problems with unrelated owners.",
+    "interview_use": "Never accept or quote the composite alone: ask for the three components, and say why. That single move is usually enough to pass the technical bar on an equipment question. The second move that lands is connecting OEE to Theory of Constraints — improving OEE on a machine that is not the system bottleneck converts cash into work in process and adds no throughput, so the first question is whether this asset is the constraint at all.",
+    "watch_out": "Availability uses Planned Production Time, which excludes planned downtime, so you can raise OEE by planning more downtime without changing anything real — check whether the planned-time basis changed before believing an improvement. Performance depends on the Ideal Cycle Time you chose as the denominator, so an optimistic or stale ideal makes a healthy machine look bad and a padded one makes a poor machine look fine. The composite also hides direction: two plants at 60 percent can need opposite interventions. If you want a measure against all calendar time rather than planned time, that is TEEP, and it will always look far worse."
+  },
+  {
+    "id": "throughput",
+    "name": "Throughput",
+    "domains": [
+      "Operations",
+      "Supply Chain"
+    ],
+    "formula": "Good units of output / Unit of time (per hour, per shift, per day)",
+    "plain_english": "How much usable output the system actually produces per unit of time.",
+    "good_bad": "Higher is better, but only system throughput counts. The system's throughput equals the throughput of its constraint, so raising output anywhere else produces work in process, not product. This is why a plant can report rising station-level productivity and flat shipments in the same quarter, and being able to explain that gap is worth more in an interview than any number.",
+    "interview_use": "The metric that anchors any capacity question, and the natural bridge to Theory of Constraints and Little's Law. Distinguish it clearly from capacity (the maximum possible) and from utilization (how much of capacity you used), because interviewers use the three interchangeably and you should not. When asked to raise throughput, the ordered answer is identify the constraint, exploit it at zero cost, subordinate the rest to it, then and only then add capacity.",
+    "watch_out": "Throughput counted before quality inspection is not throughput — count good units only, or you are measuring how fast you make scrap. Be explicit about the time basis and whether it is per available hour, per scheduled hour, or per calendar hour, since those differ by a large factor. Goldratt's accounting definition of throughput is different again (revenue minus truly variable cost), so in a Theory of Constraints conversation confirm which sense is meant. And a throughput target with no quality or safety counter-metric reliably produces exactly the behavior you would expect."
+  },
+  {
+    "id": "cycle-time",
+    "name": "Cycle Time",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Process cycle time = 1 / throughput rate (average time between successive completed units at steady state). Often confused with flow time or throughput time = total elapsed time for one unit to traverse the process, including waiting.",
+    "plain_english": "How often a finished unit comes off the process — or, in the other common usage, how long one unit takes to get all the way through.",
+    "good_bad": "Shorter is generally better for both senses, but they respond to different actions. Cutting process cycle time requires more capacity or faster work at the constraint. Cutting flow time is usually achieved by cutting work in process and batch sizes, with no capacity change at all, which is why Little's Law is the more useful tool for it.",
+    "interview_use": "Define which sense you mean before you compute anything, out loud — 'by cycle time I mean the average time between units off the line, so about 40 seconds' — because this is the single most-abused term in operations interviews and an interviewer may be testing exactly that. Pair it with takt time to answer capacity-sufficiency questions (you need cycle time at or below takt) and with Little's Law to answer wait-time questions.",
+    "watch_out": "At least three distinct meanings circulate in the same conversation: machine cycle time (one machine's repeat interval), process cycle time (system output interval, the inverse of throughput), and lead or flow time (end-to-end elapsed time for one unit). Agile and DevOps teams add a fourth usage (work start to work done for a ticket). Averaging cycle time across a mixed product line produces a number that describes nothing that runs on the line. And measuring cycle time on a non-constraint step and improving it changes system output by exactly zero."
+  },
+  {
+    "id": "takt-time",
+    "name": "Takt Time",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Takt = Available production time / Customer demand in that same time (available time should be net of planned breaks and planned downtime)",
+    "plain_english": "The drumbeat the customer sets — how often you must finish a unit to exactly keep up with demand.",
+    "good_bad": "Takt is not good or bad; it is a requirement handed to you by demand, and it changes when demand changes. What is good or bad is your cycle time relative to it. Cycle time above takt means you cannot meet demand and need capacity, overtime, or a line rebalance. Cycle time well below takt means idle capacity, and the Lean response is to rebalance work across fewer stations rather than to let everyone work slowly.",
+    "interview_use": "The cleanest way to answer 'do we have enough capacity' with arithmetic rather than opinion, and the basis for line balancing: divide total work content by takt to get the theoretical number of stations required. Saying explicitly that takt is set by the customer while cycle time is set by your process is a small line that signals real Lean literacy.",
+    "watch_out": "Takt is not a speed you can increase — if cycle time exceeds takt, you are short of capacity, and telling people to work faster is the wrong response. Available time must be net of planned breaks, meetings, and changeovers, or your takt will be optimistic and your line will quietly fail to hit it every day. Takt is also a period average, so it does not protect you against within-day demand peaks, which is why drive-thru and warehouse staffing are built on peak-interval demand rather than daily takt. And computing takt against a forecast rather than actual demand inherits every forecast error into your capacity plan."
+  },
+  {
+    "id": "capacity-utilization",
+    "name": "Capacity Utilization",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Actual output / Maximum sustainable output, or equivalently Hours actually run / Hours available",
+    "plain_english": "How much of your available capacity you actually used.",
+    "good_bad": "This is the metric where the intuitive reading is most often wrong. High utilization is not the goal: queueing behaviour means average wait time rises non-linearly as utilization approaches 100 percent, and any variability in arrivals or service times amplifies it, so a system run at 95 percent utilization has dramatically worse lead times than one at 80 percent with the same capacity. High utilization is desirable at the constraint and actively harmful at a non-constraint, where it only builds work in process.",
+    "interview_use": "One of the best available opportunities to sound senior. When an interviewer suggests raising utilization to cut unit cost, the strong response is that the cost saving is real but is paid for in lead time and work in process, and that you would only push utilization high at the constraint while deliberately holding buffer capacity elsewhere. In a services or knowledge-work context, the same logic explains why teams staffed to 100 percent utilization miss every date.",
+    "watch_out": "The denominator is where the argument is: theoretical capacity, demonstrated capacity, and capacity net of planned maintenance and changeovers give very different numbers from the same plant, and people choose the one that supports their case. Utilization also says nothing about whether the output was good or needed — running scrap or building unsellable inventory registers as high utilization, which is precisely why absorption-based unit cost targets can drive overproduction. Treat 100 percent utilization as a warning sign rather than an achievement."
+  },
+  {
+    "id": "cost-per-unit",
+    "name": "Cost per Unit",
+    "domains": [
+      "Operations",
+      "Financial Literacy"
+    ],
+    "formula": "Total cost / Units produced. Specify the cost base: variable cost only, full manufacturing cost, or fully absorbed cost including allocated fixed overhead.",
+    "plain_english": "The average cost to make or handle one unit — a number that depends heavily on which costs you decided to include.",
+    "good_bad": "Lower looks better and often is not. A fully absorbed unit cost falls automatically as volume rises, purely because fixed cost spreads across more units, so 'we reduced unit cost 8 percent' may mean nothing more than 'we ran more'. It can also fall because the mix shifted toward easier products. Only a reduction in variable cost per unit at constant mix, or a genuine productivity gain, is real.",
+    "interview_use": "Always ask what is in the number and whether volume and mix were constant across the comparison, then decompose into the labor, material, overhead, and freight components before proposing anything. For any make-versus-buy, shutdown, or accept-the-order decision, say clearly that you would decide on incremental and avoidable cost rather than fully absorbed cost — that distinction is the most commonly failed finance question in an operations interview.",
+    "watch_out": "The absorption trap is the serious one: under absorption accounting, producing more than you sell moves fixed overhead onto the balance sheet inside inventory, which lowers reported unit cost and raises reported profit while the business gets worse. That is a real incentive that has driven real overproduction, and naming it is a strong signal. Also watch the denominator — units started, units completed, or good units — since using units started rather than good units silently charges scrap to nobody."
+  },
+  {
+    "id": "first-pass-yield",
+    "name": "First Pass Yield (FPY)",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Units passing a step with no rework and no scrap / Units entering that step. Rolled Throughput Yield = the product of FPY across all steps.",
+    "plain_english": "The share of units that came out right the first time, without being fixed on the way.",
+    "good_bad": "Higher is better, and FPY is more honest than final yield because final yield counts reworked units as successes and therefore hides the entire cost of rework — the labor, the delay, and the fact that a reworked unit often fails in the field. A high final yield sitting on a low FPY describes a process held together by people fixing things, which is expensive, invisible in the yield number, and the first thing to break under volume.",
+    "interview_use": "The multiplication is the interview-winning fact: ten sequential steps at 98 percent FPY each give a rolled throughput yield of about 82 percent (0.98 to the tenth power), so a process where every step looks excellent can still deliver fewer than five in six units clean. Use it to argue for measuring yield per step rather than only at the end, and to argue for moving inspection upstream of the constraint so the constraint never processes a unit that will be scrapped later.",
+    "watch_out": "The definition hinges on what counts as rework, and quiet in-line touch-ups that nobody logs inflate FPY — the measurement-system question from DMAIC's Measure step applies directly. Be clear whether you are quoting per-step FPY or rolled throughput yield, since they differ enormously in a long process and people quote the flattering one. And FPY computed on units started versus units completed differs whenever there is scrap, so state which."
+  },
+  {
+    "id": "labor-productivity",
+    "name": "Labor Productivity",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Output / Labor input — units per labor hour, orders per FTE, or revenue per FTE depending on the level of the question",
+    "plain_english": "How much gets done per hour of work paid for.",
+    "good_bad": "Higher is better when it comes from better process, layout, tooling, or training. It is not better when it comes from an easier order mix, from deferred maintenance, from cutting the quality checks, or from people working unsafely, and all four of those show up as productivity gains in the short run. Productivity that rises while defect rate or injury rate also rises is not a gain, it is a cost transfer.",
+    "interview_use": "Whenever you propose a productivity target, name the counter-metric in the same breath — quality, safety, and attrition — because an interviewer at Amazon, Boeing, or Costco has watched a rate target degrade all three. If asked to improve productivity, put process and layout changes ahead of effort: eliminate travel and search time, fix the sequencing, stage materials, and remove the handoffs, since those raise output without raising strain.",
+    "watch_out": "Labor input is defined three different ways and the choice moves the number a lot: paid hours (includes idle, breaks, training), worked hours, and direct hours on the task. Comparing sites or periods on different bases is meaningless. Mix is the other systematic distortion — a shift that happened to get simpler orders will show higher productivity with no behavioural change, so normalize by order or item profile before drawing conclusions. And revenue per FTE moves with price and mix, which makes it a business metric rather than an operational one; do not use it to evaluate a team."
+  },
+  {
+    "id": "units-per-hour",
+    "name": "Units per Hour (UPH / Rate)",
+    "domains": [
+      "Operations"
+    ],
+    "formula": "Units processed / Labor hours worked on that process path",
+    "plain_english": "The per-person hourly rate for a specific task — picking, packing, stowing, receiving.",
+    "good_bad": "Higher is better within a process path and for comparable work. Its virtue is granularity: it is measurable per person, per hour, and per path, which makes it actionable in a way that plant-level productivity is not. Its vice is that the same granularity makes it easy to hold people accountable for variation they do not control, such as item profile, travel distance, congestion, or upstream staging quality.",
+    "interview_use": "Central to Amazon fulfillment and to any warehouse operations conversation, so be ready to discuss it concretely. The strong position is that UPH is a diagnostic for process problems first and a performance measure second: if a path's UPH drops, look at slotting, travel distance, item mix, equipment availability, and upstream staging before looking at people. Pair any rate discussion with defect rate and safety, and be prepared to say plainly that a rate target with no counter-metric is a known failure mode.",
+    "watch_out": "UPH is not comparable across process paths, item profiles, or facility layouts, and rolling it up into a single facility number destroys the only thing that made it useful. Excluding indirect time (travel, waiting on equipment, problem-solving) from the denominator inflates it, and where that time is booked varies by site. Because it is measured per person, it also has genuine fairness and labor-relations implications, so an answer that treats it purely as a lever to push lands badly with experienced operations interviewers."
+  },
+  {
+    "id": "dau-mau",
+    "name": "DAU / MAU (Stickiness Ratio)",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "formula": "Daily Active Users / Monthly Active Users, where MAU is usually a trailing 28 or 30 day window",
+    "plain_english": "Of the people who used the product this month, what share use it on an average day — a proxy for habitual use.",
+    "good_bad": "Higher means more habitual use. Roughly, a ratio near 1.0 is a daily-habit product, 0.5 means a typical user shows up every other day, and 0.1 means monthly. But there is no universally good number, because the right ratio depends entirely on the product's natural cadence — a payroll tool or a tax product with a ratio of 0.05 can be perfectly healthy, while a messaging app at 0.3 is in trouble. Comparing the ratio across products with different use cases is meaningless.",
+    "interview_use": "Know it because product interviewers use it as shorthand, but the higher-value move is to say when it is the wrong metric: if the product has no genuine daily use case, DAU/MAU measures the wrong thing and cohort retention against the natural usage cadence is the better lens. Use it as a supporting metric alongside retention rather than as a headline.",
+    "watch_out": "The most important trap is that it is a ratio, so it can rise because the denominator is shrinking — a product losing casual monthly users looks 'stickier' while dying. Always read the numerator and denominator in absolute terms alongside the ratio. It is also highly definition-sensitive: what counts as 'active' (opened the app, or performed a meaningful action) and whether MAU is 28 or 30 days both move it materially, and both are easy to quietly redefine. And it says nothing about whether the daily use is valuable or compulsive."
+  },
+  {
+    "id": "retention",
+    "name": "Retention / Cohort Retention",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "formula": "For a cohort defined by signup period: Day-N retention = users active on day N / users in the cohort. Rolling or unbounded retention = users active on or after day N / cohort. Range retention = users active within a window around day N / cohort.",
+    "plain_english": "Of the people who started using the product at the same time, how many are still using it later.",
+    "good_bad": "The shape of the curve matters far more than any single point. A curve that decays and then flattens to a non-zero asymptote means you have a group of people for whom the product genuinely works, which is the actual quantitative signal of product-market fit. A curve that keeps sloping toward zero means nobody sticks and no amount of acquisition spend will fix it. A high Day-1 number with a collapsing Day-30 number usually means good onboarding attached to a weak core value.",
+    "interview_use": "The metric to reach for when asked how you would tell whether a product is working, and the correct rebuttal to any growth story built on acquisition. Always say 'cohorted' — comparing aggregate active users over time confounds new-user inflow with existing-user decay and can hide a retention collapse entirely behind a marketing push. If asked to improve retention, segment by cohort and by acquisition channel first, since a channel can quietly deliver users who never had the relevant problem.",
+    "watch_out": "The three definitions produce wildly different numbers from identical data, and the difference grows with N, so any retention figure without its definition is uninterpretable — classic retention (active exactly on day N) looks far worse than unbounded retention (active at any point on or after day N), and teams under pressure migrate toward the flattering one. Also watch the survivorship problem: recent cohorts have not had time to decay, so including them in an average retention figure makes retention look like it is improving. And retention of the wrong action (opened the app) can be flat while retention of the valuable action collapses."
+  },
+  {
+    "id": "churn-rate",
+    "name": "Churn Rate",
+    "domains": [
+      "Program & Product Management",
+      "Financial Literacy"
+    ],
+    "formula": "Customer churn = customers lost during the period / customers at the start of the period. Revenue (gross) churn = recurring revenue lost / recurring revenue at start. Net revenue churn = (revenue lost - expansion revenue from existing customers) / revenue at start.",
+    "plain_english": "The share of customers, or of recurring revenue, that you lost over a period.",
+    "good_bad": "Lower is better. Net revenue churn can be negative, which is excellent — existing customers are expanding faster than others are leaving, so revenue grows with zero new acquisition. The gap between customer churn and revenue churn is itself diagnostic: customer churn much higher than revenue churn means you are losing small accounts, which may be acceptable, while revenue churn higher than customer churn means you are losing your large ones, which is urgent.",
+    "interview_use": "Be precise about which churn you are quoting, because gross and net are the standard place where a growth story gets dressed up. The arithmetic worth knowing: monthly churn does not annualize linearly. Five percent monthly churn is 1 minus 0.95 to the twelfth power, about 46 percent annually, not 60 percent — and getting that right when an interviewer offers the linear number is a cheap, memorable win. Churn is also the input that LTV is most sensitive to, so any LTV claim should be interrogated at its churn assumption.",
+    "watch_out": "The denominator convention varies: customers at period start, average customers over the period, or start plus new — and fast-growing companies favour the one that dilutes churn. Whether new customers who join and leave within the same period are counted at all is another quiet choice. For usage-based or non-contractual businesses, churn requires an arbitrary inactivity definition (no purchase in 90 days?) which means the metric is partly a policy decision. And a monthly churn figure on an annual-contract business is close to meaningless because the churn opportunity only arrives at renewal, so cohort the renewals instead."
+  },
+  {
+    "id": "cac",
+    "name": "CAC (Customer Acquisition Cost)",
+    "domains": [
+      "Program & Product Management",
+      "Financial Literacy"
+    ],
+    "formula": "Total sales and marketing spend in a period / New customers acquired in that period. Paid CAC uses only paid-channel spend and paid-acquired customers; blended CAC uses all spend over all new customers including organic.",
+    "plain_english": "What it costs on average to land one new customer.",
+    "good_bad": "Lower is better, but only relative to what that customer is worth — CAC alone is not interpretable, which is why it is always read against LTV or against a payback period. A rising CAC is normal as you scale beyond your cheapest channels and is not automatically a problem; a CAC rising faster than LTV is. CAC payback period (months of gross profit to recover CAC) is often the more operationally useful version because it speaks to cash, not just ratio.",
+    "interview_use": "Ask three things before using any CAC figure: what is in the numerator, is it blended or paid, and how is the lag handled. Fully loaded CAC (including salaries, tooling, agency fees, and creative production) can be two to three times a media-only CAC for the same business, so a CAC comparison across companies is usually a comparison of accounting choices. Framing CAC payback in months rather than a bare LTV-to-CAC ratio reads as more commercially literate.",
+    "watch_out": "Three specific distortions. First, blended CAC flatters you by dividing paid spend across organically acquired customers too, so it systematically understates the cost of the next customer, which is the number that actually matters for a spend decision. Second, lag — spend in one month acquires customers in later months, so naive same-period division understates CAC in a growing business and overstates it in a shrinking one; cohort the spend to the customers it produced. Third, marginal CAC is what matters for a budget decision and is always higher than average CAC, because you spend your cheapest dollars first."
+  },
+  {
+    "id": "ltv",
+    "name": "LTV (Customer Lifetime Value)",
+    "domains": [
+      "Program & Product Management",
+      "Financial Literacy"
+    ],
+    "formula": "Simplified subscription form: LTV = (ARPA x Gross Margin %) / Churn Rate, where churn and ARPA are on the same period basis. Equivalently ARPA x Gross Margin % x average lifetime, with average lifetime approximated as 1 / churn rate.",
+    "plain_english": "The total gross profit you expect to earn from a typical customer over the whole time they stay.",
+    "good_bad": "Higher is better, and it is only meaningful against CAC — the widely quoted LTV-to-CAC target of about 3 to 1 is a venture rule of thumb, not a law, and the right ratio depends on payback period, capital cost, and growth stage. Be more suspicious of a high LTV than of a low one, because every simplification in the formula pushes the estimate upward.",
+    "interview_use": "Treat the formula as a sensitivity exercise rather than a valuation. The single most useful thing to say is that LTV is dominated by the churn assumption, so an LTV quoted to three significant figures off a churn estimate with a wide confidence interval is false precision — and that you would therefore compare a range, or use a fixed-horizon value (12-month or 24-month gross profit per customer) which is far more defensible. Insisting on gross profit rather than revenue is the other quick credibility marker.",
+    "watch_out": "Three real overstatements, all common. Computing LTV on revenue rather than gross profit inflates it by the whole cost of service — always apply gross margin. Using 1 divided by churn assumes a constant churn rate, but churn is nearly always much higher in early periods and declines for survivors, so the constant-rate model overstates lifetime, sometimes badly. And an undiscounted LTV over a multi-year horizon ignores the time value of money and the growing uncertainty of far-future periods. Because of all three, LTV is the most frequently inflated metric in a product or growth conversation, and treating any single point estimate as a fact is the trap."
+  },
+  {
+    "id": "nps",
+    "name": "NPS (Net Promoter Score)",
+    "domains": [
+      "Program & Product Management",
+      "Operations"
+    ],
+    "formula": "NPS = % Promoters (score 9-10) minus % Detractors (score 0-6). Passives (7-8) are excluded from the numerator but counted in the denominator. Range: -100 to +100.",
+    "plain_english": "Ask how likely people are to recommend you on a 0-10 scale, then subtract the share of critics from the share of enthusiasts.",
+    "good_bad": "Higher is better and positive is better than negative, but absolute levels are not comparable across industries or geographies — cultural response patterns alone shift NPS by tens of points, so a European NPS and a US NPS on the same product legitimately differ. The defensible uses are tracking your own score over time with a fixed methodology and comparing segments measured the same way. Cross-company NPS comparison, which is what NPS is most often used for, is close to meaningless.",
+    "interview_use": "Know the formula exactly, including that 7-8 are excluded from the numerator but not the denominator, because that is a common quick-check question. Then have a view: the score is a blunt summary and the verbatim comments are the actionable output, so a strong answer to 'how would you use NPS' is to use the score as a trend tripwire and the open-text responses as the diagnostic. Pair it with a behavioural metric like retention, because stated intent to recommend and actual behaviour diverge.",
+    "watch_out": "Collapsing an eleven-point scale into three buckets throws away information, so NPS can stay flat while sentiment shifts substantially inside the buckets — a mass of 6s moving to 8s registers as a real improvement while 9s moving to 10s registers as nothing. As a difference of two proportions it also has a wide confidence interval, so at a few hundred responses a five-point move is usually noise, and teams routinely over-read it. Response bias is severe because the delighted and the angry answer surveys and the indifferent do not. And because it is often tied to compensation, it attracts outright gaming — solicitation timing, asking only happy customers, and coaching the number are all common."
+  },
+  {
+    "id": "activation-rate",
+    "name": "Activation Rate",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "formula": "New users who complete a defined first-value action within a defined window / Total new users in that cohort",
+    "plain_english": "The share of new users who actually reach the point where the product does something useful for them.",
+    "good_bad": "Higher is better, and activation is usually the highest-leverage funnel step because everything downstream is conditional on it — improving retention among users who never activated is impossible. But the level is entirely an artefact of your definition: pick an easy action and a long window and activation is 80 percent; pick a hard action and a short window and it is 15 percent. The number by itself communicates nothing without the definition attached.",
+    "interview_use": "The value of the metric is choosing the right action, so make that the substance of your answer: the activation event should be the earliest action that measurably predicts retention, and you validate it by checking that activated cohorts retain materially better than non-activated ones. Saying you would run that correlation before committing to the definition is what distinguishes a product answer from a dashboard answer. Then improve it with onboarding, time-to-value reduction, and removing setup steps rather than with prompts and nags.",
+    "watch_out": "Because it is definition-dependent, activation is the easiest metric in this list to improve without improving the product — move the goalpost and the number moves. Insist on knowing when the definition last changed before interpreting a trend. The other failure is choosing a correlated-but-not-causal gate: 'invited a teammate' may correlate with retention because retained teams invite people, not because inviting causes retention, and optimizing the invite prompt then produces a beautiful activation chart and flat retention."
+  },
+  {
+    "id": "milestone-slippage",
+    "name": "Milestone Slippage",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "formula": "Slip in days = actual completion date minus the original baseline date. Programme-level: % of milestones delivered on or before their original baseline date.",
+    "plain_english": "How late things landed compared to what you originally committed to.",
+    "good_bad": "Less slip is better, and consistent small slip is healthier than occasional enormous slip because it means estimates are roughly calibrated. Zero slip across a whole programme is itself a warning sign: it usually means milestones are padded, trivially small, or re-baselined, not that execution is flawless. What matters most is whether slip is detected early — slip discovered a week before the date is a planning failure regardless of its size.",
+    "interview_use": "Central to TPM and programme management interviews, where 'a project is behind schedule, what do you do' is a standard prompt. The strong answer separates the reporting problem from the recovery problem: measure against the original baseline and report both original and current dates so the trend is visible, then recover by cutting scope, adding capacity, or moving the date, and say which lever you would pull and why. Also name the leading indicators you would watch instead of waiting for the milestone — blocker age, unplanned scope added, dependency status, and the rate at which remaining work is being discovered.",
+    "watch_out": "Re-baselining is the central abuse: resetting the baseline makes slip vanish from the report while the programme is exactly as late, so always ask against which baseline a schedule-adherence number was computed and insist on keeping the original visible. Counting milestones hit rather than days slipped incentivises slicing work into many tiny milestones. And slip is a lagging indicator by construction — by the time it registers, the decision window has closed, which is why an answer that relies only on slippage tracking is weaker than one that pairs it with leading signals."
+  },
+  {
+    "id": "lead-time-for-changes",
+    "name": "Lead Time for Changes (DORA)",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "formula": "Time from code committed to that code running successfully in production. One of DORA's four keys alongside deployment frequency, change failure rate, and time to restore service.",
+    "plain_english": "How long it takes for a finished change to actually reach customers.",
+    "good_bad": "Shorter is better, and it is a good proxy for delivery-pipeline health — long lead times usually mean manual gates, batched releases, slow test suites, or heavy approval processes. But it measures the pipeline, not the product, so a short lead time tells you nothing about whether you are building the right things.",
+    "interview_use": "Useful in TPM and technical programme contexts to show you can speak to engineering health with the standard vocabulary. Always cite it with its counter-metric: improving lead time and deployment frequency while change failure rate rises means you are shipping faster and breaking more, which is not an improvement — DORA's four keys are designed to be read as a set of two throughput and two stability measures precisely for that reason.",
+    "watch_out": "The clock starts at commit, not at idea or request, so it measures delivery and not end-to-end product cycle time. Teams routinely conflate the two and claim a two-hour lead time while ideas still wait six weeks in a backlog, which is where the real delay lives — if the question is about responsiveness to customers, the relevant measure starts at the request. Also, the metric is easily improved by shrinking commits without changing anything real, so read it alongside deployment frequency and change failure rate rather than alone."
+  },
+  {
+    "id": "false-positive-rate",
+    "name": "False Positive Rate",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "Statistically: FPR = FP / (FP + TN) — the share of genuinely negative cases that got flagged. In fraud and compliance operations the same phrase almost always means FP / (FP + TP) — the share of alerts that turn out to be nothing, which is 1 minus precision.",
+    "plain_english": "Either how often you flag something that was actually fine, measured against all the fine things, or how much of your alert queue is noise — two very different numbers that share one name.",
+    "good_bad": "Lower is better in both senses, but the two behave differently and the operational one is what drives cost. Under the class imbalance typical of fraud and AML, a statistically tiny FPR produces an enormous absolute alert volume: flagging 1 percent of a million clean transactions is 10,000 false alerts, which may swamp a review team and dwarf the true positives entirely. So a model can have an excellent statistical FPR and an unworkable operational one at the same time.",
+    "interview_use": "This ambiguity is exactly the kind of thing an experienced risk interviewer probes, so define which one you mean before quoting a number — 'by false positive rate I mean the share of alerts that close as no-action, so 1 minus precision' takes five seconds and prevents a whole conversation from going wrong. Then connect it to cost: false positives cost analyst hours and customer friction (false declines), false negatives cost losses and regulatory exposure, and the threshold should be set where expected total cost is minimised rather than where any single rate looks good.",
+    "watch_out": "Beyond the definitional collision, the operational version depends on how a case is dispositioned, so it measures analyst behaviour and backlog as much as model quality — a team under pressure closes ambiguous alerts as no-action and the false positive rate improves without the model changing. It also silently assumes your labels are right: an alert closed as no-action may have been undetected fraud, which means the measured false positive rate is biased low and the measured recall is biased high. Say that assumption out loud; it is the sophisticated point here."
+  },
+  {
+    "id": "precision-recall",
+    "name": "Precision and Recall",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "Precision = TP / (TP + FP). Recall (sensitivity, detection rate) = TP / (TP + FN). F1 = 2 x Precision x Recall / (Precision + Recall).",
+    "plain_english": "Precision is how much of what you flagged was real. Recall is how much of what was real you caught.",
+    "good_bad": "You cannot maximise both with a fixed model; you trade them against each other by moving the decision threshold. Loosening the threshold raises recall, lowers precision, and increases alert volume and review cost. Tightening it does the reverse and lets more fraud through. Neither is universally better, and the right point depends on the relative cost of a miss and of a false alarm in your specific business — which is a business decision, not a modelling one.",
+    "interview_use": "This is the strongest available ground for someone coming out of marketplace risk and compliance, so go past the definitions to the economics. Frame the threshold choice as an expected-cost calculation: cost of a missed fraud (loss plus chargeback fee plus regulatory and reputational exposure) against cost of a false decline (lost transaction, lost customer lifetime value) against cost of review labour per alert. Note that accuracy is a useless metric under heavy class imbalance — a model that approves everything is 99.9 percent accurate on a 0.1 percent fraud rate — and that precision-recall curves are the right visualisation, not ROC, when positives are rare. Then mention that in regulated domains recall is often effectively floored by the regulator, which removes half the trade-off from your control.",
+    "watch_out": "Both metrics depend on labels you may not have: unreviewed alerts and undetected fraud are unlabelled, so recall computed against confirmed fraud is measured against known fraud and is systematically optimistic. Precision at the portfolio level also hides segment-level failure — a model can be precise overall and terrible on a specific corridor, merchant category, or customer segment, which is where real harm and real fair-lending or discrimination exposure live, so always ask for the breakdown. And F1 weights precision and recall equally, which almost never matches the real cost asymmetry in fraud; use a cost-weighted measure instead and say why."
+  },
+  {
+    "id": "fraud-chargeback-rate",
+    "name": "Fraud Rate and Chargeback Rate",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "Count basis: chargebacks / total transactions. Value basis: chargeback amount / total transaction volume, often quoted in basis points. Fraud loss rate is usually the value version: net fraud loss / total payment volume.",
+    "plain_english": "How much of what you process ends up disputed or lost to fraud, as a share of either transaction count or transaction value.",
+    "good_bad": "Lower is better, and there is a hard ceiling: the card networks run monitoring programmes with published count-based and value-based thresholds, and exceeding them brings fees, remediation plans, and ultimately loss of processing. Check current network rules rather than quoting a threshold number, because they change. But zero is also wrong as a target — driving fraud to zero means declining good customers, so the objective is total cost including false declines, not minimum fraud.",
+    "interview_use": "The single most valuable thing to raise here is the lag, because it catches people out constantly: chargebacks arrive weeks to months after the transaction, so the current month's rate is always understated and will keep rising as disputes land. Any answer that compares this month's rate to last month's without cohorting is wrong, and saying so unprompted is a strong signal. Cohort by transaction date, not by chargeback date, and expect the recent cohorts to be immature. This generalises to any metric whose numerator arrives late.",
+    "watch_out": "Count-based and value-based rates diverge sharply when fraud concentrates in high-value transactions, and people quote whichever is lower — state which you mean. Chargebacks are also not the same thing as fraud: friendly fraud, service disputes, and buyer's remorse all arrive as chargebacks, while fraud that the customer never notices or that you absorb without a dispute never does, so the two metrics overlap without being substitutes. The denominator choice (attempted, authorised, or settled transactions) shifts the rate materially. And a falling fraud rate accompanied by a rising decline rate is not a win, it is a cost you moved somewhere less visible."
+  },
+  {
+    "id": "alert-to-case-conversion",
+    "name": "Alert-to-Case Conversion Rate",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "Alerts escalated to an investigation or case / Total alerts generated. Further down the funnel: cases resulting in a confirmed finding (or a filed report, in AML) / cases opened.",
+    "plain_english": "What share of the alarms your rules and models raise turn out to be worth investigating.",
+    "good_bad": "Neither high nor low is automatically good, which is what makes this a tuning diagnostic rather than a target. Low conversion means noisy rules burning analyst time, and it has a second-order cost: analysts working a queue that is mostly noise become desensitised and miss real cases. Very high conversion often means thresholds are too tight and you are missing fraud that never generated an alert at all — the cases you never see do not appear in this ratio.",
+    "interview_use": "Use it to argue for rule-level rather than portfolio-level tuning: conversion by rule, by segment, and by analyst tells you which specific rule to retire or retune, whereas the aggregate number tells you nothing actionable. Pair it with a coverage measure so the conversation is not one-sided — improving conversion by tightening thresholds looks like a win on this metric while quietly reducing recall, and naming that trade-off is the point. It is also the natural place to discuss the operational cost model: alerts times minutes per review equals the headcount the current thresholds imply.",
+    "watch_out": "It is as much a measure of analyst behaviour and backlog as of rule quality — a team behind on volume closes marginal alerts faster and conversion drops without any change in the underlying rules. It is also easy to game in both directions: suppress low-yield rules and conversion rises while detection falls, or lower the escalation bar and conversion rises while case quality falls. And it is blind to false negatives by construction, so it must never be optimised alone."
+  },
+  {
+    "id": "sla-adherence",
+    "name": "SLA Adherence",
+    "domains": [
+      "Risk & Compliance",
+      "Operations"
+    ],
+    "formula": "Items resolved (or responded to) within the committed target / Total items in scope for that SLA",
+    "plain_english": "The share of work handled inside the time you promised.",
+    "good_bad": "Higher is better, but a high adherence rate with a badly breaching tail is a real and common failure — 95 percent adherence can coexist with a handful of cases sitting 60 days past target, and those are usually the ones that generate regulatory findings or lose the customer. Adherence near 100 percent with slack to spare may also mean the target is set too loosely to mean anything.",
+    "interview_use": "Report and discuss percentiles rather than the mean or the pass rate alone: the p90 and p99 handling times are where the risk is, and an average handle time inside SLA tells you almost nothing about the tail. If asked to improve adherence, distinguish the three causes — volume exceeding capacity, a subset of cases that are structurally slow, and queue prioritisation that lets old items age — because they have different fixes, and ageing the queue by days-to-breach is usually the cheapest immediate improvement.",
+    "watch_out": "The clock definition drives the number more than performance does, and it is where the argument always is: does the clock pause while waiting on the customer or a third party, is it business hours or calendar hours, when exactly does it start (receipt, triage, or assignment), and what happens on reopen? Every one of those is a legitimate policy choice and every one can be quietly changed to improve the metric. Also separate first-response SLA from resolution SLA, since teams often report the easier one, and check whether out-of-scope exclusions have grown — a rising exclusion rate is the most common hidden source of an improving adherence number."
+  },
+  {
+    "id": "audit-finding-closure-rate",
+    "name": "Audit Finding Closure Rate",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "Findings closed / Total findings, usually within a defined due-date window. Often reported alongside % of findings overdue and average age of open findings, weighted by severity.",
+    "plain_english": "What share of the issues auditors raised have actually been fixed and signed off.",
+    "good_bad": "Higher is better but is close to useless unweighted. A 90 percent closure rate is a good picture if the open 10 percent are low-severity and recent, and a bad one if they are all critical findings 200 days overdue. Ageing and severity carry the information; the headline rate mostly carries reassurance. A very high closure rate with recurring repeat findings is the worst pattern of all, because it means issues are being closed without the underlying cause being addressed.",
+    "interview_use": "If asked to report on remediation, say you would report severity-weighted ageing of open findings and the repeat-finding rate alongside the closure rate, not the closure rate alone — that is the answer of someone who has watched a clean dashboard sit on top of an unresolved problem. Tie it to root cause: a finding closed with a compensating manual control has been closed, but the risk that generated it is still there, and the repeat-finding rate is what exposes that.",
+    "watch_out": "'Closed' is doing a lot of work. Closed with validated evidence, closed on management assertion, closed by risk acceptance, closed by re-scoping, and due-date extended are all frequently aggregated into one number, and lumping them flatters it substantially — ask for the split. Extending due dates is the direct analogue of re-baselining a schedule: the metric improves and nothing changed. And counting findings equally means five documentation observations offset one critical control failure, which is why unweighted closure rate should never be the headline."
+  },
+  {
+    "id": "residual-vs-inherent-risk",
+    "name": "Residual vs Inherent Risk",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "formula": "No real arithmetic. Inherent risk = assessed exposure before or without controls. Residual risk = assessed exposure remaining after controls operate as evidenced. Control effectiveness is the qualitative bridge between them, and residual risk is compared against stated risk appetite or tolerance.",
+    "plain_english": "How bad it could be if nothing were in place, versus how bad it still is given what you actually have in place and can prove works.",
+    "good_bad": "Residual risk should sit within stated appetite; if it does not, you either strengthen controls, transfer, avoid, or make a documented acceptance decision at the right level of authority. Low residual risk is only meaningful if it rests on controls whose effectiveness has been tested — a low residual score derived from controls that exist only on paper is the standard way a risk register becomes fiction, and it is exactly what post-incident reviews uncover.",
+    "interview_use": "Decisions and reporting should be based on residual risk, while inherent risk is useful mainly for prioritising where controls matter most and for audit scoping. The strongest thing you can add is the appetite link — a residual risk is not 'acceptable' in the abstract, it is acceptable against a stated tolerance owned by a named person, and saying that converts a scoring exercise into a governance answer. It is also the cleanest vocabulary for describing second-line work: you assess whether controls actually reduce inherent to within-appetite residual, and escalate when they do not.",
+    "watch_out": "The arithmetic does not exist even though heat-map tooling strongly implies it does — there is no defensible 'inherent minus control effectiveness equals residual' calculation, and treating the reduction as a computation rather than a judgement is a common and consequential error. Residual scored off documented rather than tested control operation is the other systematic failure. Practice also varies on whether 'inherent' means truly no controls (largely hypothetical) or no incremental controls beyond baseline, so ask which convention is in use. And residual risk assessed on controls operating individually can badly understate exposure when several controls share a single point of failure, such as one team, one system, or one person."
+  },
+  {
+    "id": "cogs",
+    "name": "COGS (Cost of Goods Sold)",
+    "domains": [
+      "Financial Literacy",
+      "Supply Chain"
+    ],
+    "formula": "COGS = Beginning Inventory + Purchases (or cost of goods manufactured) - Ending Inventory. Includes direct materials, direct labour, inbound freight, and manufacturing overhead attributable to goods sold in the period.",
+    "plain_english": "What the things you actually sold this period cost you to make or buy.",
+    "good_bad": "Not good or bad on its own; it is only meaningful as a share of revenue (which is the inverse of gross margin) or per unit. The important property is that it follows the goods sold, not the goods bought — costs sit in inventory on the balance sheet until the item sells, which is why buying heavily late in a period does not hit the income statement until the product moves.",
+    "interview_use": "The bridge between a supply chain decision and the income statement, so be able to say which line your proposal moves. Sourcing savings, freight savings on inbound, and yield improvements land in COGS and therefore in gross margin; outbound freight, warehousing, and distribution often do not and instead land in operating expense. Knowing which of your levers moves gross margin and which moves operating margin is the difference between a logistics answer and a business answer.",
+    "watch_out": "What belongs in COGS versus operating expense genuinely varies by company, and that is the main reason cross-company gross margin comparisons mislead: some retailers put distribution centre and store occupancy costs in COGS while others report them in SG&A, which shifts gross margin by several points with no operational difference. The inbound-versus-outbound freight split is the specific confusion that catches supply chain candidates — inbound freight is normally capitalised into inventory cost and flows through COGS, while outbound is commonly a selling expense. Also, because inventory valuation method (FIFO, weighted average, LIFO where permitted) determines which costs flow out, COGS moves with accounting policy during price inflation even when nothing physical changes."
+  },
+  {
+    "id": "gross-margin",
+    "name": "Gross Margin",
+    "domains": [
+      "Financial Literacy",
+      "Supply Chain"
+    ],
+    "formula": "Gross Profit = Revenue - COGS. Gross Margin % = (Revenue - COGS) / Revenue.",
+    "plain_english": "The share of each revenue dollar left after paying for the product itself, before any operating costs.",
+    "good_bad": "Higher is generally better and indicates pricing power or cost advantage, but the level is industry-determined — grocery and distribution run thin by nature while software runs high, so the meaningful comparisons are against your own trend and against close peers on the same COGS convention. A rising gross margin driven by mix rather than by price or cost is a different story from one driven by sourcing, so decompose before celebrating.",
+    "interview_use": "The first place to take a margin question, and the natural bridge from an operations improvement to a financial outcome. Decompose any change into price, cost, and mix before diagnosing, because all three move gross margin and only one of them is usually yours. The judgement point worth raising: a sourcing decision that improves unit price and therefore gross margin can destroy more value downstream in quality escapes, expedite freight, warranty, and lost sales — so argue on total landed and total lifecycle cost, not on the purchase price that shows up in this line.",
+    "watch_out": "Not comparable across companies with different COGS conventions, for exactly the reasons in the COGS entry — always check what is in their COGS before benchmarking. Gross margin is also frequently confused with contribution margin, which they are not: gross margin subtracts COGS including fixed manufacturing overhead, while contribution margin subtracts only variable cost, so the two give different answers to a decision about taking an incremental order. And under absorption accounting, gross margin can improve simply because production exceeded sales and overhead was capitalised into inventory, which is an accounting effect rather than a performance one."
+  },
+  {
+    "id": "contribution-margin",
+    "name": "Contribution Margin",
+    "domains": [
+      "Financial Literacy",
+      "Operations"
+    ],
+    "formula": "Contribution Margin = Revenue - Variable Costs. Per unit = Price - Variable Cost per unit. CM ratio = CM / Revenue. Breakeven units = Fixed Costs / CM per unit.",
+    "plain_english": "What each additional unit or order contributes toward covering fixed costs and then profit.",
+    "good_bad": "Higher is better, and the sign is what decides an incremental decision: as long as contribution margin is positive, an additional order improves profit even if it looks unprofitable on a fully allocated basis, because the fixed costs are being incurred anyway. That is the whole reason to use contribution margin rather than gross margin for accept-or-reject, make-or-buy, product-drop, and pricing-floor decisions.",
+    "interview_use": "The most useful finance concept in an operations interview, because it is the correct answer to a class of questions where the intuitive answer is wrong: should we take this low-price order, should we drop this unprofitable SKU, should we keep this facility open. Show the breakeven arithmetic — fixed costs divided by contribution margin per unit — and name the decision horizon. Then close the loop back to operations: contribution margin is the right basis for the decision, and capacity is the constraint that limits how much of the best-contributing mix you can actually run, so the real optimisation is contribution per unit of the constrained resource, not contribution per unit of product.",
+    "watch_out": "Do not confuse it with gross margin — gross margin subtracts COGS, which contains fixed manufacturing overhead; contribution margin subtracts only variable cost. Mixing them is the most common finance error in operations interviews. Which costs are truly variable also depends on the decision and the time horizon rather than being a property of the cost: almost nothing is variable within a week and almost everything is over several years, so state the horizon. And using contribution margin to justify sustained below-full-cost pricing is the well-known trap, because fixed costs still have to be covered by something and a business that fills its capacity with positive-but-thin contribution never earns its cost of capital."
+  },
+  {
+    "id": "fixed-vs-variable-cost",
+    "name": "Fixed vs Variable Cost",
+    "domains": [
+      "Financial Literacy",
+      "Operations"
+    ],
+    "formula": "Total Cost = Fixed Cost + (Variable Cost per unit x Volume). Step-fixed costs jump at capacity thresholds; semi-variable (mixed) costs have both components.",
+    "plain_english": "Some costs stay the same whatever you produce, some scale with how much you produce, and quite a few jump in chunks when you cross a capacity threshold.",
+    "good_bad": "Neither structure is better; they trade risk against leverage. A high fixed-cost structure gives high operating leverage — profit rises fast with volume and collapses fast when volume falls — while a variable-heavy structure (outsourced capacity, third-party logistics, contract labour) sacrifices peak margin for resilience. Which is right depends on demand volatility and how confident you are in the forecast, and saying that rather than picking one is the mature answer.",
+    "interview_use": "The framing question behind outsourcing, network design, automation, and peak-staffing decisions. The point that earns credit: classification is a property of the decision and the horizon, not of the cost, so the same warehouse lease is fixed for this quarter's pricing decision and variable for a three-year network decision. For any make-versus-buy or shutdown question, say explicitly that only avoidable and incremental costs belong in the analysis and that allocated fixed overhead is a trap, because it makes a contributing product look like it loses money.",
+    "watch_out": "The relevant-range caveat is the one people forget: costs are only fixed within a range, and adding a shift, a line, or a building steps them up, so a linear model extrapolated past the threshold is simply wrong. Labour is the perennially miscategorised item — treated as variable in a model and behaving as fixed in practice, because you cannot flex a trained workforce week to week without real cost. And automation converts variable cost into fixed cost, which raises the breakeven volume; an automation case built on unit-cost savings without stating the volume it requires is incomplete."
+  },
+  {
+    "id": "working-capital",
+    "name": "Working Capital",
+    "domains": [
+      "Financial Literacy",
+      "Supply Chain"
+    ],
+    "formula": "Working Capital = Current Assets - Current Liabilities. Operating (or net trade) working capital, the part supply chain moves, is approximately Inventory + Accounts Receivable - Accounts Payable.",
+    "plain_english": "The cash tied up in running the business day to day — mostly inventory and money customers owe you, less money you owe suppliers.",
+    "good_bad": "More working capital is not better, which is the counterintuitive part: it is cash trapped in the business rather than earning a return. Too little, though, and you cannot pay suppliers or fill orders. The goal is the minimum that supports the service level you have committed to, which is exactly the inventory-turnover-versus-fill-rate trade-off expressed on the balance sheet.",
+    "interview_use": "The cleanest way to connect an inventory project to something a CFO cares about: quantify a proposed inventory reduction as cash released, and then as the annual carrying cost avoided at the company's carrying rate. Inventory is the line a supply chain professional can actually move, which makes it a credible thing to own; receivables and payables mostly sit with finance and procurement, and saying so shows you know the boundaries of your role. Move fluently between this and cash-to-cash, since they describe the same thing in dollars and in days.",
+    "watch_out": "Reducing working capital by stretching payables or squeezing inventory can look like value creation while transferring cost and risk elsewhere — to suppliers who reprice or destabilise, or to customers who experience stockouts and then to you as expedite freight. Both effects land in a different cost centre from the one that got credit for the improvement, so name that. Working capital is also a point-in-time balance-sheet figure and is therefore highly seasonal: comparing a peak-season balance to an off-season one is meaningless, and it is the standard way a working-capital improvement gets manufactured by choosing the measurement date."
+  },
+  {
+    "id": "unit-economics",
+    "name": "Unit Economics",
+    "domains": [
+      "Financial Literacy",
+      "Program & Product Management"
+    ],
+    "formula": "Contribution per unit = Revenue per unit - Variable cost to deliver that unit. The 'unit' must be defined explicitly: an order, a transaction, a subscriber, a delivery, a customer.",
+    "plain_english": "Whether one more of the thing you sell makes or loses money, once you count everything it actually costs to deliver it.",
+    "good_bad": "Positive contribution per unit means scale helps; negative means scale makes the problem larger, and no amount of growth fixes it. But positive unit economics is necessary rather than sufficient — a business with healthy per-unit contribution still loses money if the fixed cost base is never covered, and a business with thin contribution can look fine while growing because the losses arrive later.",
+    "interview_use": "Define the unit out loud before anything else, since 'per order' and 'per customer' can point in opposite directions when a customer places many small orders. Then list what you are including and excluding, especially the items people leave out: payment processing, returns and refunds, customer support contacts, delivery and last-mile cost, and promotional discounts or subsidies. Treating a subsidy or promotion as marketing rather than as a variable cost of the transaction is the standard way a marketplace's unit economics are made to look positive, and calling that out is a strong move.",
+    "watch_out": "It is not a standardised metric, so the exclusions are the whole argument and every company draws them differently — insist on the list. For marketplaces the unit is usually a transaction with take rate as revenue, which means subsidies on either side of the market must be counted as variable cost. Allocating any fixed cost into a unit economic figure defeats its purpose, because the number is supposed to answer an incremental question. And unit economics computed on a cohort too young to have generated its returns, refunds, support contacts, or churn is systematically optimistic, which is the same late-arriving-numerator problem as chargeback rate."
+  }
+]

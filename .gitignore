@@ -1,0 +1,23 @@
+output/
+.env
+__pycache__/
+*.pyc
+.venv/
+config/firebase-credentials.json
+.streamlit/secrets.toml
+data/jobs.db
+data/jobs.db-shm
+data/jobs.db-wal
+data/jobs_corrupt*.db
+data/jobs.db.bak
+data/jobs_new.db
+.DS_Store
+
+# The candidate's data lives on the user-data branch; this is only a local snapshot
+data/user_data.json
+data/user_data.json.tmp
+
+# Jobs DB is published to the history-free jobs-data branch, not committed to main
+data/jobs_deploy.db
+data/*.db.tmp
+data/.jobs_deploy.sha

@@ -1,0 +1,822 @@
+[
+  {
+    "id": "scor",
+    "name": "SCOR (Supply Chain Operations Reference)",
+    "domains": [
+      "Supply Chain"
+    ],
+    "one_liner": "A reference model, created in 1996 by PRTM and AMR Research and now stewarded by ASCM, that decomposes any supply chain into a standard set of top-level processes so you can locate a problem in the chain before proposing a fix.",
+    "when_to_use": "Reach for it when a supply-chain prompt is broad and unbounded ('how would you improve our supply chain', 'our fulfillment is a mess') — naming the processes turns a vague question into a bounded map you can walk out loud. Do not use it for a single-issue diagnostic ('OTIF dropped 8 points last month'), where a metric-drop tree is faster and more impressive, and never recite all seven processes when only two are in scope. If the interviewer uses the older SCOR 12 names (Plan / Source / Make / Deliver / Return / Enable), map to them silently rather than correcting anyone: Make became Transform, Deliver split into Order plus Fulfill, and Enable broadened into Orchestrate.",
+    "steps": [
+      {
+        "label": "Plan",
+        "detail": "Balance aggregate demand against supply: forecasting, S&OP, inventory targets, capacity planning. Ask what the demand signal is, how often it is refreshed, and who is accountable when the plan and the forecast disagree."
+      },
+      {
+        "label": "Source",
+        "detail": "Acquire goods and services: supplier selection, qualification, contracting, PO execution, inbound receipt. Ask about supplier concentration, lead time and its variability, and switching cost — this is where most 'we were late' answers actually live."
+      },
+      {
+        "label": "Transform",
+        "detail": "Convert inputs into finished goods or delivered services — manufacturing, assembly, repair, remanufacture, service execution. Called Make in SCOR 12 and earlier."
+      },
+      {
+        "label": "Order",
+        "detail": "Capture, validate, price, and commit customer orders, including the availability promise and the date you quote. Broken out as its own process in SCOR DS; previously buried inside Deliver. A promise problem and a delivery problem look identical in the OTIF number and have completely different fixes."
+      },
+      {
+        "label": "Fulfill",
+        "detail": "Pick, pack, ship, transport, deliver, and install. The other half of the old Deliver process."
+      },
+      {
+        "label": "Return",
+        "detail": "Move product backwards: customer returns, warranty, recall, repair, and disposition of returned stock. The process candidates skip most often, and frequently where unmeasured cost and customer damage hide."
+      },
+      {
+        "label": "Orchestrate",
+        "detail": "The cross-cutting enablement layer — strategy, people, data and technology, risk, regulatory compliance, sustainability, and performance management. Replaces and broadens the old Enable process. Name it when the interviewer asks who owns a metric or how a fix stays fixed."
+      }
+    ],
+    "worked_example": "Asked 'how would you improve on-time delivery for a Boeing sub-assembly line', start by placing the failure rather than listing fixes: is the promise wrong (Order), is material late (Source), is the build slow or scrapping (Transform), or is freight and paperwork failing at the dock (Fulfill)? Say that you would pull OTIF and lead time by process step to see where the days are actually lost, because a planning fix and a freight fix have nothing to do with each other. If most of the slip sits in Source behind one sole-source supplier, the answer is dual-sourcing and supplier-managed inventory, not more expedite freight. Then use Orchestrate to close: name who owns the metric and reviews it weekly, so the improvement survives you.",
+    "source_name": "Wikipedia — Supply chain operations reference",
+    "source_url": "https://en.wikipedia.org/wiki/Supply_chain_operations_reference",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution. The full SCOR DS (2022) model is an ASCM product and is not free to reproduce; cite ASCM, do not copy their content."
+  },
+  {
+    "id": "dmaic",
+    "name": "DMAIC",
+    "domains": [
+      "Operations",
+      "Supply Chain",
+      "Program & Product Management"
+    ],
+    "one_liner": "The Six Sigma improvement cycle for an existing process that is underperforming: Define, Measure, Analyze, Improve, Control.",
+    "when_to_use": "Use it when the process already exists, the output is measurable, and the cause is genuinely unknown — that is DMAIC's whole value, it refuses to let you jump to Improve. Do not use it to design something new (that is DMADV or DFSS), for a one-off incident with a traceable chain (use Five Whys or a postmortem), or when you already know the answer and are just narrating steps to look rigorous. Interviewers notice when Analyze is skipped.",
+    "steps": [
+      {
+        "label": "Define",
+        "detail": "Write the problem as an observable defect with a number, a scope, and a goal: what counts as a defect, where the process starts and stops, the baseline, the target, and who the customer is. If you cannot state the defect in one sentence, you are not ready to measure."
+      },
+      {
+        "label": "Measure",
+        "detail": "Validate the measurement system before trusting any number — is the defect always logged, or do people quietly fix it? Then establish the baseline and map the actual process as run, not as documented."
+      },
+      {
+        "label": "Analyze",
+        "detail": "Find and verify root cause with data rather than opinion: stratify and segment, Pareto the defects, test hypotheses, use a fishbone to generate candidates and then kill most of them. Say out loud which cause you believe and how you would confirm it."
+      },
+      {
+        "label": "Improve",
+        "detail": "Pilot the change on a limited scope, then verify against the baseline with the same measurement definition. Prefer a change that makes the defect impossible (poka-yoke) over one that asks people to try harder."
+      },
+      {
+        "label": "Control",
+        "detail": "Lock the gain: control plan, control chart or dashboard, updated standard work, a named owner, and a review cadence. This is the step candidates skip and the one that wins the interview, because every interviewer has watched an improvement decay in six weeks."
+      }
+    ],
+    "worked_example": "A Starbucks regional operations prompt: 'store-level order accuracy is 94% and the target is 98%.' Define the defect precisely — a drink remade or refunded — and baseline it by store, daypart, and drink type before touching anything. Measure starts with whether 94% is even trustworthy, since a barista who quietly remakes a drink never generates a record. Suppose Analyze shows 70% of defects come from four customized cold drinks during the morning peak: that points at sequencing and cup labeling, not at training. Improve pilots a labeling change in a handful of stores, and Control is the part that lands: a weekly store-level view with a named regional owner, so accuracy does not drift back.",
+    "source_name": "Wikipedia — DMAIC",
+    "source_url": "https://en.wikipedia.org/wiki/DMAIC",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution. ASQ.org is the more authoritative source but blocks automated access and is all-rights-reserved: link to it, do not copy from it."
+  },
+  {
+    "id": "star",
+    "name": "STAR (Situation, Task, Action, Result)",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "one_liner": "The standard structure for answering behavioral questions: set the Situation, state your Task, describe your Action, and close with a quantified Result.",
+    "when_to_use": "Use it for anything phrased 'tell me about a time', 'describe a situation', or 'give me an example' — at Amazon and Microsoft that is most of the loop, and Amazon interviewers are explicitly taking notes against Leadership Principles while you talk, so structure directly helps them write you up well. Do not use it for hypotheticals ('how would you...'), where a case framework belongs; answering a hypothetical with a past story reads as dodging the question.",
+    "steps": [
+      {
+        "label": "Situation",
+        "detail": "Two sentences, maximum. Just enough context for the stakes to be legible — scale, who was involved, what was at risk. Long setups are the single most common way a good story dies."
+      },
+      {
+        "label": "Task",
+        "detail": "Your specific responsibility and the constraint you were under. Name what you personally owned, not what the team was doing. If your task is indistinguishable from your manager's, pick a different story."
+      },
+      {
+        "label": "Action",
+        "detail": "Sixty to seventy percent of the answer. First person throughout — say 'I decided', 'I built', 'I escalated', never 'we'. Interviewers are scoring you, and 'we' makes it impossible to tell what you did. Include the decision points and why you chose as you did, because that reasoning is what they are actually assessing."
+      },
+      {
+        "label": "Result",
+        "detail": "Quantify it: percent, dollars, hours, defect count, headcount, time saved, before-and-after. If you have no metric, give a concrete proxy ('the escalation path I wrote is still the one the team uses across three regions'). For failure questions, add the Learning and what you changed the next time — STAR-L."
+      }
+    ],
+    "worked_example": "For 'tell me about a time you identified a risk others missed', a marketplace Risk and Compliance answer runs: Situation, two sentences on a policy change rolling out across a market with a compliance exposure nobody had flagged. Task, that you were the subject-matter expert accountable for the risk read on that change. Action, in first person and in detail — that you pulled the historical case data yourself, quantified the exposure per thousand trips, walked the operating team through it rather than filing an objection, and proposed a checkpoint they could run themselves. Result, quantified — the exposure avoided, the checkpoint adopted in N markets, the review cycle shortened. Then expect three layers of follow-up on that same story, because interviews dive progressively deeper into one answer rather than moving on.",
+    "source_name": "The Muse — The STAR Interview Method",
+    "source_url": "https://www.themuse.com/advice/star-interview-method",
+    "license_note": "All-rights-reserved — link only, do not copy text. Structure summarized here is generic and widely documented."
+  },
+  {
+    "id": "circles",
+    "name": "CIRCLES Method",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "one_liner": "Lewis Lin's seven-move structure for product design and improvement questions: Comprehend, Identify, Report, Cut, List, Evaluate, Summarize.",
+    "when_to_use": "Use it for product design and improvement prompts — 'design a tool for warehouse managers', 'how would you improve Amazon returns', 'build something for X user'. Do not use it for metric-drop questions (use a diagnostic tree), estimation questions, or behavioral questions. The failure mode is announcing all seven letters and then monologuing: narrate the moves as decisions instead, and let the interviewer redirect you between them.",
+    "steps": [
+      {
+        "label": "Comprehend the situation",
+        "detail": "Clarify scope before solving: what the product is, what platform, what business goal, what constraints, and why now. Ask two or three sharp questions, not ten."
+      },
+      {
+        "label": "Identify the customer",
+        "detail": "Name specific segments as personas with a job to be done, not demographics. Then say which segment you are designing for and why the others can wait — refusing to choose is the most common failure here."
+      },
+      {
+        "label": "Report the customer's needs",
+        "detail": "State needs as user stories with an underlying motivation, and separate what the customer says they want from the outcome they actually need."
+      },
+      {
+        "label": "Cut through prioritization",
+        "detail": "Rank the needs against a stated criterion — reach, severity of the pain, strategic fit, or business impact. Say the criterion out loud; that is the part being assessed."
+      },
+      {
+        "label": "List solutions",
+        "detail": "Generate three or more genuinely different options, including at least one cheap or non-product option. Breadth first, quality second, and resist designing the first idea."
+      },
+      {
+        "label": "Evaluate trade-offs",
+        "detail": "Compare options on the axes that matter — customer value, effort, risk, revenue, operational cost, reversibility. An honest downside on your chosen option buys more credibility than a flawless pitch."
+      },
+      {
+        "label": "Summarize the recommendation",
+        "detail": "Pick one, justify it in a few sentences, define how you would measure success, and name what would make you reverse the decision."
+      }
+    ],
+    "worked_example": "Given 'design a better returns experience for Amazon', comprehend first — physical goods, which marketplace, and whether the goal is customer satisfaction or return cost, because those pull in opposite directions. Identify segments (the wrong-size apparel returner, the defective-item returner, the serial returner abusing the policy) and commit to one, say the defective-item returner, because their trust damage is the most expensive. Report the need as wanting immediate certainty that they are not out the money, then cut to that as the top priority over convenience. List three options — instant refund on scan, in-app photo triage that skips shipping entirely, a partner drop-off with an immediate receipt — evaluate them on fraud exposure against trust gained, recommend photo triage for low-value items, and close with the metric you would watch plus the abuse rate that would make you roll it back.",
+    "source_name": "Lewis Lin, Decode and Conquer",
+    "source_url": "",
+    "license_note": "Real framework from a copyrighted book. No canonical free URL could be verified, so no URL is given rather than a guessed one. Structure paraphrased from the framework's widely documented public outline — do not reproduce book text."
+  },
+  {
+    "id": "mece",
+    "name": "MECE (Mutually Exclusive, Collectively Exhaustive)",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "one_liner": "A test you apply to your own breakdowns: no item falls into two buckets, and no item falls outside all of them.",
+    "when_to_use": "Apply it as a quick audible check right after you propose any segmentation or tree, in any case-style question. It is never an answer on its own — 'I would use MECE' is a tell that you have memorized vocabulary rather than learned to think. Loosen it deliberately when strict purity would force you onto a dimension nobody can act on; say that you are trading a little overlap for actionability.",
+    "steps": [
+      {
+        "label": "Split on one dimension at a time",
+        "detail": "Most broken trees mix dimensions at the same level — channel and geography, or cause and symptom. Pick one axis per level and stay on it."
+      },
+      {
+        "label": "Check mutual exclusivity",
+        "detail": "Take a concrete example item and confirm it lands in exactly one bucket. If it lands in two, your levels are mixed."
+      },
+      {
+        "label": "Check collective exhaustiveness",
+        "detail": "Ask what is missing. If you need a catch-all 'other' bucket, it is acceptable only if you can state that it is small."
+      },
+      {
+        "label": "Prefer a dimension whose buckets behave differently",
+        "detail": "A split is useful when the buckets have different drivers and therefore different fixes. A technically clean split into groups that all behave identically has told you nothing."
+      }
+    ],
+    "worked_example": "Asked to break down rising cost-to-serve at a Costco-style operation, a candidate offers 'online, wholesale club, and West Coast' — a West Coast club order sits in two buckets and a non-West-Coast online order sits in one, so the split is neither exclusive nor a single dimension. Fix it by splitting once on channel (club, business delivery, e-commerce) and only then, inside the channel that carries the cost, splitting again on region. Say the check out loud — 'let me make sure that is one dimension and nothing double-counts' — because the interviewer is rating whether you catch it yourself. Then note that you chose channel first because channels have genuinely different fulfillment cost structures, which is what makes the split worth doing at all.",
+    "source_name": "Caseinterview.com — MECE",
+    "source_url": "https://caseinterview.com/mece",
+    "license_note": "All-rights-reserved — link only, do not copy text. The principle itself (attributed to Barbara Minto at McKinsey) is generic and widely documented."
+  },
+  {
+    "id": "issue-tree",
+    "name": "Issue Tree",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "one_liner": "Break one big question into a hierarchy of smaller sub-questions or drivers until each leaf is something you can actually check with data.",
+    "when_to_use": "Use it on any broad quantitative business question — profit is down, cost is up, throughput is short, a metric moved. It is the default structure when you have no domain-specific framework. The differentiator is building the first split off an equation rather than a topic list: an equation-based tree is automatically exhaustive and lets you size branches, whereas a topic list invites you to talk about everything equally.",
+    "steps": [
+      {
+        "label": "State the question as one testable question",
+        "detail": "Pin down the metric, the magnitude, the time window, and the comparison baseline before splitting anything."
+      },
+      {
+        "label": "Split the first level off an identity or a process",
+        "detail": "Use an equation where one exists (Profit = Volume x Price minus Volume x Unit Cost; OTIF = On Time x In Full; Throughput = Units per Hour x Hours) or the process stages where it does not."
+      },
+      {
+        "label": "Keep every level on one dimension and MECE",
+        "detail": "Re-check exclusivity and exhaustiveness at each level rather than only at the top."
+      },
+      {
+        "label": "Drive down until each leaf is checkable",
+        "detail": "A good leaf is a number you could pull or a question you could ask a specific person. 'Culture' is not a leaf; 'changeover time on line 3 by shift' is."
+      },
+      {
+        "label": "Prune to the branches that can carry the magnitude",
+        "detail": "Say explicitly which branches are too small to matter and drop them. Sizing before investigating is the single biggest separator between strong and average candidates."
+      },
+      {
+        "label": "Name the first test",
+        "detail": "Close with the cheapest check that would most change your mind, and what you would expect to see if your hypothesis is right."
+      }
+    ],
+    "worked_example": "Given 'a Microsoft hardware line missed its margin target by 4 points, why', split off the identity first: margin moved because price per unit fell, because unit cost rose, or because mix shifted toward lower-margin SKUs. Size each branch before exploring — if list prices never changed and discounting is flat, price is out, and you have just cut the problem in half in twenty seconds. Drive the cost branch into material, freight, warranty, and absorption, and note that a freight spike and a warranty spike look identical in the margin number but point at completely different teams. Close with the first test: pull margin by SKU and by quarter, because a mix shift shows up as stable per-SKU margins with a changed weighting, which immediately rules half the tree out.",
+    "source_name": "Caseinterview.com — Issue Tree",
+    "source_url": "https://caseinterview.com/issue-tree",
+    "license_note": "All-rights-reserved — link only, do not copy text."
+  },
+  {
+    "id": "metric-drop",
+    "name": "Metric-Drop Diagnostic",
+    "domains": [
+      "Program & Product Management",
+      "Operations",
+      "Supply Chain",
+      "Risk & Compliance"
+    ],
+    "one_liner": "The standard tree for 'metric X dropped Y percent, what happened': confirm the data is real, characterize the shape, segment, separate internal from external causes, then make the contributions add up.",
+    "when_to_use": "Use it whenever a number moved and you are asked why — the most common analytical question in program, product, and operations interviews. Do not use it for design or prioritization prompts. The single biggest scoring move is refusing to guess a cause in your first sentence: candidates who immediately say 'maybe a competitor launched something' have skipped the two steps that most often contain the real answer.",
+    "steps": [
+      {
+        "label": "Confirm the drop is real",
+        "detail": "Before any hypothesis: did instrumentation, logging, or a tracking tag change? Is the pipeline delayed or mid-backfill? Did the metric definition, filter, or dashboard change? Is the current period incomplete, so late-arriving events are undercounted? A surprising share of real-world metric drops are measurement artifacts, and saying this first is the cheapest credibility you will earn all interview."
+      },
+      {
+        "label": "Characterize magnitude and shape",
+        "detail": "How big, over what window, and what shape — a step change, a gradual slope, or a spike that recovered? A step change points at a release, a config flip, a price change, or a policy change on a specific date. A slope points at mix shift, cohort decay, or capacity falling behind growth. A spike-and-recover points at an incident."
+      },
+      {
+        "label": "Segment until the drop concentrates or refuses to",
+        "detail": "Cut by time (hour, day of week), geography or site, platform or channel, customer cohort, new versus returning, product or SKU, and supplier or carrier. The question you are answering: is this broad (systemic) or concentrated (one segment did it)? Concentrated drops are usually solvable; broad drops are usually external or a platform-wide change."
+      },
+      {
+        "label": "Separate internal from external causes",
+        "detail": "Internal: code release, configuration, pricing, policy, staffing, supplier or carrier change, capacity, an upstream team's change. External: seasonality, holiday or weather, a competitor move, macro conditions, a regulatory change. Check the internal change log first, because it is knowable today, whereas external causes are usually inferred."
+      },
+      {
+        "label": "Quantify each candidate's contribution",
+        "detail": "Force the arithmetic to close. If your candidates explain 3 points of an 8-point drop, you are not done and you should say so. This step catches the seductive-but-too-small explanation, which is the most common way a confident wrong answer happens."
+      },
+      {
+        "label": "State what you would check first and why",
+        "detail": "Close with the cheapest test with the highest information value, and what result would falsify your leading hypothesis."
+      }
+    ],
+    "worked_example": "Asked 'delivery on-time rate fell 6 points week over week, what happened', the first move is not a guess — ask whether the metric is real: did a carrier scan feed break, or is the week incomplete so late deliveries are over-represented? Then check shape: a Tuesday cliff suggests a release or a network config change, while a five-week slide suggests volume mix or a capacity ramp falling behind demand. Segment by node, carrier, and ship speed — if the drop concentrates in one sort center on one carrier, the cause is operational, not systemic. Close by making the arithmetic add up: if that node handles 8 percent of volume, it cannot by itself produce a 6-point network drop, so name that gap and say what you would pull next.",
+    "source_name": "Synthesized standard diagnostic practice",
+    "source_url": "",
+    "license_note": "No single canonical source — this structure is synthesized from standard analytics, operations, and root-cause diagnostic practice as taught across product-analytics and case interview guides. Stated as synthesized rather than attributed to avoid a false citation."
+  },
+  {
+    "id": "oee",
+    "name": "OEE (Overall Equipment Effectiveness) as a diagnostic",
+    "domains": [
+      "Operations"
+    ],
+    "one_liner": "Decomposes equipment or line productivity loss into three multiplicative causes — Availability, Performance, Quality — so you know which loss to attack.",
+    "when_to_use": "Use it for equipment-paced or line-paced operations questions: a manufacturing cell, a sorter, a packaging line, a roasting plant. Do not use it for labor-paced work, knowledge work, or a whole facility treated as one number. And always ask for the three components rather than accepting the composite, because the composite tells you nothing about what to fix.",
+    "steps": [
+      {
+        "label": "Availability",
+        "detail": "Run Time divided by Planned Production Time. Captures unplanned stops, breakdowns, and changeovers. A low number here is a maintenance, setup, or material-starvation problem."
+      },
+      {
+        "label": "Performance",
+        "detail": "(Ideal Cycle Time x Total Count) divided by Run Time. Captures slow cycles and micro-stops — the losses nobody logs because each one lasts thirty seconds. A low number here usually means minor stoppages, wear, or an ideal cycle time that was never realistic."
+      },
+      {
+        "label": "Quality",
+        "detail": "Good Count divided by Total Count. Captures scrap and rework. A low number here is a tooling, material, spec, or process-control problem."
+      },
+      {
+        "label": "Multiply and decompose",
+        "detail": "OEE = Availability x Performance x Quality, equivalently (Good Count x Ideal Cycle Time) divided by Planned Production Time. Attack the smallest of the three first, then re-decompose after the fix, because the binding loss moves."
+      },
+      {
+        "label": "Check whether the asset is even the constraint",
+        "detail": "Before spending anything, confirm the machine is the system bottleneck. Raising OEE on a non-constraint converts cash into work in process and delivers no additional throughput."
+      }
+    ],
+    "worked_example": "Given 'the line is running at 55% OEE, what do you do', never accept the single number — ask for the three components, because 55% from 60% Availability is a maintenance and changeover problem while 55% from 72% Quality is a scrap and tooling problem, and the fixes share nothing. Say it decomposes to Availability 90%, Performance 85%, Quality 72%: the entire conversation should now be about defects, and specifically whether they cluster by shift, operator, material lot, or position on the line. Propose stratifying scrap by those four cuts as the first step, because that one table usually names the cause. Then add the point that earns the round: if this asset is not the system constraint, raising its OEE just builds inventory and does nothing for throughput.",
+    "source_name": "LeanProduction — OEE",
+    "source_url": "https://www.leanproduction.com/oee/",
+    "license_note": "All-rights-reserved — link only, do not copy text. The 85% 'world class' benchmark often quoted from this source is a discrete-manufacturing rule of thumb, not a universal target."
+  },
+  {
+    "id": "three-lines",
+    "name": "Three Lines of Defense",
+    "domains": [
+      "Risk & Compliance"
+    ],
+    "one_liner": "A model of who is accountable for risk: the business owns and manages it, risk and compliance functions oversee and challenge, and internal audit provides independent assurance.",
+    "when_to_use": "Use it in risk and compliance interviews for questions about accountability, function design, or 'who owns this risk'. It is also the cleanest way to describe your own scope — a subject-matter expert in a second-line function advising first-line operators is an immediately legible position. Do not use it to describe a control design or a risk assessment methodology; it is an accountability model, not a method. The most common error, and an instant credibility loss, is saying compliance owns the risk. It does not — the business does.",
+    "steps": [
+      {
+        "label": "First line: own and manage",
+        "detail": "Operational management and the process owners who take the risk and run the controls day to day. They own the risk, the control design in practice, and the outcome. If your proposed fix requires the business to do nothing differently, you have not fixed anything."
+      },
+      {
+        "label": "Second line: oversee and challenge",
+        "detail": "Risk management and compliance functions. They set the framework and policy, define standards, provide tooling and expertise, monitor exceptions, and challenge the first line. Advisory and oversight — not ownership, and not doing the first line's work for them, which is the failure mode that turns a control into a bottleneck people route around."
+      },
+      {
+        "label": "Third line: independent assurance",
+        "detail": "Internal audit, reporting to the board or audit committee, testing whether the first and second lines actually work as claimed. Independence is the whole point, so internal audit takes no operational responsibility and does not design the controls it will later test."
+      },
+      {
+        "label": "Outside the lines",
+        "detail": "The governing body or board sets risk appetite and receives assurance, and external audit and regulators provide assurance from outside the organization entirely. The IIA's 2020 update renamed this the Three Lines Model, dropped the defensive framing, and made the governing body explicit — know both names and use whichever the interviewer uses."
+      }
+    ],
+    "worked_example": "Asked 'an operating team keeps shipping policy changes without a risk review, how do you fix it', the Three Lines answer assigns ownership rather than asking for more reviews. The operating team is first line and owns the risk, so the fix is a checkpoint they run themselves and are measured on, not a compliance gate that becomes something to work around. Second line's job is to define the standard, give them a usable tool and clear criteria, and monitor exceptions — challenge, not do. Internal audit then tests whether the checkpoint was actually applied, which is what makes the fix durable rather than a memo, and you can close by naming what escalation looks like when exceptions exceed tolerance.",
+    "source_name": "The IIA — The IIA's Three Lines Model (2020 update of the Three Lines of Defense)",
+    "source_url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense/",
+    "license_note": "All-rights-reserved position paper — link only, do not copy text. Summary here is a paraphrase of the widely documented structure."
+  },
+  {
+    "id": "theory-of-constraints",
+    "name": "Theory of Constraints / Bottleneck Analysis",
+    "domains": [
+      "Operations",
+      "Supply Chain"
+    ],
+    "one_liner": "Goldratt's claim that every system has one binding constraint, so throughput can only be improved by improving that constraint — and improving anything else is waste.",
+    "when_to_use": "Use it for throughput, capacity, and lead-time questions: a line, a warehouse, a drive-thru, an approval workflow, a hiring pipeline. It is also the correct rebuttal whenever an interviewer proposes a local-efficiency improvement. Do not use it for cost-reduction questions where throughput is not the limit, or for demand-side problems — if you cannot sell what you make, the constraint is in the market, not the plant.",
+    "steps": [
+      {
+        "label": "Identify the constraint",
+        "detail": "Find the step with the lowest capacity relative to demand. Practical tells: the largest queue of work sits in front of it, everything downstream of it starves, and it is the resource people expedite around."
+      },
+      {
+        "label": "Exploit it",
+        "detail": "Get everything possible from the constraint before spending money. Never let it idle through breaks or changeovers, never starve it of material, and move inspection upstream of it so it never processes a unit that will be scrapped later."
+      },
+      {
+        "label": "Subordinate everything else to it",
+        "detail": "Run the rest of the system at the constraint's drumbeat, which means deliberately under-utilizing non-constraints. This is the counterintuitive move and the one worth saying out loud, because it contradicts the instinct to keep everyone busy."
+      },
+      {
+        "label": "Elevate the constraint",
+        "detail": "Only now add capacity: overtime, a second machine, an outsourced step, more staffing at that station."
+      },
+      {
+        "label": "Repeat, and watch for policy constraints",
+        "detail": "Once elevated, the constraint moves somewhere else, so go again. Goldratt's warning is that the new constraint is often a policy rather than a machine — a batch rule, an approval step, a metric that rewards local efficiency."
+      }
+    ],
+    "worked_example": "Given 'a Starbucks drive-thru is losing customers at the morning peak, fix throughput', identify before optimizing: is the constraint the order point, the espresso bar, or the handoff window? If the queue builds behind the espresso bar and the window sits empty, adding a second order-taker makes the line look busier and delivers zero additional drinks. Exploit first at no cost — pre-stage cups, sequence the four highest-volume drinks together, keep the bar staffed straight through the peak rather than rotating breaks into it — then subordinate by pacing order-taking to what the bar can absorb instead of stacking work in process. Only then elevate with a second bar, and close with the repeat step: once the bar is elevated, the constraint likely moves to the window, so the metric to watch changes too.",
+    "source_name": "Wikipedia — Theory of constraints",
+    "source_url": "https://en.wikipedia.org/wiki/Theory_of_constraints",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "littles-law",
+    "name": "Little's Law",
+    "domains": [
+      "Operations",
+      "Supply Chain"
+    ],
+    "one_liner": "In a stable system, the average number of items in the system equals the arrival rate times the average time each item spends there: L = lambda x W.",
+    "when_to_use": "Use it whenever a question gives you two of work in process, throughput, and wait time and asks for the third — queues, WIP, lead time, order backlogs, alert backlogs, ticket queues. It is also the quantitative backbone of any argument for capping WIP. Do not use it where the queue is growing without bound, because the law describes a stable long-run average and says nothing about a system that is falling behind.",
+    "steps": [
+      {
+        "label": "Define the system boundary out loud",
+        "detail": "Say exactly where an item enters and exits. Most wrong answers come from a fuzzy boundary, not from the arithmetic."
+      },
+      {
+        "label": "Identify L, lambda, and W",
+        "detail": "L is the average number of items in the system (work in process, queue length, open tickets). Lambda is the average arrival rate, which equals throughput in steady state. W is the average time an item spends in the system, including waiting, not just being worked."
+      },
+      {
+        "label": "Solve for the unknown and check units",
+        "detail": "W = L / lambda, L = lambda x W, lambda = L / W. Units must match: if lambda is units per hour, W comes out in hours. Say the units as you compute."
+      },
+      {
+        "label": "Convert the result into a lever",
+        "detail": "The useful implication is that with capacity fixed, cutting WIP cuts wait time proportionally — which is the entire case for pull systems, WIP caps, and smaller batches."
+      },
+      {
+        "label": "State the assumption",
+        "detail": "This is a long-run average identity for a stable system. It tells you nothing about variability, distribution, or worst case, and it breaks if the queue is growing. Saying this unprompted signals you understand the tool rather than having memorized a formula."
+      }
+    ],
+    "worked_example": "Given 'the pick line holds about 400 units of work in process and we complete 100 units an hour, how long does an order wait', Little's Law gives W = L / lambda = 4 hours. The follow-on is the point worth making: halving WIP to 200 units halves the wait to 2 hours with no change in capacity and no capital spend, which is the whole argument for a WIP cap. Say the assumption unprompted — this holds as a long-run average in a stable system, so if the queue is still growing the number is not yet meaningful. If the interviewer then asks about the worst case rather than the average, acknowledge that Little's Law cannot answer that and that you would need the variability of arrivals and service times.",
+    "source_name": "Wikipedia — Little's law",
+    "source_url": "https://en.wikipedia.org/wiki/Little%27s_law",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "five-whys",
+    "name": "Five Whys",
+    "domains": [
+      "Operations",
+      "Supply Chain",
+      "Risk & Compliance"
+    ],
+    "one_liner": "Ask why repeatedly, verifying each link, until you reach a cause you can actually change — usually a system or process cause rather than a person.",
+    "when_to_use": "Use it for a single concrete failure with a traceable causal chain: one late shipment, one outage, one audit finding, one escaped defect. Do not use it when multiple causes interact or when you need statistical evidence to distinguish candidates — that is a fishbone plus DMAIC's Analyze step. Five is not literal; stop when you reach something actionable.",
+    "steps": [
+      {
+        "label": "State the failure as an observable fact with a number",
+        "detail": "'Shipment 4471 arrived nine days late', not 'our logistics is unreliable'."
+      },
+      {
+        "label": "Ask why, and answer with a verifiable cause",
+        "detail": "Each answer has to be something you could confirm from a record or a person, not a plausible guess. An unverified link makes everything below it fiction."
+      },
+      {
+        "label": "Check that each link actually produces the one above it",
+        "detail": "Read it back as 'therefore' in the forward direction. If the therefore does not hold, you have jumped a step or wandered onto a different chain."
+      },
+      {
+        "label": "Keep going past human error",
+        "detail": "If your chain ends at 'the operator entered it wrong', you stopped too early. Keep asking why the process let a wrong entry through undetected — that is where the fixable cause lives, and stopping at the person is the most common and most damaging error with this tool."
+      },
+      {
+        "label": "Verify the fix removes the failure",
+        "detail": "Confirm the proposed change actually breaks the chain, and that it would also have prevented the near-misses, not only this one instance."
+      }
+    ],
+    "worked_example": "A critical part arrived nine days late. Why — it shipped six days after the promised date. Why — the PO sat unreleased in the buyer's queue. Why — it required a second approval that nobody was notified about. Why — the approval threshold had been lowered in a policy update, but the notification rule was never updated to match. Stop there: the actionable cause is a configuration change made without updating its dependent alerting, which means the fix is a change-control check, and crucially it would also catch every other PO silently stuck behind the same gap. Notice the answer would have been 'the buyer should be more careful' if the chain had stopped two steps earlier, which is exactly the trap.",
+    "source_name": "Wikipedia — Five whys",
+    "source_url": "https://en.wikipedia.org/wiki/Five_whys",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "fishbone",
+    "name": "Fishbone / Ishikawa (Cause-and-Effect) Diagram",
+    "domains": [
+      "Operations",
+      "Supply Chain"
+    ],
+    "one_liner": "Enumerate candidate causes of a defined effect by category, so you generate breadth before testing anything.",
+    "when_to_use": "Use it at the Analyze stage when the cause is genuinely unknown and you want to avoid anchoring on the first idea. Pair it with Pareto or data stratification to decide which candidate to test first. Do not present a fishbone as a conclusion — a diagram with thirty causes and no data is where weak candidates stop, and in an interview you should always follow it with how you would narrow it.",
+    "steps": [
+      {
+        "label": "Write the effect precisely",
+        "detail": "A measurable defect with a magnitude and a scope, the same discipline as DMAIC's Define."
+      },
+      {
+        "label": "Use category bones to force breadth",
+        "detail": "For manufacturing and operations, the traditional six: Machine, Method, Material, Measurement, People, Environment. For service and transactional processes, use Policies, Procedures, People, and Plant or Technology. The categories exist only to stop you from listing five variations of the same idea."
+      },
+      {
+        "label": "Populate each bone, then ask why within it",
+        "detail": "Push one or two levels deeper inside each branch rather than staying at the category label."
+      },
+      {
+        "label": "Do not forget the Measurement bone",
+        "detail": "The cause is sometimes that the metric is wrong, the gauge drifted, or the defect definition changed. This bone is the most commonly skipped and connects to the first step of any metric-drop diagnostic."
+      },
+      {
+        "label": "Narrow to testable candidates",
+        "detail": "Circle the two or three causes that could plausibly carry the observed magnitude, and state the data cut that would confirm or kill each one."
+      }
+    ],
+    "worked_example": "Asked to find why a packaging line's scrap rate doubled, build the bones out loud: Machine (sealer temperature drift, worn tooling), Method (a changed changeover procedure), Material (a new film supplier or lot), Measurement (a changed scrap definition, or a new operator counting differently), People (a new shift or reduced training), Environment (humidity in a season change). Then immediately narrow rather than admiring the diagram: since the rate doubled on a date, stratify scrap by date against the change log for material lots and maintenance, because a step change points at a discrete event rather than gradual wear. If scrap tracks one film lot, the answer is Material and the fix is incoming inspection plus a supplier conversation. Naming Measurement as a candidate before doing any of this is what separates a rigorous answer from a confident one.",
+    "source_name": "Wikipedia — Ishikawa diagram",
+    "source_url": "https://en.wikipedia.org/wiki/Ishikawa_diagram",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "pdca",
+    "name": "PDCA (Plan-Do-Check-Act)",
+    "domains": [
+      "Operations",
+      "Program & Product Management"
+    ],
+    "one_liner": "The Deming and Shewhart improvement loop: predict, try it small, compare against the prediction, then standardize or adjust and go again.",
+    "when_to_use": "Use it for small, fast, reversible improvements and for continuous-improvement culture questions. The differentiator is saying which you would pick and why: DMAIC is the heavier, data-gated cycle for a chronic problem that justifies a measurement investment, while PDCA is the lightweight loop for many small experiments. Do not use PDCA for a problem where you cannot measure the result quickly, since the Check step is what makes it worth anything.",
+    "steps": [
+      {
+        "label": "Plan",
+        "detail": "State a hypothesis, the change you will make, the result you predict with a number, and how you will measure it. The predicted number is the part people skip, and without it Check becomes storytelling."
+      },
+      {
+        "label": "Do",
+        "detail": "Run it small and on a limited scope — one shift, one store, one region — so a failure is cheap and the signal is still readable."
+      },
+      {
+        "label": "Check (or Study)",
+        "detail": "Compare actual to predicted, including when you were wrong. Being wrong in a defined way is the useful output; a vague 'it went well' wastes the cycle."
+      },
+      {
+        "label": "Act",
+        "detail": "Either standardize and scale — updated standard work, training, a monitoring metric — or adjust the hypothesis and run the loop again. Then start the next cycle, because the point is the loop, not one pass."
+      }
+    ],
+    "worked_example": "Asked how you would improve receiving dock productivity, propose PDCA explicitly over a heavier project because the changes are cheap and reversible. Plan: hypothesis that unloading is delayed by trailer sequencing, so pre-assigning doors by trailer contents should cut dwell time from 90 to 70 minutes, measured as average trailer dwell. Do: run it on the evening shift at one dock for two weeks. Check: dwell fell only to 85 minutes, but a fifth of trailers arrived outside their appointment window, which was not in the hypothesis at all. Act: adjust — the real constraint is carrier appointment adherence, so the next cycle tests a carrier scorecard instead, and you have learned something in two weeks rather than launching a six-month program on the wrong cause.",
+    "source_name": "Wikipedia — PDCA",
+    "source_url": "https://en.wikipedia.org/wiki/PDCA",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "sipoc",
+    "name": "SIPOC",
+    "domains": [
+      "Operations",
+      "Supply Chain"
+    ],
+    "one_liner": "A one-page scoping map of a process — Suppliers, Inputs, Process, Outputs, Customers — built before you try to improve anything.",
+    "when_to_use": "Use it at DMAIC's Define stage, or any time an interviewer hands you a process you do not actually understand yet. It is the fastest way to demonstrate that you scope before solving, and it surfaces the boundary disagreements that sink real projects. Build it right to left, starting from the customer. Do not use it as an improvement tool — it describes, it does not diagnose.",
+    "steps": [
+      {
+        "label": "Customers",
+        "detail": "Name who receives the output and what they actually need from it, in their terms. Internal customers count."
+      },
+      {
+        "label": "Outputs",
+        "detail": "Name the deliverable and its critical quality characteristics — the few attributes that decide whether the customer considers it acceptable."
+      },
+      {
+        "label": "Process",
+        "detail": "Four to six high-level steps and no more. If you are writing twelve, you are drawing a process map instead, and the point of SIPOC is agreeing on the boundary before that detail."
+      },
+      {
+        "label": "Inputs",
+        "detail": "What each step consumes — material, data, approvals, specifications — and which inputs are variable enough to cause the output defect."
+      },
+      {
+        "label": "Suppliers",
+        "detail": "Who provides each input, internal or external, and how reliable and variable each one is. This column is usually where the root cause turns out to live."
+      }
+    ],
+    "worked_example": "Given 'improve the supplier onboarding process' with no other detail, resist listing improvements and scope it instead. Customers: the category buyer who needs a usable supplier, and the compliance function that needs a defensible file. Outputs: an approved, contracted, payment-ready supplier with a complete risk assessment. Process in five steps: request, qualification, risk and compliance review, contracting, system setup. Inputs and Suppliers is where the answer appears — the risk review depends on documents the supplier itself provides, so if suppliers submit incomplete packets the cycle time problem is upstream of every internal step, and no amount of internal streamlining will fix it. State the boundary question you would ask first: does onboarding end at contract signature or at first successful payment, because the two definitions produce completely different cycle times.",
+    "source_name": "Wikipedia — SIPOC",
+    "source_url": "https://en.wikipedia.org/wiki/SIPOC",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "kraljic",
+    "name": "Kraljic Matrix (Purchasing Portfolio)",
+    "domains": [
+      "Supply Chain"
+    ],
+    "one_liner": "Segments purchased categories on business impact against supply risk, giving four quadrants that each call for a different sourcing strategy.",
+    "when_to_use": "Use it for procurement and strategic sourcing questions — 'how would you approach this category', 'you inherit 200 million dollars of spend, where do you start', 'how do you decide which suppliers to partner with'. It is the antidote to answering every sourcing question with 'negotiate harder', which is the single most common weak answer in procurement interviews. Do not use it for supplier performance management or for responding to one supplier's failure.",
+    "steps": [
+      {
+        "label": "Define the two axes with real data",
+        "detail": "Business or profit impact: spend, share of cost of goods, effect on end-product quality or revenue. Supply risk or market complexity: number of qualified suppliers, switching cost and qualification lead time, geographic and single-source concentration, capacity tightness. Say what data you would pull for each axis rather than asserting the placement."
+      },
+      {
+        "label": "Non-critical / routine (low impact, low risk)",
+        "detail": "Minimize cost to transact: catalogs, purchasing cards, supplier consolidation, automation. The goal is to stop spending management attention here at all."
+      },
+      {
+        "label": "Leverage (high impact, low risk)",
+        "detail": "Use competition: competitive tendering, volume consolidation across sites, aggressive price negotiation, index-based pricing. This is the only quadrant where 'negotiate harder' is genuinely the answer."
+      },
+      {
+        "label": "Bottleneck (low impact, high risk)",
+        "detail": "Secure supply and reduce dependence: safety stock, dual sourcing, long-term supply agreements, or the engineering answer of redesigning the requirement so the part is no longer unique. Low spend does not mean low importance, which is the quadrant people underrate."
+      },
+      {
+        "label": "Strategic (high impact, high risk)",
+        "detail": "Partner: long-term contracts, joint development, shared forecasts and capacity commitments, explicit risk sharing, executive-level relationship management. Squeezing price here buys a short-term win and a long-term supply problem."
+      },
+      {
+        "label": "Set the action plan per quadrant and re-plot periodically",
+        "detail": "Categories migrate as markets tighten or suppliers consolidate, so the matrix is a recurring exercise rather than a one-time slide."
+      }
+    ],
+    "worked_example": "Asked how you would approach Starbucks coffee-side spend, place the categories before proposing anything. Green coffee is strategic — enormous impact, real origin and climate risk — so the answer is multi-year relationships, origin diversification, and shared visibility, not tendering. Cups and lids are leverage: high spend, many qualified converters, so consolidate volume and tender it. A single-source specialty flavoring is bottleneck: trivial spend but it can stop a promotion, so the answer is safety stock plus qualifying a second source, and ideally a reformulation. Office supplies are non-critical and should be pushed onto a catalog and forgotten. The point to make explicitly is that four different strategies come out of one framework, which is why 'negotiate harder' is wrong for three of the four quadrants.",
+    "source_name": "Wikipedia — Kraljic matrix",
+    "source_url": "https://en.wikipedia.org/wiki/Kraljic_matrix",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution. Original source is Peter Kraljic, Harvard Business Review, 1983 (paywalled)."
+  },
+  {
+    "id": "working-backwards",
+    "name": "Working Backwards (PR-FAQ)",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "one_liner": "Amazon's practice of starting from the customer and writing the launch artifacts — a press release and an FAQ — before committing any resources.",
+    "when_to_use": "Essential for Amazon and AWS interviews, and useful at any company for 'how would you decide what to build' or 'how would you launch this'. It is also the right vocabulary for Customer Obsession in an Amazon behavioral loop. Do not use it as a synonym for 'talk to customers' — the substance is the written document and the willingness to kill the idea when the press release is not compelling. Note that Amazon runs on written narratives rather than slide decks, so an answer that ends in 'I would build a deck' lands badly there.",
+    "steps": [
+      {
+        "label": "Name the customer and the problem in their words",
+        "detail": "A specific customer with a specific pain, not a market segment. Amazon frames the entry point as a short set of questions: who is the customer, what is the problem or opportunity, what is the most important customer benefit, how do you know what customers need, what does the customer experience look like, and how will you measure success."
+      },
+      {
+        "label": "Write the press release as if it already launched",
+        "detail": "Headline, the problem, the solution, and a customer quote — one page, in plain language, no jargon. Iterate until it is genuinely compelling. If you cannot write an exciting press release, that is the signal to stop, and saying so out loud is the strongest move available in this framework."
+      },
+      {
+        "label": "Write the FAQ, and split it",
+        "detail": "External questions are what customers will ask. Internal questions are the hard ones: what it costs, the technical risk, what it cannibalizes, the legal and regulatory exposure, what has to be true for it to work. The internal FAQ is where weak ideas die."
+      },
+      {
+        "label": "Define success metrics before building",
+        "detail": "Name the input metrics you can control and the output metric you are actually trying to move, and commit to them in the document."
+      },
+      {
+        "label": "Review, revise, and only then plan the build",
+        "detail": "The document is the deliverable and it gets torn apart in review by design. Build only after it survives, and revisit the document as reality changes to check the original promise still holds."
+      }
+    ],
+    "worked_example": "Asked 'how would you decide whether to build a supplier risk dashboard', work backwards rather than scoping features. Write the press release first: the customer is the category buyer who currently finds out about a supplier disruption from the supplier, the benefit is learning about it days earlier, and the quote is a buyer saying they rerouted before the line stopped. Then write the internal FAQ, which is where it gets hard — where the signal data comes from, what the false-positive rate would be, what a buyer is actually supposed to do with an alert, and whether anyone will open it on a Tuesday. Define success as days of early warning and disruptions mitigated rather than dashboard logins, because logins are a vanity metric. If the FAQ reveals you have no reliable early signal, the honest output is a recommendation not to build it yet, and saying that is a stronger answer than a feature list.",
+    "source_name": "AWS Executive Insights — Product Management at AWS (Working Backwards)",
+    "source_url": "https://aws.amazon.com/executive-insights/content/product-management-at-amazon/",
+    "license_note": "All-rights-reserved — link only, do not copy text. The book-length treatment is Colin Bryar and Bill Carr, Working Backwards (also copyrighted)."
+  },
+  {
+    "id": "rice",
+    "name": "RICE Prioritization",
+    "domains": [
+      "Program & Product Management"
+    ],
+    "one_liner": "A prioritization score — Reach times Impact times Confidence, divided by Effort — whose real value is forcing your trade-off assumptions into the open.",
+    "when_to_use": "Use it for 'how do you prioritize' in product, program, and TPM interviews. Present it as a way to expose which assumption is load-bearing, never as an oracle that outputs the answer — 'the score said 14.2 so we built it' is a bad answer. Know the alternatives and when they fit better: weighted scoring against company goals, Kano for satisfaction versus expectation, cost of delay or WSJF when timing dominates, or simply tying everything to one business metric. At Amazon expect prioritization to be argued in a written narrative against a customer metric rather than scored in a spreadsheet.",
+    "steps": [
+      {
+        "label": "Reach",
+        "detail": "How many users, orders, or units are affected in a defined time period. It has to be a real count from data, per quarter or per month, not a guess — this is the input people fabricate most often."
+      },
+      {
+        "label": "Impact",
+        "detail": "The per-unit effect, on a deliberately coarse scale. Intercom's published scale is 3 for massive, 2 for high, 1 for medium, 0.5 for low, and 0.25 for minimal. Coarse is intentional, because false precision here is worse than a rough judgment."
+      },
+      {
+        "label": "Confidence",
+        "detail": "A percentage that discounts for how much you actually know: 100 percent when you have data, 80 percent when you have some, 50 percent when it is a hunch. This is the column that keeps a beautifully scored guess from outranking a measured certainty."
+      },
+      {
+        "label": "Effort",
+        "detail": "Total person-months or person-weeks across all functions, not just engineering. Forgetting design, legal, and operational rollout is how effort gets systematically underestimated."
+      },
+      {
+        "label": "Score and then argue with it",
+        "detail": "Score equals Reach times Impact times Confidence divided by Effort. Then sanity-check the ranking against judgment and strategy, and name which single input the ranking is most sensitive to — that input is what you should go measure, and saying so is the whole point of having done the arithmetic."
+      }
+    ],
+    "worked_example": "Given three candidate program investments and limited capacity, score them out loud but lead with the mechanics of the disagreement. Say a supplier-portal automation reaches 800 suppliers a quarter at medium impact with 80 percent confidence and 4 person-months, giving 800 x 1 x 0.8 / 4 = 160, while a niche reporting feature reaches 40 internal users at high impact with full confidence and 1 person-month, giving 40 x 2 x 1.0 / 1 = 80. The portal wins, but immediately note that the ranking flips if Reach on the portal is really 200 rather than 800, so Reach is the load-bearing assumption and the next action is to go measure it rather than to start building. Close by naming what RICE cannot see here — a strategic commitment, a regulatory deadline, or a dependency another team is blocked on — which is why the score informs the decision rather than making it.",
+    "source_name": "Intercom — RICE: Simple prioritization for product managers",
+    "source_url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+    "license_note": "All-rights-reserved — link only, do not copy text. Scale values cited are Intercom's published ones."
+  },
+  {
+    "id": "abc-pareto",
+    "name": "ABC Analysis and the Pareto Principle",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Risk & Compliance"
+    ],
+    "one_liner": "Rank items by their contribution to a total and manage the classes with different policies, because a small share of items usually drives most of the value.",
+    "when_to_use": "Use it for inventory policy, cost reduction, SKU or supplier rationalization, defect prioritization, and alert tuning — anywhere you have too many things to manage identically. It is the fastest way to turn 'we have 40,000 SKUs' into a tractable answer. Do not use it where the items are genuinely homogeneous, and do not use it alone where criticality matters more than value, which is the failure covered in the last step.",
+    "steps": [
+      {
+        "label": "Choose the ranking variable to match the decision",
+        "detail": "Annual consumption value (unit cost times annual usage) for inventory policy, total spend for sourcing, defect count times cost for quality, alert volume times review minutes for risk tuning. Ranking on unit count or unit price instead of value is the most common mistake."
+      },
+      {
+        "label": "Rank descending and cumulate",
+        "detail": "Sort, compute the running share of the total, and look at where the curve bends. The bend is the information; the class boundaries are just where you decide to cut it."
+      },
+      {
+        "label": "Cut into classes",
+        "detail": "Commonly A is roughly the top 70 to 80 percent of value, B the next 15 to 20, C the remainder — often a very small share of value spread across most of the items. These cuts are conventions, not laws, and companies set them differently."
+      },
+      {
+        "label": "Assign a different policy per class",
+        "detail": "A items get tight review, frequent cycle counting, individual forecasting, and named ownership. C items get simple reorder rules, larger order quantities, and deliberate neglect. The value of the analysis is entirely in differentiating the policy — classifying and then managing everything the same way has achieved nothing."
+      },
+      {
+        "label": "Re-run periodically and add a second axis",
+        "detail": "Items migrate between classes as demand shifts. More importantly, pure value ranking ignores criticality: a two-dollar fastener that stops an aircraft build is not a C item in practice. Mature operations add a criticality axis, or pair ABC with XYZ on demand variability, and saying this unprompted is what separates a real answer from a textbook one."
+      }
+    ],
+    "worked_example": "Asked 'you inherit 40,000 SKUs and inventory is too high, where do you start', rank by annual consumption value and expect a few hundred SKUs to carry most of it. Attack the A items with individual review, tighter safety stock based on measured demand variability, and shorter replenishment cycles, because that is where the cash actually is. Push C items onto simple rules and larger, less frequent orders, since the labor to optimize them exceeds the savings. Then add the Boeing-style caveat before the interviewer does: cross-reference the C list against criticality, because the cheap single-source part that halts a build needs safety stock regardless of its value rank, and a pure ABC policy would have quietly stripped its buffer.",
+    "source_name": "Wikipedia — ABC analysis",
+    "source_url": "https://en.wikipedia.org/wiki/ABC_analysis",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution. The underlying 80-20 observation is the Pareto principle: https://en.wikipedia.org/wiki/Pareto_principle"
+  },
+  {
+    "id": "eoq",
+    "name": "EOQ (Economic Order Quantity)",
+    "domains": [
+      "Supply Chain"
+    ],
+    "one_liner": "The order quantity that minimizes the sum of ordering cost and inventory carrying cost: EOQ equals the square root of (2 x D x S divided by H).",
+    "when_to_use": "Use it to show you understand the shape of the order-size trade-off, not as a literal answer to 'how much should we order'. It is the right vocabulary for any inventory-policy question. Its assumptions — constant known demand, constant lead time, no quantity discounts, no capacity or pallet constraints, no shelf life — are all false in practice, so name them as you use it. Reciting EOQ and stopping there is a weak answer; reciting it and then explaining why the real order quantity differs is a strong one.",
+    "steps": [
+      {
+        "label": "State the trade-off first",
+        "detail": "Larger orders mean fewer setups or purchase transactions but more average inventory and more carrying cost. Smaller orders invert it. EOQ is just where the two curves cross."
+      },
+      {
+        "label": "Get D, S, and H on consistent time units",
+        "detail": "D is demand in units per year, S is the fixed cost per order or setup, and H is the annual holding cost per unit — typically unit cost times a carrying rate covering capital, storage, insurance, shrink, and obsolescence. Mixing monthly demand with annual holding cost is the usual arithmetic error."
+      },
+      {
+        "label": "Compute, then check it against reality",
+        "detail": "Compare the answer to minimum order quantities, case and pallet rounding, truckload breaks, shelf life, storage capacity, and quantity discount tiers. The practical order quantity is usually EOQ rounded to whatever physical unit the supply chain actually moves."
+      },
+      {
+        "label": "Use the flatness of the cost curve",
+        "detail": "Total cost near the optimum is very flat — a deviation of plus or minus 20 percent from EOQ raises total ordering-plus-holding cost by under 2 percent. That is exactly why rounding to a full pallet or truckload is not a compromise but a free improvement, and it is the most useful thing to know about EOQ."
+      },
+      {
+        "label": "Name what EOQ ignores",
+        "detail": "It says nothing about demand variability, lead-time variability, or service level — that is safety stock and reorder point, a separate calculation. Keeping the two apart signals you actually understand inventory policy."
+      }
+    ],
+    "worked_example": "Given annual demand of 12,000 units, an order cost of 100 dollars, and a holding cost of 6 dollars per unit per year, EOQ equals the square root of (2 x 12,000 x 100 / 6), which is the square root of 400,000, roughly 632 units — about 19 orders a year. Then do the part that matters: if a pallet holds 600 units, order 600, because the cost curve is flat enough that the 5 percent deviation costs almost nothing while full pallets save real handling. If the supplier offers a price break at 1,000 units, EOQ no longer answers the question and you compare total cost at each tier including the lower unit price. Close by separating the questions: EOQ set how much, and the reorder point and safety stock — which depend on lead time and demand variability, not on EOQ — set when.",
+    "source_name": "Wikipedia — Economic order quantity",
+    "source_url": "https://en.wikipedia.org/wiki/Economic_order_quantity",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution."
+  },
+  {
+    "id": "risk-assessment",
+    "name": "Risk Assessment (Likelihood x Impact and the Four Responses)",
+    "domains": [
+      "Risk & Compliance",
+      "Supply Chain"
+    ],
+    "one_liner": "Score each risk on likelihood and impact to rank it, evaluate the controls, then choose a response — avoid, reduce, transfer, or accept — and track what remains.",
+    "when_to_use": "Use it for risk and compliance questions and for supply chain resilience questions, which are the same exercise with different subject matter. The differentiators are writing risks as cause-event-consequence statements rather than one-word topics, scoring residual rather than inherent risk, and naming the risk appetite that makes an acceptance legitimate. Do not treat the heat map as arithmetic; it is a communication device.",
+    "steps": [
+      {
+        "label": "Write the risk as cause, event, consequence",
+        "detail": "'Supplier' is not a risk. 'Our sole-source machining supplier sits in a flood-exposed region, and a flood would halt the line for six weeks at roughly 4 million dollars of lost output' is a risk. Vague risk statements are unscoreable and unmanageable, and this step alone separates candidates."
+      },
+      {
+        "label": "Score inherent likelihood and impact against anchored scales",
+        "detail": "Use a defined scale with real anchors — impact in dollars, days, or customers affected, and likelihood as a frequency or probability band — so that two people scoring independently land in the same cell."
+      },
+      {
+        "label": "Identify the controls and test whether they actually operate",
+        "detail": "Distinguish controls that exist on paper from controls that demonstrably operate. Scoring residual risk off documented controls rather than tested ones is how risk registers become fiction."
+      },
+      {
+        "label": "Score residual risk",
+        "detail": "The risk remaining once controls operate as evidenced. This, not inherent risk, is what decisions should be made on."
+      },
+      {
+        "label": "Choose a response",
+        "detail": "Avoid — stop doing the activity or redesign it away. Reduce or mitigate — add or strengthen controls. Transfer — insurance, contractual indemnity, or a supplier commitment, remembering that transfer moves the financial consequence and rarely the operational one. Accept — explicitly, with a named owner and a stated tolerance, which is a legitimate answer and often the right one."
+      },
+      {
+        "label": "Assign owner, date, and a monitoring indicator, then re-assess",
+        "detail": "Every risk needs a named owner, a review date, and a leading indicator that would tell you the likelihood is changing. Re-assess on a cadence and on trigger events, not just annually."
+      },
+      {
+        "label": "Call out tail risks separately",
+        "detail": "Likelihood times impact systematically under-ranks low-probability, catastrophic events, so a matrix will bury exactly the risks that end careers. Name tail risks explicitly rather than letting the scoring average them away."
+      }
+    ],
+    "worked_example": "Asked 'how would you build a risk framework for a new business line', start with the register rather than the governance chart. Write eight to ten risks as cause-event-consequence statements with the business owners in the room, because the statements are the hard part and the scoring is easy once they exist. Score inherent, then walk each existing control and ask for evidence it operated last quarter rather than accepting that it exists, and score residual off that. Assign a response per risk with an owner and a leading indicator — and be willing to say that two risks should be formally accepted within a stated tolerance rather than controlled, since a framework that mitigates everything is a framework nobody follows. Then flag the one low-likelihood, business-ending scenario separately, because a heat map will otherwise rank it below routine noise.",
+    "source_name": "Wikipedia — Risk matrix",
+    "source_url": "https://en.wikipedia.org/wiki/Risk_matrix",
+    "license_note": "CC-BY-SA 4.0 — safe to summarize with attribution. The four-response taxonomy and the inherent-versus-residual distinction are generic to ISO 31000 and COSO ERM, both of which are all-rights-reserved standards: cite them, do not copy them."
+  },
+  {
+    "id": "estimation",
+    "name": "Estimation (Top-Down vs Bottom-Up)",
+    "domains": [
+      "Program & Product Management",
+      "Operations",
+      "Supply Chain"
+    ],
+    "one_liner": "Build a number from a handful of anchors you can defend, then pressure-test it and give a range rather than a false-precision point estimate.",
+    "when_to_use": "Use it for 'how many X', market sizing, capacity sizing, volume, and cost questions where no data is given. First, though, ask whether data exists — asking for the real number is the correct opening, and you estimate only once told there is none. The interviewer is scoring your structure, your willingness to state assumptions, and whether you catch your own errors, not whether you land on the true value.",
+    "steps": [
+      {
+        "label": "Restate the question as a precise quantity",
+        "detail": "Pin the units, the geography, and the time period. 'How many trucks' is three different questions depending on whether it means peak day, average day, or owned fleet."
+      },
+      {
+        "label": "Choose top-down or bottom-up and say which",
+        "detail": "Top-down starts from a population and narrows with rates (people, then adoption, then frequency, then price). Bottom-up starts from one unit and multiplies up (per store, per order, per truck, per shift). Bottom-up is usually stronger for operations and capacity questions because the anchors are things an operator would actually know."
+      },
+      {
+        "label": "Write the equation before any arithmetic",
+        "detail": "State the full chain of multiplications out loud first. This lets the interviewer correct your structure before you waste two minutes computing the wrong thing, which is in your interest."
+      },
+      {
+        "label": "Pick round anchors and name every assumption as you use it",
+        "detail": "Use numbers that are easy to multiply, and flag each one as an assumption you would verify. Never smuggle in a number silently."
+      },
+      {
+        "label": "Compute in round numbers, then sanity-check against something known",
+        "detail": "Compare the result to a reference point you are confident about. If it is off by an order of magnitude, find the bad assumption rather than defending the total."
+      },
+      {
+        "label": "Give a range and name the sensitivity",
+        "detail": "Close with a range, and say which one or two assumptions the answer actually depends on — those are the figures you would go measure first. This is the highest-value sentence in the whole answer."
+      }
+    ],
+    "worked_example": "Asked 'how many delivery trucks would a Costco Business Center need for the Seattle metro', build it bottom-up and say so: orders per day times average order cube, divided by usable truck cube, divided by trips per truck per day. Anchor out loud — 400 business orders a day, 30 cubic feet each, a box truck with 900 usable cubic feet, two routes per truck per shift — which gives 12,000 cubic feet a day, about 13 truckloads, so roughly 7 trucks. Then sanity-check rather than stopping: 400 orders across 7 trucks is about 57 stops per truck per day, or ten minutes per stop across a ten-hour shift including driving, which is tight for pallet-level business deliveries — so the binding constraint is stop time, not cube, and the answer is closer to 9 or 10 trucks plus a spare. Close with the sensitivity: the estimate moves almost entirely with orders per day and minutes per stop, so those are the two numbers you would go get, and catching the stop-time error is worth more than the total.",
+    "source_name": "Synthesized standard practice",
+    "source_url": "",
+    "license_note": "No single canonical source — top-down versus bottom-up estimation is standard consulting and product-interview practice taught across many guides. Stated as synthesized rather than attributed to avoid a false citation."
+  }
+]

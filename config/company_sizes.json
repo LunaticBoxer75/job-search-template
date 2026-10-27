@@ -1,0 +1,5736 @@
+{
+ "_meta": {
+  "built": "2026-09-26",
+  "tiers": [
+   "100K+",
+   "10K-100K",
+   "1K-10K",
+   "<1K",
+   "unknown"
+  ],
+  "notes": "Tier is derived from `employees` (approximate global headcount; thresholds 100K / 10K / 1K). Subsidiaries/business units carry the PARENT's headcount and tier (e.g. Whole Foods, Zoox -> Amazon; Waymo -> Alphabet; Brooks Running, GEICO, Precision Castparts -> Berkshire Hathaway; Molex, Georgia-Pacific -> Koch), so a small unit of a giant ranks as the giant. Private-equity ownership is NOT treated as a parent (Walgreens, Staples, Inspire Brands, QTS are sized on their own). Audit/advisory networks use the global network headcount shown on Wikipedia (Deloitte, EY, PwC, KPMG, BDO, Grant Thornton, RSM, Baker Tilly, Crowe); the US member firm that actually employs US hires is smaller: BDO USA ~11K, RSM US ~20K, Grant Thornton LLP ~8.5K, Crowe LLP ~6K. staffing=true covers staffing agencies, recruiters (incl. 'our client' postings: Augmentis, CPS Inc., CFS, The Atlantic Group), contract-labour platforms (Alignerr, Crossover, Axiom) and job boards/aggregators (BioSpace, VetJobs, Jobright.ai, All Aviation Jobs, TalentAlly); their tier is always unknown. source=wikipedia means the headcount (and parent link, where relevant) was checked this session against the fetched Wikipedia article's infobox or body text (raw wikitext via the MediaWiki API). knowledge = model knowledge or a non-Wikipedia primary source: Ross Stores 111,000 associates (FY2025 10-K; Wikipedia's 88,100 is from 2019); Waters ~16,000 and Capstone Logistics 19,000 (their own job postings; Waters absorbed BD's Biosciences & Diagnostics unit in 2026). Honeywell Aerospace has been independent since 2026-06-29 (~40K). TikTok USDS Joint Venture is independent of ByteDance (<20% stake) and left unknown. Several aliases are generic words inherited from the input normalizer (international, foods, hub, compass, spectrum, connection, clear, box, inspire, aurora, citizens, archer, draper, harvey, acuity, axon, benchmark, providence, ust, bd, scan, wm, vast, ramp): each maps to the employer actually seen in these postings (e.g. international = International Motors, foods = US Foods, hub = Hub Group, compass = Compass real-estate) and can misfire on other firms with the same short name. 'odyssey' and 'cohere' each cover two different employers and are left unknown. Company size is not visa sponsorship: defense, government and cleared roles (U.S. Pacific Fleet, Lockheed Martin, Anduril, state/county agencies) often require US citizenship regardless of size."
+ },
+ "companies": {
+  "amazon": {
+   "name": "Amazon",
+   "tier": "100K+",
+   "employees": 1576000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "amazon",
+    "amazon com",
+    "amazoncom",
+    "amazon web",
+    "amazon web services",
+    "amazon web services aws",
+    "prime video & amazon mgm studios",
+    "prime video amazon mgm studios",
+    "prime video and amazon mgm studios",
+    "amazon music",
+    "aws",
+    "amazon com services",
+    "amazon com services llc",
+    "amazon logistics",
+    "amazon mgm studios",
+    "prime video",
+    "amazon com inc",
+    "amazon development center"
+   ]
+  },
+  "whole_foods_market": {
+   "name": "Whole Foods Market",
+   "tier": "100K+",
+   "employees": 1576000,
+   "parent": "Amazon",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "whole foods market",
+    "whole foods"
+   ]
+  },
+  "zoox": {
+   "name": "Zoox",
+   "tier": "100K+",
+   "employees": 1576000,
+   "parent": "Amazon",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "zoox"
+   ]
+  },
+  "google": {
+   "name": "Google",
+   "tier": "100K+",
+   "employees": 198933,
+   "parent": "Alphabet",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "google",
+    "alphabet",
+    "alphabet inc",
+    "google llc",
+    "youtube"
+   ]
+  },
+  "waymo": {
+   "name": "Waymo",
+   "tier": "100K+",
+   "employees": 198933,
+   "parent": "Alphabet",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "waymo"
+   ]
+  },
+  "deloitte": {
+   "name": "Deloitte",
+   "tier": "100K+",
+   "employees": 470000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "deloitte",
+    "deloitte consulting",
+    "deloitte & touche",
+    "deloitte and touche",
+    "deloitte touche",
+    "deloitte touche tohmatsu"
+   ]
+  },
+  "ey": {
+   "name": "EY (Ernst & Young)",
+   "tier": "100K+",
+   "employees": 406000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ey",
+    "ey-parthenon",
+    "ey parthenon",
+    "eyparthenon",
+    "ernst & young",
+    "ernst and young",
+    "ernst young"
+   ]
+  },
+  "boeing": {
+   "name": "Boeing",
+   "tier": "100K+",
+   "employees": 182000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "boeing",
+    "the boeing company",
+    "boeing company"
+   ]
+  },
+  "millennium_space_systems": {
+   "name": "Millennium Space Systems",
+   "tier": "100K+",
+   "employees": 182000,
+   "parent": "Boeing",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "millennium space systems"
+   ]
+  },
+  "microsoft": {
+   "name": "Microsoft",
+   "tier": "100K+",
+   "employees": 223000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "microsoft"
+   ]
+  },
+  "cvs_health": {
+   "name": "CVS Health",
+   "tier": "100K+",
+   "employees": 300000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cvs health",
+    "cvs",
+    "cvs pharmacy",
+    "aetna"
+   ]
+  },
+  "pwc": {
+   "name": "PwC",
+   "tier": "100K+",
+   "employees": 370000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pwc",
+    "pricewaterhousecoopers"
+   ]
+  },
+  "accenture": {
+   "name": "Accenture",
+   "tier": "100K+",
+   "employees": 779000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "accenture",
+    "accenture federal services"
+   ]
+  },
+  "uline": {
+   "name": "Uline",
+   "tier": "1K-10K",
+   "employees": 9392,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "uline"
+   ]
+  },
+  "tiktok": {
+   "name": "TikTok",
+   "tier": "100K+",
+   "employees": 120000,
+   "parent": "ByteDance",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "tiktok",
+    "tiktok inc"
+   ]
+  },
+  "tiktok_usds": {
+   "name": "TikTok USDS Joint Venture",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "tiktok usds joint venture",
+    "tiktok usds",
+    "tiktok u s data security joint venture"
+   ]
+  },
+  "anduril": {
+   "name": "Anduril Industries",
+   "tier": "1K-10K",
+   "employees": 7000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "anduril industries",
+    "anduril"
+   ]
+  },
+  "meta": {
+   "name": "Meta",
+   "tier": "10K-100K",
+   "employees": 75472,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "meta",
+    "meta platforms",
+    "facebook"
+   ]
+  },
+  "bae_systems": {
+   "name": "BAE Systems",
+   "tier": "100K+",
+   "employees": 110000,
+   "parent": "BAE Systems plc",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bae systems",
+    "bae systems inc",
+    "bae systems usa",
+    "bae systems plc"
+   ]
+  },
+  "spacex": {
+   "name": "SpaceX",
+   "tier": "10K-100K",
+   "employees": 22621,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "spacex",
+    "space exploration technologies"
+   ]
+  },
+  "alvarez_marsal": {
+   "name": "Alvarez & Marsal",
+   "tier": "10K-100K",
+   "employees": 10000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "alvarez & marsal",
+    "alvarez and marsal",
+    "alvarez marsal"
+   ]
+  },
+  "oracle": {
+   "name": "Oracle",
+   "tier": "100K+",
+   "employees": 141000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "oracle",
+    "oracle corporation"
+   ]
+  },
+  "raytheon": {
+   "name": "Raytheon (RTX)",
+   "tier": "100K+",
+   "employees": 180000,
+   "parent": "RTX",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "raytheon",
+    "raytheon australia",
+    "rtx",
+    "rtx corporation",
+    "raytheon technologies",
+    "collins aerospace",
+    "pratt & whitney",
+    "pratt and whitney",
+    "pratt whitney"
+   ]
+  },
+  "crowe": {
+   "name": "Crowe",
+   "tier": "10K-100K",
+   "employees": 40309,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "crowe",
+    "crowe llp",
+    "crowe global"
+   ]
+  },
+  "doordash": {
+   "name": "DoorDash",
+   "tier": "10K-100K",
+   "employees": 31400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "doordash"
+   ]
+  },
+  "lockheed_martin": {
+   "name": "Lockheed Martin",
+   "tier": "100K+",
+   "employees": 123000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lockheed martin"
+   ]
+  },
+  "laticrete": {
+   "name": "LATICRETE International",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "laticrete international"
+   ]
+  },
+  "blue_origin": {
+   "name": "Blue Origin",
+   "tier": "10K-100K",
+   "employees": 11000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "blue origin"
+   ]
+  },
+  "tesla": {
+   "name": "Tesla",
+   "tier": "100K+",
+   "employees": 134785,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "tesla"
+   ]
+  },
+  "applied_materials": {
+   "name": "Applied Materials",
+   "tier": "10K-100K",
+   "employees": 36500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "applied materials"
+   ]
+  },
+  "northrop_grumman": {
+   "name": "Northrop Grumman",
+   "tier": "10K-100K",
+   "employees": 95000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "northrop grumman"
+   ]
+  },
+  "affirm": {
+   "name": "Affirm",
+   "tier": "1K-10K",
+   "employees": 2358,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "affirm"
+   ]
+  },
+  "coreweave": {
+   "name": "CoreWeave",
+   "tier": "1K-10K",
+   "employees": 2189,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "coreweave"
+   ]
+  },
+  "university_of_washington": {
+   "name": "University of Washington",
+   "tier": "10K-100K",
+   "employees": 34668,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "university of washington",
+    "uw medicine"
+   ]
+  },
+  "cisco": {
+   "name": "Cisco",
+   "tier": "10K-100K",
+   "employees": 86200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cisco",
+    "cisco systems"
+   ]
+  },
+  "state_of_washington": {
+   "name": "State of Washington",
+   "tier": "10K-100K",
+   "employees": 70000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "state of washington"
+   ]
+  },
+  "wa_health_care_authority": {
+   "name": "Washington State Health Care Authority",
+   "tier": "10K-100K",
+   "employees": 70000,
+   "parent": "State of Washington",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "washington state health care authority"
+   ]
+  },
+  "concentrix": {
+   "name": "Concentrix",
+   "tier": "100K+",
+   "employees": 440000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "concentrix"
+   ]
+  },
+  "wells_fargo": {
+   "name": "Wells Fargo",
+   "tier": "100K+",
+   "employees": 205000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wells fargo"
+   ]
+  },
+  "tcs": {
+   "name": "Tata Consultancy Services",
+   "tier": "100K+",
+   "employees": 584519,
+   "parent": "Tata Group",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "tata consultancy",
+    "tata consultancy services",
+    "tata consultancy services tcs",
+    "tcs"
+   ]
+  },
+  "intuit": {
+   "name": "Intuit",
+   "tier": "10K-100K",
+   "employees": 18200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "intuit"
+   ]
+  },
+  "stripe": {
+   "name": "Stripe",
+   "tier": "1K-10K",
+   "employees": 8500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "stripe"
+   ]
+  },
+  "pds_health": {
+   "name": "PDS Health (Pacific Dental Services)",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pds health",
+    "pacific dental services"
+   ]
+  },
+  "home_depot": {
+   "name": "The Home Depot",
+   "tier": "100K+",
+   "employees": 470100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "the home depot",
+    "home depot"
+   ]
+  },
+  "srs_distribution": {
+   "name": "SRS Distribution",
+   "tier": "100K+",
+   "employees": 470100,
+   "parent": "The Home Depot",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "srs distribution",
+    "srs distribution inc"
+   ]
+  },
+  "nvidia": {
+   "name": "NVIDIA",
+   "tier": "10K-100K",
+   "employees": 42000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nvidia",
+    "nvidia ai"
+   ]
+  },
+  "robert_half": {
+   "name": "Robert Half",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "robert half"
+   ]
+  },
+  "biospace": {
+   "name": "BioSpace (job board)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "biospace"
+   ]
+  },
+  "jpmorgan_chase": {
+   "name": "JPMorgan Chase",
+   "tier": "100K+",
+   "employees": 318512,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "jpmorganchase",
+    "jpmorgan chase",
+    "jpmorgan chase & co",
+    "jpmorgan chase and co",
+    "jpmorgan chase co",
+    "jp morgan chase",
+    "jpmorgan",
+    "jp morgan"
+   ]
+  },
+  "motorola_solutions": {
+   "name": "Motorola Solutions",
+   "tier": "10K-100K",
+   "employees": 23000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "motorola solutions"
+   ]
+  },
+  "pms_for_hire": {
+   "name": "PMs for Hire",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "pms for hire"
+   ]
+  },
+  "nordstrom": {
+   "name": "Nordstrom",
+   "tier": "10K-100K",
+   "employees": 55000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nordstrom"
+   ]
+  },
+  "amd": {
+   "name": "AMD",
+   "tier": "10K-100K",
+   "employees": 31000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "amd",
+    "advanced micro devices"
+   ]
+  },
+  "sanmina": {
+   "name": "Sanmina",
+   "tier": "10K-100K",
+   "employees": 39000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sanmina",
+    "sanmina corporation"
+   ]
+  },
+  "zt_systems": {
+   "name": "ZT Systems",
+   "tier": "10K-100K",
+   "employees": 39000,
+   "parent": "Sanmina",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "zt systems"
+   ]
+  },
+  "uber": {
+   "name": "Uber",
+   "tier": "10K-100K",
+   "employees": 34000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "uber",
+    "uber technologies"
+   ]
+  },
+  "celestica": {
+   "name": "Celestica",
+   "tier": "10K-100K",
+   "employees": 21900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "celestica"
+   ]
+  },
+  "supermicro": {
+   "name": "Supermicro",
+   "tier": "1K-10K",
+   "employees": 7000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "supermicro",
+    "super micro computer spain s l",
+    "super micro computer spain sl",
+    "super micro computer",
+    "super micro computer inc"
+   ]
+  },
+  "paccar": {
+   "name": "PACCAR",
+   "tier": "10K-100K",
+   "employees": 25900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "paccar",
+    "paccar parts"
+   ]
+  },
+  "kenworth": {
+   "name": "Kenworth",
+   "tier": "10K-100K",
+   "employees": 25900,
+   "parent": "PACCAR",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kenworth truck",
+    "kenworth truck co",
+    "kenworth"
+   ]
+  },
+  "starbucks": {
+   "name": "Starbucks",
+   "tier": "100K+",
+   "employees": 381000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "starbucks"
+   ]
+  },
+  "salesforce": {
+   "name": "Salesforce",
+   "tier": "10K-100K",
+   "employees": 83334,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "salesforce"
+   ]
+  },
+  "keurig_dr_pepper": {
+   "name": "Keurig Dr Pepper",
+   "tier": "10K-100K",
+   "employees": 30600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "keurig dr pepper",
+    "keurig dr pepper inc",
+    "kdp"
+   ]
+  },
+  "analog_devices": {
+   "name": "Analog Devices",
+   "tier": "10K-100K",
+   "employees": 24500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "analog devices"
+   ]
+  },
+  "parker_hannifin": {
+   "name": "Parker Hannifin",
+   "tier": "10K-100K",
+   "employees": 57950,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "parker hannifin"
+   ]
+  },
+  "lhh": {
+   "name": "LHH (Adecco Group)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "lhh",
+    "lee hecht harrison"
+   ]
+  },
+  "intuitive_surgical": {
+   "name": "Intuitive Surgical",
+   "tier": "10K-100K",
+   "employees": 17021,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "intuitive",
+    "intuitive intuitive surgical",
+    "intuitive surgical"
+   ]
+  },
+  "walmart": {
+   "name": "Walmart",
+   "tier": "100K+",
+   "employees": 2100000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "walmart"
+   ]
+  },
+  "anthropic": {
+   "name": "Anthropic",
+   "tier": "1K-10K",
+   "employees": 2500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "anthropic"
+   ]
+  },
+  "flex": {
+   "name": "Flex",
+   "tier": "100K+",
+   "employees": 147979,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "flex",
+    "flex ltd"
+   ]
+  },
+  "apple": {
+   "name": "Apple",
+   "tier": "100K+",
+   "employees": 166000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "apple",
+    "apple inc"
+   ]
+  },
+  "baker_tilly": {
+   "name": "Baker Tilly",
+   "tier": "10K-100K",
+   "employees": 50400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "baker tilly",
+    "baker tilly us",
+    "baker tilly international"
+   ]
+  },
+  "merck": {
+   "name": "Merck",
+   "tier": "10K-100K",
+   "employees": 75000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "merck",
+    "merck & co",
+    "merck and co",
+    "merck co",
+    "msd"
+   ]
+  },
+  "abbott": {
+   "name": "Abbott",
+   "tier": "100K+",
+   "employees": 115000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "abbott",
+    "abbott laboratories"
+   ]
+  },
+  "siemens": {
+   "name": "Siemens",
+   "tier": "100K+",
+   "employees": 327000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "siemens"
+   ]
+  },
+  "fluidstack": {
+   "name": "Fluidstack",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "fluidstack"
+   ]
+  },
+  "vetjobs": {
+   "name": "VetJobs (job board)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "vetjobs"
+   ]
+  },
+  "echostar": {
+   "name": "EchoStar",
+   "tier": "10K-100K",
+   "employees": 12100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "echostar",
+    "echostar corporation"
+   ]
+  },
+  "rivian": {
+   "name": "Rivian",
+   "tier": "10K-100K",
+   "employees": 14861,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "rivian"
+   ]
+  },
+  "penske_logistics": {
+   "name": "Penske Logistics",
+   "tier": "10K-100K",
+   "employees": 40000,
+   "parent": "Penske Truck Leasing",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "penske logistics"
+   ]
+  },
+  "karman": {
+   "name": "Karman Space & Defense",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "karman space & defense",
+    "karman space and defense",
+    "karman space defense",
+    "karman holdings"
+   ]
+  },
+  "morgan_stanley": {
+   "name": "Morgan Stanley",
+   "tier": "10K-100K",
+   "employees": 83000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "morgan stanley"
+   ]
+  },
+  "l3harris": {
+   "name": "L3Harris Technologies",
+   "tier": "10K-100K",
+   "employees": 47000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "l3harris technologies",
+    "l3harris"
+   ]
+  },
+  "lam_research": {
+   "name": "Lam Research",
+   "tier": "10K-100K",
+   "employees": 19000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lam research"
+   ]
+  },
+  "insight_global": {
+   "name": "Insight Global",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "insight global"
+   ]
+  },
+  "xcel_energy": {
+   "name": "Xcel Energy",
+   "tier": "10K-100K",
+   "employees": 11380,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "xcel energy"
+   ]
+  },
+  "seattle_childrens": {
+   "name": "Seattle Children's",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "seattle children's",
+    "seattle children s",
+    "seattle childrens",
+    "seattle children s hospital",
+    "seattle children's hospital",
+    "seattle childrens hospital"
+   ]
+  },
+  "kaiser_permanente": {
+   "name": "Kaiser Permanente",
+   "tier": "100K+",
+   "employees": 300000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kaiser permanente"
+   ]
+  },
+  "gxo": {
+   "name": "GXO Logistics",
+   "tier": "100K+",
+   "employees": 152000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "gxo logistics",
+    "gxo logistics inc",
+    "gxo"
+   ]
+  },
+  "qts": {
+   "name": "QTS Data Centers",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "qts data centers",
+    "qts",
+    "qts realty trust",
+    "quality technology services"
+   ]
+  },
+  "molex": {
+   "name": "Molex",
+   "tier": "100K+",
+   "employees": 120000,
+   "parent": "Koch, Inc.",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "molex"
+   ]
+  },
+  "georgia_pacific": {
+   "name": "Georgia-Pacific",
+   "tier": "100K+",
+   "employees": 120000,
+   "parent": "Koch, Inc.",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "georgia-pacific",
+    "georgia pacific",
+    "georgiapacific",
+    "georgia pacific llc",
+    "georgia-pacific llc",
+    "georgiapacific llc"
+   ]
+  },
+  "t_mobile": {
+   "name": "T-Mobile",
+   "tier": "100K+",
+   "employees": 199000,
+   "parent": "Deutsche Telekom",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "t-mobile",
+    "t mobile",
+    "tmobile",
+    "t mobile us",
+    "t-mobile us",
+    "tmobile us"
+   ]
+  },
+  "expeditors": {
+   "name": "Expeditors International",
+   "tier": "10K-100K",
+   "employees": 19588,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "expeditors",
+    "expeditors international",
+    "expeditors international of washington"
+   ]
+  },
+  "johnson_johnson": {
+   "name": "Johnson & Johnson",
+   "tier": "100K+",
+   "employees": 138200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "johnson & johnson",
+    "johnson and johnson",
+    "johnson johnson",
+    "johnson & johnson medtech",
+    "johnson and johnson medtech",
+    "johnson johnson medtech",
+    "janssen",
+    "johnson & johnson innovative medicine",
+    "johnson and johnson innovative medicine",
+    "johnson johnson innovative medicine"
+   ]
+  },
+  "qcells": {
+   "name": "Qcells (Hanwha)",
+   "tier": "1K-10K",
+   "employees": 6004,
+   "parent": "Hanwha Solutions",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "qcells north america",
+    "qcells georgia",
+    "qcells georgia inc",
+    "qcells",
+    "hanwha qcells",
+    "hanwha q cells"
+   ]
+  },
+  "aston_carter": {
+   "name": "Aston Carter",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "aston carter"
+   ]
+  },
+  "chewy": {
+   "name": "Chewy",
+   "tier": "10K-100K",
+   "employees": 18100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "chewy"
+   ]
+  },
+  "king_county": {
+   "name": "King County, WA",
+   "tier": "10K-100K",
+   "employees": 15000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "king county wa",
+    "king county"
+   ]
+  },
+  "cambia": {
+   "name": "Cambia Health Solutions",
+   "tier": "1K-10K",
+   "employees": 4439,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cambia health solutions",
+    "regence"
+   ]
+  },
+  "digitalocean": {
+   "name": "DigitalOcean",
+   "tier": "1K-10K",
+   "employees": 1204,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "digitalocean"
+   ]
+  },
+  "turner_construction": {
+   "name": "Turner Construction",
+   "tier": "10K-100K",
+   "employees": 41575,
+   "parent": "Hochtief",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "turner construction",
+    "turner construction company"
+   ]
+  },
+  "nscale": {
+   "name": "Nscale",
+   "tier": "1K-10K",
+   "employees": 1000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nscale"
+   ]
+  },
+  "everpure": {
+   "name": "Everpure (formerly Pure Storage)",
+   "tier": "1K-10K",
+   "employees": 6400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "everpure",
+    "pure storage"
+   ]
+  },
+  "ulta_beauty": {
+   "name": "Ulta Beauty",
+   "tier": "10K-100K",
+   "employees": 66800,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ulta beauty",
+    "ulta"
+   ]
+  },
+  "loenbro": {
+   "name": "Loenbro",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "loenbro"
+   ]
+  },
+  "jobot": {
+   "name": "Jobot",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "jobot"
+   ]
+  },
+  "pokemon_company_international": {
+   "name": "The Pokémon Company International",
+   "tier": "<1K",
+   "employees": 448,
+   "parent": "The Pokémon Company",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "the pokémon international",
+    "the pokemon international",
+    "the pokemon company international",
+    "the pokémon company international",
+    "the pokemon company",
+    "the pokémon company",
+    "pokemon company international"
+   ]
+  },
+  "crusoe": {
+   "name": "Crusoe",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "crusoe"
+   ]
+  },
+  "mckinstry": {
+   "name": "McKinstry",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "mckinstry"
+   ]
+  },
+  "intepros": {
+   "name": "IntePros",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "intepros"
+   ]
+  },
+  "apex_systems": {
+   "name": "Apex Systems",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "apex systems"
+   ]
+  },
+  "chipotle": {
+   "name": "Chipotle Mexican Grill",
+   "tier": "100K+",
+   "employees": 130301,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "chipotle mexican grill",
+    "chipotle"
+   ]
+  },
+  "bank_of_america": {
+   "name": "Bank of America",
+   "tier": "100K+",
+   "employees": 213000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bank of america"
+   ]
+  },
+  "entegris": {
+   "name": "Entegris",
+   "tier": "1K-10K",
+   "employees": 7700,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "entegris"
+   ]
+  },
+  "kraft_heinz": {
+   "name": "Kraft Heinz",
+   "tier": "10K-100K",
+   "employees": 35000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kraft heinz"
+   ]
+  },
+  "slalom": {
+   "name": "Slalom",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "slalom",
+    "slalom consulting"
+   ]
+  },
+  "plaid": {
+   "name": "Plaid",
+   "tier": "1K-10K",
+   "employees": 1200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "plaid"
+   ]
+  },
+  "kpmg": {
+   "name": "KPMG",
+   "tier": "100K+",
+   "employees": 275288,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kpmg",
+    "kpmg us",
+    "kpmg llp"
+   ]
+  },
+  "sierra_nevada_corp": {
+   "name": "Sierra Nevada Corporation",
+   "tier": "1K-10K",
+   "employees": 5000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sierra nevada",
+    "sierra nevada corporation"
+   ]
+  },
+  "sierra_space": {
+   "name": "Sierra Space",
+   "tier": "1K-10K",
+   "employees": 5000,
+   "parent": "Sierra Nevada Corporation",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sierra space"
+   ]
+  },
+  "nyu_langone": {
+   "name": "NYU Langone Health",
+   "tier": "10K-100K",
+   "employees": 55000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nyu langone health",
+    "nyu langone"
+   ]
+  },
+  "hpe": {
+   "name": "Hewlett Packard Enterprise",
+   "tier": "10K-100K",
+   "employees": 67000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hewlett packard enterprise",
+    "hpe"
+   ]
+  },
+  "coinbase": {
+   "name": "Coinbase",
+   "tier": "1K-10K",
+   "employees": 3772,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "coinbase"
+   ]
+  },
+  "aditi_consulting": {
+   "name": "Aditi Consulting",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "aditi consulting"
+   ]
+  },
+  "judge_group": {
+   "name": "The Judge Group",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "the judge",
+    "the judge group",
+    "judge group"
+   ]
+  },
+  "whatnot": {
+   "name": "Whatnot",
+   "tier": "<1K",
+   "employees": 800,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "whatnot"
+   ]
+  },
+  "davita": {
+   "name": "DaVita Kidney Care",
+   "tier": "10K-100K",
+   "employees": 78000,
+   "parent": "DaVita",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "davita kidney care",
+    "davita"
+   ]
+  },
+  "lucky_strike": {
+   "name": "Lucky Strike Entertainment",
+   "tier": "10K-100K",
+   "employees": 12565,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lucky strike entertainment",
+    "bowlero"
+   ]
+  },
+  "hdr": {
+   "name": "HDR",
+   "tier": "10K-100K",
+   "employees": 19000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hdr",
+    "hdr inc"
+   ]
+  },
+  "zipline": {
+   "name": "Zipline",
+   "tier": "<1K",
+   "employees": 750,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "zipline"
+   ]
+  },
+  "wonder": {
+   "name": "Wonder",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "wonder"
+   ]
+  },
+  "walgreens": {
+   "name": "Walgreens",
+   "tier": "100K+",
+   "employees": 211000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "walgreens",
+    "walgreen co"
+   ]
+  },
+  "northern_trust": {
+   "name": "Northern Trust",
+   "tier": "10K-100K",
+   "employees": 25000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "northern trust",
+    "northern trust corp"
+   ]
+  },
+  "saronic": {
+   "name": "Saronic Technologies",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "saronic technologies",
+    "saronic"
+   ]
+  },
+  "target": {
+   "name": "Target",
+   "tier": "100K+",
+   "employees": 415000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "target",
+    "target corporation"
+   ]
+  },
+  "northwestern_medicine": {
+   "name": "Northwestern Medicine",
+   "tier": "10K-100K",
+   "employees": 40000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "northwestern medicine"
+   ]
+  },
+  "gusto": {
+   "name": "Gusto",
+   "tier": "1K-10K",
+   "employees": 2400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "gusto"
+   ]
+  },
+  "db_a": {
+   "name": "DB&A - DeWolff, Boberg & Associates",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "db&a - dewolff boberg & associates",
+    "db a dewolff boberg associates",
+    "db and a dewolff boberg and associates",
+    "dba dewolff boberg associates",
+    "db a dewolff boberg associates inc",
+    "db and a dewolff boberg and associates inc",
+    "db&a - dewolff boberg & associates inc",
+    "dba dewolff boberg associates inc",
+    "dewolff boberg & associates",
+    "dewolff boberg and associates",
+    "dewolff boberg associates"
+   ]
+  },
+  "international_motors": {
+   "name": "International Motors (formerly Navistar)",
+   "tier": "100K+",
+   "employees": 107755,
+   "parent": "Traton (Volkswagen Group)",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "international",
+    "international motors",
+    "navistar"
+   ]
+  },
+  "actalent": {
+   "name": "Actalent",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "actalent"
+   ]
+  },
+  "flexport": {
+   "name": "Flexport",
+   "tier": "1K-10K",
+   "employees": 2100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "flexport"
+   ]
+  },
+  "commure": {
+   "name": "Commure",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "commure"
+   ]
+  },
+  "marvell": {
+   "name": "Marvell Technology",
+   "tier": "1K-10K",
+   "employees": 7480,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "marvell technology",
+    "marvell"
+   ]
+  },
+  "mckesson": {
+   "name": "McKesson",
+   "tier": "10K-100K",
+   "employees": 45000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "mckesson"
+   ]
+  },
+  "marvin_group": {
+   "name": "The Marvin Group / Marvin Engineering",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "marvin engineering",
+    "marvin engineering company",
+    "the marvin",
+    "the marvin group"
+   ]
+  },
+  "cbre": {
+   "name": "CBRE",
+   "tier": "100K+",
+   "employees": 155000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cbre",
+    "cbre group"
+   ]
+  },
+  "turner_townsend": {
+   "name": "Turner & Townsend",
+   "tier": "100K+",
+   "employees": 155000,
+   "parent": "CBRE",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "turner & townsend",
+    "turner and townsend",
+    "turner townsend",
+    "turner & townsend pty",
+    "turner and townsend pty",
+    "turner townsend pty",
+    "turner & townsend pty limited",
+    "turner and townsend pty limited",
+    "turner townsend pty limited"
+   ]
+  },
+  "abbvie": {
+   "name": "AbbVie",
+   "tier": "10K-100K",
+   "employees": 57000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "abbvie"
+   ]
+  },
+  "precision_castparts": {
+   "name": "Precision Castparts",
+   "tier": "100K+",
+   "employees": 387800,
+   "parent": "Berkshire Hathaway",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "precision castparts",
+    "precision castparts corp"
+   ]
+  },
+  "docusign": {
+   "name": "Docusign",
+   "tier": "1K-10K",
+   "employees": 6838,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "docusign"
+   ]
+  },
+  "augmentis": {
+   "name": "Augmentis (recruiter)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "augmentis"
+   ]
+  },
+  "evlo_ai": {
+   "name": "Evlo AI",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "evlo ai"
+   ]
+  },
+  "emerson": {
+   "name": "Emerson",
+   "tier": "10K-100K",
+   "employees": 71000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "emerson",
+    "emerson electric"
+   ]
+  },
+  "stanford_university": {
+   "name": "Stanford University",
+   "tier": "10K-100K",
+   "employees": 18369,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "stanford university"
+   ]
+  },
+  "verkada": {
+   "name": "Verkada",
+   "tier": "1K-10K",
+   "employees": 1700,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "verkada"
+   ]
+  },
+  "applegreen": {
+   "name": "Applegreen",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "applegreen"
+   ]
+  },
+  "trident_seafoods": {
+   "name": "Trident Seafoods",
+   "tier": "1K-10K",
+   "employees": 9000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "trident seafoods"
+   ]
+  },
+  "asml": {
+   "name": "ASML",
+   "tier": "10K-100K",
+   "employees": 44175,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "asml"
+   ]
+  },
+  "caterpillar": {
+   "name": "Caterpillar",
+   "tier": "100K+",
+   "employees": 118000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "caterpillar",
+    "caterpillar inc"
+   ]
+  },
+  "leonardo_drs": {
+   "name": "Leonardo DRS",
+   "tier": "10K-100K",
+   "employees": 62762,
+   "parent": "Leonardo S.p.A.",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "leonardo drs"
+   ]
+  },
+  "pge": {
+   "name": "Pacific Gas and Electric",
+   "tier": "10K-100K",
+   "employees": 28400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pacific gas and electric",
+    "pacific gas and electric company",
+    "pg and e",
+    "pg e",
+    "pg&e",
+    "pge"
+   ]
+  },
+  "adobe": {
+   "name": "Adobe",
+   "tier": "10K-100K",
+   "employees": 31360,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "adobe"
+   ]
+  },
+  "delta_electronics": {
+   "name": "Delta Electronics Americas",
+   "tier": "10K-100K",
+   "employees": 83000,
+   "parent": "Delta Electronics",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "delta electronics americas"
+   ]
+  },
+  "formlabs": {
+   "name": "Formlabs",
+   "tier": "<1K",
+   "employees": 750,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "formlabs"
+   ]
+  },
+  "watts_water": {
+   "name": "Watts Water Technologies",
+   "tier": "1K-10K",
+   "employees": 5700,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "watts water technologies"
+   ]
+  },
+  "kuehne_nagel": {
+   "name": "Kuehne+Nagel",
+   "tier": "10K-100K",
+   "employees": 96863,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kuehne+nagel",
+    "kuehne nagel",
+    "kuehnenagel",
+    "kuehne + nagel"
+   ]
+  },
+  "ppg": {
+   "name": "PPG",
+   "tier": "10K-100K",
+   "employees": 46000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ppg",
+    "ppg industries"
+   ]
+  },
+  "crossover": {
+   "name": "Crossover (recruiting platform)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "crossover"
+   ]
+  },
+  "martin_brower": {
+   "name": "Martin Brower",
+   "tier": "10K-100K",
+   "employees": 36000,
+   "parent": "Reyes Holdings",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "martin brower"
+   ]
+  },
+  "reyes_beverage": {
+   "name": "Reyes Beverage Group",
+   "tier": "10K-100K",
+   "employees": 36000,
+   "parent": "Reyes Holdings",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "reyes beverage",
+    "reyes beverage group"
+   ]
+  },
+  "ascensus": {
+   "name": "Ascensus",
+   "tier": "1K-10K",
+   "employees": 5500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ascensus"
+   ]
+  },
+  "dsv": {
+   "name": "DSV",
+   "tier": "100K+",
+   "employees": 151751,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "dsv - global transport and logistics",
+    "dsv global transport and logistics",
+    "dsv"
+   ]
+  },
+  "daley_associates": {
+   "name": "Daley And Associates",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "daley and associates",
+    "daley and associates llc"
+   ]
+  },
+  "puget_sound_energy": {
+   "name": "Puget Sound Energy",
+   "tier": "1K-10K",
+   "employees": 3257,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "puget sound energy"
+   ]
+  },
+  "sanofi": {
+   "name": "Sanofi",
+   "tier": "10K-100K",
+   "employees": 82878,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sanofi"
+   ]
+  },
+  "thermo_fisher": {
+   "name": "Thermo Fisher Scientific",
+   "tier": "100K+",
+   "employees": 125000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "thermo fisher scientific",
+    "thermo fisher"
+   ]
+  },
+  "avantor": {
+   "name": "Avantor",
+   "tier": "10K-100K",
+   "employees": 14500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "avantor"
+   ]
+  },
+  "xometry": {
+   "name": "Xometry",
+   "tier": "1K-10K",
+   "employees": 1500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "xometry"
+   ]
+  },
+  "aquent": {
+   "name": "Aquent",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "aquent"
+   ]
+  },
+  "iqvia": {
+   "name": "IQVIA",
+   "tier": "10K-100K",
+   "employees": 93000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "iqvia"
+   ]
+  },
+  "axon": {
+   "name": "Axon",
+   "tier": "1K-10K",
+   "employees": 5100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "axon",
+    "axon enterprise"
+   ]
+  },
+  "palo_alto_networks": {
+   "name": "Palo Alto Networks",
+   "tier": "10K-100K",
+   "employees": 16068,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "palo alto networks"
+   ]
+  },
+  "lululemon": {
+   "name": "lululemon",
+   "tier": "10K-100K",
+   "employees": 39000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lululemon",
+    "lululemon athletica"
+   ]
+  },
+  "liberty_mutual": {
+   "name": "Liberty Mutual Insurance",
+   "tier": "10K-100K",
+   "employees": 45000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "liberty mutual insurance",
+    "liberty mutual"
+   ]
+  },
+  "providence": {
+   "name": "Providence",
+   "tier": "100K+",
+   "employees": 120000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "providence",
+    "providence health & services",
+    "providence health and services",
+    "providence health services",
+    "providence swedish"
+   ]
+  },
+  "aprio": {
+   "name": "Aprio",
+   "tier": "1K-10K",
+   "employees": 1500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "aprio"
+   ]
+  },
+  "snorkel_ai": {
+   "name": "Snorkel AI",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "snorkel ai"
+   ]
+  },
+  "alo_yoga": {
+   "name": "Alo (Alo Yoga)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "alo",
+    "alo yoga"
+   ]
+  },
+  "endeavor_health": {
+   "name": "Endeavor Health",
+   "tier": "10K-100K",
+   "employees": 26000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "endeavor health"
+   ]
+  },
+  "newell_brands": {
+   "name": "Newell Brands",
+   "tier": "10K-100K",
+   "employees": 24600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "newell brands"
+   ]
+  },
+  "ross_stores": {
+   "name": "Ross Stores",
+   "tier": "100K+",
+   "employees": 111000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "ross stores",
+    "ross stores inc",
+    "ross dress for less"
+   ]
+  },
+  "dexian": {
+   "name": "Dexian",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "dexian"
+   ]
+  },
+  "millenniumsoft": {
+   "name": "MillenniumSoft",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "millenniumsoft",
+    "millenniumsoft inc"
+   ]
+  },
+  "action_behavior_centers": {
+   "name": "Action Behavior Centers",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "action behavior centers - aba therapy for autism",
+    "action behavior centers aba therapy for autism",
+    "action behavior centers"
+   ]
+  },
+  "citizens": {
+   "name": "Citizens Financial Group",
+   "tier": "10K-100K",
+   "employees": 17570,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "citizens",
+    "citizens financial group",
+    "citizens bank"
+   ]
+  },
+  "vast": {
+   "name": "Vast (space stations)",
+   "tier": "<1K",
+   "employees": 606,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "vast"
+   ]
+  },
+  "jb_hunt": {
+   "name": "J.B. Hunt Transport Services",
+   "tier": "10K-100K",
+   "employees": 34718,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "j b hunt transport",
+    "j b hunt transport services inc",
+    "jb hunt transport services inc",
+    "jb hunt",
+    "j b hunt"
+   ]
+  },
+  "mass_general_brigham": {
+   "name": "Mass General Brigham",
+   "tier": "10K-100K",
+   "employees": 80000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "mass general brigham"
+   ]
+  },
+  "mass_general_hospital": {
+   "name": "Massachusetts General Hospital",
+   "tier": "10K-100K",
+   "employees": 80000,
+   "parent": "Mass General Brigham",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "massachusetts general hospital"
+   ]
+  },
+  "brown_brothers_harriman": {
+   "name": "Brown Brothers Harriman",
+   "tier": "1K-10K",
+   "employees": 6000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "brown brothers harriman"
+   ]
+  },
+  "hadrian": {
+   "name": "Hadrian",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "hadrian",
+    "hadrian automation"
+   ]
+  },
+  "abm": {
+   "name": "ABM Industries",
+   "tier": "100K+",
+   "employees": 140000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "abm industries",
+    "abm industries inc",
+    "abm"
+   ]
+  },
+  "state_of_colorado": {
+   "name": "State of Colorado",
+   "tier": "10K-100K",
+   "employees": 35000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "state of colorado"
+   ]
+  },
+  "hyve_solutions": {
+   "name": "Hyve Solutions",
+   "tier": "10K-100K",
+   "employees": 24000,
+   "parent": "TD SYNNEX",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hyve solutions"
+   ]
+  },
+  "addison_group": {
+   "name": "Addison Group",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "addison",
+    "addison group"
+   ]
+  },
+  "ryder": {
+   "name": "Ryder System",
+   "tier": "10K-100K",
+   "employees": 39900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ryder system",
+    "ryder system inc",
+    "ryder"
+   ]
+  },
+  "texas_health_resources": {
+   "name": "Texas Health Resources",
+   "tier": "10K-100K",
+   "employees": 24000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "texas health resources"
+   ]
+  },
+  "mta": {
+   "name": "Metropolitan Transportation Authority",
+   "tier": "10K-100K",
+   "employees": 74000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "metropolitan transportation authority"
+   ]
+  },
+  "ge_vernova": {
+   "name": "GE Vernova",
+   "tier": "10K-100K",
+   "employees": 70000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ge vernova"
+   ]
+  },
+  "ektello": {
+   "name": "ektello",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "ektello"
+   ]
+  },
+  "all_aviation_jobs": {
+   "name": "All Aviation Jobs (job board)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "all aviation jobs"
+   ]
+  },
+  "clorox": {
+   "name": "The Clorox Company",
+   "tier": "1K-10K",
+   "employees": 7600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "the clorox",
+    "the clorox company",
+    "clorox"
+   ]
+  },
+  "dover": {
+   "name": "Dover Corporation",
+   "tier": "10K-100K",
+   "employees": 24000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "dover",
+    "dover corporation"
+   ]
+  },
+  "cardinal_health": {
+   "name": "Cardinal Health",
+   "tier": "10K-100K",
+   "employees": 63900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cardinal health"
+   ]
+  },
+  "city_of_tacoma": {
+   "name": "City of Tacoma",
+   "tier": "1K-10K",
+   "employees": 4035,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "city of tacoma"
+   ]
+  },
+  "alaska_airlines": {
+   "name": "Alaska Airlines",
+   "tier": "10K-100K",
+   "employees": 31585,
+   "parent": "Alaska Air Group",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "alaska airlines"
+   ]
+  },
+  "sodexo": {
+   "name": "Sodexo",
+   "tier": "100K+",
+   "employees": 426464,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sodexo"
+   ]
+  },
+  "leidos": {
+   "name": "Leidos",
+   "tier": "10K-100K",
+   "employees": 47000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "leidos"
+   ]
+  },
+  "honeywell_aerospace": {
+   "name": "Honeywell Aerospace",
+   "tier": "10K-100K",
+   "employees": 40000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "honeywell aerospace"
+   ]
+  },
+  "applicantz": {
+   "name": "Applicantz",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "applicantz"
+   ]
+  },
+  "draper": {
+   "name": "Draper (Charles Stark Draper Laboratory)",
+   "tier": "1K-10K",
+   "employees": 2000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "draper",
+    "draper laboratory"
+   ]
+  },
+  "williams_sonoma": {
+   "name": "Williams-Sonoma",
+   "tier": "10K-100K",
+   "employees": 19600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "williams-sonoma",
+    "williams sonoma",
+    "williamssonoma",
+    "williams sonoma inc",
+    "williams-sonoma inc",
+    "williamssonoma inc"
+   ]
+  },
+  "odyssey": {
+   "name": "Odyssey / Odyssey Group (name collision)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "odyssey",
+    "odyssey group"
+   ]
+  },
+  "gilead": {
+   "name": "Gilead Sciences",
+   "tier": "10K-100K",
+   "employees": 17000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "gilead sciences",
+    "gilead"
+   ]
+  },
+  "pepsico": {
+   "name": "PepsiCo",
+   "tier": "100K+",
+   "employees": 318000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pepsico"
+   ]
+  },
+  "ringcentral": {
+   "name": "RingCentral",
+   "tier": "1K-10K",
+   "employees": 3126,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ringcentral"
+   ]
+  },
+  "wanzek": {
+   "name": "Wanzek Construction",
+   "tier": "10K-100K",
+   "employees": 32000,
+   "parent": "MasTec",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wanzek construction a mastec",
+    "wanzek construction inc a mastec company",
+    "wanzek construction",
+    "wanzek"
+   ]
+  },
+  "aurora_innovation": {
+   "name": "Aurora Innovation",
+   "tier": "1K-10K",
+   "employees": 1700,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "aurora",
+    "aurora innovation"
+   ]
+  },
+  "wesco": {
+   "name": "Wesco International",
+   "tier": "10K-100K",
+   "employees": 20000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wesco",
+    "wesco international"
+   ]
+  },
+  "american_airlines": {
+   "name": "American Airlines",
+   "tier": "100K+",
+   "employees": 103440,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "american airlines",
+    "american airlines group"
+   ]
+  },
+  "beth_israel_lahey": {
+   "name": "Beth Israel Lahey Health",
+   "tier": "10K-100K",
+   "employees": 39000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "beth israel lahey health"
+   ]
+  },
+  "horizontal_talent": {
+   "name": "Horizontal Talent",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "horizontal talent"
+   ]
+  },
+  "jobright_ai": {
+   "name": "Jobright.ai (job aggregator)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "jobright ai",
+    "jobrightai"
+   ]
+  },
+  "rei": {
+   "name": "REI",
+   "tier": "10K-100K",
+   "employees": 15000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "rei",
+    "recreational equipment inc"
+   ]
+  },
+  "jacobs": {
+   "name": "Jacobs",
+   "tier": "10K-100K",
+   "employees": 43000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "jacobs",
+    "jacobs solutions"
+   ]
+  },
+  "grainger": {
+   "name": "Grainger",
+   "tier": "10K-100K",
+   "employees": 26000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "grainger",
+    "w w grainger"
+   ]
+  },
+  "teksystems": {
+   "name": "TEKsystems",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "teksystems"
+   ]
+  },
+  "caci": {
+   "name": "CACI International",
+   "tier": "10K-100K",
+   "employees": 27000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "caci international",
+    "caci international inc",
+    "caci"
+   ]
+  },
+  "okta": {
+   "name": "Okta",
+   "tier": "1K-10K",
+   "employees": 6366,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "okta"
+   ]
+  },
+  "bloom_energy": {
+   "name": "Bloom Energy",
+   "tier": "1K-10K",
+   "employees": 2214,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bloom energy"
+   ]
+  },
+  "metropolis": {
+   "name": "Metropolis Technologies",
+   "tier": "10K-100K",
+   "employees": 20000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "metropolis technologies"
+   ]
+  },
+  "epitec": {
+   "name": "EPITEC",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "epitec"
+   ]
+  },
+  "loreal": {
+   "name": "L'Oréal",
+   "tier": "10K-100K",
+   "employees": 90000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "l'oréal",
+    "l oreal",
+    "l oréal",
+    "l'oreal",
+    "loreal",
+    "loréal"
+   ]
+  },
+  "ibm": {
+   "name": "IBM",
+   "tier": "100K+",
+   "employees": 264300,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ibm"
+   ]
+  },
+  "bobs_discount_furniture": {
+   "name": "Bob's Discount Furniture",
+   "tier": "1K-10K",
+   "employees": 5800,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bob's discount furniture",
+    "bob s discount furniture",
+    "bobs discount furniture"
+   ]
+  },
+  "osi_group": {
+   "name": "OSI Group",
+   "tier": "10K-100K",
+   "employees": 20000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "osi",
+    "osi group"
+   ]
+  },
+  "gotion": {
+   "name": "Gotion",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "gotion",
+    "gotion inc"
+   ]
+  },
+  "shield_ai": {
+   "name": "Shield AI",
+   "tier": "1K-10K",
+   "employees": 1500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "shield ai"
+   ]
+  },
+  "inspire_brands": {
+   "name": "Inspire Brands",
+   "tier": "100K+",
+   "employees": 650000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "inspire brands",
+    "inspire"
+   ]
+  },
+  "wsp": {
+   "name": "WSP",
+   "tier": "10K-100K",
+   "employees": 83000,
+   "parent": "WSP Global",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wsp in the u s",
+    "wsp in the us",
+    "wsp usa",
+    "wsp global"
+   ]
+  },
+  "staples": {
+   "name": "Staples",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "staples"
+   ]
+  },
+  "inaba_foods": {
+   "name": "INABA Foods (USA)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "inaba foods",
+    "inaba foods inc",
+    "inaba foods usa inc",
+    "inaba foods usa"
+   ]
+  },
+  "us_bank": {
+   "name": "U.S. Bank",
+   "tier": "10K-100K",
+   "employees": 70000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "u s bank",
+    "us bank",
+    "u s bancorp",
+    "us bancorp"
+   ]
+  },
+  "paychex": {
+   "name": "Paychex",
+   "tier": "10K-100K",
+   "employees": 19000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "paychex"
+   ]
+  },
+  "figma": {
+   "name": "Figma",
+   "tier": "1K-10K",
+   "employees": 1886,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "figma"
+   ]
+  },
+  "united_airlines": {
+   "name": "United Airlines",
+   "tier": "100K+",
+   "employees": 113200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "united airlines"
+   ]
+  },
+  "invenergy": {
+   "name": "Invenergy",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "invenergy"
+   ]
+  },
+  "samsung_electronics": {
+   "name": "Samsung Electronics",
+   "tier": "100K+",
+   "employees": 259149,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "samsung electronics",
+    "samsung semiconductor",
+    "samsung"
+   ]
+  },
+  "benchmark_electronics": {
+   "name": "Benchmark Electronics",
+   "tier": "10K-100K",
+   "employees": 11840,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "benchmark",
+    "benchmark electronics"
+   ]
+  },
+  "ascendion": {
+   "name": "Ascendion",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "ascendion"
+   ]
+  },
+  "howmet": {
+   "name": "Howmet Aerospace",
+   "tier": "10K-100K",
+   "employees": 23930,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "howmet aerospace"
+   ]
+  },
+  "conagra": {
+   "name": "Conagra Brands",
+   "tier": "10K-100K",
+   "employees": 18300,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "conagra brands"
+   ]
+  },
+  "eos_fitness": {
+   "name": "EōS Fitness",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "eōs fitness",
+    "eos fitness"
+   ]
+  },
+  "curtiss_wright": {
+   "name": "Curtiss-Wright",
+   "tier": "1K-10K",
+   "employees": 9200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "curtiss-wright",
+    "curtiss wright",
+    "curtisswright",
+    "curtiss wright corporation",
+    "curtiss-wright corporation",
+    "curtisswright corporation"
+   ]
+  },
+  "novolex": {
+   "name": "Novolex (incl. Pactiv Evergreen)",
+   "tier": "10K-100K",
+   "employees": 16500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "novolex",
+    "pactiv evergreen"
+   ]
+  },
+  "schneider_electric": {
+   "name": "Schneider Electric",
+   "tier": "100K+",
+   "employees": 177000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "schneider electric"
+   ]
+  },
+  "sharkninja": {
+   "name": "SharkNinja",
+   "tier": "1K-10K",
+   "employees": 3000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sharkninja"
+   ]
+  },
+  "blue_yonder": {
+   "name": "Blue Yonder",
+   "tier": "100K+",
+   "employees": 183685,
+   "parent": "Panasonic",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "blue yonder"
+   ]
+  },
+  "draftkings": {
+   "name": "DraftKings",
+   "tier": "1K-10K",
+   "employees": 5100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "draftkings",
+    "draftkings inc"
+   ]
+  },
+  "capgemini": {
+   "name": "Capgemini",
+   "tier": "100K+",
+   "employees": 423400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "capgemini"
+   ]
+  },
+  "weyerhaeuser": {
+   "name": "Weyerhaeuser",
+   "tier": "1K-10K",
+   "employees": 9440,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "weyerhaeuser"
+   ]
+  },
+  "multicare": {
+   "name": "MultiCare Health System",
+   "tier": "10K-100K",
+   "employees": 20000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "multicare health system",
+    "multicare"
+   ]
+  },
+  "harvey_nash": {
+   "name": "Harvey Nash",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "harvey nash"
+   ]
+  },
+  "harbor_freight": {
+   "name": "Harbor Freight Tools",
+   "tier": "10K-100K",
+   "employees": 30000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "harbor freight tools",
+    "harbor freight"
+   ]
+  },
+  "eaton": {
+   "name": "Eaton",
+   "tier": "10K-100K",
+   "employees": 94000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "eaton"
+   ]
+  },
+  "frontier_airlines": {
+   "name": "Frontier Airlines",
+   "tier": "1K-10K",
+   "employees": 7656,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "frontier airlines"
+   ]
+  },
+  "napa": {
+   "name": "NAPA Auto Parts",
+   "tier": "10K-100K",
+   "employees": 60000,
+   "parent": "Genuine Parts Company",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "napa auto parts"
+   ]
+  },
+  "veho": {
+   "name": "Veho",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "veho"
+   ]
+  },
+  "pyramid_consulting": {
+   "name": "Pyramid Consulting",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "pyramid consulting",
+    "pyramid consulting inc"
+   ]
+  },
+  "sandisk": {
+   "name": "Sandisk",
+   "tier": "10K-100K",
+   "employees": 11000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sandisk"
+   ]
+  },
+  "us_tech_solutions": {
+   "name": "US Tech Solutions",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "tech solutions",
+    "us tech solutions"
+   ]
+  },
+  "grant_thornton": {
+   "name": "Grant Thornton",
+   "tier": "10K-100K",
+   "employees": 72858,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "grant thornton",
+    "grant thornton us",
+    "grant thornton llp",
+    "grant thornton advisors"
+   ]
+  },
+  "net2source": {
+   "name": "Net2Source",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "net2source",
+    "net2source n2s",
+    "n2s"
+   ]
+  },
+  "fleet_data_centers": {
+   "name": "Fleet Data Centers",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "fleet data centers"
+   ]
+  },
+  "brooks_running": {
+   "name": "Brooks Running",
+   "tier": "100K+",
+   "employees": 387800,
+   "parent": "Berkshire Hathaway",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "brooks running",
+    "brooks sports"
+   ]
+  },
+  "securitas": {
+   "name": "Securitas Security Services USA",
+   "tier": "100K+",
+   "employees": 322000,
+   "parent": "Securitas AB",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "securitas security",
+    "securitas security services usa inc",
+    "securitas"
+   ]
+  },
+  "costco": {
+   "name": "Costco Wholesale",
+   "tier": "100K+",
+   "employees": 341000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "costco wholesale",
+    "costco"
+   ]
+  },
+  "sofi": {
+   "name": "SoFi",
+   "tier": "1K-10K",
+   "employees": 5000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sofi"
+   ]
+  },
+  "expedia": {
+   "name": "Expedia Group",
+   "tier": "10K-100K",
+   "employees": 16500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "expedia",
+    "expedia group"
+   ]
+  },
+  "sound_transit": {
+   "name": "Sound Transit",
+   "tier": "1K-10K",
+   "employees": 1914,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sound transit"
+   ]
+  },
+  "bunzl": {
+   "name": "Bunzl Distribution",
+   "tier": "10K-100K",
+   "employees": 27000,
+   "parent": "Bunzl plc",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bunzl distribution",
+    "bunzl distribution na",
+    "bunzl"
+   ]
+  },
+  "wafd_bank": {
+   "name": "WaFd Bank",
+   "tier": "1K-10K",
+   "employees": 2208,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wafd bank",
+    "wafd",
+    "washington federal"
+   ]
+  },
+  "bdo": {
+   "name": "BDO",
+   "tier": "100K+",
+   "employees": 119611,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bdo",
+    "bdo usa"
+   ]
+  },
+  "intel": {
+   "name": "Intel",
+   "tier": "10K-100K",
+   "employees": 85100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "intel",
+    "intel corporation"
+   ]
+  },
+  "archer_aviation": {
+   "name": "Archer Aviation",
+   "tier": "<1K",
+   "employees": 900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "archer",
+    "archer aviation"
+   ]
+  },
+  "russell_tobin": {
+   "name": "Russell Tobin",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "russell tobin"
+   ]
+  },
+  "keystone_automotive": {
+   "name": "Keystone Automotive Operations",
+   "tier": "10K-100K",
+   "employees": 44000,
+   "parent": "LKQ Corporation",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "keystone automotive operations",
+    "keystone automotive operations inc"
+   ]
+  },
+  "emory_healthcare": {
+   "name": "Emory Healthcare",
+   "tier": "10K-100K",
+   "employees": 26000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "emory healthcare"
+   ]
+  },
+  "skydio": {
+   "name": "Skydio",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "skydio"
+   ]
+  },
+  "goldman_sachs": {
+   "name": "Goldman Sachs",
+   "tier": "10K-100K",
+   "employees": 47400,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "goldman sachs"
+   ]
+  },
+  "gartner": {
+   "name": "Gartner",
+   "tier": "10K-100K",
+   "employees": 20244,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "gartner"
+   ]
+  },
+  "aecom": {
+   "name": "AECOM",
+   "tier": "10K-100K",
+   "employees": 51000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "aecom"
+   ]
+  },
+  "waters": {
+   "name": "Waters Corporation",
+   "tier": "10K-100K",
+   "employees": 16000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "waters",
+    "waters corporation"
+   ]
+  },
+  "insulet": {
+   "name": "Insulet",
+   "tier": "1K-10K",
+   "employees": 3900,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "insulet",
+    "insulet corporation"
+   ]
+  },
+  "texas_hhs": {
+   "name": "Texas Health and Human Services",
+   "tier": "10K-100K",
+   "employees": 36000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "texas health and human",
+    "texas health and human services",
+    "texas health and human services commission",
+    "texas hhsc"
+   ]
+  },
+  "spectrum": {
+   "name": "Spectrum (Charter Communications)",
+   "tier": "10K-100K",
+   "employees": 91900,
+   "parent": "Charter Communications",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "spectrum",
+    "charter spectrum"
+   ]
+  },
+  "scale_ai": {
+   "name": "Scale AI",
+   "tier": "1K-10K",
+   "employees": 1200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "scale ai"
+   ]
+  },
+  "ontic": {
+   "name": "Ontic",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "ontic"
+   ]
+  },
+  "ultimate_staffing": {
+   "name": "Ultimate Staffing",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "ultimate staffing"
+   ]
+  },
+  "ursa_major": {
+   "name": "Ursa Major",
+   "tier": "<1K",
+   "employees": 270,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ursa major",
+    "ursa major technologies"
+   ]
+  },
+  "ut_southwestern": {
+   "name": "UT Southwestern Medical Center",
+   "tier": "10K-100K",
+   "employees": 20000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "ut southwestern medical center",
+    "ut southwestern"
+   ]
+  },
+  "safran": {
+   "name": "Safran",
+   "tier": "100K+",
+   "employees": 110000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "safran"
+   ]
+  },
+  "cetera": {
+   "name": "Cetera Financial Group",
+   "tier": "1K-10K",
+   "employees": 1832,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cetera financial",
+    "cetera financial group",
+    "cetera"
+   ]
+  },
+  "apex_fintech": {
+   "name": "Apex Fintech Solutions",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "apex fintech solutions"
+   ]
+  },
+  "ut_austin": {
+   "name": "The University of Texas at Austin",
+   "tier": "10K-100K",
+   "employees": 24000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "the university of texas at austin",
+    "university of texas at austin",
+    "ut austin"
+   ]
+  },
+  "mondelez": {
+   "name": "Mondelēz International",
+   "tier": "10K-100K",
+   "employees": 91000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "mondelēz international",
+    "mondelez international",
+    "mondelez"
+   ]
+  },
+  "ust": {
+   "name": "UST",
+   "tier": "10K-100K",
+   "employees": 30000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ust",
+    "ust global"
+   ]
+  },
+  "valley_medical_center": {
+   "name": "Valley Medical Center (Renton)",
+   "tier": "1K-10K",
+   "employees": 3500,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "valley medical center & clinics",
+    "valley medical center and clinics",
+    "valley medical center clinics"
+   ]
+  },
+  "rush": {
+   "name": "Rush University Medical Center",
+   "tier": "1K-10K",
+   "employees": 9900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "rush university medical center",
+    "rush university system for health"
+   ]
+  },
+  "cfs": {
+   "name": "CFS (recruiter)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "cfs"
+   ]
+  },
+  "texas_instruments": {
+   "name": "Texas Instruments",
+   "tier": "10K-100K",
+   "employees": 34000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "texas instruments"
+   ]
+  },
+  "talentally": {
+   "name": "TalentAlly (job board)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "talentally"
+   ]
+  },
+  "wellington_management": {
+   "name": "Wellington Management",
+   "tier": "1K-10K",
+   "employees": 1922,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wellington management"
+   ]
+  },
+  "rsm": {
+   "name": "RSM",
+   "tier": "10K-100K",
+   "employees": 64000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "rsm llp",
+    "rsm us llp",
+    "rsm us",
+    "rsm international"
+   ]
+  },
+  "dsj_global": {
+   "name": "DSJ Global",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "dsj global"
+   ]
+  },
+  "fossil": {
+   "name": "Fossil Group",
+   "tier": "1K-10K",
+   "employees": 5200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "fossil",
+    "fossil group inc",
+    "fossil group"
+   ]
+  },
+  "university_of_colorado": {
+   "name": "University of Colorado",
+   "tier": "10K-100K",
+   "employees": 40000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "university of colorado"
+   ]
+  },
+  "pentair": {
+   "name": "Pentair",
+   "tier": "1K-10K",
+   "employees": 9750,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pentair"
+   ]
+  },
+  "perplexity": {
+   "name": "Perplexity",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "perplexity",
+    "perplexity ai"
+   ]
+  },
+  "sazerac": {
+   "name": "Sazerac Company",
+   "tier": "1K-10K",
+   "employees": 2000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sazerac",
+    "sazerac company"
+   ]
+  },
+  "base_power": {
+   "name": "Base Power Company",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "base power",
+    "base power company"
+   ]
+  },
+  "blank_street": {
+   "name": "Blank Street",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "blank street"
+   ]
+  },
+  "darigold": {
+   "name": "Darigold",
+   "tier": "1K-10K",
+   "employees": 1516,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "darigold"
+   ]
+  },
+  "nintendo": {
+   "name": "Nintendo",
+   "tier": "1K-10K",
+   "employees": 8666,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nintendo"
+   ]
+  },
+  "community_transit": {
+   "name": "Community Transit",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "community transit"
+   ]
+  },
+  "databricks": {
+   "name": "Databricks",
+   "tier": "10K-100K",
+   "employees": 10000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "databricks"
+   ]
+  },
+  "sanmar": {
+   "name": "SanMar",
+   "tier": "1K-10K",
+   "employees": 5000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "sanmar"
+   ]
+  },
+  "booz_allen": {
+   "name": "Booz Allen Hamilton",
+   "tier": "10K-100K",
+   "employees": 34200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "booz allen hamilton",
+    "booz allen"
+   ]
+  },
+  "aviation_technical_services": {
+   "name": "Aviation Technical Services",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "aviation technical",
+    "aviation technical services"
+   ]
+  },
+  "ford": {
+   "name": "Ford Motor Company",
+   "tier": "100K+",
+   "employees": 169000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ford motor",
+    "ford motor company",
+    "ford"
+   ]
+  },
+  "general_motors": {
+   "name": "General Motors",
+   "tier": "100K+",
+   "employees": 156000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "general motors",
+    "gm"
+   ]
+  },
+  "gm_financial": {
+   "name": "GM Financial",
+   "tier": "100K+",
+   "employees": 156000,
+   "parent": "General Motors",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "gm financial"
+   ]
+  },
+  "hub_group": {
+   "name": "Hub Group",
+   "tier": "1K-10K",
+   "employees": 2000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hub",
+    "hub group"
+   ]
+  },
+  "bimbo_bakeries": {
+   "name": "Bimbo Bakeries USA",
+   "tier": "100K+",
+   "employees": 137000,
+   "parent": "Grupo Bimbo",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bimbo bakeries",
+    "bimbo bakeries usa"
+   ]
+  },
+  "cloudflare": {
+   "name": "Cloudflare",
+   "tier": "1K-10K",
+   "employees": 5156,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cloudflare"
+   ]
+  },
+  "fanatics": {
+   "name": "Fanatics",
+   "tier": "10K-100K",
+   "employees": 22000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "fanatics"
+   ]
+  },
+  "teradyne": {
+   "name": "Teradyne",
+   "tier": "1K-10K",
+   "employees": 6500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "teradyne"
+   ]
+  },
+  "symbotic": {
+   "name": "Symbotic",
+   "tier": "1K-10K",
+   "employees": 1300,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "symbotic"
+   ]
+  },
+  "medline": {
+   "name": "Medline",
+   "tier": "10K-100K",
+   "employees": 45000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "medline",
+    "medline industries"
+   ]
+  },
+  "childrens_hospital_colorado": {
+   "name": "Children's Hospital Colorado",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "children's hospital colorado",
+    "children s hospital colorado",
+    "childrens hospital colorado"
+   ]
+  },
+  "jabil": {
+   "name": "Jabil",
+   "tier": "100K+",
+   "employees": 138000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "jabil"
+   ]
+  },
+  "notion": {
+   "name": "Notion",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "notion",
+    "notion labs"
+   ]
+  },
+  "digitas": {
+   "name": "Digitas North America",
+   "tier": "100K+",
+   "employees": 114000,
+   "parent": "Publicis Groupe",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "digitas north america",
+    "digitas"
+   ]
+  },
+  "vizient": {
+   "name": "Vizient",
+   "tier": "1K-10K",
+   "employees": 4000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "vizient",
+    "vizient inc"
+   ]
+  },
+  "solarwinds": {
+   "name": "SolarWinds",
+   "tier": "1K-10K",
+   "employees": 2305,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "solarwinds"
+   ]
+  },
+  "hannaford": {
+   "name": "Hannaford Supermarkets",
+   "tier": "100K+",
+   "employees": 414000,
+   "parent": "Ahold Delhaize",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hannaford supermarkets",
+    "hannaford"
+   ]
+  },
+  "johnson_controls": {
+   "name": "Johnson Controls",
+   "tier": "10K-100K",
+   "employees": 87000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "johnson controls"
+   ]
+  },
+  "vulcanforms": {
+   "name": "VulcanForms",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "vulcanforms",
+    "vulcanforms inc"
+   ]
+  },
+  "terumo_bct": {
+   "name": "Terumo Blood and Cell Technologies",
+   "tier": "10K-100K",
+   "employees": 30591,
+   "parent": "Terumo",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "terumo blood and cell technologies",
+    "terumo bct"
+   ]
+  },
+  "formic": {
+   "name": "Formic",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "formic"
+   ]
+  },
+  "rosendin": {
+   "name": "Rosendin",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "rosendin",
+    "rosendin electric"
+   ]
+  },
+  "huntington": {
+   "name": "Huntington National Bank",
+   "tier": "10K-100K",
+   "employees": 19932,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "huntington national bank",
+    "huntington bancshares"
+   ]
+  },
+  "aig": {
+   "name": "AIG",
+   "tier": "10K-100K",
+   "employees": 22100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "aig",
+    "american international group"
+   ]
+  },
+  "clean_harbors": {
+   "name": "Clean Harbors",
+   "tier": "10K-100K",
+   "employees": 25232,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "clean harbors"
+   ]
+  },
+  "textron": {
+   "name": "Textron",
+   "tier": "10K-100K",
+   "employees": 34000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "textron"
+   ]
+  },
+  "performance_food_group": {
+   "name": "Performance Food Group",
+   "tier": "10K-100K",
+   "employees": 43000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "vistar",
+    "performance foodservice",
+    "performance food group"
+   ]
+  },
+  "grocery_outlet": {
+   "name": "Grocery Outlet",
+   "tier": "<1K",
+   "employees": 949,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "grocery outlet"
+   ]
+  },
+  "vaco": {
+   "name": "Vaco by Highspring",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "vaco by highspring",
+    "vaco",
+    "highspring"
+   ]
+  },
+  "white_lodging": {
+   "name": "White Lodging",
+   "tier": "1K-10K",
+   "employees": 6500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "white lodging"
+   ]
+  },
+  "pick_your_part": {
+   "name": "Pick Your Part",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "pick your part"
+   ]
+  },
+  "bms": {
+   "name": "Bristol Myers Squibb",
+   "tier": "10K-100K",
+   "employees": 32500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bristol myers squibb",
+    "bristol-myers squibb",
+    "bristolmyers squibb"
+   ]
+  },
+  "us_foods": {
+   "name": "US Foods",
+   "tier": "10K-100K",
+   "employees": 30000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "foods",
+    "us foods"
+   ]
+  },
+  "harvey_ai": {
+   "name": "Harvey (legal AI)",
+   "tier": "<1K",
+   "employees": 82,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "harvey"
+   ]
+  },
+  "republic_finance": {
+   "name": "Republic Finance",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "republic finance"
+   ]
+  },
+  "highgate": {
+   "name": "Highgate",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "highgate"
+   ]
+  },
+  "wm": {
+   "name": "WM (Waste Management)",
+   "tier": "10K-100K",
+   "employees": 48000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "wm",
+    "waste management"
+   ]
+  },
+  "hendrickson": {
+   "name": "Hendrickson",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "hendrickson"
+   ]
+  },
+  "jd_com": {
+   "name": "JD.com",
+   "tier": "100K+",
+   "employees": 776682,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "jd com",
+    "jdcom"
+   ]
+  },
+  "standardaero": {
+   "name": "StandardAero",
+   "tier": "1K-10K",
+   "employees": 8100,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "standardaero"
+   ]
+  },
+  "lennox": {
+   "name": "Lennox",
+   "tier": "10K-100K",
+   "employees": 14200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lennox",
+    "lennox international"
+   ]
+  },
+  "compass_inc": {
+   "name": "Compass (real estate)",
+   "tier": "10K-100K",
+   "employees": 10000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "compass",
+    "compass inc"
+   ]
+  },
+  "scan_health_plan": {
+   "name": "SCAN Health Plan",
+   "tier": "1K-10K",
+   "employees": 1465,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "scan",
+    "scan health plan"
+   ]
+  },
+  "ichor": {
+   "name": "Ichor Systems",
+   "tier": "1K-10K",
+   "employees": 2300,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "ichor systems",
+    "ichor systems inc",
+    "ichor holdings"
+   ]
+  },
+  "charles_schwab": {
+   "name": "Charles Schwab",
+   "tier": "10K-100K",
+   "employees": 33000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "charles schwab",
+    "schwab"
+   ]
+  },
+  "optum": {
+   "name": "Optum",
+   "tier": "100K+",
+   "employees": 390000,
+   "parent": "UnitedHealth Group",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "optum"
+   ]
+  },
+  "cushman_wakefield": {
+   "name": "Cushman & Wakefield",
+   "tier": "10K-100K",
+   "employees": 52000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cushman & wakefield",
+    "cushman and wakefield",
+    "cushman wakefield"
+   ]
+  },
+  "vallen": {
+   "name": "Vallen",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "vallen",
+    "vallen usa"
+   ]
+  },
+  "jcpenney": {
+   "name": "JCPenney",
+   "tier": "10K-100K",
+   "employees": 60000,
+   "parent": "Catalyst Brands",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "jcpenney",
+    "jc penney"
+   ]
+  },
+  "zoll": {
+   "name": "ZOLL Medical",
+   "tier": "10K-100K",
+   "employees": 46751,
+   "parent": "Asahi Kasei",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "zoll medical",
+    "zoll medical corporation",
+    "zoll"
+   ]
+  },
+  "toyota_na": {
+   "name": "Toyota North America",
+   "tier": "100K+",
+   "employees": 383853,
+   "parent": "Toyota Motor Corporation",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "toyota north america",
+    "toyota motor north america"
+   ]
+  },
+  "capstone_logistics": {
+   "name": "Capstone Logistics",
+   "tier": "10K-100K",
+   "employees": 19000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "capstone logistics",
+    "capstone logistics llc"
+   ]
+  },
+  "korry": {
+   "name": "Korry Electronics",
+   "tier": "10K-100K",
+   "employees": 16500,
+   "parent": "TransDigm Group (via Esterline)",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "korry electronics",
+    "korry electronics co",
+    "korry"
+   ]
+  },
+  "fred_hutch": {
+   "name": "Fred Hutch",
+   "tier": "1K-10K",
+   "employees": 7000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "fred hutch",
+    "fred hutchinson cancer center"
+   ]
+  },
+  "cybercoders": {
+   "name": "CyberCoders",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "cybercoders"
+   ]
+  },
+  "comrise": {
+   "name": "Comrise",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "comrise"
+   ]
+  },
+  "clear_secure": {
+   "name": "CLEAR (Clear Secure)",
+   "tier": "1K-10K",
+   "employees": 4022,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "clear",
+    "clear secure"
+   ]
+  },
+  "confidential": {
+   "name": "Confidential (employer hidden)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "confidential"
+   ]
+  },
+  "bd": {
+   "name": "BD (Becton Dickinson)",
+   "tier": "10K-100K",
+   "employees": 72000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bd",
+    "becton dickinson",
+    "becton dickinson and company"
+   ]
+  },
+  "fiserv": {
+   "name": "Fiserv",
+   "tier": "10K-100K",
+   "employees": 38000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "fiserv"
+   ]
+  },
+  "medtronic": {
+   "name": "Medtronic",
+   "tier": "10K-100K",
+   "employees": 95000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "medtronic"
+   ]
+  },
+  "kelly": {
+   "name": "Kelly (Kelly Services)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "kelly",
+    "kelly services"
+   ]
+  },
+  "acuity": {
+   "name": "Acuity (formerly Acuity Brands)",
+   "tier": "10K-100K",
+   "employees": 11500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "acuity",
+    "acuity brands",
+    "acuity inc"
+   ]
+  },
+  "je_dunn": {
+   "name": "JE Dunn Construction",
+   "tier": "1K-10K",
+   "employees": 3800,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "je dunn construction"
+   ]
+  },
+  "box": {
+   "name": "Box",
+   "tier": "1K-10K",
+   "employees": 2810,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "box",
+    "box inc"
+   ]
+  },
+  "core_states": {
+   "name": "Core States Group",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "core states",
+    "core states group"
+   ]
+  },
+  "crowdstrike": {
+   "name": "CrowdStrike",
+   "tier": "10K-100K",
+   "employees": 10698,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "crowdstrike"
+   ]
+  },
+  "serco": {
+   "name": "Serco",
+   "tier": "10K-100K",
+   "employees": 50000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "serco"
+   ]
+  },
+  "alignerr": {
+   "name": "Alignerr (AI-training contractor platform)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "alignerr"
+   ]
+  },
+  "axiom_legal": {
+   "name": "Axiom (legal talent)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "axiom"
+   ]
+  },
+  "gallagher_re": {
+   "name": "Gallagher Re",
+   "tier": "10K-100K",
+   "employees": 72000,
+   "parent": "Arthur J. Gallagher & Co.",
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "gallagher re"
+   ]
+  },
+  "cj_logistics": {
+   "name": "CJ Logistics America",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "cj logistics america"
+   ]
+  },
+  "mars": {
+   "name": "Mars",
+   "tier": "100K+",
+   "employees": 150000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "mars",
+    "mars inc",
+    "mars incorporated"
+   ]
+  },
+  "ask_consulting": {
+   "name": "ASK Consulting",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "ask consulting"
+   ]
+  },
+  "divergent": {
+   "name": "Divergent",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "divergent"
+   ]
+  },
+  "cox_automotive": {
+   "name": "Cox Automotive",
+   "tier": "10K-100K",
+   "employees": 50000,
+   "parent": "Cox Enterprises",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cox automotive",
+    "cox automotive inc"
+   ]
+  },
+  "infleqtion": {
+   "name": "Infleqtion",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "infleqtion"
+   ]
+  },
+  "simpson_strong_tie": {
+   "name": "Simpson Strong-Tie",
+   "tier": "1K-10K",
+   "employees": 3337,
+   "parent": "Simpson Manufacturing",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "simpson strong-tie",
+    "simpson strong tie",
+    "simpson strongtie"
+   ]
+  },
+  "nys_opwdd": {
+   "name": "NYS Office for People With Developmental Disabilities",
+   "tier": "10K-100K",
+   "employees": 22000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "nys office for people with developmental disabilities",
+    "opwdd"
+   ]
+  },
+  "glass_doctor": {
+   "name": "Glass Doctor (franchise)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "glass doctor"
+   ]
+  },
+  "mercury_systems": {
+   "name": "Mercury Systems",
+   "tier": "1K-10K",
+   "employees": 2300,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "mercury systems"
+   ]
+  },
+  "city_of_seattle": {
+   "name": "City of Seattle",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "city of seattle"
+   ]
+  },
+  "pitchbook": {
+   "name": "PitchBook",
+   "tier": "10K-100K",
+   "employees": 11085,
+   "parent": "Morningstar",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "pitchbook"
+   ]
+  },
+  "cognizant": {
+   "name": "Cognizant",
+   "tier": "100K+",
+   "employees": 349800,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cognizant"
+   ]
+  },
+  "inspyr": {
+   "name": "INSPYR Solutions",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "inspyr solutions"
+   ]
+  },
+  "marriott": {
+   "name": "Marriott International",
+   "tier": "100K+",
+   "employees": 418000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "marriott international",
+    "marriott"
+   ]
+  },
+  "overlake": {
+   "name": "Overlake Medical Center & Clinics",
+   "tier": "1K-10K",
+   "employees": 3000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "overlake medical center & clinics",
+    "overlake medical center and clinics",
+    "overlake medical center clinics",
+    "overlake medical center"
+   ]
+  },
+  "us_pacific_fleet": {
+   "name": "U.S. Pacific Fleet",
+   "tier": "100K+",
+   "employees": 554600,
+   "parent": "United States Navy",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "u s pacific fleet",
+    "us pacific fleet"
+   ]
+  },
+  "robinhood": {
+   "name": "Robinhood",
+   "tier": "1K-10K",
+   "employees": 2900,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "robinhood"
+   ]
+  },
+  "dicks_sporting_goods": {
+   "name": "DICK'S Sporting Goods",
+   "tier": "100K+",
+   "employees": 105200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "dick's sporting goods",
+    "dick s sporting goods",
+    "dicks sporting goods"
+   ]
+  },
+  "geico": {
+   "name": "GEICO",
+   "tier": "100K+",
+   "employees": 387800,
+   "parent": "Berkshire Hathaway",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "geico"
+   ]
+  },
+  "luxury_bath": {
+   "name": "Luxury Bath",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "luxury bath"
+   ]
+  },
+  "sutter_health": {
+   "name": "Sutter Health",
+   "tier": "10K-100K",
+   "employees": 57000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "sutter health"
+   ]
+  },
+  "kla": {
+   "name": "KLA",
+   "tier": "10K-100K",
+   "employees": 15000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "kla",
+    "kla corporation"
+   ]
+  },
+  "cedars_sinai": {
+   "name": "Cedars-Sinai",
+   "tier": "10K-100K",
+   "employees": 16000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "cedars-sinai",
+    "cedars sinai",
+    "cedarssinai"
+   ]
+  },
+  "cps_inc": {
+   "name": "CPS, Inc. (recruiter)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "cps",
+    "cps inc"
+   ]
+  },
+  "success_academy": {
+   "name": "Success Academy Charter Schools",
+   "tier": "1K-10K",
+   "employees": 2300,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "success academy charter schools"
+   ]
+  },
+  "ramp": {
+   "name": "Ramp",
+   "tier": "1K-10K",
+   "employees": 1200,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ramp"
+   ]
+  },
+  "sbm_management": {
+   "name": "SBM Management Services",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "sbm management lp",
+    "sbm management services lp"
+   ]
+  },
+  "procept": {
+   "name": "PROCEPT BioRobotics",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "procept biorobotics"
+   ]
+  },
+  "loro_piana": {
+   "name": "Loro Piana",
+   "tier": "100K+",
+   "employees": 211552,
+   "parent": "LVMH",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "loro piana"
+   ]
+  },
+  "lg_electronics": {
+   "name": "LG Electronics North America",
+   "tier": "10K-100K",
+   "employees": 75000,
+   "parent": "LG Electronics",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lg electronics north america"
+   ]
+  },
+  "georgia_tech": {
+   "name": "Georgia Institute of Technology",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "georgia institute of technology",
+    "georgia tech"
+   ]
+  },
+  "llnl": {
+   "name": "Lawrence Livermore National Laboratory",
+   "tier": "1K-10K",
+   "employees": 9563,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "lawrence livermore national laboratory",
+    "llnl"
+   ]
+  },
+  "parkland_health": {
+   "name": "Parkland Health",
+   "tier": "10K-100K",
+   "employees": 15000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "parkland health"
+   ]
+  },
+  "ferrero": {
+   "name": "Ferrero",
+   "tier": "10K-100K",
+   "employees": 48697,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ferrero"
+   ]
+  },
+  "duly": {
+   "name": "Duly Health and Care",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "duly health and care"
+   ]
+  },
+  "amcor": {
+   "name": "Amcor",
+   "tier": "10K-100K",
+   "employees": 77000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "amcor"
+   ]
+  },
+  "evona": {
+   "name": "EVONA (recruiter)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "evona"
+   ]
+  },
+  "stv": {
+   "name": "STV",
+   "tier": "1K-10K",
+   "employees": 3000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "stv"
+   ]
+  },
+  "flatirondragados": {
+   "name": "FlatironDragados",
+   "tier": "10K-100K",
+   "employees": 41575,
+   "parent": "Hochtief (ACS Group)",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "flatirondragados",
+    "flatiron dragados",
+    "flatiron construction"
+   ]
+  },
+  "spectraforce": {
+   "name": "SPECTRAFORCE",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "spectraforce"
+   ]
+  },
+  "getinge": {
+   "name": "Getinge",
+   "tier": "10K-100K",
+   "employees": 12000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "getinge"
+   ]
+  },
+  "onsemi": {
+   "name": "onsemi",
+   "tier": "10K-100K",
+   "employees": 22600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "onsemi",
+    "on semiconductor"
+   ]
+  },
+  "rockefeller_capital": {
+   "name": "Rockefeller Capital Management",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "rockefeller capital management"
+   ]
+  },
+  "form_energy": {
+   "name": "Form Energy",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "form energy"
+   ]
+  },
+  "allen_control_systems": {
+   "name": "Allen Control Systems",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "allen control systems"
+   ]
+  },
+  "whoop": {
+   "name": "WHOOP",
+   "tier": "<1K",
+   "employees": 800,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "whoop"
+   ]
+  },
+  "infotree": {
+   "name": "Infotree Global Solutions",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "infotree global solutions"
+   ]
+  },
+  "travelers": {
+   "name": "Travelers",
+   "tier": "10K-100K",
+   "employees": 34000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "travelers",
+    "the travelers companies"
+   ]
+  },
+  "nfi": {
+   "name": "NFI",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "nfi",
+    "nfi industries"
+   ]
+  },
+  "saic": {
+   "name": "SAIC",
+   "tier": "10K-100K",
+   "employees": 25000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "saic",
+    "science applications international corporation"
+   ]
+  },
+  "aptiv": {
+   "name": "Aptiv",
+   "tier": "100K+",
+   "employees": 140000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "aptiv"
+   ]
+  },
+  "amiseq": {
+   "name": "AMISEQ",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "amiseq"
+   ]
+  },
+  "east_west_bank": {
+   "name": "East West Bank",
+   "tier": "1K-10K",
+   "employees": 3000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "east west bank"
+   ]
+  },
+  "relativity_space": {
+   "name": "Relativity Space",
+   "tier": "1K-10K",
+   "employees": 2000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "relativity space"
+   ]
+  },
+  "atlantic_group": {
+   "name": "The Atlantic Group (recruiter)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "atlantic",
+    "atlantic group"
+   ]
+  },
+  "osi_systems": {
+   "name": "OSI Systems",
+   "tier": "1K-10K",
+   "employees": 3180,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "osi systems",
+    "osi systems inc"
+   ]
+  },
+  "newrez": {
+   "name": "Newrez",
+   "tier": "1K-10K",
+   "employees": 6045,
+   "parent": "Rithm Capital",
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "newrez"
+   ]
+  },
+  "choa": {
+   "name": "Children's Healthcare of Atlanta",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "children's healthcare of atlanta",
+    "children s healthcare of atlanta",
+    "childrens healthcare of atlanta"
+   ]
+  },
+  "beacon_hill": {
+   "name": "Beacon Hill Staffing Group",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": true,
+   "source": "knowledge",
+   "aliases": [
+    "beacon hill",
+    "beacon hill staffing group"
+   ]
+  },
+  "bose": {
+   "name": "Bose",
+   "tier": "1K-10K",
+   "employees": 7000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "bose",
+    "bose corporation"
+   ]
+  },
+  "convergint": {
+   "name": "Convergint",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "convergint"
+   ]
+  },
+  "trimble": {
+   "name": "Trimble",
+   "tier": "10K-100K",
+   "employees": 11500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "trimble",
+    "trimble inc"
+   ]
+  },
+  "msi_express": {
+   "name": "MSI Express",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "msi express",
+    "msi express inc"
+   ]
+  },
+  "hellofresh": {
+   "name": "HelloFresh",
+   "tier": "10K-100K",
+   "employees": 19065,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "hellofresh"
+   ]
+  },
+  "cohere": {
+   "name": "Cohere (name collision)",
+   "tier": "unknown",
+   "employees": null,
+   "parent": null,
+   "staffing": false,
+   "source": "unknown",
+   "aliases": [
+    "cohere"
+   ]
+  },
+  "ericsson": {
+   "name": "Ericsson",
+   "tier": "10K-100K",
+   "employees": 89000,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "ericsson"
+   ]
+  },
+  "openai": {
+   "name": "OpenAI",
+   "tier": "1K-10K",
+   "employees": 4500,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "openai"
+   ]
+  },
+  "pc_connection": {
+   "name": "Connection (PC Connection)",
+   "tier": "1K-10K",
+   "employees": 2600,
+   "parent": null,
+   "staffing": false,
+   "source": "wikipedia",
+   "aliases": [
+    "connection",
+    "pc connection"
+   ]
+  },
+  "compass_group": {
+   "name": "Compass Group",
+   "tier": "100K+",
+   "employees": 550000,
+   "parent": null,
+   "staffing": false,
+   "source": "knowledge",
+   "aliases": [
+    "compass group",
+    "compass group usa",
+    "compass group north america",
+    "compass group plc"
+   ]
+  }
+ }
+}

@@ -1,0 +1,217 @@
+{
+  "funnel_math": {
+    "summary": "Roughly 150 applications produce about 5 real interviews, and the goal is to convert 4 of those 5. Getting the interview is half the battle; converting it is the trainable half. That asymmetry is the whole argument for front-loading prep — the scarce resource is interviews, not applications.",
+    "detail": [
+      "A common baseline from hiring-side mentors: ~150 applications to ~5 interviews, and aim to convert 4 of 5. That is roughly a 3% application-to-interview rate and an 80% target conversion rate.",
+      "Read those two numbers as two different problems. The 3% is a volume-and-targeting problem, solved by applying consistently and tailoring per company. The 80% is a skill problem, solved by practice — and unlike the 3%, it is almost entirely under your control.",
+      "The effort implication is counterintuitive: do NOT wait for the first interview to start preparing. If you get 5 interviews across a whole recruiting season, an unprepared first interview burns 20% of your total conversion budget on a rehearsal. There is no warm-up round.",
+      "Reframe the same math by expected value. Going from 40% to 80% conversion on 5 interviews is the difference between 2 offers and 4 offers. To get that same gain through volume alone you would need to apply to 300 jobs instead of 150 — far more work, and you cannot manufacture interviews the way you can manufacture reps.",
+      "The 3% rate also means rejection is the base case, not a signal. At 150 applications you should expect roughly 145 non-responses or rejections. Budget emotionally for that up front so it does not read as evidence about you.",
+      "Tailoring is what moves the 3%. The specific advice: tailor the resume AND the portfolio to each company's stated values — Amazon's 16 Leadership Principles, Microsoft's growth mindset and structured-interview language, Boeing's quality and rate-readiness framing. A generic application competes on keywords; a tailored one competes on fit.",
+      "Track the funnel in the application tracker so the numbers are yours, not a benchmark. After 50 applications you can compute your own application-to-screen rate. If it is far below 3%, the problem is the resume or the targeting, not the interview skill — and that is a different fix.",
+      "Referrals distort the funnel favourably and are the highest-leverage single action. A referred application converts to a screen at a multiple of a cold one. The referral tooling in this pipeline exists for exactly this reason; use it before adding more cold applications.",
+      "One structural note specific to you: as an F-1 candidate you should filter out roles you cannot legally hold before counting them in the 150. Boeing in particular posts many US-person and export-controlled (ITAR/EAR) roles. Applications to those are not part of a real funnel."
+    ]
+  },
+  "phases": [
+    {
+      "id": "t-minus-12-weeks",
+      "label": "12+ weeks out (foundation — start here even with no interview scheduled)",
+      "focus": "Build the story bank and establish a baseline. This phase exists because the single strongest piece of mentor advice is to start VERY early, and because at 12 weeks out you have time to fix weaknesses rather than just discover them.",
+      "actions": [
+        "Write the story bank first, before touching any question list. Target 12-15 stories in PARADE format from your current job, your undergraduate research or projects, and your graduate coursework. See story_bank_method below — this is the phase's main deliverable.",
+        "Run one deliberately unprepared mock to establish a baseline. Record it. The point is to find out where you actually break — rambling, no numbers, burying your own role in 'we' — not to perform well.",
+        "Pick and close ONE quantitative gap. Given that SQL appears in roughly 18% of the SCM and ops job descriptions this pipeline has scraped, SQL is the default choice: SQLBolt to fluency, then Beyond-LeetCode-SQL for interview-grade questions.",
+        "Build the domain-fluency list. Go through 20 saved job descriptions and extract every term you cannot define cold. Define each one from a primary source — CSCMP glossary, SCOR, ASQ, Lean Enterprise Institute — not from a blog. This becomes a flashcard list.",
+        "Book career-services appointments now, for dates 6-10 weeks out. Autumn full-time recruiting for a spring graduation compresses coach availability; the slots you want will not exist if you book in the same week you need them.",
+        "Write the one-page portfolio project brief for each project you will claim. For every project: what problem, what you built, what tools, exactly where and how AI was used, and the measured impact. Expect interviewers to drill into how it was built, how AI was used, and what real impact it had — a project you cannot defend in depth is a liability, not an asset."
+      ],
+      "output": "A story bank of 12-15 written PARADE stories, a recorded baseline mock with three named weaknesses, a domain-term flashcard list built from real JDs, one-page briefs for every portfolio project, and career-coach sessions on the calendar."
+    },
+    {
+      "id": "t-minus-8-weeks",
+      "label": "8-12 weeks out (depth — make each story survive three follow-ups)",
+      "focus": "Depth over breadth. Interviews escalate in depth, so every story needs three layers of follow-up already thought through, because the second and third questions are where candidates fail, not the first.",
+      "actions": [
+        "Take each story and write out three escalating follow-ups plus your answers: (1) why did you choose that approach over the alternative, (2) what would you do differently, (3) what happened to the metric after you left. If you cannot answer layer three, the story is too thin to use for a headline question.",
+        "Quantify every story. Replace each vague claim with a number and be ready to explain how the number was derived. 'Reduced manual review time' becomes 'cut review time per case from 12 minutes to 7, about 40%, across roughly 300 cases a week' — and you should be able to say where those figures come from.",
+        "Practise ops-diagnostic structuring, not just behavioral stories. Take a prompt like 'on-time-in-full dropped four points last quarter, why?' and build an issue tree out loud. For end-to-end supply-chain diagnosis, structure along SCOR (Plan, Source, Make, Deliver, Return, Enable); for a broken internal process, structure along DMAIC.",
+        "Run a mock every two weeks. Alternate sources: career coach, Exponent Practice peer, LLM self-mock. Different sources fail you in different ways, which is the point.",
+        "Build a metrics recall sheet and drill it until it is automatic: inventory turns, days of supply, fill rate, OTIF, OEE, safety stock logic, landed cost, cost to serve, cash conversion cycle. For each, know the definition, the formula, and one concrete lever that moves it.",
+        "Rebuild the portfolio project you are weakest at explaining. If you cannot walk through the code or the logic live, either learn it properly or drop it from the resume. A project on the resume that collapses under questioning damages credibility across the whole interview."
+      ],
+      "output": "Every story survives three escalating follow-ups with quantified results. A metrics sheet recalled cold. At least two mocks completed with written feedback. No portfolio project on the resume you cannot defend line by line."
+    },
+    {
+      "id": "t-minus-4-weeks",
+      "label": "4-6 weeks out (targeting — tailor per company)",
+      "focus": "Company-specific tailoring. This is what moves the 3% application-to-interview rate and what tailoring both resume and portfolio to each company's values.",
+      "actions": [
+        "Build a one-page sheet per target company: the values in their own words (Amazon's 16 Leadership Principles from amazon.jobs, Microsoft's growth-mindset and structured-interview language, Starbucks' ethical sourcing, Costco's low-SKU high-turn model, Boeing's quality and rate readiness), plus the loop shape, plus a recent supply-chain event involving them you can discuss.",
+        "Map your story bank onto each company's values and find the gaps. If nothing in your bank demonstrates Amazon's Dive Deep or Microsoft's growth mindset, that is a missing story to write now, not a stretch to improvise later.",
+        "Produce a tailored resume variant per target company — not a rewrite, a re-ordering and re-wording so the top third of the page reflects that company's language. Use your career center's action-verbs list and sample resumes.",
+        "Activate referrals for every company where you have a plausible path: alumni of your school, your current employer's network, classmates, the LinkedIn search links this pipeline generates. A referral shifts the funnel more than another ten cold applications.",
+        "Prepare your questions for the interviewer per company, and make them specific enough that they could not have been asked of any other company. Generic questions read as low interest.",
+        "Correct one factual trap: verify the current Amazon Leadership Principles from amazon.jobs directly. There are 16, and a large amount of third-party prep material still says 14 with stale wording. Reciting a retired list in an Amazon loop is a visible, avoidable error."
+      ],
+      "output": "A one-page company sheet, a tailored resume variant, mapped stories with gaps filled, and specific interviewer questions for each of your top 6-8 target companies. Referral requests sent."
+    },
+    {
+      "id": "t-minus-2-weeks",
+      "label": "1-2 weeks out from a specific loop (rehearsal)",
+      "focus": "Loop-specific rehearsal. The material is already built; this phase is about delivery under the exact conditions you will face.",
+      "actions": [
+        "Confirm the loop structure with the recruiter — how many rounds, who each interviewer is, what each round assesses, and whether there is a case, a SQL screen, or a written exercise. Recruiters answer this readily and it removes most of the guesswork.",
+        "Look up each interviewer on LinkedIn and note their function and tenure. A supply-chain manager, a finance partner, and a Bar Raiser will each probe differently, and knowing which is which changes which story you lead with.",
+        "Run two full-length mocks under real conditions: same time of day, same video platform, camera on, no notes visible. Record both. The failure mode being rehearsed here is delivery, not content.",
+        "Prune the story bank to a loop-specific shortlist of 6-8 stories and assign each a primary value or competency it demonstrates. Over-preparing 15 stories for a 4-round loop causes hesitation while you search for the right one.",
+        "Do a 15-minute daily mental-math drill (PrepLounge's tool) if any round involves case math or estimation. The skill being maintained is arithmetic while talking, which is different from arithmetic alone.",
+        "Prepare the logistics the day before, not the morning of: link tested, backup dial-in, charged devices, printed resume and a copy of your question list, a quiet room booked (many career centers offer private space for virtual interviews)."
+      ],
+      "output": "A confirmed loop map with interviewer names and roles, two recorded full-length mocks, a 6-8 story shortlist mapped to competencies, and logistics tested in advance."
+    },
+    {
+      "id": "interview-week",
+      "label": "Interview week (execution)",
+      "focus": "Deliver so the interviewer can write it down. The framing: stories must be structured enough that the interviewer can take notes and relay them accurately to their team. The interviewer is not the decision-maker — they are a witness reconstructing your story for a hiring committee.",
+      "actions": [
+        "Open every behavioral answer with one sentence of context and one sentence of what you personally did, then expand. If the interviewer only captures the first fifteen seconds, that fragment should still be a complete and favourable summary.",
+        "Say 'I' for your own actions and 'we' only for genuine team context. Interviewers cannot advocate for contributions they cannot attribute, and 'we' is the most common way strong candidates make themselves invisible.",
+        "Land every story with a number. A result without a magnitude is unmemorable and unquotable in a debrief.",
+        "Treat follow-up questions as interest, not doubt. Interviews escalate in depth by design. Answer the layer asked, then stop — do not pre-empt the next layer and do not retreat from the original claim.",
+        "Ask for clarification before structuring a case or ambiguous prompt. Restate the question, state the assumptions, get a nod, then proceed. Answering the wrong question well is the most expensive error available.",
+        "Write the debrief within two hours, while recall is intact. Do this after every round, not just at the end of the loop — it is the input to the debrief protocol below.",
+        "Send a short thank-you within 24 hours that references one specific thing from the conversation. It is low-cost and occasionally decisive in a close committee discussion."
+      ],
+      "output": "Every round delivered with attributable, quantified, note-takeable stories, and a written debrief per round completed within two hours."
+    },
+    {
+      "id": "post-loop",
+      "label": "After the loop (compounding)",
+      "focus": "Make every interview an asset regardless of outcome. At ~5 interviews per season you cannot afford to learn the same lesson twice, and the debrief is the only mechanism that guarantees you do not.",
+      "actions": [
+        "Run the full debrief protocol below within 48 hours, while the emotional charge is low enough to be honest and the recall is still specific.",
+        "Update the story bank from what actually happened: add any question you had no story for, rewrite the two stories that landed worst, and promote the one that landed best to your default opener.",
+        "Log the outcome and the loop structure in the application tracker so your personal funnel numbers improve in accuracy with every attempt.",
+        "If rejected, ask the recruiter for feedback once, politely, and accept that most will decline. Then re-derive the likely cause from your own debrief instead of waiting for someone else's verdict.",
+        "If you reach an offer, negotiate with data: Levels.fyi for the company and level, your program's published graduate salary average as an anchor, and any competing process you have running.",
+        "Keep the every-two-weeks mock cadence running even while an offer is pending. Processes collapse for reasons that have nothing to do with you, and a warm pipeline is the only real hedge."
+      ],
+      "output": "A written debrief, an updated story bank, accurate personal funnel data in the tracker, and an unbroken mock cadence."
+    }
+  ],
+  "weekly_cadence": {
+    "summary": "About 4-5 hours a week, in small frequent blocks rather than one long session, sustainable alongside a full-time course load. The design principle is that recall and delivery decay fast and recover cheaply, so frequency beats duration. Total volume matters less than never dropping the mock cadence — that is the one block that cannot be made up later.",
+    "blocks": [
+      {
+        "activity": "Story bank writing and revision",
+        "frequency": "2x per week",
+        "time": "30 minutes",
+        "why": "The story bank is the substrate for every behavioral round and it is the slowest asset to build, so it needs steady time rather than a sprint. Once the initial 12-15 exist, these sessions shift to adding follow-up layers and sharpening numbers."
+      },
+      {
+        "activity": "Mock interview (career coach, Exponent Practice peer, or LLM self-mock)",
+        "frequency": "Every 2 weeks",
+        "time": "60-75 minutes including review of the recording",
+        "why": "A mock every two weeks. Rotating the source matters: a career coach catches domain and market errors, a peer catches delivery problems, and an LLM can escalate follow-ups indefinitely without getting tired. Each exposes a different failure."
+      },
+      {
+        "activity": "Mental math drill",
+        "frequency": "Daily, or 4x per week minimum",
+        "time": "10 minutes",
+        "why": "Arithmetic under observation degrades within weeks and recovers within days. Ten minutes daily is strictly better than an hour weekly, and the real skill is computing while still talking."
+      },
+      {
+        "activity": "SQL practice",
+        "frequency": "2x per week until fluent, then 1x per week",
+        "time": "30 minutes",
+        "why": "SQL appears in roughly 18% of the SCM and ops job descriptions this pipeline has scraped, and it is the most common hard filter you will hit. Once fluent it needs only maintenance."
+      },
+      {
+        "activity": "Domain reading (Supply Chain Dive, one ISACA or ACFE article)",
+        "frequency": "Daily",
+        "time": "15 minutes",
+        "why": "Supplies the current, specific examples that answer 'what are you following in the industry?' — the question that most cleanly separates a candidate who is genuinely interested from one who is reciting. Also feeds your risk-and-compliance differentiator."
+      },
+      {
+        "activity": "Portfolio project work or deep review",
+        "frequency": "1x per week",
+        "time": "60 minutes",
+        "why": "Interviewers drill into how a project was built, how AI was used, and what impact it had. A project you have not touched in three months cannot be defended in depth, so this block is as much about maintaining recall as about building."
+      },
+      {
+        "activity": "Applications plus tailoring, and referral outreach",
+        "frequency": "2x per week",
+        "time": "45 minutes",
+        "why": "Reaching ~150 applications over a season means about 6-8 a week, and they must be tailored rather than blasted. Batching them into two sessions protects the rest of the week from the emotional drag of applying."
+      },
+      {
+        "activity": "Weekly review of the funnel and the debrief log",
+        "frequency": "1x per week",
+        "time": "20 minutes",
+        "why": "Turns activity into feedback. Reviewing your own application-to-screen rate and your debrief notes is what tells you whether the bottleneck is the resume, the targeting, or the interview itself — three problems with three different fixes."
+      }
+    ]
+  },
+  "self_mock_protocol": {
+    "summary": "A rigorous solo mock using an LLM as the interviewer. This exists because ops and SCM peer partners are genuinely scarce — no crowd-verified question bank has a supply-chain track and no mock marketplace has an ops interviewer roster — so waiting for a human partner means not practising. Done properly, an LLM mock beats a peer mock on two dimensions: it will escalate follow-ups indefinitely without fatigue, and it will score you against named criteria rather than saying 'that sounded good'. It is worse on one dimension: it cannot make you nervous. So use LLM mocks for depth and Foster coaches or peers for pressure.",
+    "steps": [
+      "Set up so it is a real rehearsal, not an essay exercise. Camera on, recording, timer running, standing or sitting as you would in the real interview. Speak your answers out loud and type only a short transcript, or use voice mode. Typing polished prose trains a skill you will not be able to use.",
+      "Give the LLM the exact role context before starting: the job description pasted in full, the company, the seniority level, and which round this is (recruiter screen, hiring-manager round, functional round, Bar Raiser). A mock for an unspecified role produces generic questions and generic feedback.",
+      "Paste the prompt template below and let the LLM lead. Do not negotiate with the questions, do not ask it to go easier, and do not break character to explain what you meant. Breaking character is the single most common way self-mocks become useless.",
+      "Answer in full, out loud, at real speaking pace. If you would take twenty seconds to think in a real interview, take twenty seconds of silence here. Rushing because nobody is waiting trains the wrong tempo.",
+      "Let it escalate. The template instructs it to push at least three layers deep on every story, because interviews escalate in depth and layer three is where candidates fail. If you cannot answer layer three, that is the finding — note it and move on rather than fixing it mid-mock.",
+      "Do not look at the feedback until the whole mock is over. Reading a score after each answer converts the mock into an editing session and destroys the signal on your unaided performance.",
+      "Then read the scored feedback and extract exactly three things: the weakest answer, the pattern across answers (hedging, no numbers, 'we' instead of 'I', burying the result), and one specific fix to carry into the next session. Three is the limit — more than that and nothing changes.",
+      "Rewrite the weakest story in PARADE format the same day, while the failure is still concrete.",
+      "Watch the recording at 1.5x with the sound off, once. Filler words, hand movement, and eye contact are invisible while speaking and obvious on playback.",
+      "Log the mock: date, role, the three findings, and the one fix. Over five or six mocks the log shows whether the same weakness keeps recurring — which is the difference between a bad day and a real gap."
+    ],
+    "prompt_template": "You are conducting a realistic, rigorous mock interview. Stay in character as the interviewer for the entire session. Do not coach me, reassure me, or evaluate me until I explicitly type END MOCK.\n\n=== CONTEXT ===\nRole: [paste the job title]\nCompany: [company name]\nLevel: entry-to-mid (I have [N] years of professional experience)\nRound type: [recruiter screen | hiring manager | functional/domain | behavioral | case | Bar Raiser / values]\nInterview length: [30 | 45 | 60] minutes\nJob description: [paste the full JD]\nCompany values or principles to assess against: [paste them in the company's own words, e.g. Amazon's Leadership Principles from amazon.jobs, or Microsoft's stated criteria — respect, integrity, accountability, growth mindset]\n\n=== ABOUT ME ===\n[Replace with 3-5 sentences about you: current or recent program and dates, current or last role and years, undergraduate degree, work authorization if relevant, and the role families you are targeting. Example: I am a graduate student in supply chain management (graduating [month year]). Before this I spent [N] years as a [title] in [function] at [company]. I am targeting supply chain, operations, program management and risk/compliance roles.]\n\n=== YOUR ROLE AS INTERVIEWER ===\n1. You are a real working interviewer for this specific role at this specific company — not a generic bot. Behave like the function named in the round type. Open the way a real interviewer opens: a brief introduction of yourself and the role, then your first question.\n2. Ask ONE question at a time. Wait for my full answer before continuing. Never ask a compound question and never list multiple questions at once.\n3. ESCALATE. After every substantive answer, push at least three layers deeper before moving on. Use probes like: \"What specifically did YOU do, as opposed to your team?\" / \"Why that approach and not the obvious alternative?\" / \"What was the actual number, and how did you arrive at it?\" / \"What happened to that metric in the six months after you left?\" / \"What would you do differently, and what does that tell you?\" / \"Who disagreed with you, and how did that get resolved?\"\n4. If an answer is vague, unquantified, or uses \"we\" where I should say \"I\", do not let it pass. Press on it specifically. Do not accept a second vague answer to the same probe.\n5. If I claim a portfolio project, drill into it hard: how it was architected, what tools and data, exactly where and how AI was used and what I would have done without it, what broke, and what measurable impact it had. Ask enough that a bluff would fail.\n6. Interrupt if I ramble past about 2.5 minutes on a single answer. Real interviewers do this and I need to practise handling it.\n7. Stay strictly within the time budget. Track it and tell me when we have roughly 5 minutes left, then invite my questions for you.\n8. Mix question types appropriate to the round type. For a supply chain or operations round include at least one open diagnostic (for example: a fulfilment or delivery metric has degraded — find out why) and at least one quantitative estimation or metric question. For end-to-end supply-chain diagnosis, expect and reward structuring along SCOR (Plan, Source, Make, Deliver, Return, Enable); for an internal process problem, expect DMAIC. Do not accept a made-up framework name from me — if I name a framework, ask me to define it and apply it concretely.\n9. Do NOT praise, hint, correct, or reveal what you are looking for while the mock is running. No encouragement. Neutral, professional, slightly impatient.\n\n=== WHEN I TYPE \"END MOCK\" ===\nBreak character and give me a written debrief with exactly these sections:\n\nA. SCORES (1-5 each, with one sentence of justification per score, and be a harsh grader — 3 means adequate, not good):\n   - Structure: was each answer followable and note-takeable?\n   - Ownership: was it clear what I personally did?\n   - Quantification: were results specific and were the numbers defensible?\n   - Domain credibility: did I use the vocabulary of this function correctly?\n   - Depth under follow-up: did I hold up at layers two and three, or thin out?\n   - Fit to this company's stated values: which values did I actually evidence, and which did I miss?\n   - Communication: pace, filler, conciseness, handling of interruption.\n\nB. THE SINGLE WEAKEST ANSWER: quote what I said, explain precisely why it was weak, and rewrite it as a strong answer in PARADE format (Problem, Anticipated consequence, Role, Action, Decision-making rationale, End result). Use only facts I actually gave you — where a number is missing, leave an explicit [NUMBER NEEDED: what exactly] placeholder rather than inventing one.\n\nC. THE PATTERN: the one recurring habit across all my answers that costs me the most, stated in a single sentence.\n\nD. ONE FIX for my next mock — specific and behavioural, something I can either do or fail to do. Not \"be more confident\".\n\nE. THREE QUESTIONS I WAS NOT READY FOR, that a real interviewer for this role would plausibly ask, and that I should build stories for before the next mock.\n\nDo not soften any of this. An inflated score here costs me a real interview later, and I only expect about five interviews this season.\n\n=== BEGIN ===\nIntroduce yourself and ask your first question. Nothing else."
+  },
+  "debrief_protocol": {
+    "summary": "A written debrief after every single interview round, pass or fail, completed within two hours while recall is intact. At roughly 5 interviews per recruiting season, an un-debriefed interview is 20% of your season spent learning nothing. This is also the only honest source of data on what your interviewers actually ask, as opposed to what prep sites claim they ask.",
+    "steps": [
+      "Within two hours, before doing anything else, write down every question asked, as close to verbatim as you can manage. Recall of exact wording collapses within a day and the exact wording is the most reusable thing in the debrief.",
+      "For each question, note which story or structure you used and rate your own answer 1-5. Self-rating immediately after is more accurate than you will expect, and it is the only rating you will get from most processes.",
+      "Flag every question you had no prepared story for. These are the highest-value items in the entire debrief — they are real questions from a real interviewer for a real target role, which is better signal than any question bank.",
+      "Note where the interviewer escalated: which answers drew three follow-ups and which drew none. Heavy follow-up means either genuine interest or visible weakness; note which it felt like and why.",
+      "Record the interviewer's own reactions and language — what they leaned into, what they wrote down, any value or principle they named. That language is how the role is actually described internally and belongs in your next tailored resume.",
+      "Write down the loop structure as it actually ran versus as the recruiter described it, plus timings and names. This makes your next interview at the same company materially easier and is worth sharing with classmates targeting the same employers.",
+      "Separate process from outcome, explicitly and in writing. Name one thing you did well and one thing you would change, independent of whether you advance. A rejection after a well-executed loop and a pass after a sloppy one both happen, and conflating the two teaches the wrong lesson.",
+      "Within 48 hours, convert the debrief into concrete changes: new stories for the unprepared questions, rewrites of anything you self-rated 1-2, and a note in the company sheet about what that employer actually probes.",
+      "Ask the recruiter for feedback once, briefly and without pressure. Most will decline for policy reasons — Microsoft says outright that it usually cannot give individualized feedback — so treat any response as a bonus, not a dependency.",
+      "Log the outcome in the application tracker so your personal funnel numbers get more accurate with every round, and re-read the last three debriefs before every new loop. The point of the log is catching the weakness that appears three times, not the one that appears once."
+    ]
+  },
+  "story_bank_method": {
+    "summary": "The story bank is built before any question practice, because question practice without stories is improvisation and improvisation does not survive escalating follow-ups. The mechanism matters more than the format: a story written down, quantified, and pressure-tested can be retrieved under stress, while one that exists only as a memory cannot. The design requirement — a story must be structured enough that the interviewer can take notes and relay it accurately to their team, because the interviewer is a witness for a hiring committee, not the decision-maker.",
+    "steps": [
+      "Inventory raw material before writing anything. List every project, escalation, conflict, failure, and decision from your years of work, your undergraduate research or projects, your graduate coursework and team projects, and your portfolio projects. Aim for 25-30 raw candidates — most will not survive.",
+      "Write each surviving story in PARADE format: Problem, Anticipated consequence, Role, Action, Decision-making rationale, End result. PARADE is the right default over plain STAR because it forces the two things interviewers actually probe and candidates habitually omit — what you personally did, and why you chose that over the alternative.",
+      "Quantify the End result in every story, with a number you can defend. If you do not have the number, find it or reconstruct it defensibly and be ready to explain the reconstruction. A result without a magnitude is unmemorable and cannot survive a hiring-committee debrief.",
+      "Enforce the fifteen-second rule. The first two sentences must work as a standalone summary, because that is often all the interviewer writes down. If the first fifteen seconds do not convey the problem and your role, the story is structured wrong regardless of how good the rest is.",
+      "Strip collective pronouns. Every action should be 'I' unless the team's involvement is genuinely load-bearing. This is the most common way strong candidates make their own contribution unattributable.",
+      "Pressure-test each story with three escalating follow-ups and write the answers down: why this approach over the alternative, what you would do differently, and what happened to the metric afterwards. Stories that cannot survive layer three get demoted to backup rather than deleted — they still work as supporting examples.",
+      "Tag every story with the themes it can serve (see coverage_targets) and with the company values it evidences. One strong story usually serves three or four themes, so the target is coverage, not volume.",
+      "Audit for coverage gaps and write targeted stories to fill them. An empty theme is a predictable failure, not a surprise — and the gaps are usually the uncomfortable ones: failure, conflict with a manager, ethical judgement.",
+      "Prune to 12-15 active stories. Beyond that you will hesitate mid-interview while searching, which reads as fabrication. Keep the rest in a backup file.",
+      "Rehearse out loud, never by reading. A story rehearsed silently sounds recited when spoken. Ninety seconds is the target length for the main body, expanding under follow-up rather than front-loading every detail.",
+      "Re-audit after every real interview. Any question you had no story for becomes a new entry within 48 hours."
+    ],
+    "coverage_targets": [
+      "Failure and what changed afterwards — the story you are most reluctant to tell is usually the one that scores highest, and it is what Microsoft's stated growth-mindset criterion is actually testing for.",
+      "Data-driven decision — you formed a hypothesis, pulled data, and the data changed your answer. Amazon's Dive Deep and every analyst loop hinge on this.",
+      "Influence without authority — you changed an outcome across a team you did not manage. The core competency of program management and the most commonly under-prepared theme.",
+      "Conflict or disagreement, especially with a manager or a senior stakeholder — including how it resolved and what you conceded.",
+      "Process improvement with a measured result — the natural home for DMAIC framing and directly aligned with your process-improvement and business-operations target roles.",
+      "Ambiguity — you acted without clear direction or complete information. Universal at entry-to-mid level and unavoidable in tech-company loops.",
+      "Risk or compliance judgement — a real call you made at work where the rules were unclear or in tension with the business. For a risk background this is the genuine differentiator; most SCM candidates cannot tell this story at all.",
+      "Ownership of an end-to-end outcome — something you carried from problem to resolution, not a slice of someone else's project.",
+      "Customer or stakeholder impact — a change that improved a specific downstream experience, framed from their side rather than yours.",
+      "Cross-cultural or global collaboration — a global scope in your current role is real signal for companies with international supply chains, and it is an easy theme to leave on the table.",
+      "Learning something hard and fast — a career pivot (for example, from a science degree into supply chain) is itself this story, and told well it converts an unusual background from a question mark into evidence.",
+      "A portfolio project in full technical depth — how built, what tools, exactly where AI was used and what you would have done without it, what broke, and what the measured impact was. Interviewers drill here; one project you can defend completely is worth more than three you can only summarize."
+    ]
+  }
+}

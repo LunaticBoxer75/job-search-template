@@ -1,0 +1,301 @@
+[
+  {
+    "id": "pm-retention-drop",
+    "domain": "Program & Product Management",
+    "title": "Weekly retention dropped five points",
+    "difficulty": "core",
+    "prompt": "You own a product with a few hundred thousand weekly users, and this morning weekly retention came in five points below last week. Your VP wants to know what happened before end of day. Walk me through what you do.",
+    "why_asked": "Screens for whether you can debug a metric systematically — segmenting and ruling out instrumentation — instead of guessing at causes.",
+    "framework": "Metric Tree",
+    "structure": [
+      "Clarify the metric definition and the exact delta before diagnosing anything — ask which retention metric this is, whether the five points are absolute (40% to 35%) or relative (40% to 38%), and what the normal week-to-week variance band has been.",
+      "Rule out instrumentation before behavior: check whether a logging change, app release, SDK upgrade, or delayed data pipeline landed in the window, because a broken or double-counted event is the most common cause of a clean one-week step change.",
+      "Establish the shape of the drop — a single-day step change, a gradual slide, or a spike-then-recover — because a step change points at a release or outage while a slide points at mix shift or seasonality.",
+      "Segment along external dimensions first (platform and OS version, geography, acquisition channel, tenure cohort, new versus returning, device class) looking for one segment carrying the whole loss rather than a uniform decline across all of them.",
+      "Then segment along internal dimensions: releases shipped, experiments and feature flags ramped, pricing or policy changes, notification and email volume changes, and any spike in support tickets or app-store reviews in the same window.",
+      "Check whether this is a numerator or a denominator problem — a large low-intent acquisition spike in the prior week inflates the base and mechanically depresses retention even if no existing user changed behavior at all.",
+      "Rule out calendar and seasonality effects explicitly: a public holiday, end of quarter, a school term boundary, or a week with one fewer business day can produce a five-point move with nothing broken.",
+      "Close with a ranked hypothesis list, the fastest check that would confirm or kill the top one, and what you would tell the VP today: most likely cause, your confidence, whether the metric is still deteriorating, and whether anything needs rolling back this afternoon."
+    ],
+    "quant_hooks": [
+      "Retention rate = users active in period N who were also active in period N-1, divided by users active in period N-1. Be explicit whether the five points are percentage points (40% to 35%) or a relative 5% decline (40% to 38%) — they imply very different severity.",
+      "Segment contribution math: a segment's contribution to the aggregate change = segment share of the base multiplied by the change in that segment's rate. If Android is 30% of the base and Android retention fell 15 points, that contributes 0.30 x 15 = 4.5 points — nearly the entire drop, and you are done looking elsewhere.",
+      "Denominator effect: if marketing added 25% more new users last week and new users retain at roughly half the rate of tenured users, aggregate retention falls with zero behavior change. Recompute on a fixed cohort to strip this out.",
+      "Noise check: week-over-week variation in a rate scales roughly as the square root of p(1-p)/n. At p = 0.40 and n = 2,000, one standard error is about 1.1 points, so a five-point move is clearly real; at n = 200 it is about 3.5 points and a five-point move is barely distinguishable from noise."
+    ],
+    "good_signals": [
+      "Asks whether the drop is even real — instrumentation, pipeline, variance band — before generating a single behavioral hypothesis.",
+      "Segments to isolate one driver and does the contribution arithmetic out loud, rather than reciting a list of dimensions with no math attached.",
+      "Separates numerator causes from denominator causes and catches the acquisition-spike artifact without being prompted.",
+      "Distinguishes what they would tell leadership today from what the full investigation requires, and names the rollback decision explicitly."
+    ],
+    "failure_modes": [
+      "Jumping straight to solutions — push notifications, a re-engagement email, an onboarding redesign — before establishing any cause.",
+      "Treating the drop as one global cause when a five-point aggregate move is usually one segment moving a lot; never segmenting, therefore never finding it.",
+      "Producing a flat brainstorm of twenty possible causes with no prioritization and no statement of what evidence would confirm or eliminate each.",
+      "Never asking how the metric is defined, then confidently analyzing a different metric than the one that moved."
+    ],
+    "followups": [
+      "You find the entire drop is in new users from one paid channel. Is that a product problem or a marketing problem, and who owns fixing it?",
+      "Your data engineer confirms a logging change but says it only affects 3% of sessions. Does that close the case? Size whether 3% can explain five points.",
+      "Leadership wants last week's release rolled back today. That release also contained a security fix. How do you decide?",
+      "It turns out nothing broke — the prior week was an unusually high outlier. How do you stop this from becoming a fire drill every month?"
+    ]
+  },
+  {
+    "id": "pm-feature-tradeoff",
+    "domain": "Program & Product Management",
+    "title": "Six-week feature versus two-week deal",
+    "difficulty": "core",
+    "prompt": "Engineering tells you Feature A will take six weeks. Sales says they will lose a deal without Feature B and they want it in two, and you cannot do both. What do you do?",
+    "why_asked": "Screens for prioritization judgment under real organizational pressure, and whether you can say no to a powerful stakeholder with reasoning rather than deference.",
+    "framework": "RICE",
+    "structure": [
+      "Refuse to treat this as a binary until you understand both asks: what customer problem each feature solves, who asked for it, and what specifically happens if each one slips.",
+      "Interrogate the Sales claim concretely — which deal, what annual value, what the real close date is, whether Feature B is a written requirement or something a champion mentioned once, and whether anyone has asked the customer if a workaround would suffice.",
+      "Interrogate the engineering estimate with equal rigor: what is inside the six weeks, how much is scope versus unknowns versus waiting on a dependency, and what a genuine two-week thin slice of Feature A would deliver.",
+      "Actively hunt for the third option, which almost always exists — a manual or services-delivered workaround for Feature B, a config flag, a contractual commitment to a date, or a partial release that unblocks the deal without consuming the six weeks.",
+      "Score both against one consistent rubric such as RICE, and be explicit that Confidence is where a single-anecdote Sales claim gets discounted rather than pretending the inputs are facts.",
+      "Weigh what the score does not capture: strategic fit, whether Feature B is a one-off customization that creates permanent maintenance cost, and the real productivity cost of context-switching a team mid-sprint.",
+      "Make the call out loud, state the trade-off you are accepting rather than hiding it, and name the specific evidence that would make you reverse the decision.",
+      "Close the loop on communication — tell Sales in writing what they are getting and when, and give the customer a date you can actually hold instead of a date you hope for."
+    ],
+    "quant_hooks": [
+      "RICE score = (Reach x Impact x Confidence) / Effort, where Reach is accounts or users touched per quarter, Impact is a fixed scale (3 = massive, 1 = medium, 0.25 = minimal), Confidence is a percentage, and Effort is person-weeks. Show the inputs, because the real argument is always about the inputs, never the arithmetic.",
+      "Size the deal against the engineering cost: at a fully loaded cost of roughly $250K per engineer per year, six weeks of a three-engineer team is about 3 x $250K x (6/52), which is roughly $87K. A $200K deal clears that easily, which means the real question is what Feature A was worth, not whether the deal is big enough.",
+      "Reach is the number that decides this: one account at $200K is a customization, while twelve pipeline accounts each needing the same thing is a product gap. Ask which one it is before scoring anything.",
+      "Discount the claim by history: if Sales has historically closed 40% of deals it called committed, a $200K 'we will lose it' is closer to $80K of expected value when compared against Feature A."
+    ],
+    "good_signals": [
+      "Pushes back on both the six weeks and the two weeks instead of accepting either number as a fixed input.",
+      "Finds a third path — thin slice, manual workaround, resequencing — rather than simply picking a side and defending it.",
+      "Separates a single-account customization from a genuine product gap, and says that distinction out loud to Sales.",
+      "Actually decides within the interview, with reasoning, rather than concluding 'it depends' or 'I would escalate to my manager.'"
+    ],
+    "failure_modes": [
+      "Siding with Sales automatically because revenue sounds urgent, with no test of whether the claim is real or whether the feature is truly a blocker.",
+      "Siding with engineering automatically and treating the roadmap as sacred, which reads as low commercial awareness.",
+      "Splitting the team across both features so neither ships on time — the classic wrong answer, and the one most candidates give.",
+      "Producing a tidy RICE table full of invented numbers with no acknowledgement that they are estimates, which signals process theater rather than judgment."
+    ],
+    "followups": [
+      "Sales escalates to your VP and gets a yes over your head. What do you do next?",
+      "You build Feature B, the deal closes, and two more prospects immediately ask for variations. How do you avoid becoming a custom development shop?",
+      "An engineer tells you privately that the six weeks was padded and it is really three. How does that change your answer, and how do you handle the estimating culture problem?",
+      "How would you set up prioritization so this same fight does not happen every quarter?"
+    ]
+  },
+  {
+    "id": "pm-lost-and-found",
+    "domain": "Program & Product Management",
+    "title": "Improve ride-share lost and found",
+    "difficulty": "core",
+    "prompt": "A rider leaves something in a car. Improve the lost-and-found experience for a ride-sharing app. Take it wherever you think it should go.",
+    "why_asked": "Screens for product sense: whether you define the customer and the goal before designing, and whether you can hold a three-sided marketplace in your head at once.",
+    "framework": "CIRCLES",
+    "structure": [
+      "Comprehend the situation first: clarify scope (rider side only, or driver and support too), platform, geography, and which business goal you are optimizing — recovery rate, support cost per contact, rider retention after a loss event, or driver satisfaction.",
+      "Identify the customer, and note there are at least three: the rider who lost the item, the driver now holding a stranger's property, and the support agent mediating between them; then name the segments that actually differ, such as lost a phone with no working device, lost a wallet with ID, lost a low-value item, or lost something belonging to a child.",
+      "Report the needs from each side honestly: the rider needs to identify the right trip fast and reach the driver without either party exposing personal contact details, the driver needs not to lose earning time or absorb the cost of a return trip, and the platform needs the flow not to become a fraud vector for false claims or social engineering.",
+      "Cut through prioritization by picking one customer and one problem rather than trying to serve all three — the sharpest cut is the rider who lost their phone, because the entire existing recovery flow assumes the rider still has the app on the device they just lost, which is exactly when the product fails completely.",
+      "List solutions at several levels of ambition: a web recovery flow reachable from any device with identity verification, a driver-side 'item found' report that proactively matches to the trip, a scheduled return with a set fee and an agreed meeting point, masked calling within a time-boxed window, partner drop-off lockers or venue handoff points, and a photo-based item log for high-traffic locations.",
+      "Evaluate trade-offs on the axes that actually matter: recovery rate versus fraud exposure, driver compliance versus driver compensation, support headcount versus automation, and how much of the fix is product versus operational policy.",
+      "Summarize a recommendation: the one thing you would build first, the metric it moves, the guardrail metric you would watch alongside it, and the obvious version two.",
+      "Say how you would validate before building — read support transcripts, funnel the existing flow to find where claims die, and interview drivers about why returns do not happen today."
+    ],
+    "quant_hooks": [
+      "Funnel the existing flow to locate the leak: lost-item events, then claims initiated, then driver contact established, then item confirmed found, then item physically returned. Recovery rate = items returned / items reported lost. A 20% recovery rate where 70% of claims never reach driver contact tells you to fix contact, not logistics.",
+      "Support cost math: at 1M trips per month and a 0.5% loss rate you have roughly 5,000 cases per month. If a live agent contact costs about $6, moving half of them to self-service saves roughly 5,000 x 0.5 x $6 = $15K per month — enough to fund the flow, nowhere near enough to fund lockers everywhere.",
+      "Return-fee economics explain low voluntary return rates: if an average return costs a driver 35 minutes and the driver nets around $20 per hour, the opportunity cost is close to $12, so a $5 return fee is a losing proposition and a $15 fee is roughly break-even.",
+      "Fraud guardrail: track false-claim rate = disputed or unverifiable claims / total claims, and watch it as the counter-metric to any increase in recovery rate, because the two move together."
+    ],
+    "good_signals": [
+      "Names all three sides of the marketplace unprompted, then deliberately picks one to solve instead of trying to satisfy everyone.",
+      "Identifies the lost-phone case, which is the sharpest real insight available here and the one most candidates walk right past.",
+      "Treats fraud and abuse as a first-class design constraint — any 'just connect the rider and driver' answer creates a social-engineering channel.",
+      "Recognizes that a large part of the solution is operational policy (fee level, SLA, driver incentive) rather than software, and says so explicitly."
+    ],
+    "failure_modes": [
+      "Listing features in the first minute without defining the customer or the goal, which is the single most common way this case is failed.",
+      "Designing only for the rider and ignoring that the driver has no real incentive to cross the city for free.",
+      "Assuming the rider still has a working phone with the app installed on it.",
+      "Offering no success metric, or a vanity metric like 'number of lost-item reports filed,' which rises when the product gets worse."
+    ],
+    "followups": [
+      "Your flow doubles recovery rate but driver complaints about unpaid return trips triple. What now?",
+      "How would you stop a rider from claiming a lost item that never existed in order to get a credit?",
+      "What changes for a high-volume venue like an airport where hundreds of items are lost every night?",
+      "The item was found, but the next rider took it. How does your design handle that?"
+    ]
+  },
+  {
+    "id": "pm-first-30-days",
+    "domain": "Program & Product Management",
+    "title": "New program, first thirty days",
+    "difficulty": "core",
+    "prompt": "You have just been handed a brand-new program. There is no charter, no team, no metrics — just a VP sentence saying this matters. What do you do in your first thirty days?",
+    "why_asked": "Screens for whether you have a real operating model for starting a program, or only enthusiasm and a 30-60-90 template.",
+    "framework": "",
+    "structure": [
+      "Convert the VP's sentence into a written problem statement and an explicit definition of done, then get it confirmed in writing, because most new programs fail from nobody ever agreeing what success meant.",
+      "Map stakeholders in week one: who the executive sponsor is, who controls the budget, which teams have to do actual work, who holds a veto, and who is affected but not consulted — and find out which of them volunteered and which were conscripted.",
+      "Run ten to fifteen short one-on-ones before proposing anything, asking each person the same three questions — what does success look like to you, what will get in the way, and what has already been tried — so you can see precisely where the answers contradict each other.",
+      "Inventory what already exists: prior attempts and why they died, adjacent programs you would collide with, available data and tooling, and any external commitments already made that you now own.",
+      "Write a one-to-two page charter covering problem, scope and explicit non-scope, success metrics with baselines and targets, milestones, named owners per workstream, dependencies, risks, and decision rights — then circulate it for comment rather than announcing it.",
+      "Stand up the operating cadence and the reporting artifact early: a weekly status in a consistent format, one source of truth for the plan, a documented escalation path, and a decision log, because a program's value is largely mechanism rather than heroics.",
+      "Deliberately land one visible small win inside the thirty days to prove the cadence works and buy credibility, even if it is just unblocking a dependency or forcing a decision that had been stuck for a month.",
+      "Finish the thirty days with a measured baseline and a risk list with named owners, so day thirty-one starts from facts rather than from a plan nobody has pressure-tested."
+    ],
+    "quant_hooks": [
+      "Insist on a baseline before accepting a target: if the ask is 'improve on-time delivery,' your first deliverable is the current rate and its variance, because a target set without a baseline cannot be defended, reported against, or celebrated.",
+      "Size the ask against real capacity in week one: if the program needs four person-quarters of engineering and the contributing teams have already committed their entire quarter elsewhere, the plan is infeasible on day one — surface that arithmetic in the charter rather than in month three.",
+      "Structure metrics as a hierarchy rather than a list: one primary outcome metric, two or three input metrics you can influence weekly, and one guardrail metric that tells you the program is causing damage somewhere else."
+    ],
+    "good_signals": [
+      "Spends the first days listening and writing rather than announcing a plan, and can articulate why that sequence matters.",
+      "Produces a written charter with an explicit non-scope section, which is the clearest single marker of program-management maturity.",
+      "Talks about decision rights and escalation paths, not only tasks and dates.",
+      "Plans an early visible win on purpose, for credibility reasons, and can name what it would actually be."
+    ],
+    "failure_modes": [
+      "Reciting a generic 30-60-90 template with no content specific to the situation in front of them.",
+      "Building a detailed schedule before confirming what the program is for or who owns which piece.",
+      "Skipping stakeholder mapping, then discovering in month two that a team whose work is required never agreed to do it.",
+      "Defining success as activity — workshops run, documents written — instead of outcome, or offering no metrics at all."
+    ],
+    "followups": [
+      "Two weeks in, two senior stakeholders give you contradictory definitions of success. How do you resolve it?",
+      "You discover a prior version of this program failed last year. How does that change your first thirty days?",
+      "You have no direct reports and no budget. How do you get other teams to do work for you?",
+      "Your sponsor changes roles in week three. What is your move?"
+    ]
+  },
+  {
+    "id": "pm-behind-schedule",
+    "domain": "Program & Product Management",
+    "title": "Cross-functional program is slipping",
+    "difficulty": "core",
+    "prompt": "You are six weeks into a twelve-week program with three teams involved, and you have just realized you are going to miss the date. Only one of the three teams is behind. What do you do?",
+    "why_asked": "Screens for delivery judgment under pressure: whether you diagnose before acting, and whether you escalate early with options rather than late with excuses.",
+    "framework": "Issue Tree",
+    "structure": [
+      "Establish the real status before communicating anything — get the actual completion state of each workstream rather than the reported one, and separate 'behind on a task' from 'behind on the critical path,' because only the second one moves the date.",
+      "Quantify the slip: how many weeks, at what confidence, and what is driving it — scope growth, an underestimate, a dependency that did not land, attrition, or rework from quality problems.",
+      "Diagnose with an issue tree instead of assuming a single cause: the slip is scope, capacity, productivity, or dependency/blocking, and each branch has a different recovery lever, so you cannot choose a lever before naming the branch.",
+      "Escalate early and with a recommendation attached rather than just a red status, because the cardinal sin in program management is a date that slips quietly and then surprises leadership too late for them to do anything about it.",
+      "Build two or three concrete recovery options with their costs: cut scope to a defensible minimum and hold the date, hold scope and move the date, add capacity only where it genuinely helps, or parallelize by relaxing a dependency with a temporary stub or manual process.",
+      "Work the single behind team directly and find out which problem it actually is — a skills gap, a priority conflict with that team's own roadmap, or a bad estimate — because the fix for a priority conflict is an executive conversation, not a replanned schedule.",
+      "Get a decision from the accountable owner, write down what was decided and which trade-off was accepted, then replan from the new reality instead of carrying the original plan forward as fiction.",
+      "Change the mechanism so the next slip surfaces earlier: leading indicators rather than percent-complete self-reports, a weekly critical-path review, and an explicit definition of done per milestone."
+    ],
+    "quant_hooks": [
+      "Measure slip against the critical path, not the average: if the behind team's workstream is not on the longest dependent chain, a three-week slip there may cost zero weeks of launch. Identify the chain first, then measure.",
+      "Percent-complete is the most gamed number in program management. Replace it with countable units — tickets closed of scoped, test cases passing of written, integrations live of planned — then compute required velocity as remaining units divided by remaining weeks and compare it against the velocity actually observed over the last three weeks.",
+      "Hunt for the scope asymmetry: if 30% of remaining scope is consuming 70% of remaining time, cutting that 30% buys back most of the slip. Being seen looking for that asymmetry is worth more than any recovery plan.",
+      "Adding people late has negative short-term return: a new contributor typically needs two to four weeks of ramp plus senior time to onboard them, so adding capacity inside the final six weeks usually makes the date worse — this is Brooks's observation from The Mythical Man-Month and it is still true."
+    ],
+    "good_signals": [
+      "Distinguishes critical path from general lateness, and declines to panic about a slip that does not move the date.",
+      "Escalates with options and a recommendation rather than escalating a problem and waiting for instructions.",
+      "Names the diagnosis branch — scope, capacity, productivity, or dependency — before proposing any fix.",
+      "Treats the behind team as a partner with a reason, and separates cannot from will not from was never told this was priority one."
+    ],
+    "failure_modes": [
+      "Reaching immediately for 'add resources' or 'the team works weekends' with no diagnosis at all, which reads as junior.",
+      "Softening or delaying the bad news to avoid a hard conversation, then delivering it too late for leadership to have any real options.",
+      "Blaming the late team in the escalation, which burns the cross-functional relationship you still need for the remaining six weeks.",
+      "Replanning to the same original date with no scope change and no capacity change — a plan with no arithmetic behind it and no chance of holding."
+    ],
+    "followups": [
+      "The behind team tells you their VP reprioritized them onto something else. Now what?",
+      "Leadership refuses to move the date and refuses to cut scope. What do you actually do?",
+      "How do you decide what to cut, and who has the authority to approve that cut?",
+      "In hindsight, what signal should have told you in week three that this was going to slip?"
+    ]
+  },
+  {
+    "id": "pm-metrics-and-what-not-to-build",
+    "domain": "Program & Product Management",
+    "title": "Define success and what not to build",
+    "difficulty": "stretch",
+    "prompt": "Take a program you own. Tell me how you would define success for it. Then tell me how you decide what not to build.",
+    "why_asked": "Screens for measurement literacy and the willingness to say no — whether you can define an outcome metric with a guardrail and then defend a prioritization decision to the person who lost.",
+    "framework": "Metric Tree",
+    "structure": [
+      "Anchor on the outcome the program exists to change, then name the single primary metric you would be judged on, along with what number counts as success and by when.",
+      "Build a metric tree rather than a metric list: decompose the primary outcome into the inputs that drive it so every team can see which input they move — on-time delivery, for instance, decomposes into supplier lead-time adherence, order-processing time, and dock-to-stock time.",
+      "Separate the four types explicitly — the north-star outcome metric, the input metrics you can act on weekly, the counter or guardrail metrics that catch harm elsewhere, and the health metrics that only tell you the system is running.",
+      "Pressure-test every metric for gaming by asking, for each one, what damage you would do if you optimized only that — then pair it with the guardrail that prevents exactly that damage: closure rate with reopen rate, speed with defect rate, cost with customer satisfaction.",
+      "Insist on a baseline and a measurement plan before committing to any target: where the data comes from, who owns the query, how often it refreshes, and what the historical variance is so you can distinguish a real change from noise.",
+      "For what not to build, make the trade-off explicit rather than implicit — everything gets scored against the same rubric, and the 'not now' list is published with reasons, because an unwritten no gets relitigated every single week.",
+      "Give concrete kill criteria instead of instinct: no measurable link to the primary metric, reach limited to one stakeholder, effort disproportionate to impact, duplicates something that already exists, or the guardrail cost exceeds the gain.",
+      "Close on how you deliver a no — name the reason, name what would change your mind, and offer the cheapest alternative that addresses the underlying need, because that is what keeps stakeholders bringing you problems instead of routing around you."
+    ],
+    "quant_hooks": [
+      "State the primary metric as a formula with a baseline, a target, and a date: 'on-time-in-full rate, defined as orders delivered complete by the promised date divided by total orders, from 87% to 93% by end of Q2' — not 'improve delivery.'",
+      "Use the metric tree so the arithmetic composes and reveals leverage: if three sequential stages pass at 95%, 97%, and 94%, then 0.95 x 0.97 x 0.94 is about 0.87, which immediately identifies the 94% stage as where the gain is.",
+      "Quantify the opportunity cost of every yes: two engineers for a quarter is roughly half a person-year, so any request must beat the next-best use of half a person-year — name that alternative out loud, because 'we have capacity' is never the real question.",
+      "Set a minimum detectable effect before starting: if the metric's week-to-week noise is plus or minus two points, a project expected to move it one point is unmeasurable, and you should either raise the ambition or drop the project."
+    ],
+    "good_signals": [
+      "Pairs each metric with a counter-metric without being prompted, which shows they have personally watched metrics get gamed.",
+      "Gives a formula, a baseline, and a date rather than a directional aspiration.",
+      "Treats 'what not to build' as a communication problem as much as an analytical one, and describes how the no gets recorded and defended over time.",
+      "Names something real they would kill and why, rather than staying safely abstract."
+    ],
+    "failure_modes": [
+      "Listing a dozen metrics with no hierarchy, so nobody can say which one the program is actually judged on.",
+      "Choosing output and activity metrics — features shipped, meetings held, documents written — instead of outcomes.",
+      "Proposing a target with no baseline, which collapses the moment leadership asks why that particular number.",
+      "Answering 'what not to build' with 'I would align with stakeholders,' which is a non-answer: no rubric, no kill criteria, no example."
+    ],
+    "followups": [
+      "Your primary metric improves and your guardrail metric gets worse. Walk me through the decision.",
+      "A senior stakeholder's pet request fails your rubric. Take me through that conversation, in their words and yours.",
+      "The data needed to measure your primary metric does not exist yet. What do you do this quarter?",
+      "Six weeks in the metric has not moved at all. How do you tell whether the program is wrong or just early?"
+    ]
+  },
+  {
+    "id": "pm-working-backwards-pitch",
+    "domain": "Program & Product Management",
+    "title": "Pitch a program working backwards",
+    "difficulty": "stretch",
+    "prompt": "Pick a problem you think we should be solving, and pitch it to me the way you would pitch it internally — start from the customer, not from the solution. Then tell me the strongest reason it fails.",
+    "why_asked": "Screens for whether you can start from a customer problem rather than a solution, quantify it honestly, and argue against your own idea before someone else does.",
+    "framework": "",
+    "structure": [
+      "Choose a problem you can speak to with actual evidence, and state it as a sentence the customer would say in their own words — a pitch that opens with a solution has already lost the room.",
+      "Name the specific customer and how many of them there are: 'our customers' is not a customer, while 'warehouse associates running manual cycle counts across forty sites' is.",
+      "Quantify the pain before proposing anything — how often it happens, what it costs in hours, dollars, errors, or churn, and how you know — because a clearly labelled rough estimate beats a confident adjective every time.",
+      "Describe the experience after the fix in concrete, present-tense, customer-visible terms, the way Amazon's Working Backwards press release does; if you cannot describe the customer's new day in five sentences, the idea is not ready to pitch.",
+      "Surface the hard questions yourself, FAQ-style: what it costs, what it breaks, who has to change how they work, what the riskiest assumption is, and what happens if you do nothing at all.",
+      "State the smallest version that would prove or kill the idea, with a measurable threshold — a pilot at two sites, a specific target, and a decision rule agreed in advance.",
+      "Give the measurement plan: the outcome metric you would move, the guardrail you would watch, and the baseline you need to collect before you start.",
+      "Close by naming the strongest argument against your own pitch and how you would test it early, because volunteering the counterargument is the fastest way to earn credibility in a senior review."
+    ],
+    "quant_hooks": [
+      "Size the pain bottom-up rather than top-down: frequency x population x cost per occurrence. Forty sites x twelve counts per year x six hours x $28 per hour fully loaded is roughly $80K per year — small enough to kill the idea, which is exactly why you do the arithmetic before the pitch rather than after.",
+      "State the riskiest assumption as a number you could be wrong about: 'this only works if at least 60% of associates adopt it; below 40% the manual process stays in place and we have added cost rather than removed it.'",
+      "Pre-commit the pilot's decision rule: 'if error rate at the two pilot sites does not fall by at least a third within eight weeks, we stop.' A pilot with no stopping rule always continues."
+    ],
+    "good_signals": [
+      "Opens with a customer and a quantified pain, and visibly resists describing the solution for the first minute.",
+      "Uses a real, checkable number and labels its confidence rather than asserting a precise-sounding figure they cannot defend.",
+      "Volunteers the strongest objection to their own idea before being asked for it.",
+      "Pre-commits to a kill criterion, which is rare enough at this level that it immediately distinguishes them."
+    ],
+    "failure_modes": [
+      "Pitching a solution in search of a problem — starting from a technology or a feature and reverse-engineering a customer to justify it.",
+      "Describing the pain in adjectives ('frustrating,' 'inefficient') with no frequency, population, or cost attached.",
+      "Describing internal process improvements instead of customer experience in the 'after' state.",
+      "Naming only weak objections so the pitch appears unbeatable, which reads as either naive or evasive."
+    ],
+    "followups": [
+      "Your number is probably wrong. Which input is it most sensitive to, and how would you tighten it?",
+      "What would have to be true for this to be a bad idea?",
+      "Who inside the company loses if this ships, and how do you handle them?",
+      "You get one quarter and two people, nothing more. What do you do with it?"
+    ]
+  }
+]

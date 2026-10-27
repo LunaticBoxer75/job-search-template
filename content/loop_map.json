@@ -1,0 +1,233 @@
+[
+  {
+    "id": "recruiter-screen",
+    "stage": "Recruiter Screen",
+    "order": 1,
+    "typical_duration": "20-30 minutes",
+    "who": "Recruiter, sourcer, or talent acquisition coordinator",
+    "what_happens": "A fast, mostly logistical call. The recruiter walks the resume top-to-bottom, asks why this role and why now, confirms location and start-date expectations, states or asks about compensation range, confirms work authorization, and describes the remaining rounds. Expect to do about 60% of the talking but on a tight leash — this person is filling a scorecard, not exploring your potential. Some companies substitute or add an asynchronous one-way recorded video round at this point (Target publishes a page specifically about Recorded Video Interviews), and Amazon's published program-manager path routes candidates to a 60-minute phone screen with a senior leader rather than a short recruiter chat.",
+    "what_they_screen_for": "Four things, in order: (1) Are you actually eligible and available — location, start date, work authorization, salary expectations inside band. (2) Can you describe your own experience crisply in 90 seconds without rambling. (3) Is the career story coherent — each step from degree to current job to graduate program to supply chain needs to sound deliberate, not like drift. (4) Are you enthusiastic enough about this specific company to be worth a hiring manager's hour. Depth of technical skill is NOT being assessed here; do not try to prove it.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Write and rehearse a 90-second career narrative that makes the pivot inevitable rather than accidental: what your first degree trained you to do, what your current role taught you (for example, operational risk at scale), and what the graduate program adds (the quantitative supply chain toolkit). Say it out loud ten times until it is 90 seconds, not four minutes.",
+      "Know the compensation number before the call. Have a researched range and a single sentence: 'Based on what I'm seeing for this scope in this market, I'm targeting X to Y — is that consistent with the band?' Never answer 'whatever you think is fair.'",
+      "Prepare three specific, non-generic reasons for this company drawn from its own published material — values wording, a named supply chain program, the network shape. Recruiters hear 'great culture and growth' forty times a week.",
+      "Have one crisp question about the process itself: how many rounds, who you'll meet, is there a case or written exercise, and what the timeline looks like. For companies that publish nothing (Starbucks, Nordstrom, Alaska, PACCAR, Costco) this is the only way to find out, and asking reads as organized.",
+      "Rehearse the work-authorization answer to the point where it is boring to deliver — see f1_notes. The single biggest risk at this stage is sounding uncertain about your own status."
+    ],
+    "common_mistakes": [
+      "Treating it as a low-stakes chat. More candidates die here than anywhere else in the loop, usually for a rambling self-introduction rather than a lack of qualifications.",
+      "Deflecting on salary and then being anchored low later, or naming a number with no research behind it.",
+      "Trying to demonstrate technical depth to someone not evaluating it — which reads as poor audience-reading, itself a stakeholder-management signal.",
+      "Sounding hesitant, apologetic, or vague about work authorization, which converts a routine administrative question into a perceived risk."
+    ],
+    "f1_notes": "This is where work authorization almost always surfaces, so decide the wording in advance and deliver it flatly and without apology. What you can say plainly, unprompted if the form asks or the recruiter raises it: 'I'm on an F-1 student visa at [university]. My [program] runs [start] to [expected completion], and it's STEM-designated. After graduation I'd work on post-completion OPT, and because the degree is STEM-designated I'd be eligible to apply for the 24-month STEM OPT extension — that extension does require the employer to be enrolled in E-Verify.' That is factual, complete, and signals you have done your homework rather than expecting the company to figure it out. What you should NOT volunteer unprompted: H-1B lottery odds and probabilities, speculation about whether the company 'usually' sponsors, any personal immigration complexity, or a long explanation nobody asked for. If the application form asks 'will you now or in the future require sponsorship,' answer it honestly — do not guess at a strategically convenient answer. How to ask about sponsorship without torpedoing the conversation: ask late, after you have already been interesting, and ask it as a logistics question rather than a demand — 'Is this role open to candidates starting on OPT, and does the team support the STEM OPT extension and longer-term sponsorship? I ask so I can plan timing, not because it changes my interest.' If the recruiter says no or doesn't know, thank them and move on rather than negotiating; recruiters rarely own that policy. Useful homework: you can check an employer's E-Verify enrollment yourself in the USCIS E-Verify employer search (https://www.e-verify.gov/e-verify-employer-search) before the call — but note that tool's own stated limits: data is self-reported at enrollment, employers may be registered under a name the public doesn't recognize, and for multi-location employers a match 'does not necessarily mean that all of the hiring sites are enrolled.' This is preparation guidance, not legal advice — you should confirm your own dates, eligibility and paperwork with your school's international student office and your program office before relying on any of it in a negotiation."
+  },
+  {
+    "id": "hiring-manager-screen",
+    "stage": "Hiring Manager Screen",
+    "order": 2,
+    "typical_duration": "45-60 minutes",
+    "who": "The hiring manager who owns the role and the headcount",
+    "what_happens": "The first real evaluation. The manager digs into two or three resume items in depth, asks what you actually did versus what your team did, probes one or two behavioral competencies, and describes the team's current problems. Usually ends with a genuine two-way conversation about the role. This person decides whether you move forward, and their read carries the most weight of anyone in the process.",
+    "what_they_screen_for": "Ownership and scope: what did you personally decide, and what changed because of you. Whether your experience is transferable to the team's actual problems rather than superficially adjacent. Whether you are coachable and pleasant to work with daily. And a quiet risk assessment — will this hire create work for the manager or absorb it. For a career-changer into supply chain, the specific doubt to defuse is 'can you do the quantitative work,' so evidence beats enthusiasm.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Pick three resume bullets the manager is most likely to probe and rebuild each into a full story with numbers, your specific decisions, the alternative you rejected, and what you'd do differently now. Depth on three beats shallow coverage of ten.",
+      "Separate 'I' from 'we' deliberately in every answer. Managers listen for this constantly, and compliance and program work — which is inherently collaborative — is where candidates most often disappear into 'we.'",
+      "Research the team's actual problem, not just the company's. Read the job description as a symptom list: whatever it repeats is what's broken. Then prepare a first-90-days point of view you can offer if asked. Microsoft explicitly asks candidates to bring a proposed approach to the role's tasks, not only past examples.",
+      "Pre-empt the quantitative doubt with proof rather than assertion: a specific model you built, a dataset you worked in, the tools you use (SQL, Excel modelling, Python, Tableau), or a portfolio project from your coursework. 'I'm a fast learner' is not evidence.",
+      "Prepare two questions that only this manager could answer — how the team measures success this quarter, what the last person in this seat struggled with. These convert the screen into a conversation between peers."
+    ],
+    "common_mistakes": [
+      "Answering in team voice ('we implemented...') so the manager cannot locate your individual contribution or judgment.",
+      "Overselling supply chain expertise you don't yet have. Managers forgive an incoming student who is honest about the gap and shows a learning plan; they do not forgive bluffing, and one probing follow-up exposes it.",
+      "Bringing no view on the role's actual problems — arriving purely to be evaluated rather than to discuss the work.",
+      "Talking about compliance as rule-enforcement rather than risk reduction and process improvement, which makes the background sound like a constraint function instead of an operations skill."
+    ],
+    "f1_notes": "The hiring manager is usually the person who genuinely cares about start dates, because they have a gap to fill. Be precise and confident about timing rather than hedging. For a full-time role starting after graduation: post-completion OPT requires filing Form I-765, and USCIS states a student 'may apply up to 90 days before you complete your degree, but no later than 60 days after' — for a May/June completion that means filing opens around February-March of that year. Critically, work cannot begin 'until after we approve your Form I-765 and you receive your Employment Authorization Document (EAD),' so you should propose a start date with buffer after your expected EAD receipt rather than naming your graduation date and hoping. If the manager needs someone sooner than that, better to learn it now. For an internship conversation, the constraint is CPT and it is tighter than most candidates assume — see the take-home/case stage notes. Do not re-open the visa topic here if the recruiter already cleared it; repeating it makes it look like a bigger problem than it is. Confirm all dates with your school's international student office before committing to any start date in writing."
+  },
+  {
+    "id": "take-home-case",
+    "stage": "Take-Home / Case Presentation (optional — varies by company)",
+    "order": 3,
+    "typical_duration": "2-6 hours of work, plus a 30-45 minute presentation if there is a live readout",
+    "who": "Assigned by the recruiter or hiring manager; presented to a panel of 2-4 people including the hiring manager",
+    "what_happens": "Highly variable and often skipped entirely. Common forms: a written exercise (Amazon's published program-manager path sends a writing assessment about 2 days before the loop), a dataset with an open question ('here's six months of shipment data — what should we do?'), a business case with a recommendation deck, or a short operational scenario. Sometimes there is no live readout and the artifact is scored on its own; sometimes you present it and defends it.",
+    "what_they_screen_for": "Structured thinking under ambiguity, and specifically whether you lead with a recommendation or buries it. Data hygiene — do you state assumptions, name what's missing, sanity-check magnitudes. Written communication quality, which is a scored competency in its own right at Amazon. Judgment about scope: the exercise is almost always under-specified on purpose, and the test is whether you ask or assumes silently.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Build one reusable structure and practice it until it's automatic: recommendation first, then the two or three numbers that drive it, then assumptions and what you'd validate next, then risks with mitigations. Most candidates narrate their analysis chronologically and lose the room before the recommendation appears.",
+      "Practice writing specifically, not just analyzing. Amazon scores a writing exercise as a named competency. Drill a one-page memo: a decision up front, evidence in the middle, risks at the end, no filler adjectives.",
+      "Time-box the work honestly and say what you cut. A clean 4-hour answer that states 'with more time I'd validate X' beats a sprawling 15-hour answer, and over-investment signals poor prioritization.",
+      "Always state assumptions explicitly in the artifact. Under-specified prompts are deliberate; unstated assumptions are the most common scored deduction.",
+      "Rehearse the defense, not just the deck. Expect 'what would change your recommendation?' and 'what's the weakest part of this?' — having an honest answer ready reads as senior; defending everything reads as junior."
+    ],
+    "common_mistakes": [
+      "Burying the recommendation in slide 9 and walking the panel through the analytical journey first.",
+      "Not asking clarifying questions when the prompt is ambiguous, then solving the wrong problem elegantly.",
+      "Presenting numbers you cannot reproduce or explain, including anything you generated with a tool you can't walk through — panels probe exactly there.",
+      "Over-polishing the visual design while leaving the logic thin, or the reverse: dense correct analysis with no stated 'so what.'"
+    ],
+    "f1_notes": "Relevant mainly when this is an internship loop, because the internship constraint is CPT and the window is often narrower than candidates expect. Many schools require having completed one academic year of full-time study in the U.S. before CPT, so an internship early in a one-year program can fall inside that first year. Schools typically waive the waiting period only when the internship is required for all students in the program during the first year, and CPT must be an established component of the curriculum — CPT cannot be authorized for the sole purpose of employment. Practical consequences to plan around: (1) verify with your program office AND your school's international student office, before accepting any internship, whether the program's internship course makes you eligible in the first year; (2) many schools approve CPT one term at a time, so a placement spanning terms needs a fresh request each term; (3) the updated I-20 with CPT authorization takes time to issue and you cannot begin work until you have it — so negotiate a start date with at least a month of runway, not a start date next Monday; (4) 12 or more months of full-time CPT eliminates OPT eligibility, so do not stack full-time CPT casually. Rules differ by school — read your own international student office's CPT page. None of this is legal advice — get your actual eligibility confirmed in writing by your school's international student office."
+  },
+  {
+    "id": "onsite-analytical",
+    "stage": "Onsite Loop — Analytical / Case Round",
+    "order": 4,
+    "typical_duration": "45-60 minutes (Amazon's published program-manager loop uses five 55-minute interviews)",
+    "who": "A senior analyst, data scientist, or senior individual contributor on the team",
+    "what_happens": "A live problem-solving round. Typical prompts: size a demand forecast, diagnose why on-time delivery dropped, decide whether to expand a distribution center or add a carrier, walk through how you'd build a supplier risk scorecard, or estimate the cost of a process failure. Often includes light mental math and a request to explain a metric precisely. May include a short SQL or Excel exercise for analyst-titled roles.",
+    "what_they_screen_for": "Whether you decompose a messy problem into drivers before computing anything. Comfort with numbers and units — and whether you notice when an answer is implausible. Correct use of the vocabulary (inventory turns, fill rate, service level, safety stock, lead time variability, on-time in-full). Most of all, whether you reason out loud in a way a colleague could follow and correct.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Drill the core supply chain math until it's reflexive: inventory turns, days of supply, safety stock and its relationship to lead-time variability and service level, EOQ intuition, forecast error (MAPE/bias), fill rate versus OTIF, and cost-to-serve. Being asked to define one of these and fumbling is the fastest way to lose this round as a career-changer.",
+      "Practice thinking aloud. Solve 15-20 short cases out loud on a timer, stating the structure first ('three drivers could explain this: demand, supply, or measurement — let me check measurement first'). Silent correct work scores worse than narrated good work.",
+      "Sanity-check every number before saying it. State the magnitude you expect, then compute. Catching your own implausible result is a strong positive signal; missing it is the round's most damaging error.",
+      "Prepare the risk-and-controls angle as your differentiator. A supplier risk scorecard, a control for a recurring defect, a monitoring metric — this is where a risk & compliance background genuinely outperforms other entry-level candidates, and you should steer toward it when the prompt allows.",
+      "Refresh basic SQL and Excel modelling if the title contains 'analyst' — joins, group-by, window function intuition, and a clean lookup-and-pivot workflow."
+    ],
+    "common_mistakes": [
+      "Jumping to a number before structuring the problem, then having no way to check or defend it.",
+      "Using terminology imprecisely — conflating fill rate with on-time delivery, or safety stock with buffer inventory. Practitioners notice instantly.",
+      "Going silent while thinking. The interviewer is scoring reasoning, and silence gives them nothing to score.",
+      "Refusing to commit to an answer. Ambiguous prompts still require a recommendation with stated assumptions; endless hedging reads as inability to decide."
+    ],
+    "f1_notes": ""
+  },
+  {
+    "id": "onsite-behavioral",
+    "stage": "Onsite Loop — Behavioral / Values Round",
+    "order": 5,
+    "typical_duration": "45-60 minutes",
+    "who": "A peer or another manager on the team, often assigned specific competencies to assess",
+    "what_happens": "Structured past-behavior questioning: tell me about a time you disagreed with a decision, missed a deadline, dealt with an underperforming partner, had to influence without authority, made a call with incomplete data. Amazon states 'A significant portion of the conversation will focus on how you've demonstrated our Leadership Principles in your past jobs' because 'past behavior is an indicator of future success,' expects roughly two to three behavioral questions per interviewer, and says directly 'We won't ask brain teasers.' Follow-ups go deep on the 'what,' the 'how,' and 'the why of your decisions.'",
+    "what_they_screen_for": "Evidence against named competencies or values, not charm. Self-awareness — can you describe a real failure and what you changed. Whether the stories hold up under follow-up, which is how interviewers detect rehearsed or borrowed material. And specificity: a story with names, numbers, dates and a concrete decision is scored; a general description of how you 'usually approaches things' is not.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Build 12-16 distinct STAR stories, not five. Amazon explicitly recommends STAR ('We recommend using the STAR model to frame your responses') and with 2-3 behavioral questions per interviewer across a five-interview loop you need 10-15 non-repeating stories. Running out by round three is the single most common onsite failure.",
+      "Tag each story to the specific framework of the specific company — Amazon's 16 Leadership Principles by name, Nordstrom's five values, Alaska's four ('Own safety' first), Nike's five maxims, Microsoft's respect/integrity/accountability/growth mindset. Same stories, relabeled headlines.",
+      "Put the Result in numbers every time, and make the Action unmistakably yours. Then prepare the layer beneath: what you'd do differently, what the alternative was, why you chose as you did. Follow-ups live there.",
+      "Deliberately prepare the uncomfortable ones: a real failure with a real cost, a conflict with a senior stakeholder, a time you were wrong and reversed yourself. Microsoft screens for growth mindset explicitly; Amazon has 'Have Backbone; Disagree and Commit' and 'Earn Trust' ('vocally self-critical'). A sanitized answer scores as a miss on both.",
+      "Time each story to 2-3 minutes out loud. Long stories get cut off and the Result — the scored part — is what gets lost."
+    ],
+    "common_mistakes": [
+      "Reusing the same two or three strong stories across multiple interviewers, who compare notes in the debrief and see the thin bench.",
+      "Describing general approach instead of a specific instance ('I always make sure to align stakeholders early') — this is unscoreable and interviewers will keep pushing until they get an instance or run out of time.",
+      "Choosing a fake failure ('I cared too much about quality'). It signals either poor self-awareness or unwillingness to be candid, both of which are directly disqualifying against values like Earn Trust.",
+      "Narrating Situation and Task for three minutes and reaching the Result as time expires."
+    ],
+    "f1_notes": ""
+  },
+  {
+    "id": "onsite-cross-functional",
+    "stage": "Onsite Loop — Cross-Functional / Stakeholder Round",
+    "order": 6,
+    "typical_duration": "45-60 minutes",
+    "who": "A partner from an adjacent function — finance, engineering, merchandising, legal, planning, or a plant/site operations lead",
+    "what_happens": "A partner who will have to work with you but does not own the headcount assesses whether you are workable. Expect scenarios about competing priorities between teams, communicating bad news upward, translating technical detail for a non-technical audience, and driving a decision without authority over the people involved. Amazon lists stakeholder management as an explicitly assessed competency on its program-manager loop.",
+    "what_they_screen_for": "Whether you can influence without authority, and whether you represent other functions' constraints fairly rather than as obstacles. Communication calibration — do you adjust depth for the audience in real time. Escalation judgment: when you escalate, how, and whether you do it without damaging relationships. Underneath it all: would this person make my job easier or harder.",
+    "domains": [
+      "Program & Product Management",
+      "Operations",
+      "Risk & Compliance",
+      "Supply Chain"
+    ],
+    "how_to_prepare": [
+      "Prepare two stories where you moved a decision with no authority — one where it worked and one where you had to escalate — and be able to explain the escalation choice in terms of cost and urgency rather than frustration.",
+      "Prepare the compliance-versus-speed story carefully, because it is the one this interviewer is most likely to probe given your background. Show that you found a path that preserved the control and the business outcome, rather than a story where you simply blocked someone.",
+      "Practice the same explanation at two depths — a 30-second version for a VP and a detailed version for a practitioner — and demonstrate the switch live by asking 'how much detail is useful here?'",
+      "Learn what this specific function actually cares about before the round: finance cares about working capital and forecast accuracy, engineering about scope and on-call load, merchandising about availability and margin, legal about documented controls. Speaking their metric back to them is the strongest possible signal.",
+      "Have one question that acknowledges their pain: 'where does this team most often get let down by program management?' It invites candor and shows you expect to be useful to them, not just to your own manager."
+    ],
+    "common_mistakes": [
+      "Framing other functions as obstacles ('sales kept over-promising'), which tells the interviewer exactly how you'll talk about them later.",
+      "Escalating in the story with no attempt at resolution first, or conversely never escalating and letting a problem rot to prove you're low-maintenance.",
+      "Pitching at the wrong depth and not noticing — over-explaining to an expert or hand-waving to a practitioner.",
+      "Treating this round as a formality because the person isn't the hiring manager. Cross-functional interviewers routinely sink candidates in the debrief, and their objection carries weight precisely because they have no stake in filling the role."
+    ],
+    "f1_notes": "Peer and cross-functional interviewers generally do not own hiring policy and are often explicitly instructed not to discuss work authorization. If one asks about your status casually or out of curiosity, keep it to one calm sentence — 'I'm on an F-1; I'll be on OPT after graduation and the recruiter has the details' — and return to the substance. Do not over-explain, do not relitigate the timeline, and do not raise it yourself here: introducing it unprompted to someone who cannot resolve it only plants doubt in a debrief where you want the conversation to be about your work."
+  },
+  {
+    "id": "onsite-bar-raiser-exec",
+    "stage": "Onsite Loop — Executive / Bar-Raiser Round",
+    "order": 7,
+    "typical_duration": "45-60 minutes",
+    "who": "A senior leader outside the hiring team — at Amazon, a trained Bar Raiser (the role is named on Amazon's How We Hire hub but not defined there); elsewhere, a skip-level director or VP",
+    "what_happens": "A deliberately wider-angle conversation with someone who is not trying to fill this seat. Expect fewer, broader questions with harder follow-ups: the trajectory of your career, how you think about the industry, an ambiguous strategic question, and at least one probe designed to find the floor of your knowledge. This interviewer is usually empowered to veto.",
+    "what_they_screen_for": "Whether you raise the bar — are you better than the average person already doing this job. Long-run trajectory rather than fit for one role. Intellectual honesty under pressure, specifically whether you say 'I don't know' cleanly and then reasons toward an answer. And durable values alignment: this is where Amazon's Have Backbone, Earn Trust and Think Big, or a skip-level's read on integrity, actually get tested.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Prepare a real point of view on where your field is going — supply chain resilience after a decade of disruption, nearshoring trade-offs, the gap between AI-driven planning claims and data quality reality. One considered opinion you can defend beats five headlines you can recite.",
+      "Practice saying 'I don't know' and continuing: 'I don't know that — here's how I'd find out, and here's my instinct and why.' Senior interviewers deliberately push past your knowledge boundary, and the response to that moment is often what they write in the debrief.",
+      "Prepare your strongest Think Big / trajectory story — a time you proposed something beyond your remit — plus a clear, non-defensive answer to 'why should we hire someone without a supply chain track record yet?'",
+      "Re-read your own resume for the weakest claim on it and prepare an honest account of it. Bar-raiser-style interviewers reliably find the soft spot.",
+      "Prepare one question worth a senior leader's time — about strategy, the biggest bet the org is making, or what would have to be true for this function to matter more in three years. Not benefits, not process."
+    ],
+    "common_mistakes": [
+      "Bluffing on something you don't know. It is the fastest veto available, and a senior interviewer will pull the thread specifically to see whether you pretend.",
+      "Giving small, role-shaped answers to big questions and showing no curiosity beyond the immediate job.",
+      "Being over-rehearsed to the point of sounding scripted, which reads as inauthentic to someone who interviews constantly.",
+      "Treating the round as a friendly wrap-up chat because it is last on the schedule and the interviewer is pleasant."
+    ],
+    "f1_notes": ""
+  },
+  {
+    "id": "offer-negotiation",
+    "stage": "Offer and Negotiation",
+    "order": 8,
+    "typical_duration": "Decision typically within days (Amazon's published program-manager path states a decision 'within 5 business days'); negotiation usually 3-10 days",
+    "who": "Recruiter (owns the negotiation), with the hiring manager consulted on level, scope and start date",
+    "what_happens": "Verbal offer first, usually by phone, with base, bonus, equity, sign-on and start date. Then written documents — Microsoft, for example, routes offer documents through its Action Center, email, or a secure link depending on country, and handles 'relocation, work authorization, or completing paperwork' at the pre-onboard step. Negotiation happens in this window, before signing. Reference checks and background checks typically run in parallel.",
+    "what_they_screen_for": "Nothing about competence anymore — the evaluation is over. What is being managed now is closing risk and internal equity: can they hire you at a level and number consistent with the team, and will you accept. How you negotiate does shape the first impression your manager carries into day one, so tone matters more than tactics.",
+    "domains": [
+      "Supply Chain",
+      "Operations",
+      "Program & Product Management",
+      "Risk & Compliance"
+    ],
+    "how_to_prepare": [
+      "Get the full offer in writing before responding substantively, and evaluate total compensation rather than base alone — Microsoft explicitly tells candidates to weigh 'Total Rewards' including bonus, health benefits, pension and wellness programs, and Starbucks frames Bean Stock the same way.",
+      "Negotiate one or two things, not six, and name a specific number with a specific reason (market data, a competing offer, scope of the role). Vague requests for 'more' invite a vague response.",
+      "Ask about level and scope, not just money. For a career-changer, being leveled one notch too low is more expensive over three years than a lower signing bonus, and level is harder to fix later.",
+      "Confirm the start date against your EAD reality before signing anything — see f1_notes. This is the one negotiation item where getting it wrong has consequences beyond compensation.",
+      "Stay warm throughout. The recruiter is not an adversary, and the hiring manager hears about the negotiation. One firm, well-reasoned ask delivered pleasantly is normal and expected; a multi-round grind over small items is remembered."
+    ],
+    "common_mistakes": [
+      "Accepting on the phone in the first five minutes out of relief or gratitude, forfeiting the entire negotiation window.",
+      "Negotiating aggressively on many dimensions at once, or using a bluffed competing offer — recruiters compare notes and it can cost the offer.",
+      "Ignoring level and scope while fixating on base salary.",
+      "Committing to a start date that assumes documents will arrive on schedule, with no buffer built in."
+    ],
+    "f1_notes": "This is the stage where authorization facts become contractual, so verify before signing rather than after. Three things to lock down. (1) START DATE: post-completion OPT requires an approved Form I-765, and USCIS states work cannot begin 'until after we approve your Form I-765 and you receive your Employment Authorization Document (EAD).' Filing opens up to 90 days before degree completion and closes 60 days after — for a May/June completion, roughly February-March of that year onward. Propose a start date with real buffer after your expected EAD receipt, and tell the recruiter plainly that the date depends on EAD receipt so it is a shared plan rather than a broken promise later. (2) E-VERIFY AND THE STEM OPT EXTENSION: the 24-month STEM OPT extension requires the employer to 'Be enrolled in E-Verify' with a valid company or client company ID number and to 'Remain a participant in good standing with E-Verify, as determined by USCIS.' Of the Seattle-area employers in the company list, Boeing states it participates in E-Verify and Costco states nationwide participation; Alaska states it participates 'where required by law' (note the conditional); Amazon, Microsoft, Starbucks, Nordstrom, PACCAR, Target and Nike publish no statement on the pages checked. You should verify the specific hiring site in the USCIS E-Verify employer search and, at offer stage, ask the recruiter directly. (3) FORM I-983: the STEM extension also requires the employer to sign the Form I-983 'Training Plan for STEM OPT Students,' customized for the individual student, attesting the student 'will not replace a full- or part-time, temporary or permanent U.S. worker,' with obligations to report material changes and to report termination or departure to the DSO 'within 5 business days.' Some smaller employers refuse this paperwork — find out before signing, not 20 months in. One timing note that affects how long you can hold out for a better offer: USCIS allows up to 90 days of unemployment on initial post-completion OPT and 'An additional 60 days' with the extension, 150 days total. Not legal advice — confirm every date and requirement with your school's international student office before signing, and ask them to review the I-983 when the time comes."
+  }
+]

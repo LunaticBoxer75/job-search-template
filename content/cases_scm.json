@@ -1,0 +1,303 @@
+[
+  {
+    "id": "scm-cogs-leak",
+    "domain": "Supply Chain",
+    "title": "Diagnose An 8% COGS Increase",
+    "difficulty": "core",
+    "prompt": "Our COGS is up 8% over the last two years and nobody can tell me why. Revenue grew, but margin didn't. Walk me through how you would find where the money is leaking - procurement, the plants, or freight.",
+    "why_asked": "Screens for whether you can decompose a lagging financial metric into operational drivers before proposing fixes.",
+    "framework": "SCOR",
+    "structure": [
+      "Clarify what the 8% actually measures - total COGS dollars or COGS per unit - because if volume grew 10% while COGS grew 8%, unit cost actually fell and there may be no leak at all.",
+      "Split the change into price, volume, and mix effects first, so you know whether you are chasing a purchasing problem, a growth artifact, or a shift toward more expensive products.",
+      "Walk the SCOR processes in order - Plan, Source, Transform, Order, Fulfill, Return - and attach a cost line to each, so the diagnosis is exhaustive rather than wherever you happen to have data.",
+      "On the Source side, pull spend by commodity and supplier and compare purchase price variance against published index movements, to separate genuine market inflation from lost negotiating leverage.",
+      "On the Transform side, look at yield, scrap and rework rates, labor cost per unit, and overtime premium hours, since plant cost per unit usually moves through yield and overtime long before it moves through wage rates.",
+      "On the Fulfill side, decompose freight into rate per pound, expedite or premium freight share, and trailer cube utilization, because premium freight is typically the fastest-growing hidden line and often sits in a different cost center.",
+      "Rank the candidate drivers by dollars at stake times your confidence, pick the top two or three, and state exactly what data you would pull to confirm or kill each one.",
+      "Close with the size of the prize and a sequenced plan, separating quick wins like killing expedite freight from structural work like resourcing a commodity."
+    ],
+    "quant_hooks": [
+      "Decompose total versus unit COGS: if COGS rose 8% and units rose 10%, unit cost change = 1.08/1.10 - 1 = -1.8%, so unit economics actually improved and the story is growth, not leakage.",
+      "Annualize to sanity-check inflation: 8% over two years is about 3.9% per year compounded (1.08^0.5 - 1), roughly in line with general input inflation - so the real question is which specific line beat that rate.",
+      "Purchase price variance = (actual unit price - standard unit price) x actual quantity purchased, run by commodity to isolate where sourcing lost ground.",
+      "Premium freight leakage = expedite shipments x (expedite cost per unit - standard cost per unit), which also tells you what upstream failure you are paying to cover."
+    ],
+    "good_signals": [
+      "Asks whether COGS is measured in total dollars or per unit before doing any analysis, and refuses to proceed without that answer.",
+      "Separates price, volume, and mix explicitly instead of treating all COGS growth as waste.",
+      "Names a concrete data pull for each hypothesis - spend by commodity, yield by line, a freight bill audit - rather than saying they would look into it.",
+      "Sizes the prize before recommending a fix, so effort lands on the biggest dollar pool rather than the most familiar one."
+    ],
+    "failure_modes": [
+      "Jumping straight to 'renegotiate with suppliers' in the first sentence, without establishing whether sourcing is even where the increase sits.",
+      "Ignoring mix shift, then getting blindsided when the interviewer reveals the growth came entirely from a lower-margin product line.",
+      "Producing a flat, unranked list of every possible cost driver - comprehensive, but useless for deciding what to do on Monday.",
+      "Treating inflation as the answer and stopping there, instead of testing which lines beat inflation and why."
+    ],
+    "followups": [
+      "Volume was flat over those two years. Does that change your diagnosis, and what is now the single most likely driver?",
+      "Procurement says they held unit prices flat on every contract. Where else could the money have gone?",
+      "You find that expedite freight tripled. What upstream failure usually causes that, and how would you prove it?",
+      "If you can only fix one thing this quarter, and the savings have to show up in this fiscal year, what do you pick and why?"
+    ]
+  },
+  {
+    "id": "scm-stockout-paradox",
+    "domain": "Supply Chain",
+    "title": "Stockouts With Record Inventory",
+    "difficulty": "core",
+    "prompt": "One of our DCs is sitting on the highest inventory value in its history, and its stockout rate is also the worst in the network. Explain to me how both of those can be true at the same time, and tell me what you would do about it.",
+    "why_asked": "Tests whether the candidate understands inventory as a mix and accuracy problem rather than a volume problem, and can see how an aggregate metric hides SKU-level failure.",
+    "framework": "Issue Tree",
+    "structure": [
+      "Restate the paradox precisely - total dollars are up while unit availability is down - and say plainly that this means the inventory is in the wrong SKUs, the wrong place, or the wrong condition, not that there is too little of it.",
+      "Build the tree with three clean branches: wrong mix (money tied up in slow movers and dead stock), wrong placement (right SKUs, wrong node or wrong pick face), and wrong records (the system says it is there and it is not).",
+      "Segment with ABC by volume and XYZ by demand variability, then show fill rate and days of cover for each cell - the A-items are almost certainly starved while C-items and obsolete stock absorb the dollars.",
+      "Check inventory aging and the excess-and-obsolete balance, because one cancelled customer program or discontinued line can swallow a large share of the value and never move again.",
+      "Test inventory record accuracy directly - cycle count variance by bin, phantom inventory, and units stranded in reserve that never got replenished to the pick face - since a putaway error looks exactly like a stockout to the picker.",
+      "Interrogate the planning parameters: reorder points and safety stocks set once and never retuned, minimum order quantities forcing overbuys on C-items, and a forecast that is biased high on the tail and low on the movers.",
+      "Propose the fix in two horizons - immediate reallocation and expedite for the starved A-items plus a targeted cycle-count blitz, then structural resegmentation of safety stock and a disposition plan for the dead stock.",
+      "State the working-capital consequence explicitly and commit to a dual target - fill rate up AND inventory dollars down - so nobody solves service by simply buying more."
+    ],
+    "quant_hooks": [
+      "Fill rate = units shipped / units ordered, computed per SKU class rather than in aggregate - expect A-item fill rate far below the reported average and C-item cover running into hundreds of days.",
+      "Inventory turnover = COGS / average inventory, and DSI = 365 / turnover; if the network runs 60 days of inventory and this DC is at 140, the excess is the whole story.",
+      "Safety stock for demand variability = z x standard deviation of demand during lead time; recomputing this per SKU class is usually where the dollars move from C-items to A-items at no net cost.",
+      "Inventory record accuracy = bins counted with zero variance / bins counted; below roughly 97% at bin level you will generate stockouts no matter how much stock you own."
+    ],
+    "good_signals": [
+      "Immediately reframes aggregate dollars as a mix question instead of debating whether the inventory number is correct.",
+      "Raises inventory record accuracy and phantom inventory unprompted - the cause most candidates never mention and warehouse teams see constantly.",
+      "Commits to a dual target so the fix cannot be gamed by buying more inventory.",
+      "Distinguishes cycle stock from safety stock, and knows which lever moves which."
+    ],
+    "failure_modes": [
+      "Recommending 'increase safety stock', which raises the very inventory value that was the complaint and deepens the paradox they were asked to resolve.",
+      "Deciding the data must be wrong and spending the whole answer on data quality instead of the operating problem.",
+      "Segmenting by revenue only, and missing that demand variability is what actually drives the safety stock requirement.",
+      "Never mentioning working capital or cash, so the recommendation reads as an operations fix with no financial consequence."
+    ],
+    "followups": [
+      "Half the inventory value sits in one SKU that a customer cancelled last quarter. What do you do with it, and who owns that decision?",
+      "The site manager says his cycle counts are 99% accurate. How would you verify or refute that without trusting the report?",
+      "How would you set a different service level for an A-item versus a C-item, and how would you defend a deliberately low target to a sales VP?",
+      "If you had to release 20% of the inventory dollars in one quarter without hurting fill rate, what is your sequence?"
+    ]
+  },
+  {
+    "id": "scm-make-vs-buy",
+    "domain": "Supply Chain",
+    "title": "Outsource Production Or Keep It In-House",
+    "difficulty": "stretch",
+    "prompt": "A vendor overseas has quoted us 22% below our internal cost per unit for one product family. Our own plant has the capacity to keep making it. How would you decide, and what would you need to see before you signed anything?",
+    "why_asked": "Screens for total-cost thinking and whether the candidate can hold cost, risk, and working capital in the same decision instead of chasing the quoted unit price.",
+    "framework": "MECE",
+    "structure": [
+      "Refuse the 22% at face value and say why - a quoted FOB unit price is not comparable to a fully loaded internal cost, so the first move is putting both sides on the same basis.",
+      "Build landed cost for the vendor option: unit price plus inbound freight, duty and tariffs by HTS classification, insurance, customs brokerage, inbound handling, and any packaging or palletization differences.",
+      "Add the costs that never appear in the quote - incremental pipeline and safety stock from a longer and more variable lead time, quality escape and sorting cost, tooling and qualification cost, and travel plus supplier management overhead.",
+      "Fix the internal side honestly by separating avoidable cash cost from allocated overhead, because fixed overhead that does not actually disappear when the line stops makes the internal number look artificially bad and can flip the decision.",
+      "Lay out the non-cost branches MECE: capacity and flexibility (what happens to the freed line, can the vendor flex in peak), quality and IP, continuity and geopolitical exposure, and labor or regulatory compliance risk at the supplier's site.",
+      "Compute the breakeven and the sensitivity - at what freight rate, duty rate, or exchange rate does the 22% evaporate - and name the single variable the decision is most fragile to.",
+      "Recommend a staged structure rather than a binary: dual-source a share of volume, keep internal capability on the highest-margin or most volatile SKUs, and define the exit conditions before signing anything.",
+      "Name decision rights and timeline - who signs, what the qualification runway really is, and what goes in the contract on capacity reservation, price adjustment, change-in-law, and termination."
+    ],
+    "quant_hooks": [
+      "Landed cost per unit = FOB unit price + freight per unit + (duty rate x dutiable value) + insurance + brokerage + inbound handling; a 22% FOB advantage is routinely halved by this step alone on low-value, high-cube goods.",
+      "Pipeline inventory added by a longer lead time: going from 2 weeks to 12 weeks adds roughly (10/52) x annual unit demand of in-transit and cycle stock, carried at a typical 20-25% annual carrying cost.",
+      "Safety stock with lead-time variability = z x sqrt(average lead time x variance of demand + average demand squared x variance of lead time) - the formula that shows why lead-time variability costs more than lead-time length.",
+      "Breakeven: annual savings per unit x volume must cover annualized tooling, qualification, and any unabsorbed overhead - report payback in months, not as a percentage."
+    ],
+    "good_signals": [
+      "Converts the quote to landed cost unprompted and says which adders matter most for this product's value density.",
+      "Separates avoidable from unavoidable internal cost - the real test of whether they understand cost accounting versus cost allocation.",
+      "Quantifies the working-capital cost of the longer pipeline rather than mentioning lead time only as a service risk.",
+      "Proposes a dual-source or staged approach with explicit exit conditions instead of an all-or-nothing recommendation."
+    ],
+    "failure_modes": [
+      "Comparing the vendor's FOB price against internal fully-absorbed cost and declaring a 22% saving - the single most common error in this case.",
+      "Treating all internal overhead as avoidable (overstates savings) or none of it as avoidable (understates them), instead of asking which portion actually goes away.",
+      "Listing risks qualitatively - quality, geopolitics, IP - without attaching a cost, a probability, or a mitigation to any of them.",
+      "Forgetting that a low-value, high-cube product can be uneconomic to ship regardless of how good the unit price looks."
+    ],
+    "followups": [
+      "Only 30% of the plant overhead actually goes away if we stop making this. Does the deal still work?",
+      "A new tariff adds 15 points of duty on this HTS code six months after you sign. What did you put in the contract to protect us?",
+      "The vendor's minimum order quantity is three months of demand. What does that do to your analysis?",
+      "If we outsource and the product then takes off, what have we lost, and how would you have preserved that option up front?"
+    ]
+  },
+  {
+    "id": "scm-single-source-audit-fail",
+    "domain": "Supply Chain",
+    "title": "Sole Supplier Fails A Quality Audit",
+    "difficulty": "core",
+    "prompt": "We single-source a component that goes into 60% of our finished goods, and the supplier just failed our quality audit - major findings, not minor. It is Monday morning. What do you do?",
+    "why_asked": "Tests incident sequencing under pressure - whether the candidate protects the customer first, then root-causes, then restructures the underlying risk.",
+    "framework": "DMAIC",
+    "structure": [
+      "Start with containment, not root cause - the first hour is about whether suspect product is already in your plants, in transit, in finished goods, or at customers, so quarantine and traceability come before any supplier conversation.",
+      "Define the exposure precisely: which lots are implicated, which build dates consumed them, whether the defect is detectable in-house, and whether there is a safety or regulatory dimension that changes the clock.",
+      "Measure the real risk - severity of the findings, defect escape rate in PPM, and critically whether this is a process-control failure (bad parts have probably already shipped) or a documentation failure (serious, but a different urgency).",
+      "Run supply continuity as a parallel track, not a later step: current days of supply, whether to build buffer before any stop-ship, whether a qualified alternate exists, and the real qualification runway for a second source.",
+      "Drive root cause with the supplier through a structured mechanism - an 8D or formal CAPA with containment action, verified root cause, and evidence the corrective action holds - rather than accepting a promise to do better.",
+      "Improve your own detection while the supplier fixes theirs: incoming inspection or increased sampling on the affected characteristic, with a documented exit criterion for when you dial it back.",
+      "Control and de-risk structurally: qualify an alternate source, add the component to a critical-parts list with its own review cadence, and change the audit and scorecard rhythm so a major finding can never again be a surprise.",
+      "Communicate on a schedule - who needs to know today (quality, plant, planning, the customer-facing team), what you are committing to, and when the next update lands."
+    ],
+    "quant_hooks": [
+      "Days of supply = current on-hand units / average daily usage; this single number decides whether you can afford to stop shipments from this supplier or must run on containment.",
+      "Exposure sizing = implicated lot quantity x units per assembly, traced forward into finished goods and shipped units to bound the rework or recall population.",
+      "FMEA risk priority number = severity x occurrence x detection, the standard way to argue where to add inspection versus where to accept residual risk.",
+      "Containment economics: inspection cost per unit versus expected cost of escape (escape rate x cost per field failure), which is how you justify 100% inspection or decline it."
+    ],
+    "good_signals": [
+      "Sequences containment before root cause and says so explicitly - the clearest single separator in this case.",
+      "Runs supply continuity and the quality investigation as parallel tracks instead of serially.",
+      "Distinguishes a process-control finding from a documentation finding, because the two imply very different probabilities that bad parts already shipped.",
+      "Treats single-sourcing as the underlying defect and proposes a qualification plan with a real timeline, not a vague call for resilience."
+    ],
+    "failure_modes": [
+      "Leading with 'find a second supplier' - eventually correct, useless on Monday, and it ignores product already in the field.",
+      "Stopping all shipments from the supplier before checking days of supply, creating a self-inflicted line-down on top of a quality problem.",
+      "Accepting the supplier's corrective action plan with no verification evidence and no effectiveness check at a later date.",
+      "Never asking whether the defect is detectable in-house, which is what determines whether containment is even possible."
+    ],
+    "followups": [
+      "You have 11 days of supply and requalifying an alternate takes four months. Walk me through those 11 days.",
+      "The supplier insists the finding was documentation only and no bad product shipped. How do you verify or refute that?",
+      "Your plant manager wants to keep running on the suspect lots to hit the month. How do you handle that conversation?",
+      "Six months later, how do you prove to your VP that this is actually fixed rather than just quiet?"
+    ]
+  },
+  {
+    "id": "scm-new-product-forecast",
+    "domain": "Supply Chain",
+    "title": "Forecast A Product With No History",
+    "difficulty": "core",
+    "prompt": "We are launching a product in six months. No sales history, and no comparable SKU in our own catalog. Marketing wants a number from you for the initial production buy. How do you build it, and how much do you trust it?",
+    "why_asked": "Screens for building a defensible estimate under genuine uncertainty, and for designing a supply plan that survives being wrong rather than producing one confident number.",
+    "framework": "",
+    "structure": [
+      "Establish what decision the forecast serves before forecasting anything - the long-lead component commitment, the capacity reservation, and the first finished-goods buy each need a different number and a different level of conservatism.",
+      "Triangulate from at least three independent angles instead of one: analogous launches (internal or competitive, similar price and channel), top-down market sizing, and bottom-up channel or account-level commitments.",
+      "Build the analog properly - choose reference launches, adjust for price point, distribution breadth, and marketing spend, and use the shape of their ramp curve, not just their peak, because timing error usually costs more than level error.",
+      "Gather structured judgment rather than hallway opinions: a facilitated estimate where sales, marketing, and finance each state assumptions and a range, and the ranges get reconciled in the open.",
+      "Produce a range with explicit scenarios - low, base, high with a stated probability each - and name the one or two assumptions that move the number most, so the conversation becomes about assumptions rather than about your number.",
+      "Convert the forecast into a supply posture that tolerates error: commit long-lead and generic components, delay SKU-specific commitment through postponement, negotiate a reorder window and flex clause, and size the first buy against the asymmetry of over versus under.",
+      "Instrument the launch to learn fast - define early signals (pre-orders, first-weeks sell-through, attach rate), the review cadence, and pre-agreed trigger points at which you re-forecast and re-buy.",
+      "Commit up front to tracking forecast accuracy and bias from week one, so the organization learns from this launch instead of repeating it."
+    ],
+    "quant_hooks": [
+      "Newsvendor critical ratio: target service level = cost of underage / (cost of underage + cost of overage); if lost contribution is $40 and markdown loss is $10, that implies roughly 80% - a defensible basis for the buy quantity instead of a gut percentage.",
+      "Cost of being wrong in each direction: overage cost per unit = unit cost - salvage value; underage cost per unit = lost contribution margin, plus any lost future value from a disappointed customer.",
+      "Scenario-weighted expected demand = sum of (scenario demand x probability), reported alongside the range rather than instead of it.",
+      "Measure both forecast bias = sum of (actual - forecast) / sum of actual, and MAPE = mean of |actual - forecast| / actual, because a forecast can look accurate on average while being consistently biased."
+    ],
+    "good_signals": [
+      "Asks what decision the number is for, and gives different numbers for the long-lead commitment and the first finished-goods buy.",
+      "Triangulates from independent methods and states plainly where they disagree, instead of presenting one method as the answer.",
+      "Uses the asymmetry between overage and underage cost explicitly to set the buy quantity.",
+      "Designs the supply chain to be correctable - postponement, reorder window, flex clause - rather than betting on forecast accuracy."
+    ],
+    "failure_modes": [
+      "Producing a single point number with no range and then defending it, which is the fastest way to lose this case.",
+      "Saying there is no data so you cannot forecast - the interviewer is testing precisely the opposite instinct.",
+      "Picking an analog with no adjustment for price, channel, or marketing support, and not disclosing the adjustment logic.",
+      "Building for steady-state demand and ignoring the ramp shape, which produces a launch stockout followed by a pile of excess."
+    ],
+    "followups": [
+      "Sales says 100,000 units and finance says 40,000. What do you commit to, and how do you run that meeting?",
+      "Your long-lead component has a 20-week lead time and a 50,000-unit minimum. How does that change your answer?",
+      "Three weeks after launch you are at 40% of plan. What do you do, and what would you have needed in place to act that fast?",
+      "How would you make sure the company actually learns from this forecast rather than repeating it at the next launch?"
+    ]
+  },
+  {
+    "id": "scm-lead-time-reduction",
+    "domain": "Supply Chain",
+    "title": "Supplier Lead Times Are Always Late",
+    "difficulty": "core",
+    "prompt": "Our quoted supplier lead time is four weeks, but we are actually seeing six to nine, and planning has stopped trusting the number entirely. How would you attack this?",
+    "why_asked": "Tests whether the candidate decomposes a lead time into measurable segments and understands that variability, not average length, is what breaks planning.",
+    "framework": "Little's Law",
+    "structure": [
+      "Separate the two problems hiding in the prompt - the average is longer than quoted, and the spread is wide - and say which one hurts more, because variability is what forces safety stock and destroys planner trust.",
+      "Decompose the end-to-end lead time into segments you can measure: requisition-to-PO approval, PO-to-acknowledgement, supplier queue time, actual production run time, ready-to-ship dwell, transit, customs clearance, and receiving dock-to-stock.",
+      "Instrument each segment with timestamps you already have, then compute mean and standard deviation per segment - in most cases the production run is a small fraction of the total, and queue plus internal approval time dominate.",
+      "Apply Little's Law to the supplier's queue - average time in the system = work in process / throughput - to show that your lead time is mostly a queueing outcome, so reducing their WIP or raising their throughput shortens your wait more reliably than asking them to hurry.",
+      "Attack your own contribution first because it is free and fast: batched weekly PO releases, approval bottlenecks, late engineering changes, a forecast the supplier never sees, and a dock-to-stock process that adds days after the truck has already arrived.",
+      "Then attack variability specifically - find the segment contributing the most variance rather than the most days, and target it with capacity reservation, a firm frozen window, or scheduled pickup slots.",
+      "Reset planning parameters to observed reality in the interim so the plan stops lying, and be explicit that this raises inventory until the lead time is genuinely fixed - that is the honest trade, not a failure.",
+      "Lock the improvement in with a scorecard the supplier sees: on-time delivery measured against the original commit date, lead-time mean and standard deviation by segment, and a joint review cadence with named owners."
+    ],
+    "quant_hooks": [
+      "Little's Law: average time in the system = work in process / throughput; a supplier holding 400 units of queued orders at a throughput of 100 units per week imposes a 4-week wait before a single minute of your production starts.",
+      "Safety stock with lead-time variability = z x sqrt(average lead time x variance of demand + average demand squared x variance of lead time) - plug in the observed standard deviation to price what the unreliability costs in inventory dollars.",
+      "OTIF = orders delivered on time AND complete / total orders, measured against the original commit date rather than a revised one, which is usually where a supplier's self-reported 95% becomes your 70%.",
+      "Rank segments twice - once by mean days, once by standard deviation; the segment that tops the variance ranking is almost never the one people have been arguing about."
+    ],
+    "good_signals": [
+      "Distinguishes mean from variance and prioritizes variance reduction, which is the insight this case exists to find.",
+      "Looks inward first and finds days the company itself is adding through approvals, order batching, or slow receiving.",
+      "Measures on-time against the original commitment date and catches the revised-date trick without being prompted.",
+      "Updates planning parameters to observed reality as an interim action, rather than leaving planners with a number they already know is false."
+    ],
+    "failure_modes": [
+      "Going straight to escalation or a penalty clause with the supplier, without knowing which segment is actually long.",
+      "Reducing the average and declaring victory while the spread stays wide, so planners still cannot plan.",
+      "Treating the quoted four weeks as ground truth instead of asking what it was ever based on and when it was last validated.",
+      "Ignoring the internal segments entirely - many candidates never consider that their own PO approval adds a week."
+    ],
+    "followups": [
+      "You find the supplier ships on time from their own dock, but our receiving takes five days to make the stock available. Is this still a supplier problem?",
+      "Which would you rather have - a reliable six-week lead time, or a four-week lead time that varies by three weeks? Defend it with numbers.",
+      "The supplier says our order pattern is lumpy and that is why they queue us. How do you respond?",
+      "What would you put on a supplier scorecard, and what behavior might each metric accidentally encourage?"
+    ]
+  },
+  {
+    "id": "scm-tariff-shock",
+    "domain": "Supply Chain",
+    "title": "A New Tariff Hits Your Largest Lane",
+    "difficulty": "stretch",
+    "prompt": "A new duty just landed on the country where we source about 40% of our direct spend, and it takes effect in 90 days. Our CFO wants the margin impact and what we are doing about it by end of week. Where do you start?",
+    "why_asked": "Tests whether the candidate can size a regulatory shock fast, separate compliance levers from sourcing levers, and sequence actions against a hard deadline.",
+    "framework": "SCOR",
+    "structure": [
+      "Size the exposure before proposing anything: pull spend by supplier, by HTS classification, and by declared country of origin, and isolate the share genuinely in scope rather than assuming the whole country's spend is hit.",
+      "Verify classification and origin rather than trusting the ERP - misclassified HTS codes and assumed origins are common, and a classification review is often the fastest legitimate saving available inside 90 days.",
+      "Translate duty into margin: duty rate times dutiable value per unit, rolled up per product and per customer, so you know which SKUs go negative on contribution and which can absorb it.",
+      "Split the levers into compliance, commercial, and structural buckets so the plan is MECE and so it is obvious which ones can actually land before the effective date.",
+      "Work the compliance levers that are legitimate and fast: eligibility for preferential treatment under an applicable trade agreement, first-sale valuation, duty drawback on re-exported goods, foreign trade zones or bonded warehousing to defer duty, and properly documented unbundling of non-dutiable elements from transaction value.",
+      "Work the commercial levers: supplier cost sharing, targeted price action where elasticity allows, change-in-law clauses in existing contracts, and a pre-effective-date buy-ahead sized against carrying cost and obsolescence risk rather than bought reflexively.",
+      "Sequence the structural work that necessarily lands after the deadline: qualifying suppliers in alternate countries on a realistic runway, evaluating an origin change through genuine substantial transformation, and re-running the network on landed cost.",
+      "Set up governance and a clear compliance line - named owner, weekly exposure tracker, a documented position for every duty-saving action, and an explicit rule that nothing proceeds without customs counsel sign-off, because aggressive origin engineering is where companies get into real trouble."
+    ],
+    "quant_hooks": [
+      "Annualized exposure = affected annual spend x duty rate - the single number the CFO wants in the first line of the email, before any mitigation talk.",
+      "Duty impact per unit = duty rate x dutiable value per unit, compared against gross margin per unit to find which SKUs fall below zero contribution and therefore need a price or sourcing action first.",
+      "Buy-ahead economics: saving = duty avoided per unit; cost = carrying cost (typically 20-25% annual on inventory value, prorated over the extra months of cover) plus obsolescence risk - buy-ahead only pays when the first exceeds the second.",
+      "Pass-through math: price increase needed to hold gross margin percentage = duty per unit / (1 - target gross margin), which is larger than most people's first guess."
+    ],
+    "good_signals": [
+      "Sizes the exposure with real data cuts before naming a single mitigation, and gets one credible number to the CFO early.",
+      "Separates fast compliance levers from slow structural ones, and states honestly which can land inside 90 days.",
+      "Raises documentation and counsel sign-off unprompted, showing they know the difference between legitimate duty planning and penalty exposure.",
+      "Treats buy-ahead as a calculation with a carrying-cost and obsolescence downside rather than an obvious yes."
+    ],
+    "failure_modes": [
+      "Leading with 'move the supply chain to another country' when nothing can realistically be requalified in 90 days.",
+      "Assuming all spend from that country is dutiable, overstating the exposure, and losing credibility on the first slide.",
+      "Suggesting origin relabeling or transshipment without understanding substantial transformation - this crosses from planning into fraud.",
+      "Ignoring the working-capital and obsolescence cost of a large buy-ahead, or the shelf life of what you are buying."
+    ],
+    "followups": [
+      "What actually makes a good qualify for preferential origin treatment, and who has to certify it?",
+      "Your buy-ahead would put nine months of cover on a product with a twelve-month shelf life. Does it still make sense?",
+      "A supplier offers to ship through a third country so the paperwork shows a different origin. What do you say, and what do you do next?",
+      "Six months later the duty is rescinded. What did you do differently because you knew that was possible?"
+    ]
+  }
+]

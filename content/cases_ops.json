@@ -1,0 +1,303 @@
+[
+  {
+    "id": "ops-peak-throughput-drop",
+    "domain": "Operations",
+    "title": "Peak Throughput Dropped 15%",
+    "difficulty": "core",
+    "prompt": "It is week two of peak and one of our fulfillment centers is running 15% below its planned units per hour, while every other site in the region is on plan. You get one day on site. How do you find it?",
+    "why_asked": "Tests structured constraint-finding in a live operation - whether the candidate isolates a bottleneck with data instead of touring the building and guessing.",
+    "framework": "Theory of Constraints",
+    "structure": [
+      "Pin the metric down first - 15% below plan on what denominator, over what window, and is the plan itself peak-adjusted or last quarter's baseline, because a planning error and a process failure need opposite responses.",
+      "Segment before walking the floor: by day and hour, by shift, by process path, by station or function, and by order profile, then find where the 15% concentrates - a uniform shortfall and a single-shift shortfall have completely different causes.",
+      "Identify the constraint explicitly by comparing actual throughput to demonstrated capacity at each stage, and read the WIP - inventory piles up immediately upstream of the true bottleneck, so the floor will tell you where it is if you look at the queues.",
+      "Split the constraint's loss into availability, performance, and quality, so you know whether you are losing time (downtime, waiting, unstaffed hours), speed (rate below standard), or good units (rework, damage, mispicks).",
+      "Test the peak-specific causes that would never show off-season: new-hire learning curve and trainers pulled off the floor, higher lines per order or a different item mix, inbound arriving in a different profile, storage congestion and longer travel in a fuller building, and fatigue in hours nine through twelve.",
+      "Check upstream starvation and downstream blockage before blaming the constraint station - a pick line short of replenishment or a pack line blocked by full outbound staging looks identical to a slow station on a report.",
+      "Split the fixes into today (rebalance labor to the constraint, add replenishment, clear staging), this week (retraining, slot the top movers closer, change the shift pattern), and after peak (structural capacity or layout), and say what each is worth in units per hour.",
+      "Close with a control: an hourly throughput board against the constraint's target, a named owner per shift, and a same-day escalation trigger, so the gain does not evaporate at the next shift handover."
+    ],
+    "quant_hooks": [
+      "Units per hour per labor hour by function, compared against this site's own demonstrated best-day rate rather than a corporate standard, which isolates whether the rate or the hours are short.",
+      "OEE at the constrained station = Availability x Performance x Quality, where Availability = run time / planned production time, Performance = (ideal cycle time x total count) / run time, and Quality = good units / total units - a 15% loss usually resolves into two of the three.",
+      "Little's Law on the queue: average time in the system = work in process / throughput, which converts an observed WIP pile into hours of delay and tells you what the backlog is actually costing.",
+      "Labor math: required labor hours = forecast units / target units per hour, compared against scheduled hours net of absenteeism, training time, and breaks - that gap is frequently the whole story."
+    ],
+    "good_signals": [
+      "Questions whether the 15% is a real operational loss or a planning artifact before diving into causes.",
+      "Segments the data down to shift and process path before walking the floor, then uses the floor walk to confirm a hypothesis rather than to form one.",
+      "Reads WIP location as the signal for the true constraint instead of relying only on reports.",
+      "Distinguishes a starved bottleneck from a slow bottleneck - the mistake that sends teams chasing the wrong station for a week."
+    ],
+    "failure_modes": [
+      "Concluding 'we need more people' before establishing whether labor hours or labor productivity is what is short.",
+      "Optimizing a non-constraint - improving pick rate when pack is the bottleneck, which raises WIP and improves nothing downstream.",
+      "Ignoring that new hires are a large share of peak headcount, and judging their rate against a tenured standard.",
+      "Fixing the shift without changing anything about the handover, so the next shift regresses and the improvement reads as noise."
+    ],
+    "followups": [
+      "Every station is individually hitting its rate but the building is still down 15%. What is happening?",
+      "Labor hours are fully staffed to plan and absenteeism is normal. Where do you look next?",
+      "You have budget for either 30 more associates or one additional pack line. How do you decide, in the middle of peak?",
+      "What would you change about next year's plan so this does not repeat, and how would you know it worked?"
+    ]
+  },
+  {
+    "id": "ops-onboarding-touchpoints",
+    "domain": "Operations",
+    "title": "Halve Onboarding Touchpoints",
+    "difficulty": "core",
+    "prompt": "Our supplier onboarding takes eleven manual handoffs and about three weeks, and legal will not let us drop any of the compliance checks. Redesign it so there are half as many human touchpoints, and convince me nothing got riskier.",
+    "why_asked": "Screens for process redesign discipline - whether the candidate distinguishes a control from a step, and can prove risk was preserved rather than asserting it.",
+    "framework": "DMAIC",
+    "structure": [
+      "Define scope and the real goal - touchpoints are the stated target, but the outcomes that matter are cycle time and error rate, so agree up front on all three measures and on what actually counts as a touchpoint.",
+      "Map the current state at the handoff level: who touches it, what data or decision they add, how long they hold it, how often it comes back, and where it waits - and separate wait time from work time, because three weeks of elapsed time is usually a few hours of real work.",
+      "Measure before redesigning: monthly volume, touch time per step, queue time per step, rework and rejection rates, and which steps generate the most back-and-forth with the supplier.",
+      "Classify every step into exactly one of three buckets - a genuine control required by policy or regulation, a verification that could be automated or risk-tiered, or pure coordination that exists only because of the handoff structure - and be explicit that only the third bucket can be deleted outright.",
+      "Redesign around the controls rather than through them: keep every control but change how it is satisfied - system validation instead of a manual check, straight-through processing for low-risk suppliers, exception-only human review, parallel instead of sequential checks, and one accountable owner instead of a relay.",
+      "Make risk tiering the main lever - a low-risk domestic supplier with no data access does not need the same path as a high-risk one - and define the tiering criteria, who approves them, and how a supplier gets retiered.",
+      "Prove the risk position instead of claiming it: map each old control to its new control one-to-one, show every regulatory requirement still has an owner and an artifact, add monitoring and sampling on the automated paths, and get compliance and legal to sign that mapping before launch.",
+      "Control the result - pilot on one supplier segment, measure cycle time, touchpoints, error rate, and audit findings against the baseline, and define both the rollback trigger and the ongoing audit cadence."
+    ],
+    "quant_hooks": [
+      "Cycle time decomposition: total elapsed time versus the sum of touch times; a ratio of 20:1 or worse means the opportunity is in the queues and sequencing, not in making anyone work faster.",
+      "Touchpoint count before and after, presented with a one-to-one control mapping table - the deliverable that actually wins this case with a compliance stakeholder.",
+      "Straight-through processing rate = cases completing with no human touch / total cases, which is the metric that tells you whether the redesign held after launch.",
+      "Capacity released = touch hours saved per case x monthly volume, converted at fully loaded labor cost - which is how the project gets funded in the first place."
+    ],
+    "good_signals": [
+      "Separates a control from a step within the first two minutes, and never proposes deleting a control.",
+      "Attacks queue time and sequencing - parallel checks, exception-only review - rather than only automating individual tasks.",
+      "Proposes risk tiering so effort is proportional to risk instead of applying the heaviest path to every supplier.",
+      "Brings compliance in as a co-designer early and produces an artifact they can sign, rather than seeking forgiveness after launch."
+    ],
+    "failure_modes": [
+      "Hitting the touchpoint target by merging steps onto one overloaded person - halves the handoffs and creates a new single point of failure.",
+      "Promising automation with no exception-handling design, so the strange 15% of cases quietly become a worse manual process than before.",
+      "Asserting that risk is unchanged with no control-to-control mapping and no monitoring to back the claim.",
+      "Improving the internal metric while making the supplier's experience worse - more forms demanded earlier so the internal steps look faster."
+    ],
+    "followups": [
+      "Which of the eleven steps would you delete first, and how do you know it is not a control in disguise?",
+      "Legal says the check must be performed by a human. How do you still save time on that step?",
+      "Your automated check is 92% accurate. Is that good enough, and how does the answer change depending on what the check protects against?",
+      "Six months in, cycle time has crept back to eighteen days. What broke, and what should have prevented it?"
+    ]
+  },
+  {
+    "id": "ops-competing-priorities",
+    "domain": "Operations",
+    "title": "Two Urgent Projects, One Analyst",
+    "difficulty": "core",
+    "prompt": "You have two projects, both flagged critical, both due the same quarter, and one analyst who is the only person who can do the data work on either. Both sponsors are directors and both are in your next meeting. What do you do?",
+    "why_asked": "Tests prioritization judgment and stakeholder handling - whether the candidate makes a trade-off explicit and defensible instead of quietly overcommitting.",
+    "framework": "Issue Tree",
+    "structure": [
+      "Reject the framing that both can be fully delivered, and say so early - the real failure mode here is agreeing to both and missing both, so your job is to make the trade-off visible rather than absorb it.",
+      "Get comparable facts on each project: what outcome it protects or creates, the quantified cost of delay per week, the true deadline versus the preferred one, the dependency chain, and whether the date is external and immovable or internal and negotiable.",
+      "Decompose each project rather than treating it as atomic - often the constrained analyst is needed for one specific piece and the rest can proceed in parallel, which dissolves half the apparent conflict.",
+      "Try to relax the constraint before rationing it: a narrower scope that still meets the real need, a manual or approximate first version, borrowed capacity from another team, a contractor, or a sequence where A's analyst work finishes before B needs it.",
+      "Build two or three concrete options with explicit consequences - A first, B first, and a reduced-scope-both option - each with dates, what each sponsor gets, and what each gives up, so the decision becomes a choice between stated outcomes rather than an argument about importance.",
+      "Walk in with a recommendation and a rationale grounded in cost of delay, immovability of the deadline, and reversibility - bring a proposal, not a problem, and do not ask two directors to fight it out in front of you.",
+      "If they will not converge, escalate properly: to the single person who owns both outcomes, with the options and your recommendation already written down, and a stated date after which you proceed with the default.",
+      "Once the decision is made, protect it - confirm in writing to both sponsors, set the check-in cadence, and flag the moment reality changes rather than letting the date slide silently."
+    ],
+    "quant_hooks": [
+      "Cost of delay per week for each project - revenue at risk, contractual penalty, compliance exposure, cost avoidance forgone - which is the only number that makes 'both are critical' resolvable.",
+      "Constrained-resource arithmetic: analyst days required per project versus analyst days available in the quarter; if you need 60 and have 40, no amount of prioritization conversation changes the physics.",
+      "Weighted shortest job first as a tiebreaker: rank by cost of delay divided by the duration of the constrained work, which favors short high-impact work and is defensible out loud.",
+      "Scope-reduction value: what share of each project's benefit lands in the first 60% of the work - usually where the partial-both option earns its legitimacy."
+    ],
+    "good_signals": [
+      "Makes the trade-off explicit and quantified instead of promising to make it work.",
+      "Tries to break the constraint - scope, sequencing, borrowed capacity - before accepting a zero-sum choice.",
+      "Arrives with options and a recommendation rather than asking the directors to decide from scratch.",
+      "Names the escalation path, the decision deadline, and the default action if nobody decides."
+    ],
+    "failure_modes": [
+      "Saying yes to both and then managing by heroics and weekend work - precisely the answer interviewers are listening for and rejecting.",
+      "Choosing based on who is more senior or more insistent, with no articulated rationale anyone could audit.",
+      "Escalating with a problem instead of a recommendation, which reads as an inability to make a call.",
+      "Never checking whether the deadlines are real, and rationing a scarce resource against a date somebody picked arbitrarily."
+    ],
+    "followups": [
+      "One deadline is a regulatory filing date and the other is an internal board presentation. Does that settle it - and what if the board meeting is where next year's budget gets decided?",
+      "Your analyst tells you privately they can do both if they work weekends. What do you say?",
+      "Neither director will yield and their shared VP is on vacation for two weeks. What do you do on day one?",
+      "Six weeks in, project A is going to slip anyway. When and how do you tell that sponsor?"
+    ]
+  },
+  {
+    "id": "ops-cost-per-unit-rising",
+    "domain": "Operations",
+    "title": "Cost Per Unit Rises With Volume",
+    "difficulty": "core",
+    "prompt": "Our volume is up 30% year over year and our cost per unit is up 6%. That is the opposite of what scale is supposed to do. Explain how that happens, and tell me how you would fix it.",
+    "why_asked": "Screens for cost structure literacy - whether the candidate can separate mix, rate, and productivity effects, and understands where diseconomies of scale actually come from.",
+    "framework": "Cost-to-Serve",
+    "structure": [
+      "Define the unit before anything else, because cost per unit can mean per order, per line, per shipment, or per item - and a drop in units per order alone can produce this result with nothing operationally wrong.",
+      "Split total cost into fixed and variable, then compute what cost per unit should have been at the new volume if nothing else had changed, so you have an expected baseline and can size the genuinely unexplained gap.",
+      "Decompose that gap into mix, rate, and productivity: mix (smaller orders, more SKUs, split shipments, harder geographies, a different channel), rate (wage increases, carrier rate increases, overtime and temp premiums), and productivity (units per labor hour, travel distance, rework).",
+      "Build the cost-to-serve view by segment - channel, customer, order profile, SKU - because growth is rarely uniform and the 6% is usually concentrated in whichever segment grew fastest and costs the most to serve.",
+      "Look specifically for the diseconomies that growth itself creates: congestion in a fuller building, longer travel distances, overtime and temp labor premiums, the new-hire learning curve, expedite freight covering capacity shortfalls, and quality slipping under pace.",
+      "Check whether a step-fixed cost was simply absorbed - a new shift, line, or site - because that spikes cost per unit temporarily and the right response is a ramp plan, not a cost-cutting program.",
+      "Recommend by segment and by driver: reprice or re-engineer the service for structurally unprofitable segments, fix the operational drivers (slotting, order consolidation, shift design, training curve), and stop the compensating behaviors like expedite freight.",
+      "Put in the measurement that prevents recurrence - cost per unit by segment with a fixed-versus-variable split and a productivity metric alongside it - so the next move in cost per unit is explainable in a week rather than a quarter."
+    ],
+    "quant_hooks": [
+      "Expected cost per unit at the new volume = (fixed cost + variable cost per unit x new volume) / new volume; compare against actual to size the unexplained gap before attributing it to anything.",
+      "Mix effect isolation: hold cost per unit within each segment constant and reweight to the new segment mix - whatever the number moves by is pure mix and needs no operational fix at all.",
+      "Productivity check: units per labor hour this year versus last, plus overtime hours as a percentage of total hours, since the overtime premium (commonly 1.5x base) raises cost per unit even at flat productivity.",
+      "Cost to serve per order by segment = (labor + freight + packaging + allocated facility) / orders, computed specifically for the fastest-growing segment - usually where the answer is hiding."
+    ],
+    "good_signals": [
+      "Nails down the definition of unit and checks whether units per order changed, which alone can explain the entire result.",
+      "Computes the expected cost per unit at the new volume first, so the discussion is about the unexplained gap rather than the whole 6%.",
+      "Names growth-induced diseconomies specifically - congestion, travel, overtime premium, learning curve - rather than generically citing inefficiency.",
+      "Separates 'this segment is structurally expensive to serve' from 'we are running it badly', because the fixes are completely different."
+    ],
+    "failure_modes": [
+      "Assuming waste and launching a cost-reduction program without testing mix, which fails when the growth came from a structurally more expensive channel.",
+      "Ignoring step-fixed costs, then cutting a shift that was deliberately added for capacity arriving next quarter.",
+      "Reporting only aggregate cost per unit and never segmenting, so the concentrated driver stays invisible.",
+      "Fixing cost per unit by degrading service in a way that resurfaces later as expedite freight, returns, or lost customers - a local metric improved at the system's expense."
+    ],
+    "followups": [
+      "The volume growth came entirely from a new e-commerce channel with single-item orders. Is cost per unit even the right metric anymore?",
+      "Which of your drivers would you expect to reverse on its own within two quarters, and which will not?",
+      "You find the fastest-growing customer segment is unprofitable at current pricing. Walk me through what you do and who you talk to.",
+      "If I gave you one metric to put in front of the leadership team every week, what would it be, and why that one?"
+    ]
+  },
+  {
+    "id": "ops-new-dc-capacity",
+    "domain": "Operations",
+    "title": "Size And Instrument A New DC",
+    "difficulty": "stretch",
+    "prompt": "We are opening a distribution center in the Pacific Northwest in fourteen months. Tell me how you would size it - and then tell me the handful of KPIs you would hold that site accountable to once it is live.",
+    "why_asked": "Tests whether the candidate can move from demand to physical and labor capacity with real math, then define metrics that drive the right behavior rather than metrics that merely look good.",
+    "framework": "Little's Law",
+    "structure": [
+      "Start from demand, not square footage: units and orders per year, the peak-to-average ratio, peak day and peak hour profile, order profile (lines per order, units per line, cube per unit), and the growth horizon the building must still fit in year five.",
+      "Size throughput capacity from the peak rather than the average - required rate = peak day units / (operating hours x planned utilization) - and state the planned utilization out loud, because designing to 100% means failing every peak.",
+      "Size storage separately from throughput: peak on-hand units times cube per unit, divided by usable cube per position and a realistic position fill rate, then translate into pallet or bin positions and add aisles, staging, returns, and value-added space.",
+      "Use Little's Law to connect flow to space - inventory in the building = throughput rate x average dwell time - which makes explicit that an inventory policy decision (seven days of cover instead of four) is directly a decision about how much building you buy.",
+      "Size labor and the dock interfaces: labor hours = peak units / target units per hour, converted to headcount by shift and grossed up for absenteeism and training; dock doors = peak trucks per day / turns per door per day; staging area sized to the largest wave.",
+      "Decide the automation and flexibility posture with a stated basis - what is fixed capital versus flexible labor, what cost per unit looks like at 60% and at 110% of forecast volume, and which choices are reversible versus locked at build.",
+      "Define the KPI set deliberately and in tension: a throughput metric (units per hour), a cost metric (cost per unit), a quality metric (order defect rate or inventory record accuracy), a service metric (on-time ship or OTIF), and a safety metric - and state that none of them may be optimized alone.",
+      "For each KPI, name the behavior it could distort and the paired metric that prevents it, then set ramp-appropriate targets rather than holding a brand-new building to a mature site's numbers in month one."
+    ],
+    "quant_hooks": [
+      "Required throughput rate = peak day units / (operating hours x planned utilization); at 80,000 peak-day units, 20 operating hours, and 85% planned utilization you need roughly 4,700 units per hour of demonstrated capacity.",
+      "Storage positions = (peak on-hand units x cube per unit) / (usable cube per position x target position fill), plus an allowance for aisles, staging, returns, and value-added services.",
+      "Little's Law: average inventory in the building = throughput rate x average dwell time, so cutting dwell from 7 days to 4 cuts the storage requirement by roughly 43% at constant throughput.",
+      "Headcount per shift = (peak units / target units per hour) / hours per shift, grossed up for absenteeism and training; and for any automated stage, OEE = Availability x Performance x Quality."
+    ],
+    "good_signals": [
+      "Designs from peak hour and peak day with an explicit utilization assumption, rather than sizing from the annual average and dividing.",
+      "Separates throughput capacity from storage capacity - the two requirements most commonly conflated in this case.",
+      "Ties dwell time and inventory policy to building size, showing they understand that a planning decision drives a capital decision.",
+      "Defines KPIs in tension and names the gaming behavior each one invites, which is the part most candidates skip entirely."
+    ],
+    "failure_modes": [
+      "Sizing on average daily volume and coming up two to three times short at peak - the classic and fatal error here.",
+      "Designing for 100% utilization with no buffer for variability, downtime, or growth.",
+      "Listing fifteen KPIs with no hierarchy, or a single KPI like units per hour that can be hit by shipping the easy orders while service and quality slide.",
+      "Holding a ramping site to steady-state targets from week one, which destroys the credibility of both the site and the metric."
+    ],
+    "followups": [
+      "The five-year volume forecast has a 40% range. How does that change the building you design, and what do you deliberately leave flexible?",
+      "You can have either 20% more storage or 20% more throughput capacity for the same capital. How do you choose?",
+      "If I hold this site only to cost per unit, what will they do - and what will it cost me somewhere else?",
+      "What targets do you set for month one, month six, and month eighteen, and how do you defend a deliberately low month-one target?"
+    ]
+  },
+  {
+    "id": "ops-automation-roi",
+    "domain": "Operations",
+    "title": "Pick What To Automate And Prove It",
+    "difficulty": "core",
+    "prompt": "A team spends about 40 hours a week on a manual reporting and reconciliation process. Leadership wants it automated. Tell me what you would automate, what you would leave alone, and how you would prove it was worth doing.",
+    "why_asked": "Tests whether the candidate automates the right slice and can build a defensible business case rather than an enthusiastic one.",
+    "framework": "DMAIC",
+    "structure": [
+      "Define the outcome the automation is actually for - hours saved, cycle time, error rate, or the ability to scale without headcount - because those four lead to different designs and different definitions of success.",
+      "Break the 40 hours into discrete tasks with volume, minutes per occurrence, frequency, error rate, and exception rate, so you decide with data instead of with the team's impression of what feels painful.",
+      "Score each task on two axes: value of automating (hours times frequency, plus error cost and cycle-time impact) and difficulty (data availability, stability of the rules, number of systems involved, exception rate, and whether judgment is required).",
+      "Automate the high-volume, rule-stable, low-exception tasks first, and be explicit about what you are deliberately leaving manual - judgment calls, rare exceptions, and anything whose rules are about to change - because chasing the messy tail is how these projects die.",
+      "Fix the process before encoding it: eliminate steps that exist only because of the manual method, standardize inputs at the source, and refuse to automate a bad process faster, which is the most common waste in this space.",
+      "Design the exception path as a first-class part of the solution - what happens when the automation cannot proceed, who sees it, how quickly, and how exceptions get tracked so failures are visible rather than silent.",
+      "Build the ROI honestly: fully loaded cost of hours saved plus error and rework cost avoided, against build cost plus ongoing maintenance, licensing, and support - with a stated payback period and a candid note on whether the freed hours are genuinely being redeployed or merely claimed.",
+      "Prove it afterwards, not just beforehand: baseline the current-state metrics before you build, measure the same metrics after, and put a control plan in place with monitoring, a named owner, and a review cadence, because a silently broken automation is worse than the manual process it replaced."
+    ],
+    "quant_hooks": [
+      "Annual savings = hours saved per week x 52 x fully loaded hourly cost; use fully loaded cost (salary plus benefits and overhead), not base salary, or finance will discount the whole case.",
+      "Payback period in months = implementation cost / (monthly savings - monthly run cost); under 12 months is usually easy to fund, beyond 24 months needs a non-cost justification.",
+      "Automation coverage = cases completed with no human touch / total cases, reported alongside exception rate, since covering 70% of volume with a clean exception path usually beats chasing 100%.",
+      "Error cost avoided = error rate reduction x volume x cost per error - frequently larger than the labor saving, and the piece candidates most often omit."
+    ],
+    "good_signals": [
+      "Decides what NOT to automate and explains the criteria, which demonstrates judgment rather than enthusiasm.",
+      "Simplifies the process before automating it, and says explicitly that automating a bad process locks the badness in.",
+      "Uses fully loaded cost and includes ongoing maintenance and licensing in the business case.",
+      "Insists on a pre-build baseline so the after-the-fact claim is measurable rather than asserted."
+    ],
+    "failure_modes": [
+      "Claiming the full 40 hours as savings when a third of it is judgment work and exceptions that will still need a person.",
+      "Promising headcount reduction that never materializes because nobody defined where the freed hours go - which torches credibility for the next project.",
+      "Ignoring maintenance cost and ownership, producing an automation that quietly breaks after the builder changes teams.",
+      "Automating the loudest complaint rather than the highest-volume repeatable task."
+    ],
+    "followups": [
+      "Leadership hears '40 hours saved' as 'one headcount'. Is that the right conclusion, and how do you manage that expectation?",
+      "The rules change every quarter. Does that change what you build?",
+      "Your automation runs fine for four months, then silently produces wrong numbers for two weeks. What should have caught it?",
+      "How would you choose between a lightweight scripted fix you can build in two weeks and a proper platform solution that takes two quarters?"
+    ]
+  },
+  {
+    "id": "ops-metric-integrity",
+    "domain": "Operations",
+    "title": "The KPI Is Green, Customers Are Angry",
+    "difficulty": "stretch",
+    "prompt": "Our on-time delivery dashboard has read 98% for six straight months, and customer complaints about late deliveries are up 40% over the same period. Both numbers come from our own systems. Reconcile it for me.",
+    "why_asked": "Tests whether the candidate can audit a measurement system and spot local-metric optimization, instead of trusting the dashboard or dismissing the customer.",
+    "framework": "MECE",
+    "structure": [
+      "Take both signals seriously and say so - the useful assumption is that the metric and the customers are each measuring something real but different, not that one of them is simply wrong.",
+      "Audit the metric definition line by line: what event starts the clock, what event stops it, on-time against which date (original promise, revised commit, or carrier appointment), and who has the ability to change that date.",
+      "Audit the population: which orders are in the denominator and which are excluded - cancelled, backordered, partial shipments, exception-flagged, one-off customer accommodations - because exclusions are where a metric usually goes quietly green.",
+      "Check completeness against timeliness: OTIF requires on time AND complete, so a metric tracking only timeliness reads green while a customer receiving two of three lines experiences the order as late.",
+      "Check the metric boundary against the customer's experience - the internal number may stop at carrier handoff or ship confirmation while the customer measures delivery to their door, which makes a deteriorating final mile completely invisible.",
+      "Look for the behavior the metric is inviting: revising the commit date before it is missed, shipping easy orders first, splitting shipments to stop the clock, or reclassifying a late order as an exception - each of these improves the metric and worsens the customer's reality.",
+      "Validate against an independent source rather than the same pipeline: sample actual proof-of-delivery timestamps, match complaint records to specific order numbers, quantify the true rate, and then state the honest number.",
+      "Fix the measurement and the incentive together - measure against the original promise date, add the completeness dimension, extend the clock to delivery rather than dispatch, pair the service metric with a customer-experienced counter-metric, and remove the ability to revise a commit date without an audit trail."
+    ],
+    "quant_hooks": [
+      "Recompute OTIF properly = orders delivered on time AND complete / total orders placed, against the original promise date and with no exclusions; expect the number to fall sharply below the reported figure.",
+      "Complaint-implied failure rate = late-delivery complaints / total orders, grossed up because most unhappy customers never complain (a 5-10% complaint rate per failure is a common working assumption) - if that exceeds the reported 2% miss rate, the metric is provably wrong.",
+      "Exclusion audit: orders excluded from the denominator / total orders - a metric excluding 12% of orders cannot honestly be reported as 98%.",
+      "Date-revision rate = orders whose commit date changed after order entry / total orders, which is the single cleanest test of whether the metric is being managed rather than the operation."
+    ],
+    "good_signals": [
+      "Treats the dashboard as a system to be audited rather than a fact, and names definition, population, and clock boundaries as separate failure sources.",
+      "Catches the difference between an on-time-only metric and true OTIF including completeness.",
+      "Identifies the specific gaming behaviors that a date-revision-tolerant metric invites - the core insight of this case.",
+      "Validates against an independent data source and is willing to report a materially worse number than the one leadership has been quoting."
+    ],
+    "failure_modes": [
+      "Concluding the complaints are anecdotal or driven by a few loud accounts, and defending the dashboard.",
+      "Rebuilding the dashboard without touching the incentive, so the new metric gets managed exactly the same way within two quarters.",
+      "Assuming the data is corrupt and treating this as an engineering bug, when the usual cause is a definition that was always permissive.",
+      "Reporting the corrected number to leadership with no transition plan, which creates a credibility crisis instead of a fix."
+    ],
+    "followups": [
+      "You discover the commit date can be revised by the planning team with no audit trail. Whose problem is that, and what do you change first?",
+      "The corrected number is 84%. How do you present that to a leadership team that has been reporting 98% externally?",
+      "What counter-metric would you pair with on-time delivery so this cannot happen again - and what does that counter-metric itself invite?",
+      "If the definition was technically correct all along, does anyone actually get held accountable? How do you handle that?"
+    ]
+  }
+]

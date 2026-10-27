@@ -1,0 +1,508 @@
+{
+  "_README": "Copy to config/profile.json and edit. Everything person-specific lives here: who the candidate is, the intro text used in referral messages, the Pass-2 rubric Claude scores with, and the Pass-1 rules (scoring.role_families, home_area, keywords). The scoring block below is a worked example for operations / risk / supply-chain roles; replace the role families and keywords for another field.",
+  "candidate": {
+    "name": "Alex Example",
+    "email": "alex@example.com",
+    "phone": "",
+    "location": "Austin, TX",
+    "target_location": "Austin, TX",
+    "linkedin": "your-linkedin-handle",
+    "program": "Master's program (optional)",
+    "university": "Your University",
+    "program_start": "2026-09",
+    "visa_status": "F1_student",
+    "work_authorization": "Describe work authorization (e.g. U.S. citizen, OPT eligible, needs H-1B)"
+  },
+  "experience_summary": {
+    "years": 3,
+    "current_role": "Your current title",
+    "current_company": "Your company",
+    "domain_expertise": [
+      "skill_one",
+      "skill_two",
+      "skill_three"
+    ],
+    "tools": [
+      "Excel",
+      "SQL"
+    ],
+    "certifications": [],
+    "education": {
+      "bachelors": "Your degree, Your college"
+    }
+  },
+  "key_achievements": [
+    "A measurable result (e.g. cut processing time 30% by ...)"
+  ],
+  "target_roles": {
+    "primary": [
+      "Supply Chain Analyst",
+      "Operations Analyst",
+      "Supply Chain Risk Analyst",
+      "Procurement Analyst",
+      "Demand Planning Analyst",
+      "Logistics Analyst",
+      "Supply Chain Operations Manager",
+      "Program Manager",
+      "Technical Program Manager",
+      "Risk Analyst",
+      "Risk and Compliance Analyst",
+      "Compliance Analyst",
+      "Operations Manager",
+      "Operations Specialist",
+      "Business Operations Analyst",
+      "Trust and Safety Analyst",
+      "Fraud Analyst",
+      "Process Improvement Analyst"
+    ],
+    "secondary": [
+      "Process Improvement Manager",
+      "Audit Analyst",
+      "Quality Analyst",
+      "Quality Assurance Analyst"
+    ],
+    "stretch": [
+      "Supply Chain Manager",
+      "Senior Operations Analyst",
+      "Strategic Sourcing Analyst",
+      "S&OP Analyst",
+      "Inventory Analyst"
+    ]
+  },
+  "target_companies": {
+    "tier1_home": [
+      "Company A",
+      "Company B"
+    ],
+    "tier2_national": [
+      "Company C"
+    ]
+  },
+  "search_preferences": {
+    "locations_home": [
+      "Austin, TX",
+      "Round Rock, TX"
+    ],
+    "locations_national": [
+      "San Francisco, CA",
+      "San Jose, CA",
+      "Los Angeles, CA",
+      "New York, NY",
+      "Chicago, IL",
+      "Austin, TX",
+      "Dallas, TX",
+      "Atlanta, GA",
+      "Boston, MA",
+      "Denver, CO",
+      "Remote"
+    ],
+    "distance_miles": 30,
+    "job_types": [
+      "fulltime",
+      "internship"
+    ],
+    "scrape_job_types_separately": true,
+    "hours_old": 168,
+    "results_per_search": 100,
+    "country": "USA",
+    "min_salary": 70000,
+    "exclude_terms": [
+      "senior director",
+      "VP",
+      "principal",
+      "staff engineer",
+      "10+ years",
+      "15+ years"
+    ]
+  },
+  "identity": {
+    "short_intro": "a <your one-line background> with {years} years in <your field>",
+    "long_intro": "a <your background> (graduating <month year>) with {years} years of <field> experience at <company>",
+    "school_short": "Your School",
+    "linkedin_school_id": "",
+    "current_study": "Your current study or role",
+    "degree": "Your degree",
+    "graduation": "",
+    "home_city": "Austin",
+    "app_title": "Job Search",
+    "salary_benchmark": {
+      "label": "Target salary",
+      "amount": 90000
+    },
+    "brand_subtitle": "Alex Example",
+    "github_repo": "YOUR_GITHUB_USER/YOUR_REPO"
+  },
+  "skills_have": {
+    "certs": [],
+    "insights": [
+      "Excel / Spreadsheets",
+      "SQL",
+      "Communication"
+    ],
+    "projects": [
+      "sql"
+    ],
+    "report": [
+      "SQL",
+      "Communication"
+    ]
+  },
+  "pass2_rubric": [
+    "## Scoring Criteria (weights)",
+    "1. Role Relevance (25%): <list the role families in priority order, highest first>.",
+    "2. Skills Match (20%): overlap with the skills in the candidate's profile.",
+    "3. Experience Fit (15%): <N> years as <background>. <target level, e.g. entry-to-mid>.",
+    "4. Location Match (15%): <home area> > remote > rest of <state> > rest of USA.",
+    "5. Company Tier (10%): established employers<, especially ones that sponsor visas>.",
+    "6. Growth Potential (10%): career trajectory.",
+    "7. Visa Friendliness (5%): <delete this line if the candidate needs no sponsorship>.",
+    "",
+    "## Hard rules — read the description for these; they override the weights",
+    "- <If the candidate needs sponsorship:> requires U.S. citizenship, a security clearance, or \"U.S. person\" status: score <= 15.",
+    "- <If the candidate needs sponsorship:> states it will not sponsor: score <= 40 and say so in red_flags.",
+    "- REQUIRED experience (not \"preferred\") far above the candidate's <N> years: <N+3>+ years -> <= 40; <N+2> years -> <= 65.",
+    "- Roles outside the candidate's field that merely contain a matching word in the title: <= 20.",
+    "- Only if the posting STATES a start date the candidate can't make, add a red flag (don't lower the score for this alone).",
+    "",
+    "Score anchors: 90+ apply today · 75-89 strong fit · 60-74 plausible stretch · <60 not worth the time."
+  ],
+  "scoring": {
+    "internships": "normal",
+    "needs_visa_sponsorship": true,
+    "technical_pm_cap": null,
+    "excluded_fields": [
+      "clinical",
+      "healthcare",
+      "food",
+      "retail",
+      "driving",
+      "warehouse",
+      "trades",
+      "unrelated",
+      "engineering",
+      "it_security"
+    ],
+    "home_area": {
+      "label": "Austin area",
+      "core_label": "Austin core",
+      "state": "TX",
+      "state_name": "Texas",
+      "core_cities": [
+        "austin"
+      ],
+      "near_cities": [
+        "round rock",
+        "cedar park",
+        "georgetown",
+        "pflugerville",
+        "leander",
+        "san marcos"
+      ]
+    },
+    "role_families": [
+      {
+        "points": 50,
+        "label": "risk/compliance",
+        "title_patterns": [
+          "fraud",
+          "anti-?fraud",
+          "trust (?:&|and) safety",
+          "t&s",
+          "kyc",
+          "aml",
+          "bsa",
+          "anti-?money laundering",
+          "financial crimes?",
+          "sanctions",
+          "compliance",
+          "grc",
+          "risk",
+          "trade compliance",
+          "export compliance",
+          "import compliance"
+        ]
+      },
+      {
+        "points": 49,
+        "label": "operations analytics",
+        "title_patterns": [
+          "operations analysts?",
+          "ops analysts?",
+          "operational excellence",
+          "operations excellence",
+          "business operations",
+          "biz ?ops",
+          "strategy (?:&|and) operations",
+          "operations strategy",
+          "operations (?:planning|analytics|research|programs?|excellence|intelligence|insights)",
+          "process (?:improvement|excellence|optimization|analyst)",
+          "continuous improvement",
+          "lean",
+          "six sigma",
+          "program operations",
+          "marketplace operations",
+          "global operations"
+        ]
+      },
+      {
+        "points": 47,
+        "label": "supply chain",
+        "title_patterns": [
+          "supply chain",
+          "supply (?:planner|planning|manager|analyst|base|operations|management)",
+          "demand (?:planner|planning|analyst|forecast\\w*|manager|management)",
+          "s ?& ?op",
+          "sales (?:and|&) operations planning",
+          "inventory (?:analyst|planner|planning|manager|management|optimization|strategy|control)",
+          "materials? (?:planner|planning|manager|management|analyst|program|requirements)",
+          "mrp",
+          "procurement",
+          "purchasing",
+          "purchaser",
+          "buyers?",
+          "(?:strategic )?sourcing",
+          "category (?:manager|management|analyst|specialist|lead)",
+          "commodity (?:manager|analyst|specialist|lead)",
+          "vendor (?:manager|management|operations|analyst|specialist|relations)",
+          "supplier (?:management|manager|development|diversity|relations|performance|operations|quality)",
+          "logistics",
+          "transportation (?:analyst|planner|planning|coordinator|specialist|manager|operations|procurement)",
+          "freight",
+          "customs",
+          "import",
+          "export",
+          "trade (?:operations|analyst|specialist)",
+          "fulfillment (?:analyst|planner|manager|operations|specialist|strategy)",
+          "distribution (?:analyst|planner|planning|strategy)",
+          "network (?:planning|planner|design)",
+          "capacity (?:planning|planner|analyst|manager)",
+          "production (?:planner|planning|scheduler|control)",
+          "master scheduler",
+          "replenishment",
+          "allocation (?:analyst|specialist|manager)",
+          "merchandise plann\\w*",
+          "assortment plann\\w*",
+          "s2p",
+          "p2p",
+          "procure-to-pay",
+          "source-to-pay"
+        ]
+      },
+      {
+        "points": 44,
+        "label": "planning",
+        "title_patterns": [
+          "planning analyst",
+          "planners?",
+          "expedit\\w*",
+          "transportation",
+          "shipping",
+          "warehousing",
+          "contracts? (?:administrator|specialist|manager|analyst|coordinator)"
+        ]
+      },
+      {
+        "points": 44,
+        "label": "risk-adjacent",
+        "title_patterns": [
+          "investigations?",
+          "investigators?",
+          "integrity",
+          "abuse",
+          "anti-?abuse",
+          "disputes?",
+          "chargebacks?",
+          "appeals",
+          "policy enforcement",
+          "content (?:review|moderation|policy)",
+          "internal controls?",
+          "sox",
+          "controls? (?:analyst|specialist|testing|manager)",
+          "regulatory",
+          "privacy",
+          "ethics",
+          "governance",
+          "quality (?:analyst|assurance|specialist|auditor|program|analytics|lead)",
+          "audit(?:or|ors|ing)?"
+        ]
+      },
+      {
+        "points": 44,
+        "label": "program management",
+        "title_patterns": [
+          "program managers?",
+          "technical program managers?",
+          "tpm",
+          "program management",
+          "pmo",
+          "project managers?",
+          "project management",
+          "strategic initiatives"
+        ]
+      },
+      {
+        "points": 38,
+        "label": "PM / business-analysis adjacent",
+        "title_patterns": [
+          "program (?:coordinator|specialist|lead|analyst|associate|administrator)",
+          "project (?:coordinator|analyst|specialist|associate|lead|administrator)",
+          "product managers?",
+          "product management",
+          "product operations",
+          "transformation",
+          "change management",
+          "chief of staff",
+          "implementation (?:manager|specialist|consultant|lead)",
+          "engagement manager",
+          "delivery manager",
+          "strategy (?:analyst|associate|manager|consultant)",
+          "business analysts?",
+          "rotational",
+          "leadership development",
+          "management trainee",
+          "mba",
+          "operations research"
+        ]
+      },
+      {
+        "points": 38,
+        "label": "generic operations",
+        "title_patterns": [
+          "operations (?:manager|specialist|coordinator|associate|supervisor|lead|administrator)s?",
+          "operations (?:interns?|internships?|co-?ops?)",
+          "ops (?:manager|specialist|coordinator|associate)",
+          "data analysts?"
+        ]
+      },
+      {
+        "points": 32,
+        "label": "generic operations / data",
+        "title_patterns": [
+          "operations",
+          "operational",
+          "ops",
+          "(?:bi|business intelligence|reporting|analytics|insights) analysts?",
+          "analytics",
+          "consultants?",
+          "planning"
+        ]
+      },
+      {
+        "points": 22,
+        "label": "generic",
+        "title_patterns": [
+          "analysts?",
+          "specialists?",
+          "coordinators?",
+          "associates?",
+          "managers?",
+          "mgr",
+          "administrators?",
+          "interns?",
+          "internships?",
+          "co-?op",
+          "officers?",
+          "advisors?",
+          "lead"
+        ]
+      }
+    ],
+    "top_families": [
+      "operations analytics",
+      "program management",
+      "risk/compliance",
+      "supply chain"
+    ],
+    "core_target_terms": [
+      "supply chain",
+      "procurement",
+      "purchasing",
+      "buyers?",
+      "sourcing",
+      "inventory",
+      "logistics",
+      "compliance",
+      "risk",
+      "fraud",
+      "audit\\w*",
+      "planners?",
+      "planning",
+      "materials?",
+      "vendors?",
+      "suppliers?",
+      "contracts?",
+      "trade",
+      "customs"
+    ],
+    "relevance_words": [
+      "aml",
+      "audit",
+      "auditing",
+      "audits",
+      "automation",
+      "compliance",
+      "cross-functional",
+      "dashboard",
+      "dashboards",
+      "escalation",
+      "escalations",
+      "excel",
+      "forecasting",
+      "fraud",
+      "inventory",
+      "investigation",
+      "investigations",
+      "jira",
+      "kpi",
+      "kpis",
+      "kyc",
+      "lean",
+      "policies",
+      "policy",
+      "procurement",
+      "sop",
+      "sops",
+      "sql",
+      "stakeholder",
+      "stakeholders",
+      "supplier",
+      "suppliers",
+      "tableau",
+      "triage",
+      "vendor",
+      "vendors",
+      "workflow",
+      "workflows"
+    ],
+    "relevance_phrases": [
+      "risk (?:assessment|management|mitigation|analysis)",
+      "standard operating procedures?",
+      "process improvements?",
+      "root cause",
+      "quality assurance",
+      "power bi",
+      "six sigma",
+      "supply chain",
+      "data analysis",
+      "trust (?:&|and) safety"
+    ]
+  },
+  "scoring_weights": {
+    "role_relevance": 0.25,
+    "skills_match": 0.2,
+    "experience_fit": 0.15,
+    "location_match": 0.15,
+    "company_tier": 0.1,
+    "growth_potential": 0.1,
+    "visa_friendliness": 0.05
+  },
+  "seed": {
+    "interview_recs": [],
+    "todos": []
+  },
+  "manual_answers": {
+    "Will you now or in the future require sponsorship?": "Your answer",
+    "Work authorization": "Your answer",
+    "Earliest start date": "Your answer"
+  }
+}

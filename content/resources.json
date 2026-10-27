@@ -1,0 +1,1011 @@
+[
+  {
+    "group": "GitHub Repositories",
+    "group_blurb": "Open-source link lists, worked solutions, and lecture material you can clone and read offline. Treat these as reading lists and reference libraries, not as question banks — only two of them contain actual practice questions with answers.",
+    "items": [
+      {
+        "name": "dend/awesome-product-management",
+        "url": "https://github.com/dend/awesome-product-management",
+        "what_it_is": "A curated index of PM resources organized by type: books, blogs and articles, podcasts, newsletters, tools, communities, conferences, and courses. Each entry is one line with a link, no commentary.",
+        "best_for": "Week one of PM prep, when you need a map of the landscape rather than practice reps. Skim it to pick two blogs and one podcast to follow, then close it.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "2,373 stars, CC0-1.0, last pushed 2026-09-07 (actively maintained)",
+        "caveat": "It is a link list, not a question bank. There are no interview questions or answers in the repo itself."
+      },
+      {
+        "name": "shawlu95/Beyond-LeetCode-SQL",
+        "url": "https://github.com/shawlu95/Beyond-LeetCode-SQL",
+        "what_it_is": "Real SQL interview questions with fully worked solutions and explanations of why each query is written that way, plus notes on window functions, self-joins, and query optimization. Goes deeper than pattern-matching drills.",
+        "best_for": "The SQL screen on an ops or business-analyst loop. SQL appears in roughly 18% of the SCM/ops job descriptions this pipeline has scraped, so this is the single highest-leverage technical repo on the list for you.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "1,246 stars, MIT license, last pushed 2023-05-22",
+        "caveat": "Not updated since 2023. Content is still correct — SQL semantics have not changed — but do not expect new questions."
+      },
+      {
+        "name": "fabiofurini/operations-research-lab",
+        "url": "https://github.com/fabiofurini/operations-research-lab",
+        "what_it_is": "University-level operations research and management engineering material: lecture notes, Python notebooks using Gurobi, and case studies on assignment, knapsack, facility location, and routing problems.",
+        "best_for": "When a JD says 'optimization', 'linear programming', or 'network design' and you need to be able to say something credible about how those problems are actually formulated and solved.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "32 stars, CC-BY-4.0, last pushed 2026-09-04 (actively maintained)",
+        "caveat": "Academic in tone and Gurobi-dependent. It is background literacy, not interview practice."
+      },
+      {
+        "name": "ElizaLo/Product-Management-and-Leadership",
+        "url": "https://github.com/ElizaLo/Product-Management-and-Leadership",
+        "what_it_is": "A structured guide to product management and engineering leadership: discovery, roadmapping, metrics, prioritization frameworks, and team leadership, with links out to primary sources.",
+        "best_for": "Building vocabulary before a PM or TPM screen — specifically the prioritization and metrics sections, which are the parts interviewers probe.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "209 stars, MIT license, last pushed 2023-05-05",
+        "caveat": "Stale since 2023, so the tooling and AI-product sections are dated."
+      },
+      {
+        "name": "aza-ali/awesome-ai-product-management",
+        "url": "https://github.com/aza-ali/awesome-ai-product-management",
+        "what_it_is": "AI-specific PM resources: how to scope ML features, evaluation and metrics for probabilistic products, data requirements, and the AI-PM job landscape.",
+        "best_for": "Any interview where you will be asked how AI was used in your portfolio projects — which is now most of them.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "238 stars, no license declared, last pushed 2026-05-24 (actively maintained)",
+        "caveat": "No license file, so treat the content as read-only reference — do not copy text into your own materials."
+      },
+      {
+        "name": "zapplyjobs/interview-handbook-2026",
+        "url": "https://github.com/zapplyjobs/interview-handbook-2026",
+        "what_it_is": "A new-grad-oriented handbook of behavioral, STAR-format, and situational interview questions with guidance on structuring answers.",
+        "best_for": "Generating a raw list of behavioral prompts to run through the self-mock protocol. Useful as question inventory, not as an answer key.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "meta": "23 stars, no license declared, last pushed 2026-09-10 (actively maintained)",
+        "caveat": "Very small repo and aimed at new grads, so calibrate up if you have several years of experience. No license declared."
+      },
+      {
+        "name": "ragamarkely/scanalytics",
+        "url": "https://github.com/ragamarkely/scanalytics",
+        "what_it_is": "Python implementations of two classic supply-chain problems: vehicle routing (Clarke-Wright savings) and master production scheduling, with runnable code and sample data.",
+        "best_for": "A reference implementation when you build your own portfolio project — read how someone else structured the same problem before writing yours.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "meta": "73 stars, MIT license, last pushed 2021-02-07",
+        "caveat": "Better as a portfolio-project reference than as interview prep. Dormant since 2021, so dependencies may need updating."
+      },
+      {
+        "name": "prakashsellathurai/Awesome-Product-Management",
+        "url": "https://github.com/prakashsellathurai/Awesome-Product-Management",
+        "what_it_is": "A second, smaller curated PM link list covering books, courses, and tools.",
+        "best_for": "Only worth opening if dend/awesome-product-management left a gap. Mostly overlapping.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "66 stars, CC0-1.0, last pushed 2021-12-19",
+        "caveat": "Stale since 2021 — expect dead links. Redundant with the dend list."
+      },
+      {
+        "name": "product-school/Product-Management-Interview-Checklist",
+        "url": "https://github.com/product-school/Product-Management-Interview-Checklist",
+        "what_it_is": "A short checklist of things to prepare before a PM interview, published by Product School.",
+        "best_for": "A five-minute sanity check the night before a PM loop.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "41 stars, no license declared, last pushed 2019-06-26",
+        "caveat": "Stale since 2019 and essentially marketing collateral. Lowest-value item in this group; included only for completeness."
+      }
+    ]
+  },
+  {
+    "group": "Question Banks & Practice Platforms",
+    "group_blurb": "Where the actual question volume lives. Note the structural gap: crowd-verified question banks exist in depth for PM, TPM, BizOps, and data roles, but no comparable bank exists for supply chain or operations. Mine the adjacent tracks (BizOps, Business Analyst, TPM) and translate the questions into your domain.",
+    "items": [
+      {
+        "name": "Exponent — Interview Question Bank",
+        "url": "https://www.tryexponent.com/questions",
+        "what_it_is": "A crowd-verified bank of 5,322 real interview questions filterable by role and company, spanning Product Management, TPM, BizOps & Strategy, Business Analyst, and Data Analyst. Questions carry community answers and company attribution.",
+        "best_for": "Your primary source of question volume. Filter to TPM and BizOps & Strategy, then reframe each question into a supply-chain context.",
+        "cost": "Freemium",
+        "domains": [
+          "Program & Product Management",
+          "Operations"
+        ],
+        "meta": "5,322 questions across PM, TPM, BizOps & Strategy, Business Analyst, Data Analyst tracks",
+        "caveat": "There is no supply chain or logistics track. The free tier shows questions; full answers, courses, and mock scheduling sit behind the paywall."
+      },
+      {
+        "name": "Exponent Practice (formerly Pramp)",
+        "url": "https://www.tryexponent.com/practice",
+        "what_it_is": "Free peer-to-peer mock interview matching. You are paired with another candidate, each of you interviews the other using a provided prompt set, and you exchange feedback. Tracks include a Product Case Study path plus behavioral.",
+        "best_for": "Getting live reps with a human when your own network has no ops or SCM practice partners yet. The Product Case Study track is the closest usable proxy for an ops case.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management",
+          "All"
+        ],
+        "meta": "Absorbed Pramp; as of July 2024 all new Pramp sessions are hosted on Exponent Practice",
+        "caveat": "Partner quality is luck of the draw and partners will rarely know supply chain. Use it for delivery and structure, not domain depth."
+      },
+      {
+        "name": "Prepfully — Interview Guides",
+        "url": "https://prepfully.com/interview-guides",
+        "what_it_is": "Company-and-role-specific loop guides — what each round is, who interviews you, and what they score — for PM and TPM roles at Meta, Google, Netflix, Apple, Stripe and others, plus a paid coaching marketplace.",
+        "best_for": "The week you get a loop invite from a large tech company and needs to know the shape of the loop before the recruiter call.",
+        "cost": "Freemium",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "caveat": "No operations or supply-chain track exists."
+      },
+      {
+        "name": "PrepLounge — Case Library",
+        "url": "https://www.preplounge.com/en/management-consulting-cases",
+        "what_it_is": "Hundreds of practice consulting cases with interviewer-and-candidate scripts, grouped by type: market sizing, profitability, growth strategy, and operations.",
+        "best_for": "Structured case reps when an employer runs a case round — many graduate career teams offer case-format mock interviews, so cases are in scope.",
+        "cost": "Freemium",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "meta": "Case Library plus Meeting Board, mental-math tool, and a consulting Q&A forum on the same account",
+        "caveat": "Consulting-framed rather than corporate-ops-framed. Premium membership gates part of the library."
+      },
+      {
+        "name": "Product Management Exercises",
+        "url": "https://www.productmanagementexercises.com/",
+        "what_it_is": "A crowd-answered bank of PM interview questions where users post answers and the community upvotes and critiques them, so you see multiple attempts at the same prompt.",
+        "best_for": "Studying what a strong versus a mediocre answer to the same PM question actually looks like — the comparison is the value, more than the question list.",
+        "cost": "Freemium",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "caveat": "The site returned HTTP 403 to our automated checks (bot blocking), so we confirmed the host responds but could not read the page programmatically. Open it in a normal browser. Quality varies by answer since it is user-generated."
+      }
+    ]
+  },
+  {
+    "group": "Mock Interview Partners",
+    "group_blurb": "Live reps with a human. This is your thinnest resource area because ops and SCM practice partners are genuinely scarce, which is exactly why the self-mock protocol in the prep playbook exists. A good target is one mock every two weeks — achievable by mixing the free peer platforms, your school's career team, and LLM self-mocks.",
+    "items": [
+      {
+        "name": "Exponent Practice — free peer mocks",
+        "url": "https://www.tryexponent.com/practice",
+        "what_it_is": "Free peer matching for mock interviews, including behavioral and a Product Case Study track. You interview your partner and they interview you.",
+        "best_for": "Filling the weeks between career-coach sessions at zero cost.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management",
+          "All"
+        ],
+        "caveat": "Partners will not know supply chain. Use it to rehearse delivery, pacing, and handling interruptions."
+      },
+      {
+        "name": "PrepLounge Meeting Board",
+        "url": "https://www.preplounge.com/en/meeting-board",
+        "what_it_is": "A scheduling board for finding case-interview practice partners worldwide, paired with the case library so both sides have a script to run.",
+        "best_for": "Case-format practice specifically, where having a structured script matters more than the partner's domain knowledge.",
+        "cost": "Freemium",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Consulting-candidate population, so partners will push consulting frameworks rather than corporate ops reasoning."
+      },
+      {
+        "name": "MeetAPro",
+        "url": "https://www.meetapro.com/",
+        "what_it_is": "A marketplace for paid 1:1 mocks with verified working interviewers across product management, engineering management, behavioral, data, and finance tracks.",
+        "best_for": "One or two paid sessions immediately before a high-stakes loop at a target company, when you want a real practicing interviewer rather than a peer.",
+        "cost": "Paid",
+        "domains": [
+          "Program & Product Management",
+          "All"
+        ],
+        "caveat": "No operations or supply-chain track. Value here is a rigorous behavioral or PM interviewer, not domain coverage."
+      }
+    ]
+  },
+  {
+    "group": "Frameworks & Case Method",
+    "group_blurb": "The structuring vocabulary. Learn three or four of these properly rather than twelve superficially — interviewers reward a clean, followable structure over framework name-dropping. For supply-chain diagnostics the real reference model is SCOR, stewarded by ASCM.",
+    "items": [
+      {
+        "name": "Victor Cheng — The PARADE Method",
+        "url": "https://caseinterview.com/parade-method",
+        "what_it_is": "A six-part template for behavioral and resume stories: Problem, Anticipated consequence, Role, Action, Decision-making rationale, End result. Its distinguishing move over plain STAR is forcing you to state your individual role and why you chose your action over alternatives. The page includes two fully worked examples.",
+        "best_for": "Building your story bank. This is the format that makes stories structured enough for the interviewer to take notes and relay them to their team.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "meta": "Full article readable without login; email opt-ins on the page are optional and do not gate content",
+        "caveat": "All rights reserved — read and apply the structure, do not reproduce the text."
+      },
+      {
+        "name": "Victor Cheng — MECE",
+        "url": "https://caseinterview.com/mece",
+        "what_it_is": "Explanation of Mutually Exclusive, Collectively Exhaustive as a test for whether a breakdown of a problem actually holds up, with examples of breakdowns that fail the test.",
+        "best_for": "The moment in a case or ops-diagnostic question where you say 'there are three things driving this' and needs those three things to genuinely cover the space without overlapping.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain",
+          "Program & Product Management"
+        ],
+        "caveat": "All rights reserved."
+      },
+      {
+        "name": "Victor Cheng — Issue Trees",
+        "url": "https://caseinterview.com/issue-tree",
+        "what_it_is": "How to decompose an ambiguous problem into a branching tree of testable sub-questions, and how to prune branches out loud so the interviewer can follow your reasoning.",
+        "best_for": "Open-ended prompts like 'our on-time delivery dropped four points last quarter, why?' — the single most common shape of ops interview question.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain",
+          "Risk & Compliance"
+        ],
+        "caveat": "All rights reserved."
+      },
+      {
+        "name": "PrepLounge — Case Interview Basics",
+        "url": "https://www.preplounge.com/en/case-interview-basics",
+        "what_it_is": "A free six-step course covering interview fundamentals, consulting skills, case types, structuring, frameworks, and case math, plus a management-theory glossary, brainteasers, and video walkthroughs.",
+        "best_for": "A self-paced on-ramp if case interviews are new to you. PrepLounge states all Case Interview Basics articles are free even without Premium.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Paid coaching and Premium sit alongside the free course; ignore the upsells."
+      },
+      {
+        "name": "SCOR — Supply Chain Operations Reference (overview)",
+        "url": "https://en.wikipedia.org/wiki/Supply_chain_operations_reference",
+        "what_it_is": "Encyclopedia overview of the SCOR model — the Plan, Source, Make, Deliver, Return, Enable process taxonomy and its performance-attribute hierarchy — which is the industry-standard way to structure a supply-chain diagnosis.",
+        "best_for": "A five-minute grounding before you read the primary ASCM material. Also the safest structure to reach for when asked to diagnose a supply chain end to end.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "meta": "CC-BY-SA 4.0",
+        "caveat": "Secondary source. ASCM is the steward and the authority — use this only as an index into the real standard."
+      },
+      {
+        "name": "DMAIC (Define, Measure, Analyze, Improve, Control)",
+        "url": "https://en.wikipedia.org/wiki/DMAIC",
+        "what_it_is": "Overview of the Six Sigma improvement cycle and what happens in each of the five phases.",
+        "best_for": "Process-improvement and continuous-improvement roles, which appear throughout your secondary target list. Answering 'walk me through how you'd fix a broken process' with DMAIC is immediately legible to an ops interviewer.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "CC-BY-SA 4.0",
+        "caveat": ""
+      },
+      {
+        "name": "iSixSigma — DMAIC dictionary entry",
+        "url": "https://www.isixsigma.com/dictionary/dmaic/",
+        "what_it_is": "A practitioner-oriented definition of DMAIC with the tools typically used in each phase.",
+        "best_for": "Getting the phase-by-phase toolset (SIPOC, process maps, control charts) so you can name the actual artifacts rather than just the phases.",
+        "cost": "Free",
+        "domains": [
+          "Operations"
+        ],
+        "caveat": ""
+      },
+      {
+        "name": "ASQ — Quality Resources",
+        "url": "https://asq.org/quality-resources",
+        "what_it_is": "The American Society for Quality's reference library on quality tools, Six Sigma, root cause analysis, and the seven basic quality tools. ASQ is the authoritative body for quality methodology in the US.",
+        "best_for": "Authoritative definitions when you want to be sure you are using a quality term the way a certified practitioner would.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": "ASQ returns HTTP 403 to automated requests and is all-rights-reserved. We link out only — open it in a browser. Some depth is member-gated."
+      },
+      {
+        "name": "The Muse — STAR Interview Method",
+        "url": "https://www.themuse.com/advice/star-interview-method",
+        "what_it_is": "A plain-language walkthrough of Situation, Task, Action, Result with example answers.",
+        "best_for": "Amazon specifically — amazon.jobs officially names STAR as the expected answer format for its loops, so this is the baseline structure for every Amazon story.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "caveat": "STAR is the floor. Layer PARADE's role and rationale elements on top to survive the follow-up questions."
+      },
+      {
+        "name": "Lean Enterprise Institute — What is Lean",
+        "url": "https://www.lean.org/explore-lean/what-is-lean/",
+        "what_it_is": "LEI's primary explanation of lean thinking: value, value stream, flow, pull, and perfection, from the organization founded to steward the Toyota Production System literature in the West.",
+        "best_for": "Manufacturing and fulfillment interviews at Boeing, Starbucks roasting and distribution, or an Amazon operations role, where lean vocabulary is assumed knowledge.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": "The deeper Lean Lexicon is a paid publication; only the explainer pages are open."
+      }
+    ]
+  },
+  {
+    "group": "Metrics & Business Literacy",
+    "group_blurb": "Interviewers for entry-to-mid ops and SCM roles test whether you can reason with numbers, not whether you can recite definitions. The goal here is that you can define, compute, and say what moves a metric — inventory turns, fill rate, OTIF, OEE, days of supply, landed cost, cost to serve — without hesitating.",
+    "items": [
+      {
+        "name": "Lean Production — OEE (Overall Equipment Effectiveness)",
+        "url": "https://www.leanproduction.com/oee/",
+        "what_it_is": "A thorough explanation of OEE: the availability, performance, and quality factors, the exact calculation, the six big losses, and worked examples with numbers.",
+        "best_for": "Any manufacturing or fulfillment-operations interview. OEE is the classic 'compute this in your head' metric, and this page gives you the arithmetic, not just the concept.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": ""
+      },
+      {
+        "name": "CSCMP — Supply Chain Management Definitions and Glossary",
+        "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+        "what_it_is": "The Council of Supply Chain Management Professionals' official definitions of supply chain management and logistics management, plus a downloadable comprehensive glossary of logistics and SCM terms.",
+        "best_for": "Settling terminology arguments with yourself. When a JD uses a term you half-know, this is the free authoritative definition.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "meta": "Glossary PDF is the 2013 edition and is reached through a JavaScript link on this page",
+        "caveat": "Link to this landing page, not to the PDF directly — the previously circulated direct PDF URL now returns 404. The glossary is also a 2013 edition, so it predates current digital-supply-chain vocabulary."
+      },
+      {
+        "name": "Investopedia — financial and operating term dictionary",
+        "url": "https://www.investopedia.com/financial-term-dictionary-4769738",
+        "what_it_is": "Plain-English definitions with worked formulas for the finance-adjacent metrics that show up in ops interviews: inventory turnover, cash conversion cycle, working capital, COGS, gross margin, EOQ.",
+        "best_for": "The finance half of business literacy — specifically being able to explain why holding inventory is expensive in cash terms, which separates a strong ops candidate from an average one.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain",
+          "Risk & Compliance"
+        ],
+        "caveat": "Investopedia returns HTTP 403 to automated requests and is all-rights-reserved. We link out only; open it in a browser."
+      },
+      {
+        "name": "Supply Chain Dive",
+        "url": "https://www.supplychaindive.com/",
+        "what_it_is": "Daily trade journalism on supply chain, logistics, procurement, and manufacturing — tariffs, carrier capacity, port throughput, nearshoring, inventory corrections at named companies.",
+        "best_for": "The 'so what's happening in the industry right now?' question, and for sourcing a specific, current example to cite when asked about supply-chain risk. Read it fifteen minutes a day.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations",
+          "Risk & Compliance"
+        ],
+        "caveat": "Journalism, not analysis. Verify any number you plan to quote in an interview against the primary source."
+      },
+      {
+        "name": "Levels.fyi",
+        "url": "https://www.levels.fyi/",
+        "what_it_is": "Crowd-sourced compensation data by company, level, and location, including large employers such as Amazon, Microsoft, Boeing, Starbucks, and Costco.",
+        "best_for": "The recruiter's 'what are your expectations?' question, and for calibrating an offer against your program's published salary average.",
+        "cost": "Freemium",
+        "domains": [
+          "All"
+        ],
+        "caveat": "Self-reported and skewed toward engineering roles, so SCM and ops sample sizes are thin. Use it as a range, not a number."
+      },
+      {
+        "name": "MIT OpenCourseWare — 15.761 Introduction to Operations Management",
+        "url": "https://ocw.mit.edu/courses/15-761-introduction-to-operations-management-spring-2013/",
+        "what_it_is": "Full MIT Sloan course materials: lecture notes and assignments on process analysis, capacity, queueing, inventory, and the bullwhip effect.",
+        "best_for": "Closing a specific conceptual gap — for example, actually understanding Little's Law or the bullwhip effect well enough to reason about it live rather than name it.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "Spring 2013 offering; OCW material is generally CC-BY-NC-SA",
+        "caveat": "A 2013 course. Fundamentals are timeless; the case examples are dated."
+      }
+    ]
+  },
+  {
+    "group": "Supply Chain Specific (ASCM / CSCMP / APICS)",
+    "group_blurb": "The professional bodies that define the vocabulary your interviewers will use. ASCM (formerly APICS) stewards SCOR and the CPIM, CSCP, and CLTD credentials; CSCMP is the academic-practitioner body. Several ASCM pages are JavaScript-rendered and blocked our automated reads even though the URLs return HTTP 200, so these are strictly link-outs.",
+    "items": [
+      {
+        "name": "ASCM — SCOR Digital Standard",
+        "url": "https://www.ascm.org/corporate-transformation/standards-tools/scor-ds/",
+        "what_it_is": "ASCM's own page for the SCOR Digital Standard, the current edition of the SCOR process reference model and the authoritative source on its processes, performance attributes, and metrics.",
+        "best_for": "Going one level deeper than the encyclopedia overview, and for being able to say 'SCOR DS' rather than 'SCOR' — which signals you read the current standard, not a 2010 textbook.",
+        "cost": "Freemium",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "URL returns HTTP 200 but the page is JavaScript-rendered and returned no readable content to our automated fetch. Open in a browser. Access tiers (free vs member vs paid) were not verifiable programmatically."
+      },
+      {
+        "name": "SCOR DS process model browser",
+        "url": "https://scor.ascm.org/",
+        "what_it_is": "ASCM's interactive browser for the SCOR model process hierarchy.",
+        "best_for": "Drilling into a specific SCOR process — say sS1, Source Stocked Product — when you want to reference the actual process ID in a case answer.",
+        "cost": "Freemium",
+        "domains": [
+          "Supply Chain"
+        ],
+        "caveat": "A single-page JavaScript app; our fetch saw only a 'SCOR Model / Loading...' shell. It needs a real browser, and the free-versus-gated boundary was not verifiable programmatically."
+      },
+      {
+        "name": "ASCM — Certifications (CPIM, CSCP, CLTD)",
+        "url": "https://www.ascm.org/learning-development/certify-credential/",
+        "what_it_is": "ASCM's credentialing hub for CPIM (production and inventory), CSCP (end-to-end supply chain), and CLTD (logistics, transportation, distribution).",
+        "best_for": "Deciding whether to add a credential alongside a supply chain degree. CSCP is the usual choice for a generalist supply-chain analyst track; CLTD if you target logistics specifically.",
+        "cost": "Paid",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "URL returns HTTP 200 but is JavaScript-rendered and unreadable to automation. Exam and membership pricing must be checked on-site. Check whether your school offers a student discount before paying list price."
+      },
+      {
+        "name": "ASCM Supply Chain Dictionary (formerly APICS Dictionary)",
+        "url": "https://www.ascm.org/learning-development/certify-credential/apics-dictionary/",
+        "what_it_is": "The canonical supply-chain terminology reference, and the definition source the CPIM and CSCP exams are written against.",
+        "best_for": "Exam prep if you pursue an ASCM credential, and as the tie-breaker when CSCMP and a textbook define a term differently.",
+        "cost": "Paid",
+        "domains": [
+          "Supply Chain"
+        ],
+        "caveat": "A paid publication, all rights reserved, and the page is JavaScript-rendered so automated reads returned nothing. Use the free CSCMP glossary for day-to-day definitions instead."
+      },
+      {
+        "name": "CSCMP",
+        "url": "https://cscmp.org/",
+        "what_it_is": "Council of Supply Chain Management Professionals — research, the annual State of Logistics Report, local roundtables, student membership, and the SCPro credential track.",
+        "best_for": "Networking through a local roundtable, which is one of the few ways to meet practicing local supply-chain people outside of school events.",
+        "cost": "Freemium",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "Most research and reports are member-gated; the glossary is the main free artifact."
+      }
+    ]
+  },
+  {
+    "group": "Risk & Compliance Specific",
+    "group_blurb": "This is the area where curated interview prep genuinely does not exist — a prior search of GitHub returned nothing usable for risk or compliance interview questions. So the strategy is inverted: instead of practice banks, read the primary frameworks the professional bodies publish, and build your own question list from them. Risk & compliance experience is a real differentiator here, and these are the frameworks that let you describe that work in the field's own vocabulary.",
+    "items": [
+      {
+        "name": "IIA — The Three Lines Model (position paper)",
+        "url": "https://www.theiia.org/globalassets/documents/resources/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-july-2020/three-lines-model-updated-english.pdf",
+        "what_it_is": "The Institute of Internal Auditors' 14-page position paper replacing the older 'three lines of defence' model, laying out six principles covering governance, governing-body roles, management and first- and second-line roles, internal audit, independence, and value creation.",
+        "best_for": "Any risk, audit, or compliance interview. Being able to place your own role precisely in this model — and say which line it sat in and why — is a strong, specific answer most candidates cannot give.",
+        "cost": "Free",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "meta": "14-page PDF, July 2020 update; we confirmed the document title and contents page directly from the file",
+        "caveat": "Use the current 'Three Lines Model' language, not 'three lines of defence' — the rename is deliberate and interviewers in the field notice."
+      },
+      {
+        "name": "COSO — Enterprise Risk Management guidance",
+        "url": "https://www.coso.org/guidance-erm",
+        "what_it_is": "COSO's ERM guidance hub. COSO's internal control and ERM frameworks are the reference models US public-company control environments are built on.",
+        "best_for": "Explaining how risk is governed at an enterprise level rather than a process level — the difference between a compliance analyst answer and a risk program answer.",
+        "cost": "Freemium",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "caveat": "Framework overviews and some executive summaries are free; full framework documents are paid publications."
+      },
+      {
+        "name": "ACFE — Fraud 101 and the Fraud Triangle",
+        "url": "https://www.acfe.com/fraud-resources/fraud-101-what-is-fraud",
+        "what_it_is": "The Association of Certified Fraud Examiners' primer: the legal definition of fraud, Donald Cressey's Fraud Triangle (pressure, opportunity, rationalization), the Fraud Tree taxonomy of occupational fraud schemes as a downloadable infographic, and the categories of internal versus external fraud.",
+        "best_for": "Fraud, risk, and trust-and-safety interviews. The Fraud Triangle is the standard analytical lens, and it maps cleanly onto marketplace and platform risk work.",
+        "cost": "Freemium",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "meta": "Fraud Tree infographic (2026 edition) is free to download; the Fraud Examiners Manual and CPE courses are paid",
+        "caveat": "The 101-level content is open; anything deeper requires membership or purchase."
+      },
+      {
+        "name": "ISACA — Industry News and articles",
+        "url": "https://www.isaca.org/resources/news-and-trends/industry-news",
+        "what_it_is": "ISACA's article library across audit, security, governance, risk, and privacy, currently weighted toward AI governance, third-party risk, and control design. ISACA is the body behind CISA, CRISC, and CGEIT.",
+        "best_for": "Sounding current. Reading two of these a week gives you a live example of an emerging risk topic to raise when an interviewer asks what you are following.",
+        "cost": "Freemium",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "meta": "Roughly 100 recent articles listed, with year archives back to 2022; no login gate visible on the index",
+        "caveat": "Some individual articles and most tooling are member-gated even though the index is open."
+      },
+      {
+        "name": "ISACA — Credentialing (CRISC, CISA)",
+        "url": "https://www.isaca.org/credentialing",
+        "what_it_is": "ISACA's credential hub. CRISC (risk and information systems control) is the credential most aligned with a risk-analyst career path; CISA is the audit equivalent.",
+        "best_for": "If you want to keep the Risk & Compliance track alive as a hedge alongside supply chain, CRISC is the credential that signals it credibly.",
+        "cost": "Paid",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "caveat": "Exam plus membership costs are meaningful, and CRISC has an experience requirement. Check the student rate."
+      },
+      {
+        "name": "ACAMS",
+        "url": "https://www.acams.org/en/resources",
+        "what_it_is": "The Association of Certified Anti-Money Laundering Specialists — the professional body for AML and financial-crime compliance, publisher of what was ACAMS Today (now the ACAMS opinions library) and owner of the CAMS credential.",
+        "best_for": "Only if you target financial-crime or payments compliance specifically — for example a fintech or marketplace-risk role rather than a supply-chain one.",
+        "cost": "Freemium",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "caveat": "ACAMS returns HTTP 403 to all automated requests, so we confirmed the host responds and that acamstoday.org now 301-redirects here, but could not read the page. Link-out only. Narrower fit than the other items in this group."
+      },
+      {
+        "name": "NIST Cybersecurity Framework",
+        "url": "https://www.nist.gov/cyberframework",
+        "what_it_is": "The US government's freely published framework for identifying, protecting against, detecting, responding to, and recovering from cyber risk, with implementation guidance.",
+        "best_for": "Third-party and supplier risk questions — the intersection of your supply-chain target roles and your compliance background, and a genuinely differentiated angle for you.",
+        "cost": "Free",
+        "domains": [
+          "Risk & Compliance",
+          "Supply Chain"
+        ],
+        "meta": "US government work, freely redistributable",
+        "caveat": "Cyber-specific. Do not over-apply it to non-technology risk."
+      },
+      {
+        "name": "ISO 31000 (risk management) overview",
+        "url": "https://en.wikipedia.org/wiki/ISO_31000",
+        "what_it_is": "Encyclopedia overview of the ISO risk-management standard: its principles, framework, and process, and how it differs from COSO ERM.",
+        "best_for": "A quick orientation before an interview where you expect to be asked to compare risk frameworks. The ISO standard itself is a paid document, so this is the free route to the concepts.",
+        "cost": "Free",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "meta": "CC-BY-SA 4.0",
+        "caveat": "Secondary source, and the actual ISO standard is paywalled. Do not claim to have read ISO 31000 on the strength of this page."
+      },
+      {
+        "name": "Three lines of defence (historical model)",
+        "url": "https://en.wikipedia.org/wiki/Three_lines_of_defence",
+        "what_it_is": "Overview of the older three-lines-of-defence governance model that the IIA superseded in 2020.",
+        "best_for": "Recognizing the legacy term, because many organizations and interviewers still use it. Knowing both names and why the IIA changed it is a small but real credibility signal.",
+        "cost": "Free",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "meta": "CC-BY-SA 4.0",
+        "caveat": "Superseded. Read the IIA position paper for the current model and lead with that language."
+      }
+    ]
+  },
+  {
+    "group": "Company Research & Interview Experiences",
+    "group_blurb": "Two kinds of source here. First-party careers pages are the only place to get a company's actual stated process, and they are frequently more accurate than third-party summaries — the Amazon Leadership Principles are the clearest example, since there are now 16 and much third-party content still says 14. Second, candidate-reported experience sites: we deliberately do not scrape any of these, we only link out to them. Read them in a browser, respect their terms, and treat single reports as anecdote rather than data.",
+    "items": [
+      {
+        "name": "Amazon Leadership Principles (official)",
+        "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+        "what_it_is": "Amazon's own canonical list of its Leadership Principles, with the official wording of each.",
+        "best_for": "The single most important company-research page on this list, given Amazon's weight in many supply chain and operations target lists. Every Amazon behavioral question maps to one or more of these, and interviewers score against them explicitly.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "meta": "There are 16 Leadership Principles as of this verification",
+        "caveat": "Much third-party prep material still says 14 principles and quotes stale wording. Use this page as the source of truth and ignore secondary lists."
+      },
+      {
+        "name": "Amazon — The interview loop (official)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire/interview-loop",
+        "what_it_is": "Amazon's own description of its interview loop structure and what interviewers are assessing, which explicitly names the STAR method as the expected way to answer.",
+        "best_for": "Structuring Amazon prep. It tells you the format to use in your own words rather than making your infer it from blog posts.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "caveat": ""
+      },
+      {
+        "name": "Amazon — How we hire (official)",
+        "url": "https://www.amazon.jobs/content/en/how-we-hire",
+        "what_it_is": "The umbrella page for Amazon's hiring process: application, assessments, interviews, and what happens after.",
+        "best_for": "Setting expectations on timeline and stages, especially for the online-assessment steps that some ops and program roles include.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "caveat": ""
+      },
+      {
+        "name": "Microsoft — Hiring tips (official)",
+        "url": "https://careers.microsoft.com/v2/global/en/hiring-tips.html",
+        "what_it_is": "Microsoft's own account of its recruiting lifecycle (seven stages from job search to hired), its interview format (typically 2-4 conversations of up to an hour each with teammates and cross-functional colleagues), its use of structured interviews, and what it evaluates: respect, integrity, accountability, growth mindset, and how candidates learn and collaborate. It also states its position on candidate use of AI tools — allowed for preparation, not during assessments unless explicitly permitted.",
+        "best_for": "Microsoft loops. The growth-mindset language is not decoration — it is what interviewers are told to look for, so at least one of your stories should be about learning from a failure.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "caveat": "Microsoft notes a recruiting-system change that may delay job postings appearing on the site, and that it usually cannot give individualized feedback to candidates who are not selected."
+      },
+      {
+        "name": "Boeing Careers",
+        "url": "https://jobs.boeing.com/",
+        "what_it_is": "Boeing's job board and careers site, covering its Seattle-area supply chain, quality, and program management roles.",
+        "best_for": "Reading Boeing's actual requisition language before an interview. Aerospace supply chain has its own vocabulary — rate readiness, AS9100, supplier quality — and the reqs teach it.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Many Boeing roles require US person status or have export-control (ITAR/EAR) restrictions that can disqualify F-1 candidates. Check each posting carefully before investing prep time."
+      },
+      {
+        "name": "Starbucks Careers",
+        "url": "https://careers.starbucks.com/",
+        "what_it_is": "Starbucks' careers site, including its Seattle support-center supply chain, sourcing, and planning roles.",
+        "best_for": "A strong non-tech target with a real global supply chain — green coffee sourcing, roasting, and distribution — plus an ethical-sourcing program that connects directly to your compliance background.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": ""
+      },
+      {
+        "name": "Costco Careers",
+        "url": "https://www.costco.com/f/-/careers",
+        "what_it_is": "Costco's careers site, including Issaquah corporate roles in buying, inventory, and logistics.",
+        "best_for": "A distinctive retail supply-chain story — Costco's deliberately narrow SKU count and high inventory turns make it a good case to have an opinion about before interviewing there.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "Costco is known for promoting from within and for a slower, more traditional hiring process. Set expectations accordingly."
+      },
+      {
+        "name": "Glassdoor — Interviews",
+        "url": "https://www.glassdoor.com/Interview/index.htm",
+        "what_it_is": "Candidate-reported interview questions, process descriptions, and difficulty ratings by company and role.",
+        "best_for": "Sanity-checking the shape of a specific loop a week before it happens — how many rounds, roughly what gets asked.",
+        "cost": "Freemium",
+        "domains": [
+          "All"
+        ],
+        "caveat": "Deliberate policy: we link out only and never scrape Glassdoor. It returns HTTP 403 to automated requests and its terms prohibit automated collection. Reports are also self-selected and often years old, so treat them as anecdote."
+      },
+      {
+        "name": "Blind (teamblind.com)",
+        "url": "https://www.teamblind.com/",
+        "what_it_is": "Verified-employee anonymous forum, heavily used at Amazon and Microsoft, where people discuss team reputations, comp bands, hiring freezes, and org churn.",
+        "best_for": "The question no careers page answers: is this specific org a good place to land right now? Useful before accepting an offer.",
+        "cost": "Free",
+        "domains": [
+          "All"
+        ],
+        "caveat": "Deliberate policy: link-out only, no scraping. Strongly negative selection bias and engineering-heavy, so discount accordingly. Never repeat something read on Blind in an interview."
+      },
+      {
+        "name": "r/supplychain",
+        "url": "https://www.reddit.com/r/supplychain/",
+        "what_it_is": "Reddit community of working supply-chain practitioners discussing tools, certifications, career paths, salaries, and day-to-day reality of the job.",
+        "best_for": "Calibrating what an SCM analyst actually does day to day, and which certifications practitioners think are worth the money versus which are resume theater.",
+        "cost": "Free",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "Deliberate policy: link-out only, no scraping. Anonymous opinion, not data."
+      },
+      {
+        "name": "r/prodmgmt",
+        "url": "https://www.reddit.com/r/prodmgmt/",
+        "what_it_is": "Reddit community focused on product management practice and careers.",
+        "best_for": "PM-specific career questions when you want practitioner opinion rather than a vendor's content marketing.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "caveat": "Deliberate policy: link-out only, no scraping. Smaller and quieter than r/ProductManagement; check both."
+      },
+      {
+        "name": "LeetCode Discuss — Interview Experiences",
+        "url": "https://leetcode.com/discuss/interview-experience",
+        "what_it_is": "Candidate write-ups of full interview loops, usually round by round with the questions asked.",
+        "best_for": "Your SQL screens specifically. It is engineering-dominated, but the SQL and data-round write-ups transfer directly to analyst loops.",
+        "cost": "Freemium",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": "Deliberate policy: link-out only, no scraping. Returns HTTP 403 to automated requests. Overwhelmingly software-engineering content, so expect a low hit rate on ops and SCM roles."
+      }
+    ]
+  },
+  {
+    "group": "Quant & Case Math",
+    "group_blurb": "Two distinct skills, both testable. Mental math under time pressure with someone watching, and SQL against a schema you have just been shown. Both degrade fast without practice and both are cheap to maintain with short, frequent reps rather than long sessions.",
+    "items": [
+      {
+        "name": "PrepLounge — Mental Math Tool",
+        "url": "https://www.preplounge.com/en/mental-math",
+        "what_it_is": "A timed drill generator for the arithmetic case interviews actually demand: percentage changes, ratios, large-number multiplication, and breakeven calculations.",
+        "best_for": "Ten minutes a day. The goal is not speed for its own sake — it is being able to do arithmetic out loud while still talking, which is the part candidates fail.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain",
+          "Program & Product Management"
+        ],
+        "caveat": "Drills arithmetic in isolation. Pair it with full cases so you practise computing while narrating."
+      },
+      {
+        "name": "SQLBolt",
+        "url": "https://sqlbolt.com/",
+        "what_it_is": "Free interactive SQL lessons that run in the browser with no signup, progressing from SELECT through joins, aggregation, and subqueries, each with exercises checked in place.",
+        "best_for": "Going from zero or rusty to functional SQL in a weekend. This is the right starting point before Beyond-LeetCode-SQL, which assumes fluency.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": "Covers fundamentals only — no window functions or optimization, which is where interview questions actually live. Graduate to Beyond-LeetCode-SQL."
+      },
+      {
+        "name": "SQL Tutorial (formerly Mode Analytics)",
+        "url": "https://www.thoughtspot.com/sql-tutorial",
+        "what_it_is": "A well-regarded SQL tutorial series organized around analytical use cases — cohorting, funnels, time series — rather than syntax, which is closer to how ops analytics questions are actually phrased.",
+        "best_for": "The intermediate step: writing SQL that answers a business question, not just SQL that parses.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "caveat": "This was the Mode Analytics SQL tutorial; mode.com/sql-tutorial now redirects to ThoughtSpot after the acquisition, so bookmark the ThoughtSpot URL. Some interactive features from the Mode era are gone."
+      },
+      {
+        "name": "RocketBlocks",
+        "url": "https://www.rocketblocks.me/",
+        "what_it_is": "Skill-drill platform with structured exercise sets for consulting, product management, and business-operations interviews — chart reading, structuring, market sizing, and math, drilled one skill at a time with expert answers.",
+        "best_for": "If you want deliberate practice on one weak sub-skill rather than whole mock interviews. Its drill-based design is closer to how skills actually improve.",
+        "cost": "Paid",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Paid, and consulting-and-PM oriented with no supply-chain track. Only worth it if you identify a specific recurring weakness through mocks first."
+      },
+      {
+        "name": "Victor Cheng — Case Interview Secrets (companion pages)",
+        "url": "https://caseinterview.com/case-interview-secrets-book-frameworks",
+        "what_it_is": "Free companion material for Cheng's book covering how to structure a case and where candidates lose points, including case-math guidance.",
+        "best_for": "Reading before the first real case round, to understand what the interviewer is scoring rather than what the candidate thinks is being scored.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Free to read, but the associated math-practice application is login-gated. All rights reserved."
+      }
+    ]
+  },
+  {
+    "group": "Communities & Forums",
+    "group_blurb": "Places to ask a question and get a practitioner answer. Your structural problem is that you have no ops or SCM peer group for mocks yet — these are where you build one. Post a real question rather than lurking; the response rate on a specific, well-framed question is much higher than most people expect.",
+    "items": [
+      {
+        "name": "PrepLounge — Consulting Q&A Forum",
+        "url": "https://www.preplounge.com/consulting-forum",
+        "what_it_is": "An active forum where candidates ask case and interview questions and both peers and paid coaches answer, often with detailed worked reasoning.",
+        "best_for": "Posting a specific case you got stuck on and getting a structured critique. The coach answers here are often genuinely good and free to read.",
+        "cost": "Freemium",
+        "domains": [
+          "Operations",
+          "Program & Product Management"
+        ],
+        "caveat": "Consulting-recruiting framing throughout, and coaches have an obvious incentive to upsell."
+      },
+      {
+        "name": "r/ProductManagement",
+        "url": "https://www.reddit.com/r/ProductManagement/",
+        "what_it_is": "The largest product management community on Reddit — career transitions, interview debriefs, and frequent threads on breaking into PM from adjacent functions.",
+        "best_for": "Your specific transition question: how a supply-chain or risk background is received in non-technical PM and program hiring. That thread recurs often and the answers are candid.",
+        "cost": "Free",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "caveat": "Link-out only, no scraping. Heavy survivorship and complaint bias."
+      },
+      {
+        "name": "r/operations",
+        "url": "https://www.reddit.com/r/operations/",
+        "what_it_is": "Reddit community for operations practitioners across manufacturing, logistics, and business operations.",
+        "best_for": "Understanding what operations managers actually spend their week on, which makes your 'why operations?' answer concrete instead of aspirational.",
+        "cost": "Free",
+        "domains": [
+          "Operations"
+        ],
+        "caveat": "Link-out only, no scraping. Lower volume than r/supplychain."
+      },
+      {
+        "name": "Lenny's Newsletter",
+        "url": "https://www.lennysnewsletter.com/",
+        "what_it_is": "The most widely read product and growth newsletter, with a large free archive of posts on PM interviewing, career ladders, and how PM work is actually evaluated, plus a paid subscriber community.",
+        "best_for": "Understanding how PM hiring managers think, which is more useful than another list of questions. Search the archive for the interview and career-transition posts.",
+        "cost": "Freemium",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "caveat": "Tech-product and startup oriented, so translate for a program-management or non-technical PM role at a large company."
+      }
+    ]
+  },
+  {
+    "group": "Books",
+    "group_blurb": "Four or five books read properly beat twenty skimmed. A good order: one interview-mechanics book, one Amazon-operating-model book if Amazon is on your target list, and one supply-chain textbook for the vocabulary graduate coursework assumes.",
+    "items": [
+      {
+        "name": "Cracking the PM Interview — Gayle Laakmann McDowell and Jackie Bavaro",
+        "url": "https://www.crackingthepminterview.com/",
+        "what_it_is": "The standard book on landing a product management role: how the PM role differs across company types, resumes and cover letters, and the question categories — estimation, behavioral, product design, technical, and the pitch — with worked examples.",
+        "best_for": "Your non-technical PM and TPM targets. The estimation and behavioral chapters transfer directly to program-management loops too.",
+        "cost": "Paid",
+        "domains": [
+          "Program & Product Management"
+        ],
+        "meta": "Official author site; a companion volume, Cracking the PM Career, covers the job rather than the interview",
+        "caveat": "Written for tech PM hiring, so the product-design chapters are less relevant to a supply-chain program role than the estimation and behavioral ones."
+      },
+      {
+        "name": "Working Backwards — Colin Bryar and Bill Carr",
+        "url": "https://www.workingbackwards.com/",
+        "what_it_is": "Two former Amazon executives (27 years combined) on how Amazon actually operates: the Bar Raiser hiring process, PR/FAQ documents, narratives instead of slide decks, input versus output metrics, Weekly Business Reviews, Correction of Errors, and single-threaded leadership. The site carries free templates and concept explainers alongside the book, including PR/FAQ and Correction of Errors templates and a page on acing an Amazon interview.",
+        "best_for": "Amazon interviews, and it is the highest-leverage book on this list for you, given Amazon's share of your target list. The free PR/FAQ and Correction of Errors templates alone are worth the visit even before buying the book.",
+        "cost": "Freemium",
+        "domains": [
+          "All"
+        ],
+        "meta": "Free resources include WBR app and sample report, PR/FAQ template, Correction of Errors template, and concept explainers; the authors' paid courses run $99-$299 and up",
+        "caveat": "The authors sell courses, so the site is partly a funnel. The free templates and concept pages stand on their own."
+      },
+      {
+        "name": "Supply Chain Management: Strategy, Planning, and Operation — Chopra and Meindl",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/supply-chain-management-strategy-planning-and-operation/P200000005938",
+        "what_it_is": "The standard graduate supply-chain textbook, covering network design, demand forecasting, aggregate planning, inventory and safety stock, transportation, sourcing, and pricing, with the quantitative models behind each.",
+        "best_for": "The vocabulary and models supply chain coursework and interviewers will both assume. When a JD says 'safety stock optimization' or 'network design', this is where the actual math lives.",
+        "cost": "Paid",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "Expensive and likely already assigned in your program — check your program's reading list and your library before buying. Textbook, not interview prep."
+      },
+      {
+        "name": "The Goal — Eliyahu Goldratt (overview)",
+        "url": "https://en.wikipedia.org/wiki/The_Goal_(novel)",
+        "what_it_is": "Encyclopedia overview of the business novel that introduced the Theory of Constraints through the story of a plant manager finding and fixing bottlenecks.",
+        "best_for": "The single most commonly referenced book in operations interviews. Having read it, and being able to explain a bottleneck you personally found and relieved, is a reliable answer to 'how do you think about improving a process?'",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "CC-BY-SA 4.0 overview page; the book itself is a paid publication",
+        "caveat": "This is an overview page, not the book. Read the actual book — it is short and reads as fiction — and do not claim to have read it on the strength of a summary."
+      },
+      {
+        "name": "Theory of Constraints (concept reference)",
+        "url": "https://en.wikipedia.org/wiki/Theory_of_constraints",
+        "what_it_is": "The five focusing steps — identify the constraint, exploit it, subordinate everything else to it, elevate it, then repeat — plus drum-buffer-rope and throughput accounting.",
+        "best_for": "The specific mechanics behind The Goal, so you can name the five steps rather than gesture at 'find the bottleneck'.",
+        "cost": "Free",
+        "domains": [
+          "Operations",
+          "Supply Chain"
+        ],
+        "meta": "CC-BY-SA 4.0",
+        "caveat": ""
+      }
+    ]
+  },
+  {
+    "group": "Courses & Certifications",
+    "group_blurb": "Two different purposes, worth keeping separate. Courses close a specific knowledge gap and can be audited free. Certifications are a hiring signal and cost real money, so only pursue one if a pattern of target job descriptions actually asks for it — which this pipeline's scraped JDs can tell you.",
+    "items": [
+      {
+        "name": "MITx MicroMasters in Supply Chain Management",
+        "url": "https://micromasters.mit.edu/scm/",
+        "what_it_is": "MIT Center for Transportation and Logistics' online credential: five courses — SC0x Supply Chain Analytics, SC1x Fundamentals, SC2x Design, SC3x Dynamics, SC4x Technology and Systems — plus a comprehensive final exam, described by MIT as equivalent to one semester of graduate coursework. Courses can be taken individually.",
+        "best_for": "SC0x Supply Chain Analytics specifically. It is the most directly interview-relevant of the five and the closest thing to a rigorous free curriculum for the quantitative side of supply chain.",
+        "cost": "Freemium",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "meta": "Over 1.25M enrollments and 80,534 certificates issued per MIT's 2025 impact report; courses enroll on a fixed calendar and the page lists an audit option",
+        "caveat": "Auditing is offered but the exact audit limits and certificate pricing are not stated on this page — check MIT Learn. Taking the full five-course sequence alongside a full-time course load is not realistic; take one course."
+      },
+      {
+        "name": "edX — Supply chain courses",
+        "url": "https://www.edx.org/learn/supply-chain-design-related-courses",
+        "what_it_is": "edX's catalogue of supply-chain and supply-chain-design courses from multiple universities, most with a free audit track.",
+        "best_for": "Filling one narrow gap — demand forecasting, procurement, transportation — in two or three weeks without committing to a full program.",
+        "cost": "Freemium",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "meta": "Reached via redirect from the older MITx MicroMasters catalogue URL",
+        "caveat": "Catalogue quality varies widely by provider. Audit tracks often hide graded assignments, which is where the learning is."
+      },
+      {
+        "name": "Google Project Management Professional Certificate (Coursera)",
+        "url": "https://www.coursera.org/professional-certificates/google-project-management",
+        "what_it_is": "A multi-course certificate covering project initiation, planning, execution, Agile, and stakeholder management, with templates and a capstone.",
+        "best_for": "Your program-management and TPM targets, where you may have real coordination experience but no formal PM credential to point at. Cheaper and faster than PMP and it gives you the shared vocabulary.",
+        "cost": "Paid",
+        "domains": [
+          "Program & Product Management",
+          "Operations"
+        ],
+        "caveat": "Subscription-priced and widely held, so it is table stakes rather than a differentiator. Check whether your school or employer provides Coursera access before paying. Financial aid is available on Coursera."
+      },
+      {
+        "name": "ASCM certifications — CPIM, CSCP, CLTD",
+        "url": "https://www.ascm.org/learning-development/certify-credential/",
+        "what_it_is": "The three principal supply-chain credentials: CPIM for production and inventory management, CSCP for end-to-end supply chain, CLTD for logistics, transportation, and distribution.",
+        "best_for": "CSCP is the usual pick for a generalist supply-chain analyst path and is the one most frequently named in JDs. Decide after graduation, not during — the degree itself is the stronger signal while you are in it.",
+        "cost": "Paid",
+        "domains": [
+          "Supply Chain",
+          "Operations"
+        ],
+        "caveat": "The URL returns HTTP 200 but is JavaScript-rendered and our automated fetch read nothing, so verify pricing, prerequisites, and any student rate on-site."
+      },
+      {
+        "name": "ISACA credentials — CRISC and CISA",
+        "url": "https://www.isaca.org/credentialing",
+        "what_it_is": "Risk and audit credentials: CRISC for risk and information-systems control, CISA for information-systems audit.",
+        "best_for": "Only if you decide to keep Risk & Compliance as a live parallel track rather than a background differentiator. CRISC is the better fit for a risk-analyst path.",
+        "cost": "Paid",
+        "domains": [
+          "Risk & Compliance"
+        ],
+        "caveat": "Both carry experience requirements plus exam and membership costs. Probably a post-graduation decision, not a during-program one."
+      }
+    ]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "risk-framework-new-business-line",
+    "domain": "Risk & Compliance",
+    "title": "Risk framework for a new business line",
+    "difficulty": "core",
+    "prompt": "We are standing up a brand-new business line. Assume it goes live in two quarters and nobody has written a single control yet. How do you build the risk framework for it?",
+    "why_asked": "Screens for whether you can build a proportionate control environment from scratch and place accountability correctly, rather than producing a checklist.",
+    "framework": "Three Lines of Defense",
+    "structure": [
+      "Start by understanding the business model in enough detail to see where risk actually enters — who the counterparties are, how money and goods move, which steps are automated versus human judgment, what data is collected, which jurisdictions it touches, and which third parties are involved.",
+      "Build the risk taxonomy before any controls: enumerate categories in a mutually exclusive, collectively exhaustive way — strategic, operational, financial, regulatory, financial crime (fraud, money laundering, sanctions), third party, technology and information security, and people and conduct — so no risk falls into a gap between owners.",
+      "Run risk identification with the people who will actually do the work rather than only the risk team: process walkthroughs plus an explicit 'how would you abuse this?' session surface far more than any template, because the operators already know where the soft spots are.",
+      "Assess each risk on likelihood and impact to get an inherent rating, then re-rate it assuming existing controls operate to get residual — the inherent-versus-residual distinction is specific vocabulary the interviewer is listening for, so use it deliberately.",
+      "Agree risk appetite explicitly and numerically with the business owner before designing controls, because how much of this the company is willing to accept determines control intensity, and an unstated appetite turns every control debate into a personality fight.",
+      "Design controls proportionate to residual risk and be deliberate about the mix: preventive controls that block the event, detective controls that find it afterwards, and corrective processes — automated wherever volume is high, manual only where judgment is genuinely required.",
+      "Assign ownership using the Three Lines of Defense: the business owns and manages its risk day to day as the first line, risk and compliance set the framework and provide oversight and challenge as the second line, and internal audit provides independent assurance as the third — and say plainly that the second line does not own the risk.",
+      "Instrument the framework so it stays alive: key risk indicators with amber and red thresholds, a risk register with named owners and review dates, an issue and exception process, a reporting line into a governance forum, and a scheduled reassessment, because a framework written once and never revisited is decoration."
+    ],
+    "quant_hooks": [
+      "Inherent risk score = likelihood x impact on a defined scale (for example 1 to 5 each, producing 1 to 25), then residual risk = the same scoring re-run assuming controls operate as designed. Prioritize on residual, and be able to say which specific control moved a 20 down to a 6.",
+      "Express appetite in units the business recognizes: a fraud loss tolerance of 15 basis points of gross transaction value plus a false-positive ceiling is actionable, whereas 'low appetite for fraud' is not. At $50M of monthly volume, 15 bps is $75K per month, which is a number people can argue about productively.",
+      "Cost every control you propose: a manual review step at four minutes and a loaded $30 per hour is about $2 per case, so at 100,000 cases per month it is roughly $200K per month — only defensible if the loss it prevents exceeds that. Saying this out loud is the single most credible move available to a risk candidate.",
+      "Set KRI thresholds against observed variance rather than round numbers: if the metric's normal monthly range is 8 to 12 bps, an amber at 14 and a red at 18 will fire on genuine deterioration instead of on noise."
+    ],
+    "good_signals": [
+      "States the Three Lines of Defense correctly, including that the first line owns the risk and the second line challenges rather than owns it.",
+      "Separates inherent from residual risk and prioritizes on residual, which shows the model is understood rather than memorized.",
+      "Insists on a written risk appetite from the business before designing controls, instead of inventing one implicitly through control choices.",
+      "Costs the controls and names at least one risk they would deliberately accept — explicit risk acceptance is a senior behavior, not an admission of weakness."
+    ],
+    "failure_modes": [
+      "Jumping straight to a control list — identity verification, approval limits, a review queue — before the business model or the risk taxonomy is understood.",
+      "Proposing maximum control everywhere with no regard for operational cost, throughput, or customer friction, which is the fastest route to being labelled a blocker and routed around.",
+      "Taking ownership of the risk on behalf of the business, which collapses the second line into the first and leaves nobody actually accountable.",
+      "Producing a static register with no KRIs, no thresholds, no escalation path, and no reassessment cadence — a document rather than a framework."
+    ],
+    "followups": [
+      "The business owner says your controls will kill the launch date. What do you actually do?",
+      "Name one risk you would deliberately accept in the first six months, and tell me how you would document that acceptance and who signs it.",
+      "The business line launches in a second country three months later. What changes in your framework and what stays the same?",
+      "Two quarters after launch, how would you tell whether your framework is working?"
+    ]
+  },
+  {
+    "id": "risk-fraud-high-volume",
+    "domain": "Risk & Compliance",
+    "title": "Detect fraud at high transaction volume",
+    "difficulty": "core",
+    "prompt": "We process a few million transactions a month and we know some share of them are fraudulent. There is no detection system today. How would you find the fraud?",
+    "why_asked": "Screens for practical fraud-detection judgment — typologies, ground truth, precision and recall economics, and finite review capacity — rather than an appeal to machine learning.",
+    "framework": "MECE",
+    "structure": [
+      "Define what counts as fraud here before designing any detection, because the typologies drive everything downstream: first-party versus third-party fraud, account takeover, stolen payment instruments, promotion and referral abuse, collusion between two parties on the platform, synthetic identities, and insider abuse are genuinely different problems with different signals.",
+      "Enumerate those typologies mutually exclusively and collectively exhaustively, then rank them by expected loss rather than by how interesting they are — a rule set that elegantly catches an exotic pattern responsible for 2% of losses is a bad use of your first month.",
+      "Map the transaction lifecycle and identify every point where intervention is possible: account creation, device and identity signals, pre-authorization, at authorization, post-authorization but pre-fulfillment, and post-settlement recovery — because detection value depends heavily on whether you can still stop the money or only report on it.",
+      "Establish ground truth before anything else, since without labelled outcomes — chargebacks, confirmed fraud, recovered funds, confirmed false positives — you cannot measure any of this; define the label, the lag until it becomes reliable, and who adjudicates disputes.",
+      "Design in layers rather than reaching for one silver bullet: deterministic rules for known patterns and hard blocks, velocity and aggregation checks counting events per entity per time window, entity linkage across accounts, devices, payment instruments and addresses, anomaly scoring for patterns you have not seen, and a human review queue for the ambiguous middle.",
+      "Treat that review queue as a capacity-constrained system, not an infinite sink: set score thresholds by what the team can actually work per day, route by expected loss so the highest-value cases get human eyes first, and capture reviewer decisions as new labels.",
+      "Tune on economics rather than on accuracy: quantify the cost of a missed fraud against the cost of a false positive including the customer-experience and churn cost of declining a good user, then set thresholds where marginal loss prevented equals marginal cost incurred.",
+      "Build the feedback loop and expect adversarial adaptation: monitor for rule decay, watch for actors probing just under your thresholds, review the rule set on a fixed cadence, and keep a channel from the front line — support tickets, reviewer notes, appeals — into the rule backlog."
+    ],
+    "quant_hooks": [
+      "Precision = true positives / (true positives + false positives). Recall = true positives / (true positives + false negatives). Fraud teams live on this trade-off, so quote both plus the review volume each threshold implies.",
+      "The base rate is the trap, and doing this arithmetic out loud is the clearest signal you have actually worked in fraud: at 0.1% prevalence across 1M transactions there are about 1,000 true frauds. A model with 95% recall and 90% specificity flags roughly 950 of them and also flags about 10% of the 999,000 legitimate transactions, which is close to 100,000 false positives — under 1% precision, and an alert volume no review team on earth can absorb.",
+      "Set thresholds on expected value, not on score: block when expected fraud loss (probability x exposure) exceeds the expected cost of a false decline (probability of a good user x margin lost x any churn multiple). A $200 transaction at 4% fraud probability carries $8 of expected loss, so blocking it is correct only if a wrong block costs less than $8.",
+      "Report loss rate in basis points of volume — fraud loss / gross transaction value x 10,000 — so performance stays comparable month to month as volume grows, and always pair it with false-positive rate so nobody can win by blocking everything."
+    ],
+    "good_signals": [
+      "Raises the base-rate problem unprompted and demonstrates that high accuracy can still produce a completely unusable alert volume.",
+      "Designs around the review queue's finite capacity instead of assuming investigators appear on demand.",
+      "Insists on labels and ground truth before models, and names the label lag — chargebacks can take weeks to months to settle.",
+      "Frames thresholds as an economic decision and treats false-positive cost on good customers as a real cost rather than an afterthought."
+    ],
+    "failure_modes": [
+      "Answering 'I would train a machine learning model' with no labels, no typologies, no features, and no review capacity — the single most common weak answer to this question.",
+      "Optimizing recall or accuracy alone and generating an alert volume the team cannot work, so genuine fraud sits unreviewed in a backlog and the program looks worse than doing nothing.",
+      "Ignoring the cost of false positives, which once churn is counted is frequently larger than the fraud loss itself.",
+      "Treating fraud as a static problem, with no monitoring for rule decay and no expectation that adversaries will probe and adapt to whatever you deploy."
+    ],
+    "followups": [
+      "Your best rule runs at 60% precision and your reviewers can handle 500 cases a day. Walk me through setting the threshold.",
+      "Fraud loss drops 40% but complaints about declined transactions triple. What do you do?",
+      "You start to suspect an insider is involved. How does your approach change?",
+      "How would you detect a fraud pattern you have never seen before, with no labels for it?"
+    ]
+  },
+  {
+    "id": "risk-compliance-vs-speed",
+    "domain": "Risk & Compliance",
+    "title": "Compliance control versus the launch date",
+    "difficulty": "core",
+    "prompt": "Compliance says a control has to be in place; the business says that control costs them the quarter. Both of them are partly right. How do you handle it?",
+    "why_asked": "Screens for whether you can be a risk partner rather than a blocker: separating mandatory from preferred, pricing your own ask, and documenting accepted risk properly.",
+    "framework": "Risk Matrix",
+    "structure": [
+      "Separate what is legally or regulatorily required from what is internal policy or preference, because the first is not negotiable and the second is a risk-based judgment call — conflating the two is precisely how compliance functions lose credibility and get routed around.",
+      "Get the actual source text in front of you: the regulation, the license condition, the contractual obligation, or the internal standard, and compare what it genuinely mandates against what your current process happens to do out of habit.",
+      "Quantify both sides. On the risk side: likelihood and impact of the exposure including penalty exposure, license risk, customer harm, and remediation cost. On the business side: the revenue, throughput, conversion, or launch delay in real numbers.",
+      "Place the exposure on a likelihood-by-impact matrix with defined bands so it is comparable to the other risks the company already carries — high impact plus high likelihood ends the conversation, but most real cases land in the middle where the actual judgment lives, so say which quadrant you think this is and why.",
+      "Find the option neither side has proposed: narrow the scope so the control applies only to the high-risk segment, phase the rollout, substitute a fast detective control with tight monitoring for a slow preventive one, or run a manual interim process with a committed automation date.",
+      "Price the friction of your own ask honestly — seconds added to onboarding, percent of volume routed to review, FTEs required, latency introduced — because a compliance partner who can state the cost of their own requirement gets trusted, and one who cannot gets bypassed.",
+      "If a gap has to be accepted, document it as a proper time-bound exception: named accountable owner, compensating controls, monitoring in place, an expiry date, and sign-off at the right level — an undocumented accepted risk is the thing that ends careers when an examiner finds it.",
+      "Where you genuinely cannot agree, escalate on facts rather than positions: present both options with their quantified consequences to whoever actually holds the decision right, and state your recommendation explicitly instead of hiding behind neutrality."
+    ],
+    "quant_hooks": [
+      "Put both sides in the same units: 'this control adds 90 seconds to onboarding, and at a historical 3% drop-off per added minute that is roughly 4 to 5% of signups this quarter' against 'the exposure is N accounts x average harm, plus penalty risk.' Whoever quantifies both sides usually wins the room.",
+      "Check whether the risk is concentrated before accepting a blanket control, because that is where the real savings live: if 8% of volume carries 70% of the risk, applying the heavy control to that 8% preserves most of the risk reduction at roughly a tenth of the friction.",
+      "Size the expected cost of non-compliance including the tail, not just the headline fine: probability of detection x penalty, plus remediation and lookback costs, which are often the larger number. A lookback review of 200,000 historical cases at six minutes each is about 20,000 hours of work.",
+      "Score the residual exposure on the same likelihood x impact scale the company uses for everything else, so the decision is a portfolio comparison rather than an argument about adjectives."
+    ],
+    "good_signals": [
+      "Draws a hard line between legally required and internally preferred, and applies it consistently in both directions.",
+      "Quantifies the operational cost of the compliance ask, not only the risk — this is the behavior that separates a partner from a blocker.",
+      "Finds the risk-based middle path through segmentation, phasing, or a compensating control rather than defaulting to a binary yes or no.",
+      "Knows how to document an accepted risk properly, including expiry, owner, compensating control, monitoring, and approval level."
+    ],
+    "failure_modes": [
+      "Absolutism in either direction — 'compliance is non-negotiable, full stop' with no analysis of what the requirement actually says, or 'we will fix it after launch' with no exception process at all.",
+      "Proposing controls with no idea what they cost the operation, then being genuinely surprised when the business quietly works around them.",
+      "Allowing the gap informally, with no written exception, no owner, and no expiry — which is worse than either a clean yes or a clean no, because nobody is accountable and nobody is monitoring.",
+      "Escalating the disagreement as a personality conflict or a complaint, rather than as two quantified options plus a recommendation."
+    ],
+    "followups": [
+      "The business ships without your control. What do you do that afternoon?",
+      "How do you decide the right approval level for accepting a risk — team lead, VP, or a formal committee?",
+      "Your exception expires and the permanent fix has not been built. Now what?",
+      "How do you avoid becoming the team everyone routes around?"
+    ]
+  },
+  {
+    "id": "risk-vendor-audit-third-party",
+    "domain": "Risk & Compliance",
+    "title": "Audit process for a single-source supplier",
+    "difficulty": "core",
+    "prompt": "We are about to onboard a new supplier who will be single-source for a component we cannot run without. Design the audit process for them, from before we sign the contract through ongoing monitoring.",
+    "why_asked": "Screens for third-party risk fundamentals — tiering, contractual audit rights, evidence quality, sub-tier exposure, and whether findings ever actually get closed.",
+    "framework": "Risk Matrix",
+    "structure": [
+      "Establish criticality and risk tier before designing anything, because audit depth has to be proportionate: single-source with no qualified alternate, direct impact on production or customer safety, access to customer data or systems, spend concentration, and jurisdiction risk all push the tier upward.",
+      "Run pre-contract due diligence sized to that tier: financial health, which matters because financial failure is the most common way third parties actually hurt you rather than fraud; operational capability and capacity; quality systems and certifications; information security posture; sanctions and adverse-media screening of the entity and its beneficial owners; and labor and environmental practices.",
+      "Get audit rights into the contract before signing, since you cannot audit what you have no right to audit — the right to audit and inspect records, the right to audit subcontractors, notification obligations for adverse events and change of control, security and data requirements, performance SLAs with remedies, and business continuity obligations.",
+      "Scope the audit against actual risk rather than a generic checklist: choose the handful of controls whose failure would genuinely hurt you, and write the audit program as specific tests with sample sizes and pass criteria rather than as questions a supplier can simply answer yes to.",
+      "Distinguish evidence tiers explicitly and say which you are relying on: a self-assessment questionnaire is the weakest form of assurance, a third-party certification or existing audit report is middling and must be checked for scope and date, and your own on-site or process audit is the strongest and the most expensive.",
+      "Go beyond tier one where the risk actually lives, because for a single-source component your real exposure often sits with your supplier's supplier — ask for their sub-tier map, their own supplier qualification process, and their single points of failure.",
+      "Define the ongoing program rather than just the onboarding gate: a reassessment cadence set by tier, continuous monitoring signals (delivery and quality performance, financial health alerts, sanctions and news screening, security ratings, complaint and incident data), and trigger-based re-audits on adverse events.",
+      "Close the loop with a real corrective action process: findings rated by severity, a corrective action plan with owners and dates, verification that the fix actually worked, and a defined consequence path up to qualifying an alternate source or exiting — an audit whose findings are never verified closed is theater."
+    ],
+    "quant_hooks": [
+      "Tier by exposure rather than spend: a $200K single-source supplier whose failure stops a $50M production line outranks a $5M supplier with three qualified alternates. Score criticality x likelihood of failure on a matrix and let the tier set audit depth and frequency — tier 1 on-site annually, tier 3 questionnaire every two years.",
+      "Sample size determines whether a clean audit means anything: with 25 items sampled and a true 10% failure rate, the chance of seeing zero failures is 0.9 to the 25th power, about 7% — so a clean sample of 25 is meaningful, but a clean sample of 5 (0.9 to the 5th, about 59%) tells you almost nothing. State your sample basis.",
+      "Quantify the concentration risk the audit exists to manage: single-source share is 100%, time to qualify an alternate is N months, and days of buffer inventory is D. If N months of qualification exceeds D days of buffer, you have an unmitigated continuity exposure no matter how clean the audit came back.",
+      "Price the program so it is actually executable: an on-site audit costs travel plus roughly two auditor-days plus supplier time — call it several thousand dollars each — so a 400-supplier base cannot be audited on-site annually, which is exactly why tiering is the entire game."
+    ],
+    "good_signals": [
+      "Tiers the supplier by exposure first and explicitly sizes the audit to the tier, rather than applying one checklist to everybody.",
+      "Raises contractual audit rights before signing, which is the detail that shows they have actually done third-party risk rather than read about it.",
+      "Asks about sub-tier suppliers and the supplier's own single points of failure instead of stopping at tier one.",
+      "Treats the audit as a continuous monitoring program with verified corrective action, not a one-time onboarding gate."
+    ],
+    "failure_modes": [
+      "Producing a generic questionnaire with no tiering and no tests, then treating a returned questionnaire as if it were assurance.",
+      "Auditing only financial and quality dimensions and missing information security, sanctions and beneficial ownership, labor practices, and business continuity.",
+      "Never verifying that findings were remediated, so the same finding reappears in the next audit cycle and the program loses all credibility with the business.",
+      "Designing a program whose cost and auditor-hours exceed anything the organization could staff, which means in practice it simply will not happen."
+    ],
+    "followups": [
+      "Your audit finds a material issue two weeks before production start. What do you recommend?",
+      "The supplier refuses an on-site audit and offers a certification instead. Do you accept it, and what specifically do you check?",
+      "How would your approach change if the supplier sits in a jurisdiction with sanctions or forced-labor exposure?",
+      "You have 400 suppliers and budget to audit 20 on-site this year. How do you choose the 20?"
+    ]
+  },
+  {
+    "id": "risk-escalate-missed-risk",
+    "domain": "Risk & Compliance",
+    "title": "You found a risk nobody else saw",
+    "difficulty": "core",
+    "prompt": "Tell me about a risk you identified that others had missed. Then tell me what you would do if the team that owned it did not want to hear about it.",
+    "why_asked": "Screens for escalation judgment: whether you verify and size a risk, give the owner a fair chance to act, and drive to an attributable decision instead of a grudge.",
+    "framework": "Three Lines of Defense",
+    "structure": [
+      "Lead with the behavioral answer in a structured form — situation, what you saw, what you did, and the outcome with a number attached — because this question is scored simultaneously as a story and as a judgment test.",
+      "Before escalating anything, verify the risk is real: reproduce it, size it, and check whether it is already known and consciously accepted somewhere, because escalating a documented accepted risk as a fresh discovery is a credibility-ending move.",
+      "Size the exposure in the language your audience uses — accounts affected, dollars at risk, the specific regulatory obligation implicated, customers harmed, time to detection — since an unquantified risk gets filed as an opinion and forgotten.",
+      "Take it to the accountable owner first and privately, with the evidence and a proposed mitigation, and give them a genuine chance to own it; going around the first line before they have had that chance destroys the relationship you need for every future finding.",
+      "Separate urgency from importance and act accordingly: if there is active harm or a live exposure you interrupt people today and ask for interim containment, whereas a structural weakness routes through the normal risk register and governance process.",
+      "If the owner declines to act, escalate on facts and process rather than on personality — log it formally with your assessment and their documented decision, state the residual exposure, and use the governance route, since the second line's job is precisely to challenge and to report, and internal audit as the third line is the independent path when the first and second lines deadlock.",
+      "Drive to an explicit, attributable outcome either way: the risk gets mitigated, or somebody with the authority to accept it accepts it in writing with an expiry date and compensating controls. An unresolved, undocumented finding is the worst of the three possible endings.",
+      "Answer the systemic question the good interviewers are really asking: why did the existing process not catch this, and what mechanism — a control, a monitoring signal, a checklist item, a review gate — would catch the next one without depending on you happening to notice."
+    ],
+    "quant_hooks": [
+      "Size before escalating: affected population x probability x average impact, plus the time dimension. A small per-event loss running undetected for eighteen months is usually a far bigger number than a dramatic one-off, and the lookback remediation cost typically dwarfs the loss itself.",
+      "Treat detection lag as a metric in its own right: if the risk existed for eighteen months before anyone saw it, mean time to detection is the real control failure, and saying so reframes the conversation from 'fix this issue' to 'fix this blind spot.'",
+      "Give the mitigation a price so the owner can actually make a decision: 'an interim manual review of the affected segment is about 400 cases at five minutes each, roughly 33 hours of work, against an estimated continuing exposure of X per month.'"
+    ],
+    "good_signals": [
+      "Verifies and sizes the risk before escalating, and checks whether it is already a known accepted risk.",
+      "Gives the accountable owner the first opportunity to act, and can explain why that sequencing matters for every subsequent finding.",
+      "Escalates with a documented assessment and a proposed mitigation rather than an alarm and a demand.",
+      "Drives to an attributable decision — mitigated or formally accepted — and then asks the systemic question about why the process missed it."
+    ],
+    "failure_modes": [
+      "Broadcasting the finding widely or going straight to a senior leader before speaking to the owner, which wins this battle and loses every future one.",
+      "Escalating an unquantified concern, which gets dismissed as alarmism and trains the organization to discount the next warning.",
+      "Backing down when the owner pushes back and leaving the risk undocumented — silence is the failure mode that actually causes the harm.",
+      "Telling a story whose entire value was personal heroics, with no mechanism left behind to catch the next instance."
+    ],
+    "followups": [
+      "The owner agrees it is a risk but says it is a next-quarter problem. Do you accept that? What would change your answer?",
+      "You escalate and it turns out you were wrong — the risk was not real. How do you handle that, and what changes next time?",
+      "How do you decide when a finding is serious enough to go over someone's head?",
+      "What mechanism would have caught this without you being in the room?"
+    ]
+  },
+  {
+    "id": "risk-new-regulation-multi-market",
+    "domain": "Risk & Compliance",
+    "title": "New regulation, six months, four markets",
+    "difficulty": "stretch",
+    "prompt": "A new regulation takes effect in six months and it hits us in four countries, with slightly different requirements in each. You are running the compliance program. Where do you start, and what does the plan look like?",
+    "why_asked": "Screens for whether you can run a regulatory implementation as a real program — obligations, gaps, lead times, and the global-standard-versus-local-variation design call.",
+    "framework": "Issue Tree",
+    "structure": [
+      "Read the actual text and build an obligations register before planning anything: decompose the regulation into discrete, individually testable obligations with their own effective dates, because the plan is built per obligation and treating the regulation as one monolithic requirement guarantees you miss something.",
+      "Get authoritative interpretation wherever the text is ambiguous — internal or external counsel, regulator guidance, industry associations, peer practice — and document which interpretation you adopted and why, since you will be asked to defend that judgment long after everyone has forgotten the debate.",
+      "Map each obligation against what the business actually does today and produce a gap analysis structured as an issue tree, per obligation and per market: fully compliant, partially compliant, or not compliant, with the specific evidence supporting each conclusion.",
+      "Resolve the multi-market design decision deliberately and early, because this is the question the interviewer actually wants answered: adopt the strictest common standard globally, which is simpler and cheaper to operate but over-complies and may cost business in lighter-touch markets, or localize per market, which is efficient on paper but multiplies process, training, and testing fourfold.",
+      "Convert gaps into a remediation plan with named owners, sequenced by lead time rather than by severity — anything requiring systems change, vendor contract renegotiation, or a regulatory filing or approval starts first, because those lead times are the longest and the least compressible.",
+      "Cover all four remediation dimensions rather than only the system build: policy and procedure updates, system and data changes, training and communication, contract and vendor amendments, plus the record-keeping and evidence that lets you prove compliance afterwards.",
+      "Build a testing and assurance phase before the deadline rather than after it: control testing on a sample, a dry run or parallel run in one market first, and an independent second-line or audit review — a program that lands its build on the effective date with no testing window has no margin for the thing that will inevitably be wrong.",
+      "Run it with real governance: a steering group including the accountable executive, weekly tracking against the obligations register, an explicit risk and dependency log, an escalation path for interpretation disputes, and a pre-agreed plan for any obligation you will not make on time, including whether and how you would approach the regulator."
+    ],
+    "quant_hooks": [
+      "Work backwards from the effective date using real lead times: if a system change needs 10 weeks of build, 4 weeks of testing, and 3 weeks of release process, it must start by week 9 of 26 — publish that backwards-planned critical path in week one, not week fifteen.",
+      "Size operational impact as obligation x volume: collecting and verifying one additional data element across 200,000 existing customer records at four minutes each is roughly 13,300 hours, which is about eight FTE-years — a resourcing decision requiring headcount approval, not a process tweak.",
+      "Compare the two designs numerically instead of philosophically: strictest-common-standard means one process, one training curriculum, and one test set, but applies the heaviest requirement to 100% of volume; localizing means four processes and roughly four times the training and testing cost, but applies each requirement only to the volume that needs it. Run it against your actual volume mix and let the arithmetic decide.",
+      "Track readiness as the percentage of obligations evidenced as compliant, never as the percentage of project tasks complete — 90% of tasks done with the single hardest obligation untouched is 0% ready for that obligation."
+    ],
+    "good_signals": [
+      "Decomposes into an obligations register rather than treating the regulation as a single undifferentiated requirement.",
+      "Names and resolves the global-standard versus local-variation trade-off explicitly, with reasoning tied to volume and cost.",
+      "Sequences by lead time and correctly identifies systems changes, vendor contracts, and regulatory filings as the long poles.",
+      "Reserves a testing and evidence window before the deadline and plans for the possibility of missing one obligation."
+    ],
+    "failure_modes": [
+      "Starting to build controls before the obligations and gaps are written down, which guarantees rework in month four.",
+      "Assuming the requirement applies identically in all four markets, which is exactly the trap this question is constructed to catch.",
+      "Forgetting the non-system work — training, procedure updates, vendor contract amendments, and the record-keeping needed to prove compliance to an examiner twelve months later.",
+      "Planning to be finished on the effective date with zero testing window and no contingency for the obligation that slips."
+    ],
+    "followups": [
+      "Two of your four markets interpret the same requirement differently and both interpretations are defensible. How do you decide?",
+      "You will not make the deadline for one obligation. Walk me through what you do, including whether you tell the regulator.",
+      "The business says compliance in one market costs more than that market earns. What is your recommendation?",
+      "How would you prove compliance to an examiner twelve months after go-live?"
+    ]
+  },
+  {
+    "id": "risk-sanctions-forced-labor-supply-chain",
+    "domain": "Risk & Compliance",
+    "title": "Sanctions and forced-labor supply-chain diligence",
+    "difficulty": "stretch",
+    "prompt": "We source a critical input from a region with sanctions exposure and credible forced-labor concerns, and the goods pass through three tiers of suppliers before they reach us. How do you build a program that keeps us compliant — and what do you do when you cannot see past tier one?",
+    "why_asked": "Screens for whether you understand that sanctions and forced-labor enforcement demand different kinds of control, and whether you can act when supply-chain visibility runs out.",
+    "framework": "",
+    "structure": [
+      "Get the legal exposure precise first, because these obligations differ in kind rather than degree: sanctions and export controls are prohibitions on dealing with designated parties and restricted end uses, while forced-labor import enforcement under the US Uyghur Forced Labor Prevention Act operates as a rebuttable presumption that goods with links to the Xinjiang Uyghur Autonomous Region or to entities on the UFLPA Entity List are barred from entry unless the importer rebuts it with clear and convincing evidence.",
+      "Draw the practical consequence of that difference: for sanctions the control is screening and blocking, whereas for forced labor the control is documentary traceability, because the burden of proof runs against the importer and 'we asked the supplier and they said it is fine' is not evidence of anything.",
+      "Map the supply chain beyond tier one for the commodities that actually carry exposure — concentrate on the high-risk input itself (the cotton, the polysilicon, the specific alloy or component) and trace that input back through its own tiers, rather than attempting to map every supplier equally and finishing none of them.",
+      "Build the screening layer: screen counterparties, their beneficial owners, and known affiliates against the relevant designated-party and entity lists at onboarding and continuously afterwards, since lists change and a supplier that cleared last quarter may not clear today; include the ownership aggregation problem, where an entity not itself designated is 50% or more owned in aggregate by designated parties and is therefore treated as blocked under OFAC's 50 Percent Rule.",
+      "Build the traceability layer: define the documentary package required per shipment or lot — purchase orders, invoices, production and transformation records, transport documents, mill or smelter certificates, and labor-related documentation — mapped so that a lot arriving at your dock can be traced back to raw material origin.",
+      "Get the requirements into contracts and make them enforceable: representations and warranties on origin and labor practices, a prohibition on unapproved subcontracting and undisclosed sub-tier sourcing, audit and traceability rights that extend to sub-tiers, and termination rights on breach.",
+      "Handle the visibility problem honestly rather than pretending it away: where you cannot see past tier one, treat the opacity itself as the finding — escalate it, tier the supplier as high risk, use the independent signals that exist (customs and trade data, third-party supply-chain mapping services, forensic origin testing for some commodities, NGO and investigative reporting), make sub-tier disclosure a condition of continued business, and start qualifying an alternate source in parallel, because the realistic mitigation for unverifiable origin is substitution rather than more paperwork.",
+      "Plan for the detention event before it happens, since for a high-exposure commodity it is a question of when: assemble the rebuttal evidence package in advance, know who submits it, quantify the inventory and revenue at risk from goods held at the border, and have the alternate-source and buffer-inventory plan ready to execute."
+    ],
+    "quant_hooks": [
+      "Screening is a precision problem with the same arithmetic as fraud detection: name matching against designated-party lists throws large volumes of false hits, so quote the false-positive rate and the review cost. Screening 50,000 counterparties monthly at a 2% hit rate is 1,000 alerts, and at six minutes each that is 100 analyst-hours a month — tuning match thresholds trades that cost directly against the chance of missing a true match.",
+      "Quantify the exposure that justifies the program, because the shipment value badly understates it: if a detention holds six weeks of supply of a component feeding a line that produces $2M per week, the exposure is the production at risk, which is an order of magnitude above the value of the goods themselves.",
+      "Tier the diligence by exposure, since full multi-tier traceability across an entire supplier base is unaffordable: score suppliers on commodity risk x country risk x visibility, and reserve deep tracing and on-site work for the top tier. If 12% of spend sits in high-risk commodity-country pairs, that 12% gets the traceability program.",
+      "Measure the program by coverage rather than activity: the percentage of high-risk spend where raw-material origin is documented to the required tier. '90% of suppliers surveyed' means nothing; '60% of high-risk spend traced to origin' is a real number you can report to an executive and improve quarter over quarter."
+    ],
+    "good_signals": [
+      "Distinguishes sanctions (prohibition, screening-driven) from forced-labor import enforcement (rebuttable presumption, evidence-driven) and designs genuinely different controls for each.",
+      "Knows the burden of proof runs against the importer, and therefore builds the program around documentary traceability rather than supplier attestations.",
+      "Concentrates effort on high-risk commodities and tiers rather than treating every supplier as equally deserving of scrutiny.",
+      "Treats inability to see past tier one as a finding that requires escalation and possibly re-sourcing, not as an acceptable limitation to be noted and moved past."
+    ],
+    "failure_modes": [
+      "Relying on supplier self-attestation or a signed code of conduct as the control, which is precisely the evidence that fails when a shipment is detained.",
+      "Screening only direct suppliers and never the beneficial owners, affiliates, or sub-tiers where the actual exposure sits.",
+      "Treating this as a purely legal problem and never engaging sourcing, when the real mitigation for unverifiable origin is qualifying an alternate supplier — which takes months and therefore has to start early.",
+      "Having no pre-assembled rebuttal package and no continuity plan, so a detention turns into a production stoppage being solved in real time under pressure."
+    ],
+    "followups": [
+      "A shipment is detained at the border. Walk me through your first 48 hours.",
+      "Your tier-one supplier refuses to disclose its sub-tier sources, citing commercial confidentiality. What do you do?",
+      "How would you decide when the right answer is exiting a supplier or a region entirely, and who makes that call?",
+      "The program adds cost and lead time and the business asks what it buys them. How do you justify it?"
+    ]
+  }
+]
