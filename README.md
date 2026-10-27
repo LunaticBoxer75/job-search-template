@@ -88,6 +88,25 @@ streamlit run app.py
 
 `python scripts/smoke_test_pages.py` renders every page headlessly and ends with `problems: 0`.
 
+## The `/find-jobs` skill (customize it)
+
+`.claude/commands/find-jobs.md` is the daily runbook Claude Code follows when you type `/find-jobs`
+in this repo. It is plain markdown: edit it like any doc and the next run uses it. The other commands
+in `.claude/commands/` (`/track`, `/job-stats`, `/add-search`, `/generate-projects`, `/dashboard`,
+`/backfill`) work the same way.
+
+Common changes:
+- **How many jobs Claude reads** (cost vs coverage): the `PANELS` floors and caps in step 4a
+  (default: every home-area full-time job at 70+, national full-time at 85+, 5 + 5 internships).
+  Claude reads them in batches of 12 with parallel subagents; ~3 batches per agent.
+- **Report layout:** the `PANELS` list in step 5.
+- **LinkedIn description fetch:** the `--limit` / `--min-score` flags in step 3b.
+- **Your rules:** the "Standing mechanisms" table at the top. When you make a decision ("never
+  show contract roles", "skip agencies"), add a row there so every future run follows it.
+
+Scoring rules themselves live in `config/profile.json` (`scoring` for Pass 1, `pass2_rubric` for
+Pass 2), not in the skill. Keep the skill's commands in sync with the scripts when you change either.
+
 ## Hosting on Streamlit Community Cloud
 
 The hosted app's filesystem is ephemeral, so data lives on GitHub, on three branches of one repo:
